@@ -1,0 +1,390 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_promotion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 10:30+0000\n"
+"PO-Revision-Date: 2019-05-06 17:36+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_action_id
+msgid "Action"
+msgstr "Hành động"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_action_ids
+msgid "Actions"
+msgstr "Hoạt động"
+
+#. module: pos_promotion
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_form
+msgid "Activate"
+msgstr "Kích hoạt"
+
+#. module: pos_promotion
+#: selection:pos.promotion,state:0
+msgid "Activated"
+msgstr "Đã kích hoạt"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_order_x_applied_promo
+msgid "Applied action"
+msgstr "Applied action"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_applied_partner_ids
+msgid "Applied customers"
+msgstr "Applied customers"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_apply_once
+msgid "Apply once"
+msgstr "Apply once"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_campaign_id
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: pos_promotion
+#: selection:pos.promotion,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: pos_promotion
+#: model:ir.model,name:pos_promotion.model_pos_promotion
+msgid "Chương trình khuyến mại"
+msgstr "Chương trình khuyến mại"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_context
+msgid "Context"
+msgstr "Ngữ cảnh"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_count
+msgid "Count"
+msgstr "Count"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_create_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_create_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_create_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_create_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_create_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_create_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_create_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_create_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_promotion
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_form
+msgid "Deactivate"
+msgstr "Hủy kích hoạt"
+
+#. module: pos_promotion
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_form
+msgid "Deactivate this promotion? This action cannot be undo and cannot be activate it again!"
+msgstr "Deactivate this promotion? This action cannot be undo and cannot be activate it again!"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_discount
+msgid "Discount"
+msgstr "Giảm giá"
+
+#. module: pos_promotion
+#: selection:pos.promotion.action,type:0
+msgid "Discount percent"
+msgstr "Giảm giá (%)"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_display_name
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_display_name
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_display_name
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_display_name
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_domain
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_domain
+msgid "Domain"
+msgstr "Miền"
+
+#. module: pos_promotion
+#: selection:pos.promotion,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_date_end
+msgid "End date"
+msgstr "Thời gian kết thúc"
+
+#. module: pos_promotion
+#: selection:pos.promotion,state:0
+msgid "Expired"
+msgstr "Đã hết hạn"
+
+#. module: pos_promotion
+#: selection:pos.promotion.action,type:0
+msgid "Fixed percent"
+msgstr "Phần trăm cố định"
+
+#. module: pos_promotion
+#: selection:pos.promotion.action,type:0
+msgid "Fixed price"
+msgstr "Giá cố định"
+
+#. module: pos_promotion
+#: selection:pos.promotion.action,type:0
+msgid "Gift"
+msgstr "Quà tặng"
+
+#. module: pos_promotion
+#: selection:pos.promotion.action,type:0
+msgid "Giảm % theo điều kiện"
+msgstr "Giảm % theo điều kiện"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_id
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_id
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_id
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_id
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_active
+msgid "Is active?"
+msgstr "Is active?"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion___last_update
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action___last_update
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line___last_update
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line___last_update
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_write_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_write_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_write_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_write_uid
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_write_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_write_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_write_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_write_date
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_name
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_name
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_promotion
+#: code:addons/pos_promotion/models/models.py:140
+#, python-format
+msgid "Ngày kết thúc không thể đặt trước ngày bắt đầu!"
+msgstr "Ngày kết thúc không thể đặt trước ngày bắt đầu!"
+
+#. module: pos_promotion
+#: selection:pos.promotion.rule,type:0
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: pos_promotion
+#: model:ir.actions.server,name:pos_promotion.cron_check_expired_promotion_program_ir_actions_server
+#: model:ir.cron,cron_name:pos_promotion.cron_check_expired_promotion_program
+#: model:ir.cron,name:pos_promotion.cron_check_expired_promotion_program
+msgid "PoS Promotion: Check expired"
+msgstr "PoS Promotion: Check expired"
+
+#. module: pos_promotion
+#: model:ir.actions.act_window,name:pos_promotion.action_pos_promo_promo
+#: model:ir.ui.menu,name:pos_promotion.menu_pos_promo_promo
+msgid "PoS promotion"
+msgstr "Chương trình khuyến mại"
+
+#. module: pos_promotion
+#: model:ir.actions.act_window,name:pos_promotion.action_pos_promo_promo_action
+#: model:ir.ui.menu,name:pos_promotion.menu_pos_promo_promo_action
+msgid "PoS promotion action"
+msgstr "Áp dụng khuyến mại"
+
+#. module: pos_promotion
+#: model:ir.actions.act_window,name:pos_promotion.action_pos_promo_promo_rule
+#: model:ir.ui.menu,name:pos_promotion.menu_pos_promo_promo_rule
+msgid "PoS promotion rules"
+msgstr "Điều kiện khuyến mại"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_pos_id
+msgid "Point of Sale"
+msgstr "Điểm bán hàng"
+
+#. module: pos_promotion
+#: model:ir.model,name:pos_promotion.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_product_price
+msgid "Price"
+msgstr "Giá"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_price_percent
+msgid "Price (%)"
+msgstr "Giá (%)"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_product_id
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_product_id
+#: selection:pos.promotion.rule,type:0
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: pos_promotion
+#: selection:pos.promotion.action,type:0
+msgid "Product discount"
+msgstr "Product discount"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_order_x_promotion_id
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_form
+msgid "Promotion"
+msgstr "Chương trình khuyến mại"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_order_x_discount_promo
+msgid "Promotion discount"
+msgstr "Promotion discount"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_ids
+msgid "Promotion lines"
+msgstr "Promotion lines"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_promotion_id
+msgid "Promotion program"
+msgstr "Chương trình khuyến mại"
+
+#. module: pos_promotion
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_form
+msgid "Promotion that activated cannot be edit anymore, continue?"
+msgstr "Promotion that activated cannot be edit anymore, continue?"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_product_qtt
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_rule_ids
+msgid "Rules"
+msgstr "Quy tắc"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_line_sequence
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_line_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_date_start
+msgid "Start date"
+msgstr "Thời gian bắt đầu"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_action_type
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_rule_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: pos_promotion
+#: model:ir.model.fields,field_description:pos_promotion.field_pos_promotion_vip_include
+msgid "VIP include"
+msgstr "VIP include"
+
+#. module: pos_promotion
+#: code:addons/pos_promotion/models/pos_order.py:43
+#, python-format
+msgid ""
+"You have to select a pricelist in the form !\n"
+"Please set one before choosing a product."
+msgstr ""
+"You have to select a pricelist in the form !\n"
+"Please set one before choosing a product."
+
+#. module: pos_promotion
+#: model:ir.model,name:pos_promotion.model_pos_promotion_action
+msgid "pos.promotion.action"
+msgstr "pos.promotion.action"
+
+#. module: pos_promotion
+#: model:ir.model,name:pos_promotion.model_pos_promotion_action_line
+msgid "pos.promotion.action.line"
+msgstr "pos.promotion.action.line"
+
+#. module: pos_promotion
+#: model:ir.model,name:pos_promotion.model_pos_promotion_line
+msgid "pos.promotion.line"
+msgstr "pos.promotion.line"
+
+#. module: pos_promotion
+#: model:ir.model,name:pos_promotion.model_pos_promotion_rule
+msgid "pos.promotion.rule"
+msgstr "pos.promotion.rule"
+
+#. module: pos_promotion
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_action_form
+msgid "ÁP DỤNG KHUYẾN MẠI"
+msgstr "ÁP DỤNG KHUYẾN MẠI"
+
+#. module: pos_promotion
+#: model:ir.ui.view,arch_db:pos_promotion.view_pos_promo_promo_rule_form
+msgid "ĐIỀU KIỆN KHUYẾN MẠI"
+msgstr "ĐIỀU KIỆN KHUYẾN MẠI"

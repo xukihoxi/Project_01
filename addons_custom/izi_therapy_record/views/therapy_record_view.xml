@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_view_therapy_record_tree" model="ir.ui.view">
+            <field name="name">izi.view.therapy.record.tree</field>
+            <field name="model">therapy.record</field>
+            <field name="arch" type="xml">
+                <tree string="Therapy Record">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="create_date"/>
+                    <field name="employee_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="izi_view_therapy_record_form" model="ir.ui.view">
+            <field name="name">izi.view.therapy.record.form</field>
+            <field name="model">therapy.record</field>
+            <field name="arch" type="xml">
+                <form string="Therapy Record">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Tên hồ sơ trị liệu..." attrs="{'required': 1}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                <field name="code" />
+                                <field name="birthday"/>
+                                <field name="phone"/>
+                                <field name="level_age_id"/>
+                                <field name="note"/>
+                            </group>
+                            <group>
+                                <label string="Địa chỉ"/>
+                                <div class="o_address_format">
+                                    <field name="street" class="o_address_street" placeholder="Địa chỉ..." />
+                                    <field name="state_id" class="o_address_state" placeholder="Tỉnh/Tp..." />
+                                    <field name="country_id" class="oe_inline" placeholder="Quốc gia..." />
+                                </div>
+                                <field name="create_date" readonly="1"/>
+                                <field name="employee_id"/>
+                                <field name="categ_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Body Indexs">
+                                <field name="body_index_ids">
+                                    <tree editable="bottom">
+                                        <field name="measurement_time" attrs="{'required': 1}"/>
+                                        <field name="technician" attrs="{'required': 1}"/>
+                                        <field name="weight"/>
+                                        <field name="high"/>
+                                        <field name="upper_waist"/>
+                                        <field name="lower_waist"/>
+                                        <field name="middle_waist"/>
+                                        <field name="arm"/>
+                                        <field name="right_upper_thighs"/>
+                                        <field name="left_upper_thighs"/>
+                                        <field name="right_lower_thighs"/>
+                                        <field name="left_lower_thighs"/>
+                                        <field name="flank"/>
+                                        <field name="armpit"/>
+                                        <field name="lats"/>
+                                        <field name="back"/>
+                                        <field name="upper_abdomen"/>
+                                        <field name="middle_abdomen"/>
+                                        <field name="abdomen"/>
+                                        <field name="right_upper_calf"/>
+                                        <field name="left_upper_calf"/>
+                                        <field name="right_lower_calf"/>
+                                        <field name="left_lower_calf"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Precription Tasks" name="prescription_task">
+                                <field name="prescription_task_ids">
+                                    <tree create="0">
+                                        <field name="name"/>
+                                        <field name="employee_id" attrs="{'required': 1}"/>
+                                        <field name="create_date"/>
+                                        <field name="time_prescription"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Product Therapy">
+                                <field name="product_therapy_ids">
+                                    <tree editable="bottom" create="0">
+                                        <field name="product_id" attrs="{'required': 1}"/>
+                                        <field name="uom_id"/>
+                                        <field name="qty_used"/>
+                                        <field name="qty_actual"/>
+                                        <field name="qty_max"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_izi_therapy_record" model="ir.actions.act_window">
+            <field name="name">Therapy Record</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">therapy.record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Therapy Record" id="izi_therapy_record_menu" parent="point_of_sale.menu_point_root"/>
+
+        <menuitem name="Therapy Record" id="izi_therapy_record" parent="izi_therapy_record.izi_therapy_record_menu"
+                  action="action_izi_therapy_record"/>
+    </data>
+</odoo>

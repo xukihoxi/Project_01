@@ -1,0 +1,142 @@
+<odoo>
+    <data>
+        <!-- Quản lý kho-->
+        <record model="ir.ui.menu" id="stock.menu_stock_root">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_revenue_accountant'),
+                   ref('stock.group_stock_manager'),
+                   ref('stock.group_stock_user'),
+                   ref('izi_res_permissions.group_inventory_accounting'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Màn hình điều khiển-->
+        <record model="ir.ui.menu" id="stock.stock_picking_type_menu">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Thao tác-->
+        <record model="ir.ui.menu" id="stock.menu_stock_warehouse_mgmt">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_user'),
+                   ref('izi_res_permissions.group_inventory_accounting'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Xuất bán-->
+        <record model="ir.ui.menu" id="izi_stock_location_custom.menu_izi_stock_custom_transfer_outgoing_action">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_user'),
+                   ref('izi_res_permissions.group_inventory_accounting'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Nhập mua-->
+        <record model="ir.ui.menu" id="izi_stock_location_custom.menu_izi_stock_custom_transfer_incoming_action">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_user'),
+                   ref('izi_res_permissions.group_inventory_accounting'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Nội bộ-->
+        <record model="ir.ui.menu" id="izi_stock_location_custom.menu_izi_stock_custom_transfer_internal_action">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_user'),
+                   ref('izi_res_permissions.group_inventory_accounting'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Thao tác / Sản phẩm-->
+        <record model="ir.ui.menu" id="izi_use_service_card.menu_service_product_form">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Thao tác / Yêu cầu NVL phẫu thuật thẩm mỹ-->
+        <record model="ir.ui.menu" id="izi_use_service_card.pos_use_material_menu_surgery">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Dịch chuyển kho-->
+        <record model="ir.ui.menu" id="stock.all_picking">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_manager')])]"/>
+        </record>
+
+        <!-- Báo cáo-->
+        <record model="ir.ui.menu" id="stock.menu_warehouse_report">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_revenue_accountant'),
+                   ref('stock.group_stock_manager'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Xuất nhập hàng chi phí-->
+        <record model="ir.ui.menu" id="izi_product_in_out.menu_inventory_product_delivery">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_manager'),
+                   ref('izi_res_permissions.group_inventory_accounting'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Định mức NVL-->
+        <record model="ir.ui.menu" id="izi_use_service_card.menu_service_bom_form_action">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_manager'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Phế liệu-->
+        <record model="ir.ui.menu" id="stock.menu_stock_scrap">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Chạy tiến trình tự động-->
+        <record model="ir.ui.menu" id="stock.menu_procurement_compute">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Phát hành thẻ dịch vụ, phiếu mua hàng-->
+        <record model="ir.ui.menu" id="izi_product_release.menu_product_release">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_manager'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Điều chỉnh tồn kho-->
+        <record model="ir.ui.menu" id="stock.menu_action_inventory_form">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Tách sản phẩm-->
+        <record model="ir.ui.menu" id="izi_product_split.menu_action_izi_product_splite">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('stock.group_stock_manager'),
+                   ref('izi_res_permissions.group_stock_keeper')])]"/>
+        </record>
+
+        <!-- Số lô / serial-->
+        <record model="ir.ui.menu" id="stock.menu_action_production_lot_form">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Quy tắc tồn kho tối thiểu-->
+        <record model="ir.ui.menu" id="stock.menu_reordering_rules_config">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!-- Quản lý kho / Cấu hình-->
+        <record model="ir.ui.menu" id="stock.menu_stock_config_settings">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+    </data>
+</odoo>

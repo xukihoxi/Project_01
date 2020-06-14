@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template_display_iframe" xml:space="preserve">
+    <t t-name="DisplayIframe">
+        <t t-if="widget.url_report != ''">
+            <iframe  width="100%" scrolling="no" height="600px" frameborder="0" t-att-src="widget.url_report"/>
+        </t>
+    </t>
+</templates>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Chỉnh view -->
+    <data>
+        <!-- Form thanh toán đơn hàng -->
+        <record id="izi_view_pos_payment_use_service_form" model="ir.ui.view">
+            <field name="name">pos.payment.service.form.inherit</field>
+            <field name="model">pos.payment.service</field>
+            <field name="inherit_id" ref="izi_use_service_card.view_pop_up_pos_payment_service"/>
+            <field name="arch" type="xml">
+                <field name="journal_id" position="after">
+                    <field name="x_currency_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'invisible': [('x_show_currency_amount', '=', False)], 'required': [('x_show_currency_amount', '=', True)]}" readonly="1" force_save="1"/>
+                    <!--<field name="x_currency_rate_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'invisible': [('x_show_currency_amount', '=', False)], 'required': [('x_show_currency_amount', '=', True)]}" context="{'izi_x_currency_id': x_currency_id}"/>-->
+                    <field name="x_money_multi"  attrs="{'invisible': [('x_show_currency_amount', '=', False)], 'required': [('x_show_currency_amount', '=', True)]}"/>
+                    <field name="x_rate_vn" attrs="{'invisible': [('x_show_currency_amount', '=', False)], 'required': [('x_show_currency_amount', '=', True)]}"/>
+                    <field name="x_show_currency_amount" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,69 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="izi_pos_service_bed_list">
+            <field name="name">Service Bed List</field>
+            <field name="model">pos.service.bed</field>
+            <field name="arch" type="xml">
+                <tree default_order="branch_id asc, room_id asc, name asc">
+                    <field name="branch_id"/>
+                    <field name="room_id"/>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="state"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_pos_service_bed_form">
+            <field name="name">Service Bed Form</field>
+            <field name="model">pos.service.bed</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_maintenace" type="object" class="oe_highlight" string="Maintenance"/>
+                        <button name="action_ready" type="object" class="oe_highlight" string="Ready"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <h2 class="text-center">DANH MỤC GIƯỜNG</h2>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="1"/>
+                            </group>
+                            <group>
+                                <field name="room_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <!--<field name="time" string="Time (Hours)" sum="Total time" widget="float_time"/>-->
+                                <field name="state" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="izi_pos_service_bed_action_window">
+            <field name="name">Pos Service Bed</field>
+            <field name="res_model">pos.service.bed</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+
+        <menuitem name="Bed" id="izi_bed_menu" parent="point_of_sale.menu_point_config_product"
+                  action="izi_pos_service_bed_action_window" sequence="18" groups="point_of_sale.group_pos_manager"/>
+
+    </data>
+</odoo>

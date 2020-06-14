@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--<record id="pos_order_branch_rule" model="ir.rule">-->
+            <!--<field name="name">POS Order branch</field>-->
+            <!--<field name="model_id" ref="model_pos_order"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[('session_id.branch_id','in',user.branch_ids.ids)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('izi_res_permissions.group_cashier'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="pos_order_user_rule" model="ir.rule">-->
+            <!--<field name="name">POS Order user</field>-->
+            <!--<field name="model_id" ref="model_pos_order"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[('user_id','=',user.id)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('izi_res_permissions.group_consultant'))]"/>-->
+        <!--</record>-->
+    </data>
+</openerp>

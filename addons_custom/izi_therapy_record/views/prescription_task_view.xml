@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_view_prescription_task_tree" model="ir.ui.view">
+            <field name="name">izi.view.prescription.task.tree</field>
+            <field name="model">prescription.task</field>
+            <field name="arch" type="xml">
+                <tree string="Prescription Task">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="employee_id"/>
+                    <field name="time_prescription"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="izi_view_prescription_task_form" model="ir.ui.view">
+            <field name="name">izi.view.prescription.task.form</field>
+            <field name="model">prescription.task</field>
+            <field name="arch" type="xml">
+                <form string="Prescription Task">
+                    <header>
+                        <button name="action_confirm" string="Confirm" type="object" class="btn-primary"/>
+                        <button name="action_get_product_remain" string="Compute product remain" type="object"
+                                    attrs="{'invisible':[('therapy_record_id','=',False)]}" class="btn-primary"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('name','=','/')]}" style="margin-right: 35%; margin-left: 35%; max-width: 30%" readonly="1"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="partner_id" options="{'no_create_edit':True, 'no_create':True}" attrs="{'readonly': [('state','!=','draft')]}" required="1" />
+                                <field name="employee_id" options="{'no_create_edit':True, 'no_create':True}" required="1" />
+                                <field name="therapy_record_id" domain="[('partner_id', '=', partner_id)]" options="{'no_create_edit':True, 'no_create':True}" attrs="{'readonly': [('state','!=','draft')]}" required="1" />
+                            </group>
+                            <group>
+                                <field name="create_date" readonly="1" force_save="1"/>
+                                <field name="time_prescription" readonly="1"/>
+
+                            </group>
+                        </group>
+                        <label string="Sản phẩm/ Dịch vụ tồn"/>
+                        <field name="prescription_task_line_remain_ids" domain="[('type','=','remain')]" context="{'default_type':'remain'}" force_save="1">
+                            <tree editable="bottom" delete="false" create="0">
+                                <field name="product_id" readonly="1" force_save="1"/>
+                                <field name="qty" force_save="1"/>
+                                <field name="qty_actual" readonly="1" force_save="1"/>
+                                <field name="uom_id" readonly="1" force_save="1"/>
+                                <field name="note" force_save="1"/>
+                            </tree>
+                        </field>
+                        <!---->
+                        <label string="Danh mục thuốc"/>
+                        <field name="prescription_task_line_medicine_ids" domain="[('type','=','medicine')]" context="{'default_type':'medicine'}">
+                            <tree editable="bottom">
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="uom_id" readonly="1"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                        <!---->
+                        <label string="Sản phẩm/ Dịch vụ mua thêm"/>
+                        <field name="prescription_task_line_add_ids" domain="[('type','=','add')]" context="{ 'default_type': 'add'}">
+                            <tree editable="bottom">
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="uom_id" readonly="1"/>
+                                <field name="price_unit"/>
+                                <field name="amount"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                        <!---->
+                        <label string="Sản phẩm/ Dịch vụ bảo hành"/>
+                        <field name="prescription_task_line_warranty_ids" domain="[('type','=','warranty')]" context="{'default_type':'warranty'}">
+                            <tree editable="bottom">
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="uom_id" readonly="1"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_izi_prescription_task" model="ir.actions.act_window">
+            <field name="name">Prescription Task</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">prescription.task</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Prescription Task" id="izi_prescription_task" parent="izi_therapy_record.izi_therapy_record_menu"
+                  action="action_izi_prescription_task"/>
+    </data>
+</odoo>

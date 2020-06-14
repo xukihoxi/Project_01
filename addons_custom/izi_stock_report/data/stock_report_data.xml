@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.cron" id="stock_report_data_cron">
+            <field name="name">Stock: Summary Data Day</field>
+            <field name="model_id" ref="model_izi_data_warehouse_day"/>
+            <field name="state">code</field>
+            <field name="code">model.auto_summary_data_store()</field>
+            <field name="active" eval="False"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">1</field>
+            <field name="doall" eval="False"/>
+        </record>
+    </data>
+</odoo>

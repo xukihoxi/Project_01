@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="izi_internal_layout">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+    </data>
+</odoo>

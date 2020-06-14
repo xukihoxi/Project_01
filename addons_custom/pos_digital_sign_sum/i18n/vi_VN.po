@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_digital_sign_sum
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 10:24+0000\n"
+"PO-Revision-Date: 2019-05-06 17:25+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: pos_digital_sign_sum
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Account Bank Statement"
+msgstr "Account Bank Statement"
+
+#. module: pos_digital_sign_sum
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: pos_digital_sign_sum
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Apply All"
+msgstr "Áp dụng tất cả"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_account_bank_statement_lines_ids
+msgid "Bank Statement"
+msgstr "Sổ phụ từ Ngân hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Giao dịch trên sổ phụ ngân hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_debit_good_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Debit Good"
+msgstr "Đơn nợ hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_destroy_service_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Destroy Service"
+msgstr "Hủy dịch vụ"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_account_bank_statement_line_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_izi_pos_exchange_service_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_izi_service_card_using_line_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_izi_service_card_using_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_debit_good_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_destroy_service_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_order_line_x_digital_sign_id
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_order_x_digital_sign_id
+msgid "Digital Sign"
+msgstr "Chữ kỹ"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_digital_sign_sum
+#: selection:pos.sum.digital.sign,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: pos_digital_sign_sum
+#: selection:pos.sum.digital.sign,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_exchange_service_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Exchange Service"
+msgstr "Đỏi dịch vụ"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_digital_sign_sum
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "KHÁCH HÀNG KÝ XÁC NHẬN"
+msgstr "KHÁCH HÀNG KÝ XÁC NHẬN"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_pos_order_line
+msgid "Lines of Point of Sale Orders"
+msgstr "Lines of Point of Sale Orders"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_digital_sign_sum
+#: code:addons/pos_digital_sign_sum/models/models.py:29
+#: code:addons/pos_digital_sign_sum/models/models.py:30
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_order_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_order_line_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Order Line"
+msgstr "Chi tiết đơn hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: pos_digital_sign_sum
+#: model:ir.actions.act_window,name:pos_digital_sign_sum.pos_digital_sign_sum_action_window
+msgid "Pos Digital Sum"
+msgstr "Xác nhận của khách hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.ui.menu,name:pos_digital_sign_sum.pos_digital_sign_menu
+msgid "Pos Sum Digital"
+msgstr "Xác nhận của khách hàng"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_digital
+msgid "Sign Digital"
+msgstr "Sign Digital"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: pos_digital_sign_sum
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Subtotal"
+msgstr "Tổng phụ"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_use_service_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Use Service"
+msgstr "Nhật ký sử dụng dịch vụ"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model.fields,field_description:pos_digital_sign_sum.field_pos_sum_digital_sign_sign_use_service_line_ids
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_form
+#: model:ir.ui.view,arch_db:pos_digital_sign_sum.pos_digital_sign_sum_pop_up_form
+msgid "Use Service Line"
+msgstr "Chi tiết sử dụng dịch vụ"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_izi_pos_exchange_service
+msgid "izi.pos.exchange.service"
+msgstr "izi.pos.exchange.service"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_izi_service_card_using_line
+msgid "izi.service.card.using.line"
+msgstr "izi.service.card.using.line"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_pos_debit_good
+msgid "pos.debit.good"
+msgstr "pos.debit.good"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_pos_destroy_service
+msgid "pos.destroy.service"
+msgstr "pos.destroy.service"
+
+#. module: pos_digital_sign_sum
+#: model:ir.model,name:pos_digital_sign_sum.model_pos_sum_digital_sign
+msgid "pos.sum.digital.sign"
+msgstr "pos.sum.digital.sign"

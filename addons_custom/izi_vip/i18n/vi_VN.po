@@ -1,0 +1,692 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_vip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-17 16:02+0000\n"
+"PO-Revision-Date: 2020-04-17 16:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.uprank,type:0
+msgid "Accumulation"
+msgstr "Accumulation"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_res_partner_x_age
+#: model:ir.model.fields,field_description:izi_vip.field_res_users_x_age
+msgid "Age"
+msgstr "Tuổi"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_age_end
+msgid "Age End"
+msgstr "Độ tuổi kết thúc"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_age_start
+msgid "Age Start"
+msgstr "Độ tuổi bắt đầu"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_cancel_reason
+msgid "Cancel reason"
+msgstr "Lý do hủy"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_policy
+msgid "Chính sách"
+msgstr "Chính sách"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.history,state:0
+msgid "Chờ duyệt"
+msgstr "Chờ duyệt"
+
+#. module: izi_vip
+#: model:ir.actions.act_window,help:izi_vip.action_partner_level_form
+msgid "Click to create a new partner levl."
+msgstr "Click to create a new partner levl."
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_create_uid
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_create_date
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_current_rank_id
+msgid "Current rank"
+msgstr "Hạng hiện tại"
+
+#. module: izi_vip
+#: model:ir.actions.act_window,name:izi_vip.action_partner_level_form
+#: model:ir.ui.menu,name:izi_vip.menu_partner_level_form
+msgid "Custom Levels"
+msgstr "Khung độ tuổi"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_level
+msgid "Cấp độ"
+msgstr "Cấp độ"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_note
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_discount
+msgid "Discount (%)"
+msgstr "Chiết khấu (%)"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_display_name
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_customer_revenue
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_amount
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_ids
+#: model:ir.model.fields,field_description:izi_vip.field_res_partner_x_revenue_ids
+#: model:ir.model.fields,field_description:izi_vip.field_res_users_x_revenue_ids
+msgid "Doanh thu"
+msgstr "Doanh thu"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,state:0
+msgid "Done"
+msgstr "Done"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_email
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_email
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_except_product_ids
+msgid "Except products"
+msgstr "Sản phẩm ngoại lệ"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.uprank,type:0
+msgid "Exception"
+msgstr "Ngoại lệ"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_note
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_note
+msgid "Ghi chú"
+msgstr "Ghi chú"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_discount_service
+msgid "Giảm giá dịch vụ (%)"
+msgstr "Giảm giá dịch vụ (%)"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_discount_product
+msgid "Giảm giá sản phẩm (%)"
+msgstr "Giảm giá sản phẩm (%)"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_rank_discount_service
+msgid "Giảm giá tính trên dịch vụ mà KH mua (đơn vị %)"
+msgstr "Giảm giá tính trên dịch vụ mà KH mua (đơn vị %)"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_rank_discount_product
+msgid "Giảm giá tính trên sản phẩm mà KH mua (đơn vị %)"
+msgstr "Giảm giá tính trên sản phẩm mà KH mua (đơn vị %)"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_rank
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_vip_rank
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_vip_rank
+#: model:ir.model.fields,field_description:izi_vip.field_res_partner_x_rank
+#: model:ir.model.fields,field_description:izi_vip.field_res_users_x_rank
+msgid "Hạng VIP"
+msgstr "Hạng VIP"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_rank_current
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_rank_current
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_rank_current
+msgid "Hạng hiện tại"
+msgstr "Hạng hiện tại"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_rank_request
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_rank_request
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_rank_request
+msgid "Hạng yêu cầu"
+msgstr "Hạng yêu cầu"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_id
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_customer
+msgid "KH VIP"
+msgstr "KH VIP"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_partner_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_partner_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_vip_custom_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_partner_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_partner_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_partner_id
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: izi_vip
+#: sql_constraint:crm.vip.customer:0
+msgid "Khách hàng này đã tồn tại lịch sử lên hạng !"
+msgstr "Khách hàng này đã tồn tại lịch sử lên hạng !"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_active
+msgid "Kích hoạt?"
+msgstr "Kích hoạt?"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line___last_update
+#: model:ir.model.fields,field_description:izi_vip.field_level_age___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_write_uid
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_write_date
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_res_partner_x_level_age_id
+#: model:ir.model.fields,field_description:izi_vip.field_res_users_x_level_age_id
+msgid "Level Age"
+msgstr "Khung độ tuổi"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_type
+msgid "Loại"
+msgstr "Loại"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_type
+msgid "Loại yêu cầu"
+msgstr "Loại yêu cầu"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.history,type:0
+msgid "Lên hạng"
+msgstr "Lên hạng"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_vip_history_ids
+msgid "Lịch sử hạng"
+msgstr "Lịch sử hạng"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_customer_history
+msgid "Lịch sử lên hạng"
+msgstr "Lịch sử lên hạng"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_max_amount
+msgid "Maximum amount"
+msgstr "Maximum amount"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_product_except_max_amount
+msgid "Maximum amount to discount, left 0 to discount all"
+msgstr "Maximum amount to discount, left 0 to discount all"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_code
+msgid "Mã"
+msgstr "Mã"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_partner_code
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_partner_code
+msgid "Mã KH"
+msgstr "Mã KH"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_rank_code
+msgid "Mã hạng VIP"
+msgstr "Mã hạng VIP"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_descx
+msgid "Mô tả"
+msgstr "Mô tả"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_name
+msgid "Name Level"
+msgstr "Tên khung độ tuổi"
+
+#. module: izi_vip
+#: code:addons/izi_vip/models/models.py:79
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,type:0
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_is_exception
+msgid "Ngoại lệ"
+msgstr "Ngoại lệ"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_approved_date
+msgid "Ngày duyệt"
+msgstr "Ngày duyệt"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_date
+msgid "Ngày ghi nhận"
+msgstr "Ngày ghi nhận"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_date
+msgid "Ngày lên hạng"
+msgstr "Ngày lên hạng"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_expire_date
+msgid "Ngày xuống hạng"
+msgstr "Ngày xuống hạng"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_approved_uid
+msgid "Người duyệt cuối"
+msgstr "Người duyệt cuối"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_user_id
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_user_id
+msgid "Nhân viên chăm sóc"
+msgstr "Nhân viên chăm sóc"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_vip
+#: model:ir.ui.view,arch_db:izi_vip.view_partner_custom_level_form
+msgid "Partner Level"
+msgstr "Partner Level"
+
+#. module: izi_vip
+#: model:ir.ui.view,arch_db:izi_vip.view_partner_custom_level_list
+msgid "Partner Levels"
+msgstr "Khung độ tuổi"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_revenue_order_id
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_vip
+#: sql_constraint:crm.vip.product.except:0
+msgid "Products list except contains duplicate!"
+msgstr "Products list except contains duplicate!"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_rank_id
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_product_except_rank_id
+msgid "Rank ID"
+msgstr "Rank ID"
+
+#. module: izi_vip
+#: selection:crm.vip.rank.rule.line,type:0
+msgid "Rank down"
+msgstr "Rank down"
+
+#. module: izi_vip
+#: selection:crm.vip.rank.rule.line,type:0
+msgid "Rank keep"
+msgstr "Rank keep"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_rank_level
+msgid "Rank level"
+msgstr "Rank level"
+
+#. module: izi_vip
+#: sql_constraint:crm.vip.rank.rule.line:0
+msgid "Rank rule lists contains some duplicate rank items with the same type!"
+msgstr "Rank rule lists contains some duplicate rank items with the same type!"
+
+#. module: izi_vip
+#: selection:crm.vip.rank.rule.line,type:0
+msgid "Rank up"
+msgstr "Rank up"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_type
+msgid "Request type"
+msgstr "Request type"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_revenue
+msgid "Revenue"
+msgstr "Doanh thu"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_reward_points
+msgid "Reward points"
+msgstr "Reward points"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_rule_id
+msgid "Rule"
+msgstr "Rule"
+
+#. module: izi_vip
+#: sql_constraint:crm.vip.rank.rule:0
+msgid "Rule for selected current rank already existed!"
+msgstr "Rule for selected current rank already existed!"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_type
+msgid "Rule type"
+msgstr "Rule type"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_level_age_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_birthday
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_birthday
+msgid "Sinh nhật"
+msgstr "Sinh nhật"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_customer_image
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+
+#. module: izi_vip
+#: selection:crm.vip.customer.uprank,type:0
+#: selection:crm.vip.rank.rule.line,type:0
+msgid "Suddenly"
+msgstr "Suddenly"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_month_rank
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_uprank_month_rank
+msgid "Số tháng"
+msgstr "Số tháng"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_rank_active_month
+msgid "Số tháng kích hoạt VIP"
+msgstr "Số tháng kích hoạt VIP"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_rule_line_ids
+msgid "Target ranks"
+msgstr "Target ranks"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_customer_confirm_user_id
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_customer_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "The internal user that is in charge of communicating with this contact if any."
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_active_month
+msgid "Tháng kích hoạt"
+msgstr "Tháng kích hoạt"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,type:0
+msgid "Thủ công"
+msgstr "Thủ công"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_state
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_history_state
+msgid "Trạng thái"
+msgstr "Trạng thái"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_name
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_name
+msgid "Tên"
+msgstr "Tên"
+
+#. module: izi_vip
+#: model:ir.model.fields,help:izi_vip.field_crm_vip_rank_name
+msgid "Tên hạng VIP"
+msgstr "Tên hạng VIP"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,type:0
+msgid "Tự động"
+msgstr "Tự động"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_rank_rule
+msgid "Up/down rank rules"
+msgstr "Up/down rank rules"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_rank_rule_line
+msgid "Up/down rank rules line"
+msgstr "Up/down rank rules line"
+
+#. module: izi_vip
+#: model:ir.actions.server,name:izi_vip.cron_down_customer_vip_rank_ir_actions_server
+#: model:ir.cron,cron_name:izi_vip.cron_down_customer_vip_rank
+#: model:ir.cron,name:izi_vip.cron_down_customer_vip_rank
+msgid "VIP Customer: Down rank"
+msgstr "VIP Customer: Down rank"
+
+#. module: izi_vip
+#: model:ir.actions.server,name:izi_vip.cron_update_customer_vip_rank_ir_actions_server
+#: model:ir.cron,cron_name:izi_vip.cron_update_customer_vip_rank
+#: model:ir.cron,name:izi_vip.cron_update_customer_vip_rank
+msgid "VIP Customer: Update rank"
+msgstr "VIP Customer: Update rank"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_product_except
+msgid "Vip product except"
+msgstr "Vip product except"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.confirm,state:0
+msgid "Wait confirm"
+msgstr "Chờ xác nhận"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_res_partner_x_birthday
+#: model:ir.model.fields,field_description:izi_vip.field_res_users_x_birthday
+msgid "X Birthday"
+msgstr "X Birthday"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.history,type:0
+msgid "Xuống hạng tự động"
+msgstr "Xuống hạng tự động"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_customer_confirm
+msgid "Xác nhận lên hạng"
+msgstr "Xác nhận lên hạng"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_crm_vip_customer_uprank
+msgid "crm.vip.customer.uprank"
+msgstr "crm.vip.customer.uprank"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_level_age
+msgid "level.age"
+msgstr "level.age"
+
+#. module: izi_vip
+#: model:ir.model,name:izi_vip.model_res_partner_level
+msgid "res.partner.level"
+msgstr "res.partner.level"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_phone
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_phone
+msgid "Điện thoại"
+msgstr "Điện thoại"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.history,state:0
+msgid "Đã duyệt"
+msgstr "Đã duyệt"
+
+#. module: izi_vip
+#: selection:crm.vip.customer.history,state:0
+msgid "Đã từ chối"
+msgstr "Đã từ chối"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_address
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_confirm_address
+msgid "Địa chỉ"
+msgstr "Địa chỉ"
+
+#. module: izi_vip
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_customer_image
+#: model:ir.model.fields,field_description:izi_vip.field_crm_vip_rank_image
+msgid "Ảnh đại diện"
+msgstr "Ảnh đại diện"
+

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+1,1,model_reception_customer,izi_res_permissions.group_receptionist,1,1,1,1

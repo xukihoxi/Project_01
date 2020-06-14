@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="scan_barcode_izi_service_card_using_line_form">
+            <field name="name">Scan Barcode</field>
+            <field name="model">scan.barcode.izi.service.card.using.line</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1 class="text-center">
+                            <field name="name" required="1"/>
+                        </h1>
+                        <label for="message"/>
+                        <field name="message" readonly="1"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_scan_barcode_izi_service_card_using_line">
+            <field name="name">Scan Barcode</field>
+            <field name="res_model">scan.barcode.izi.service.card.using.line</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem name="Scan Barcode" id="menu_scan_barcode_izi_service_card_using_line"
+                  parent="izi_pos_custom_backend.menu_point_of_sale_service"
+                  action="action_scan_barcode_izi_service_card_using_line"
+                  groups="group_scan_barcode"/>
+    </data>
+</odoo>

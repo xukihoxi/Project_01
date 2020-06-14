@@ -1,0 +1,317 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_revenue_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-30 09:55+0000\n"
+"PO-Revision-Date: 2019-10-30 09:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_order_x_allocation_ids
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_money_form_inherit
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_pos_form_inherit
+msgid "Allocation"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_ids
+msgid "Allocation Line"
+msgstr "Chi tiết"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Allocation Lines"
+msgstr "Chi tiết"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_money_form_inherit
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_pos_form_inherit
+msgid "Allocation details"
+msgstr "Chi tiết"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_account_cash_revenue_id
+msgid "Allocation revenue"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_amount
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_amount_total
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_amount_allocated
+msgid "Amount allocated"
+msgstr "Số tiền được phân bổ"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_amount_res
+msgid "Amount residual"
+msgstr "Số dư còn lại"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_money_form_inherit
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_pos_form_inherit
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_account_cash_x_user_id
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_order_x_user_id
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_money_form_inherit
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_pos_form_inherit
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.pos_revenue_allocation_use_service_form_inherit
+msgid "Beneficiary"
+msgstr "Nhân viên hưởng doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_cash_management_id
+msgid "Cash Management"
+msgstr "Quản lý Thu Chi"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+#: selection:pos.revenue.allocation,state:0
+msgid "Close"
+msgstr "Đóng"
+
+#. module: pos_revenue_allocation
+#: model:ir.actions.act_window,help:pos_revenue_allocation.revenue_allocation_action
+msgid "Create a Revenue Allocation"
+msgstr "Tạo phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_create_uid
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_create_date
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_display_name
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_revenue_allocation
+#: selection:pos.revenue.allocation,state:0
+msgid "Draft"
+msgstr "tạo mới"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Edit"
+msgstr "Sửa"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_hr_employee
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_id
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_partner_id
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation___last_update
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_write_uid
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_write_date
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_partner_code
+msgid "Mã KH"
+msgstr "Mã KH"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_name
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_revenue_allocation
+#: code:addons/pos_revenue_allocation/models/pos_revenue_allocation.py:83
+#: code:addons/pos_revenue_allocation/models/pos_revenue_allocation.py:84
+#, python-format
+msgid "New"
+msgstr "Tạo mới"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_hr_employee_x_user_ids
+msgid "Những người dùng liên quan"
+msgstr "Những người dùng liên quan"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_order_id
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_order_id
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_tree_view
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.view_pos_revenue_allocation_filter
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_percent
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Percent"
+msgstr "Tỷ lệ %"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_session_id
+msgid "Phiên"
+msgstr "Phiên"
+
+#. module: pos_revenue_allocation
+#: code:addons/pos_revenue_allocation/models/pos_order.py:51
+#: code:addons/pos_revenue_allocation/models/pos_order.py:70
+#, python-format
+msgid "Phân bổ doanh thu"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Điểm bán hàng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_pos_session_id
+msgid "Pos Session"
+msgstr "Phiên"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "REVENUE ALLOCATION"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_revenue_allocation_id
+#: model:ir.ui.menu,name:pos_revenue_allocation.menu_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Revenue Allocation"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.actions.act_window,name:pos_revenue_allocation.revenue_allocation_action
+msgid "Revenue Allocation Action"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.revenue_allocation_form_view
+msgid "Revenue Allocation Lines"
+msgstr "Chi tiết phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.view_pos_revenue_allocation_filter
+msgid "Search Revenue Allocation"
+msgstr "Tìm kiếm phân bổ doanh thu"
+
+#. module: pos_revenue_allocation
+#: model:ir.ui.view,arch_db:pos_revenue_allocation.view_pos_revenue_allocation_filter
+msgid "Session"
+msgstr "Phiên"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_line_team_id
+msgid "Team"
+msgstr "Nhóm bán hàng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_pos_revenue_allocation_partner_name
+msgid "Tên KH"
+msgstr "Tên KH"
+
+#. module: pos_revenue_allocation
+#: model:ir.model.fields,field_description:pos_revenue_allocation.field_izi_service_card_using_x_user_id
+msgid "X User"
+msgstr "Người sử dụng"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_account_cash
+msgid "account.cash"
+msgstr "account.cash"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_pos_revenue_allocation
+msgid "pos.revenue.allocation"
+msgstr "pos.revenue.allocation"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_pos_revenue_allocation_line
+msgid "pos.revenue.allocation.line"
+msgstr "pos.revenue.allocation.line"
+
+#. module: pos_revenue_allocation
+#: model:ir.model,name:pos_revenue_allocation.model_pos_session
+msgid "pos.session"
+msgstr "Phiên"
+

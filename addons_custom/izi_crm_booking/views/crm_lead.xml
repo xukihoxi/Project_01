@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="crm_case_form_view_leads_service_booking_inherit" model="ir.ui.view">
+            <field name="name">Crm case form view lead service booking inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="izi_crm_lead.izi_crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_confirm']" position="before">
+                    <button name="action_booking" type="object" string="Booking" attrs="{'invisible': ['|', ('active','=',False), ('x_stage','!=',1)]}" class="btn-primary"/>
+                    <button name="action_meeting" type="object" string="Meeting" attrs="{'invisible': ['|', ('active','=',False), ('x_stage','!=',1)]}" class="btn-primary"/>
+                </xpath>
+                <xpath expr="//button[@name='action_schedule_meeting']" position="before">
+                    <field name="service_booking_ids" invisible="1"/>
+                    <button type="object"
+                        name="action_view_service_booking"
+                        class="oe_stat_button"
+                        icon="fa-calendar-o"
+                        attrs="{'invisible': [('service_booking_count', '=', 0)]}" groups="base.group_user">
+                        <field name="service_booking_count" widget="statinfo" string="Booking/Meeting"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

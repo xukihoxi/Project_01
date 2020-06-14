@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record id="crm_lead_form_inherit" model="ir.ui.view">
+            <field name="name">cmr.lead</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="team_id" options="{'no_create':1, 'no_create_edit':1}" required="True"/>
+                            <field name="user_id" options="{'no_create':1, 'no_create_edit':1}" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm_assign_lead" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <menuitem id="menu_lead" name="Pipeline" action="izi_crm_lead.izi_crm_lead_opportunities_tree_view"
+              parent="menu_pos_crm" groups="izi_res_permissions.group_consultant"/>
+    </data>
+</odoo>

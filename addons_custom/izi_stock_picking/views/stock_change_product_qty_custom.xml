@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_change_product_quantity_custom">
+            <field name="model">stock.change.product.qty</field>
+            <field name="inherit_id" ref="stock.view_change_product_quantity"></field>
+            <field name="arch" type="xml">
+                <field name="location_id" position="replace">
+                    <field name="location_id"  domain="[('user_ids', 'in',(uid))]" groups="stock.group_stock_multi_locations"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

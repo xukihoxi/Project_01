@@ -1,0 +1,461 @@
+<openerp>
+    <data>
+        <template id="report_template_invoice_view_amia">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div class="page background_gangnam">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                                <!--                                .background_gangnam {-->
+                                <!--                                  background-image: url(/report_qweb/static/image/background_gangnam.png);-->
+                                <!--                                  background-size: cover;-->
+                                <!--                                  background-position: bottom center;-->
+                                <!--                                  background-repeat: no-repeat;-->
+                                <!--                                  min-height: 900px;-->
+                                <!--                                }-->
+                            </style>
+                            <div style="width: 100%">
+                                <!--                                <div style="width: 40%;float: left;margin-top: 20px">-->
+                                <!--                                    <img src="/report_qweb/static/image/logo_gangnam.png"-->
+                                <!--                                         style="max-width:230px;max-height:230px;"/>-->
+                                <!--                                </div>-->
+                                <!--                                <div style="width: 60%; margin-top: 30px;padding:5px;float: left;font-size:13px;">-->
+                                <!--                                    <div style="width: 100%; margin: 0px; padding: 0px;font-size:16px;">-->
+                                <!--                                        <b>VIỆN THẨM MỸ GANGNAM</b>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div style="width: 100%; margin-top: 15px; padding: 0px;">-->
+                                <!--                                        <b>HÀ NỘI </b><t/>          :Số 454 Xã Đàn, Đống Đa-->
+                                <!--                                    </div>-->
+                                <!--                                    <div style="width: 100%; margin: 0px; padding: 0px;">-->
+                                <!--                                        <b>TP. HỒ CHÍ MINH </b> :Số 15 Nguyễn Hiền, Phường 4, Quận 3-->
+                                <!--                                    </div>-->
+                                <!--                                    <div style="width: 100%; margin: 0px; padding: 0px;">-->
+                                <!--                                        <b>HOTLINE         </b><t/>        :093.227.8888-18006257-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <br clear="both"/>
+                            </div>
+                            <!--                            <div style="width: 100%; text-align: right;padding-right:40px;font-size:16px;">-->
+                            <!--                                <b>SỐ:</b>-->
+                            <!--                                <b>-->
+                            <!--                                    <span t-field="o.name"/>-->
+                            <!--                                </b>-->
+                            <!--                            </div>-->
+                            <!--                            <br clear="both"/>-->
+                            <!--                            <br clear="both"/>-->
+                            <table style="width:100%;  padding:0px; margin: 0px;">
+                                <tr>
+                                    <td class="text-center" width="50%">
+                                        <h3>
+                                            <b>HÓA ĐƠN THANH TOÁN</b>
+                                        </h3>
+                                        <b>SỐ:</b>
+                                        <b>
+                                            <span t-field="o.name"/>
+                                        </b>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--                            <div style="width: 100%; text-align: center; padding-top: 20px">-->
+                            <!--                                <h3>-->
+                            <!--                                    <b>HÓA ĐƠN THANH TOÁN</b>-->
+                            <!--                                </h3>-->
+                            <!--                                <b>SỐ:</b>-->
+                            <!--                                <b>-->
+                            <!--                                    <span t-field="o.name"/>-->
+                            <!--                                </b>-->
+                            <!--                            </div>-->
+                            <br clear="both"/>
+                            <div style="width: 100%; float: left;font-size:16px; margin-left: 20px; padding-right:40px;">
+                                <div style="width: 70%; float: left;margin: 0px; padding:0px;">
+                                    <b>Khách hàng:
+                                        <span t-field="o.partner_id"/>
+                                    </b>
+                                </div>
+                                <div style="width: 30%;float: left;margin: 0px; padding:0px;">
+                                    <b>Điện thoại:
+                                        <t t-set="nt" t-value="o.partner_id.phone"/>
+                                        <t t-esc="nt"/>
+                                    </b>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left;font-size:16px; margin-left: 20px;padding-right:40px; ">
+                                <!--                                <div style="width: 70%; float: left;margin: 0px; padding:0px;">-->
+                                <b>Địa chỉ:
+                                    <t t-set="street" t-value="o.partner_id.street"/>
+                                    <t t-esc="street"/>
+                                </b>
+                                <!--                                </div>-->
+                                <!--                                <div style="width: 30%;float: left;margin: 0px; padding:0px;">-->
+                                <!--                                    <b>Điện thoại:-->
+                                <!--                                        <t t-set="nt" t-value="o.partner_id.phone"/>-->
+                                <!--                                        <t t-esc="nt"/>-->
+                                <!--                                    </b>-->
+                                <!--                                </div>-->
+                            </div>
+                            <div style="width: 100%; float: left;font-size:16px; margin-left: 20px;padding-right:40px; ">
+                                <b>Bảng giá:
+                                    <span t-field="o.pricelist_id.name"/>
+                                </b>
+                            </div>
+                            <div style="width: 100%; float: left;font-size:16px; margin-left: 20px;padding-right:40px; ">
+                                <!--                                <div style="width: 70%; float: left;margin: 0px; padding:0px;">-->
+                                <b>Ghi chú:
+                                    <span t-field="o.note"/>
+                                </b>
+                                <!--                                </div>-->
+                                <!--                                <div style="width: 30%;float: left;margin: 0px; padding:0px;">-->
+                                <!--                                    <b>Điện thoại:-->
+                                <!--                                        <t t-set="nt" t-value="o.partner_id.phone"/>-->
+                                <!--                                        <t t-esc="nt"/>-->
+                                <!--                                    </b>-->
+                                <!--                                </div>-->
+                            </div>
+                            <br clear="both"/>
+                            <!--                            <br clear="both"/>-->
+                            <div style="width: 100%;float: left;font-size:16px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"
+                                                rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="30%" style="padding:1px; margin: 1px;"
+                                                rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">DỊCH VỤ/SẢN PHẨM</p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"
+                                                rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">ĐVT</p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"
+                                                rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">SỐ LƯỢNG</p>
+                                            </th>
+                                            <th class="text-center" width="15%" style="padding:1px; margin: 1px;"
+                                                rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">ĐƠN GIÁ</p>
+                                            </th>
+                                            <th class="text-center" width="20%" style="padding:1px; margin: 1px;"
+                                                colspan="2">
+                                                <p style="padding:1px; margin: 1px;">CHIẾT KHẤU</p>
+                                            </th>
+                                            <th class="text-center" width="20%" style="padding:1px; margin: 1px;"
+                                                rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">THÀNH TIỀN</p>
+                                            </th>
+                                            <!--<th class="text-center" width="20%" style="padding:1px; margin: 1px;" rowspan="2">-->
+                                            <!--<p style="padding:1px; margin: 1px;">GHI CHÚ</p>-->
+                                            <!--</th>-->
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" width="5%" style="padding:1px; margin: 1px;"
+                                                colspan="1">
+                                                <p style="padding:1px; margin: 1px;">%</p>
+                                            </td>
+                                            <td class="text-center" width="15%" style="padding:1px; margin: 1px;"
+                                                colspan="1">
+                                                <p style="padding:1px; margin: 1px;">GIẢM GIÁ</p>
+                                            </td>
+
+                                        </tr>
+                                        <tr t-foreach="o.lines" t-as="l"
+                                            style="padding:1px; margin: 1px">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <td id="td1" class="text-center" width="5%"
+                                                style="padding:1px; margin: 1px">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <td style="padding:1px; margin: 1px;text-align: left">
+                                                <t t-set="text_product"
+                                                   t-value="o.get_name_print_product(l.product_id)"/>
+                                                <t t-esc="text_product"/>
+                                                <!--                                                <span t-if="l.x_name_set_id" style="padding:1px; margin-left: 10px;"-->
+                                                <!--                                                      t-field="l.x_name_set_id.name"/>-->
+                                                <!--                                                <span t-else="l.x_name_set_id" style="padding:1px; margin-left: 10px;"-->
+                                                <!--                                                      t-field="l.product_id.product_tmpl_id.name"/>-->
+                                            </td>
+                                            <td style="padding:1px; margin: 1px;text-align: left">
+                                                <span style="padding:1px; margin-left: 10px;"
+                                                      t-field="l.product_id.product_tmpl_id.uom_id.name"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.qty)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{0:,.0f}'.format(int(l.price_unit)).replace(',', '.')"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="l.discount"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="l.x_discount"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{0:,.0f}'.format(int(l.price_subtotal_incl)).replace(',', '.')"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="width: 100%;float: left;font-size:17px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <table style="width:100%;  padding:0px; margin: 0px;font-size:17px">
+                                    <tr>
+                                        <td width="77%" style="text-align: right;">
+                                            KH phải thanh toán
+                                        </td>
+                                        <td width="5%">
+
+                                        </td>
+                                        <td width="18%" style="padding:1px; margin: 1px;text-align: left;">
+                                            <i>
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{0:,.0f}'.format(int(o.x_amount_total-o.x_vip_discount - o.x_discount_promo)).replace(',', '.')"/>
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr t-foreach="o.statement_ids" t-as="q">
+                                        <t t-if="q.journal_id.code != 'GN'">
+                                            <td width="77%" style="text-align: right;">
+                                                <span style="padding:1px; margin-left: 10px;"
+                                                      t-field="q.journal_id.name"/>
+                                                :
+                                            </td>
+                                            <td width="5%">
+
+                                            </td>
+                                            <td width="18%" style="padding:1px; margin: 1px;text-align: left;">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{0:,.0f}'.format(int(q.amount)).replace(',', '.')"/>
+
+                                                <t t-if="q.x_currency_id">
+                                                    (
+                                                    <t t-esc="'{:,.0f}'.format(q.amount/q.x_amount_currency).replace(',', '.')"/>
+                                                    )
+                                                </t>
+
+                                            </td>
+                                        </t>
+                                    </tr>
+                                    <!--                                    <tr>-->
+                                    <!--                                        <td width="77%" style="text-align: right;">-->
+                                    <!--                                            <i>Chiết khấu khuyến mại :</i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                        <td class="text-center" width="23%" style="padding:1px; margin: 1px;">-->
+                                    <!--                                            <i>-->
+                                    <!--                                                <span style="padding:1px; margin: 1px;"-->
+                                    <!--                                                      t-esc="'{0:,.0f}'.format(int(o.x_discount_promo + o.x_discount_exception)).replace(',', '.')"/>-->
+                                    <!--                                            </i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                    </tr>-->
+                                    <!--                                    <tr>-->
+                                    <!--                                        <td width="77%" style="text-align: right;">-->
+                                    <!--                                            <i>Chiết khấu thành viên :</i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                        <td class="text-center" width="23%" style="padding:1px; margin: 1px;">-->
+                                    <!--                                            <i>-->
+                                    <!--                                                <span style="padding:1px; margin: 1px;"-->
+                                    <!--                                                      t-esc="'{0:,.0f}'.format(int(o.x_vip_discount)).replace(',', '.')"/>-->
+                                    <!--                                            </i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                    </tr>-->
+                                    <!--                                    <tr t-if="o.x_payment_voucher != 0">-->
+                                    <!--                                        <td width="77%" style="text-align: right;">-->
+                                    <!--                                            <i>Voucher :</i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                        <td class="text-center" width="23%" style="padding:1px; margin:1px;">-->
+                                    <!--                                            <i>-->
+                                    <!--                                                <span style="padding:1px; margin: 1px;"-->
+                                    <!--                                                      t-esc="'{0:,.0f}'.format(int(o.x_payment_voucher)).replace(',', '.')"/>-->
+                                    <!--                                            </i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                    </tr>-->
+                                    <!--                                    <tr style="color:red;">-->
+                                    <!--                                        <td width="77%" style="text-align: right;">-->
+                                    <!--                                            <i>Số tiền thanh toán :</i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                        <td class="text-center" width="23%" style="padding:1px; margin: 1px;">-->
+                                    <!--                                            <i>-->
+                                    <!--                                                <span style="padding:1px; margin: 1px;"-->
+                                    <!--                                                      t-esc="'{0:,.0f}'.format(int((o.x_total_order + o.x_payment_coin + o.x_payment_deposit))).replace(',', '.')"/>-->
+                                    <!--                                            </i>-->
+                                    <!--                                        </td>-->
+                                    <!--                                    </tr>-->
+                                    <tr>
+                                        <td width="77%" style="text-align: right;">
+                                            <i>-----------------------</i>
+                                        </td>
+                                        <td width="5%">
+
+                                        </td>
+                                        <td width="18%" style="padding:1px; margin: 1px;text-align: left;">
+                                            <i>=</i>
+                                        </td>
+                                    </tr>
+                                    <tr t-foreach="o.statement_ids" t-as="q" style="color:red;">
+                                        <t t-if="q.journal_id.code == 'GN'">
+                                            <td width="77%" style="text-align: right;">
+                                                <i>KH còn nợ :</i>
+                                            </td>
+                                            <td width="5%">
+
+                                            </td>
+                                            <td width="18%" style="padding:1px; margin: 1px;text-align: left;">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{0:,.0f}'.format(int(q.amount)).replace(',', '.')"/>
+
+                                                <t t-if="q.x_currency_id">
+                                                    (
+                                                    <t t-esc="'{:,.0f}'.format(q.amount/q.x_amount_currency).replace(',', '.')"/>
+                                                    )
+                                                </t>
+
+                                            </td>
+                                        </t>
+                                    </tr>
+                                    <!--<tr style="color:red;">
+                                        <td width="77%" style="text-align: right;">
+                                            <i>KH còn nợ :</i>
+                                        </td>
+                                        <td width="5%">
+
+                                        </td>
+                                        <td width="18%" style="padding:1px; margin: 1px;text-align: left;">
+                                            <i>
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{0:,.0f}'.format(int((o.x_amount_total - o.x_total_order - o.x_vip_discount - o.x_discount_promo - o.x_discount_exception - o.x_payment_voucher - o.x_payment_coin - o.x_payment_deposit))).replace(',', '.')"/>
+                                            </i>
+                                        </td>
+                                    </tr>-->
+                                </table>
+                            </div>
+                            <div style="width: 100%; height: 30px;  padding-top: 5px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <div style="width: 100%; height: 30px;float: left;font-size:16px;  padding-top:5px; margin: 0px">
+                                    <i>
+                                        <b>Số tiền (TT) viết bằng chữ:</b>
+                                    </i>
+                                    <t t-set="text_money" t-value="o.convert_numbers_to_text(o.x_total_order)"/>
+                                    <i>
+                                        <t t-esc="text_money"/>
+                                        VNĐ
+                                    </i>
+
+                                </div>
+                            </div>
+                            <!--                             <div style="width: 100%; height: 30px;  padding-top: 5px; margin-top: 5px;margin-left: 20px;padding-right:40px;">-->
+                            <!--                                <div style="width: 100%; height: 30px;float: left;font-size:16px;  padding-top:5px; margin: 0px">-->
+                            <!--                                    <i>-->
+                            <!--                                        <b>Tỉ giá ngoại tệ:</b>-->
+                            <!--                                    </i>-->
+                            <!--                                    <t t-if="o.x_currency_id">-->
+                            <!--                                        <t t-esc="'{:,.0f}'.format(o.rate_vn).replace(',', '.')"/>-->
+                            <!--                                    </t>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <table style="width:100%;  padding:0px; margin: 0px;font-size:16px">
+                                <tr>
+                                    <td class="text-center" width="30%">
+                                        <b>
+                                            Ngày
+                                            <t t-esc="datetime.datetime.strptime(o.date_order, '%Y-%m-%d %H:%M:%S').strftime('%d')"/>
+                                            tháng
+                                            <t t-esc="datetime.datetime.strptime(o.date_order, '%Y-%m-%d %H:%M:%S').strftime('%m')"/>
+                                            năm
+                                            <t t-esc="datetime.datetime.strptime(o.date_order, '%Y-%m-%d %H:%M:%S').strftime('%Y')"/>
+                                        </b>
+                                        <p>
+                                            <b>Chuyên viên tư vấn</b>
+                                        </p>
+                                        <p>
+                                            <t t-foreach="o.x_user_id" t-as="l">
+                                                <t t-esc="l.name"/>
+                                                <br/>
+                                            </t>
+                                        </p>
+                                    </td>
+                                    <td class="text-center" width="30%">
+                                        <br/>
+                                        <p>
+                                            <b>Thu ngân</b>
+                                        </p>
+                                        <p>
+                                            <span t-field="o.x_cashier_id"/>
+                                        </p>
+
+                                    </td>
+                                    <td class="text-center" width="30%">
+                                        <br/>
+                                        <p>
+                                            <b>Khách hàng</b>
+                                            <t t-if="o.x_signature_image">
+                                                <div style="max-width: 300px;margin: auto;margin-top: 10px;">
+                                                    <span t-field="o.x_signature_image"
+                                                          t-field-options='{"widget": "image"}'/>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <br clear="both"/>
+                                                <br clear="both"/>
+                                                <br clear="both"/>
+                                                <br clear="both"/>
+                                            </t>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_report_template_invoice_view" model="report.paperformat">
+            <field name="name">Short (Half-A5)</field>
+            <field name="default" eval="False"/>
+            <field name="format">A5</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">96</field>
+        </record>
+
+        <report
+                id="qweb_invoice_amia"
+                model="pos.order"
+                string="Receipt"
+                report_type="qweb-pdf"
+                name="report_qweb.report_template_invoice_view_amia"
+                file="report_qweb.report_template_invoice_view_amia"
+                paperformat="report_qweb.paperformat_report_template_invoice_view"
+                menu="False"/>
+
+        <record id="view_pos_order_receipt" model="ir.ui.view">
+            <field name="name">Receipt</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <button name="create_invoice" position="after">
+                    <button name="action_print" type="object" string="Print"/>
+                </button>
+            </field>
+        </record>
+    </data>
+</openerp>

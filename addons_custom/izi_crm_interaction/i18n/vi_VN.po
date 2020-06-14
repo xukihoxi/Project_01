@@ -1,0 +1,431 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_crm_interaction
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-09 09:21+0000\n"
+"PO-Revision-Date: 2020-04-09 09:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_service_booking_id
+msgid "Booking/Meeting"
+msgstr "Booking/Meeting"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+#: selection:partner.interaction,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Chăm sóc sau khi khách làm dịch vụ"
+msgstr "Chăm sóc sau khi khách làm dịch vụ"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.service_booking_form
+msgid "Confirmation"
+msgstr "Xác nhận lịch hẹn"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_res_partner_x_interaction_count
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_res_users_x_interaction_count
+msgid "Count interaction"
+msgstr "Số lượng tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_x_user_input_line_count
+msgid "Count user input line"
+msgstr "Số câu trả lời"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.service_booking_form
+#: model:ir.ui.view,arch_db:izi_crm_interaction.service_card_using_form
+msgid "Create interaction"
+msgstr "Tạo tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "Create service booking"
+msgstr "Tạo booking/meeting"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_create_uid
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_create_uid
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_create_uid
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_create_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_create_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_create_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_display_name
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_display_name
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_display_name
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+#: selection:partner.interaction,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_crm_interaction
+#: selection:partner.interaction,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_image
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_partner_interaction_image_ids
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "Images"
+msgstr "Hình ảnh"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "Input result interaction"
+msgstr "Nhập kết quả tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.service_booking_search_view
+msgid "Interacted"
+msgstr "Đã tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_res_partner_x_interaction_ids
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_res_users_x_interaction_ids
+#: model:ir.ui.view,arch_db:izi_crm_interaction.res_partner_form
+msgid "Interaction"
+msgstr "Tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction___last_update
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images___last_update
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type___last_update
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_write_uid
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_write_uid
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_write_uid
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_write_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_write_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_write_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_name
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_name
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Nhắc lịch bảo hành"
+msgstr "Nhắc lịch bảo hành"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Nhắc lịch liệu trình"
+msgstr "Nhắc lịch liệu trình"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.service_booking_search_view
+msgid "Not interacted yet"
+msgstr "Chưa tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_name
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_note
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_partner_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_line_x_partner_id
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_partner_interaction_id
+#: model:ir.ui.view,arch_db:izi_crm_interaction.res_partner_form
+msgid "Partner Interaction"
+msgstr "Tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.actions.act_window,name:izi_crm_interaction.partner_interaction_action_window
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_line_x_partner_interaction_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_x_partner_interaction_id
+#: model:ir.ui.menu,name:izi_crm_interaction.partner_interaction_main_menu
+#: model:ir.ui.menu,name:izi_crm_interaction.partner_interaction_menu
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Partner interaction"
+msgstr "Tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_line_x_partner_interaction_date
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_x_partner_interaction_date
+msgid "Partner interaction date"
+msgstr "Ngày tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.actions.act_window,name:izi_crm_interaction.partner_interaction_type_action_window
+#: model:ir.ui.menu,name:izi_crm_interaction.partner_interaction_type_menu
+msgid "Partner interaction type"
+msgstr "Loại tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_service_booking_partner_interaction_ids
+msgid "Partner interactions"
+msgstr "Tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_product_product
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Question"
+msgstr "Câu hỏi"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Remarketing"
+msgstr "Remarketing"
+
+#. module: izi_crm_interaction
+#: selection:product.service.remind,type:0
+msgid "Remind"
+msgstr "Nhắc lịch liệu trình"
+
+#. module: izi_crm_interaction
+#: selection:product.service.remind,type:0
+msgid "Remind guarantee"
+msgstr "Nhắc lịch bảo hành"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_service_booking_survey_label_id
+msgid "Result confirm booking/meeting"
+msgstr "Kết quả xác nhận booking/meeting"
+
+#. module: izi_crm_interaction
+#: model:ir.actions.act_window,name:izi_crm_interaction.result_interaction_action_window
+#: model:ir.ui.menu,name:izi_crm_interaction.result_interaction_menu
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Result interaction"
+msgstr "Kết quả tương tác"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_service_booking
+msgid "Service booking"
+msgstr "Service booking"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_using_id
+msgid "Service card using"
+msgstr "Đơn sử dụng dịch vụ"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_using_line_id
+msgid "Service card using line"
+msgstr "Dịch vụ nhắc nhở"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_product_x_service_remind_ids
+#: model:ir.ui.view,arch_db:izi_crm_interaction.product_product_form
+msgid "Service remind"
+msgstr "Nhắc lịch dịch vụ"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_images_image_small
+msgid "Small-sized image"
+msgstr "Ảnh cỡ nhỏ"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_state
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_survey_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_survey_id
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Survey"
+msgstr "Khảo sát"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_survey_user_input
+msgid "Survey User Input"
+msgstr "Dữ liệu người dùng nhập vào Khảo sát"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_survey_user_input_line
+msgid "Survey User Input Line"
+msgstr "Survey User Input Line"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_survey_user_input_id
+msgid "Survey user input"
+msgstr "Survey user input"
+
+#. module: izi_crm_interaction
+#: selection:product.service.remind,type:0
+msgid "Taking care after do service"
+msgstr "Chăm sóc sau khi khách làm dịch vụ"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Today Activities"
+msgstr "Hoạt động hôm nay"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_id_10347
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_type
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_type_name_10348
+msgid "Type name"
+msgstr "Type name"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_user_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_line_x_user_id
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_survey_user_input_x_user_id
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_partner_interaction_x_user_input_line_ids
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "User input line"
+msgstr "User input line"
+
+#. module: izi_crm_interaction
+#: model:ir.model.fields,field_description:izi_crm_interaction.field_product_service_remind_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_search_view
+#: model:ir.ui.view,arch_db:izi_crm_interaction.result_interaction_search_view
+msgid "Xác nhận Booking/Meeting"
+msgstr "Xác nhận Booking/Meeting"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_izi_service_card_using_line
+msgid "izi.service.card.using.line"
+msgstr "izi.service.card.using.line"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_partner_interaction
+msgid "partner.interaction"
+msgstr "Tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_partner_interaction_images
+msgid "partner.interaction.images"
+msgstr "partner.interaction.images"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_partner_interaction_type
+msgid "partner.interaction.type"
+msgstr "Loại tương tác khách hàng"
+
+#. module: izi_crm_interaction
+#: model:ir.model,name:izi_crm_interaction.model_product_service_remind
+msgid "product.service.remind"
+msgstr "Nhắc nhở dịch vụ"
+
+#. module: izi_crm_interaction
+#: model:ir.ui.view,arch_db:izi_crm_interaction.partner_interaction_form_view
+msgid "Ảnh"
+msgstr "Ảnh"
+

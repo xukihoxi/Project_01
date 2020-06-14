@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record id="customer_form_view_for_pos_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="izi_pos_custom_backend.customer_form_view_for_pos"/>
+            <field name="arch" type="xml">
+                <page name="revenue" position="before">
+                    <page name="point" string="Điểm tích lũy">
+                        <field name="x_point_history_ids" readonly="1">
+                            <tree>
+                                <field name="order_id"/>
+                                <field name="date"/>
+                                <field name="point"/>
+                                <field name="exchange_id"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </page>
+
+
+            </field>
+        </record>
+    </data>
+</odoo>

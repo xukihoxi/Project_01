@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_destroy_service_view_pop_up" model="ir.ui.view">
+            <field name="name">pos_destroy_service_view_pop_up</field>
+            <field name="model">pos.destroy.service</field>
+            <field name="arch" type="xml">
+                <form string="Destroy Service">
+                    <group>
+                        <field name="signature_image" widget="signature"/>
+                    </group>
+                    <footer>
+                        <button name="process_destroy_service" string="_Apply" type="object" class="btn-primary"/>
+                        <button name="cancel" string="Cancel" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

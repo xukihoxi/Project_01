@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Nhóm quyền tổng-->
+    <record model="ir.module.category" id="category_general">
+        <field name="name">General</field>
+    </record>
+
+    <!--Kiểm soát doanh thu-->
+    <record id="group_revenue_control" model="res.groups">
+        <field name="name">Revenue control</field>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+
+    <!--Kế toán quỹ-->
+    <record id="group_fund_accountant" model="res.groups">
+        <field name="name">Fund accountant</field>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+
+    <!--Thủ kho toàn công ty-->
+    <record id="group_stock_keeper" model="res.groups">
+        <field name="name">Stock keeper</field>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_manager'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+
+    <!--Giám đốc kinh doanh-->
+    <record id="group_business_manager" model="res.groups">
+        <field name="name">Business manager</field>
+        <field name="implied_ids"
+               eval="[(4, ref('izi_res_permissions.group_leader_shop')),
+               (4, ref('izi_res_permissions.group_cashier')),
+               (4, ref('izi_res_permissions.group_consultant')),
+               (4, ref('izi_res_permissions.group_receptionist')),
+               (4, ref('izi_res_permissions.group_therapist'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+
+    <!--Kế toán doanh thu-->
+    <record id="group_revenue_accountant" model="res.groups">
+        <field name="name">Revenue accountant</field>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+
+    <!--Kế toán chi phí-->
+    <record id="group_cost_accountant" model="res.groups">
+        <field name="name">Cost accountant</field>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+
+    <!--Kế toán trưởng-->
+    <record id="group_chief_accountant" model="res.groups">
+        <field name="name">Chief accountant</field>
+        <field name="implied_ids"
+               eval="[(4, ref('izi_res_permissions.group_revenue_accountant')),
+               (4, ref('izi_res_permissions.group_cost_accountant'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_general"/>
+    </record>
+</odoo>

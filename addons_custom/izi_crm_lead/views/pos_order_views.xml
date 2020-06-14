@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="x_pos_action_orders" model="ir.actions.act_window">
+        <field name="name">Pos orders</field>
+        <field name="res_model">pos.order</field>
+        <field name="domain">[('x_opportunity_id', '=', active_id)]</field>
+        <field name="context">{'search_default_x_opportunity_id': [active_id], 'default_x_opportunity_id': active_id}</field>
+    </record>
+
+</odoo>

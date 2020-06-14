@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--<record id="res_partner_brand_user_rule" model="ir.rule">-->
+            <!--<field name="name">Partner Brand User</field>-->
+            <!--<field name="model_id" ref="model_res_partner"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">['|',('x_brand_id','=',False),('x_brand_id','=',user.branch_id.brand_id.id)]-->
+            <!--</field>-->
+            <!--<field name="groups" eval="[(4, ref('izi_branch.group_branch_user'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="res_partner_brand_manager_rule" model="ir.rule">-->
+            <!--<field name="name">Partner Brand Manager</field>-->
+            <!--<field name="model_id" ref="model_res_partner"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[]-->
+            <!--</field>-->
+            <!--<field name="groups" eval="[(4, ref('izi_branch.group_branch_user_manager'))]"/>-->
+        <!--</record>-->
+    </data>
+</odoo>

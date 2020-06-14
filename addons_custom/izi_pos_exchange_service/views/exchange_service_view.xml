@@ -1,0 +1,179 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="izi_pos_exchange_service_form">
+            <field name="name">izi_pos_exchange_service form</field>
+            <field name="model">izi.pos.exchange.service</field>
+            <field name="arch" type="xml">
+                <form string="Service exchange">
+                    <header>
+                        <button name="action_send" class="oe_highlight" type="object" states="draft" string="Send"/>
+                        <button name="action_compute" type="object" states="draft"
+                                string="Compute"/>
+                        <button name="action_confirm" class="oe_highlight" type="object" states="to_confirm"
+                                groups="point_of_sale.group_pos_manager, izi_res_permissions.group_leader_shop, izi_res_permissions.group_cashier"
+                                string="Confirm"/>
+                        <!--<button name="action_exchange" class="oe_highlight" type="object" states="paid"-->
+                                <!--string="Exchange"/>-->
+                        <button name="action_customer_signature" class="oe_highlight" type="object" states="customer_comment" string="Signature"/>
+                        <button name="action_payment" class="oe_highlight" type="object" states="to_payment"
+                                string="Payment"/>
+                        <button name="action_to_refund" type="object" states="done"
+                                string="Refund" confirm="Bạn có chắc chắn muốn hoàn tác đơn?"/>
+                        <button name="action_confirm_refund" type="object" states="to_refund" class="oe_highlight"
+                                string="Approval" groups="point_of_sale.group_pos_manager, izi_res_permissions.group_leader_shop"/>
+                        <button name="action_refund" class="oe_highlight" type="object" states="wait_refund"
+                                string="Action Refund"/>
+                        <button name="action_cancel" type="object" states="to_confirm, to_refund, wait_refund, to_payment" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,to_payment,done"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">ĐỔI DỊCH VỤ</h3>
+                        <h3 class="text-center">
+                            <field name="name" readonly="1" required="1" attrs="{'invisible': [('name','=','/')]}"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Number"/>
+                        </h3>
+                        <group attrs="{'invisible': [('state', '!=', 'draft')]}">
+                            <group>
+                                <field name="serial" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <button name="check_card" type="object" string="Check card" class="oe_highlight"
+                                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="partner_id" readonly="1"/>
+                                <field name="product_lot_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="exchange_date" readonly="1"/>
+                                <field name="session_id" invisible="1"/>
+                                <field name="pricelist_id"
+                                       context="{'domain_by_session_id': session_id}" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="pos_order_id" readonly="1"
+                                       attrs="{'invisible': [('pos_order_id', '=', False)]}"/>
+                            </group>
+                        </group>
+                        <field name="note" placeholder="Note" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <notebook colspan="4">
+                            <page string="General">
+                                <div style="padding-top:20px;padding-bottom:20px">
+                                    <b>Current details</b>
+                                </div>
+                                <field name="current_detail_line_ids"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom" create="false">
+                                        <field name="service_id" readonly="1"/>
+                                        <field name="total_count" readonly="1"/>
+                                        <field name="hand_count" readonly="1"/>
+                                        <field name="used_count" readonly="1"/>
+                                        <field name="price_unit" readonly="1" widget="monetary"/>
+                                        <field name="amount_total" readonly="1"/>
+                                        <field name="to_subtract_count"/>
+                                        <field name="amount_subtract" widget="monetary"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <label for="amount_current"/>
+                                    <field name="amount_current" nolabel="1" widget="monetary"/>
+                                </group>
+                                <div class="oe_clear"/>
+
+                                <div style="padding-top:20px;padding-bottom:20px">
+                                    <b>New details</b>
+                                </div>
+                                <field name="new_service_detail_line_ids"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="service_id" domain="[('type', '=', 'service')]" required="1"/>
+                                        <field name="new_count"/>
+                                        <field name="price_unit" widget="monetary"/>
+                                        <field name="amount_total" widget="monetary"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <label for="amount_new"/>
+                                    <field name="amount_new" nolabel="1" widget="monetary"/>
+                                    <div style="float:right">--------------------------------------------------</div>
+                                    <br/>
+                                    <field name="amount_total" widget="monetary"/>
+                                </group>
+                                <div class="oe_clear"/>
+
+                            </page>
+                            <page string="Payments">
+                                <field name="statement_ids" colspan="4" nolabel="1">
+                                    <tree editable="bottom" string="Statement lines">
+                                        <field name="journal_id" readonly="1"/>
+                                        <field name="statement_id" readonly="1"/>
+                                        <field name="amount" readonly="1"/>
+                                        <field name="x_vc_name" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Rate">
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="signature_image" widget="image" readonly="1" force_save="1"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_pos_exchange_service_tree" model="ir.ui.view">
+            <field name="name">izi_pos_exchange_service tree</field>
+            <field name="model">izi.pos.exchange.service</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'"
+                      decoration-muted="state in ('refunded','cancel')"
+                      decoration-danger="state not in ('cancel', 'done','refunded','draft')">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="note"/>
+                    <field name="exchange_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_izi_pos_exchange_service" model="ir.actions.act_window">
+            <field name="name">Exchange Service</field>
+            <field name="res_model">izi.pos.exchange.service</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="context">{}</field>
+        </record>
+        <record id="action_izi_pos_exchange_service_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="izi_pos_exchange_service_tree"/>
+            <field name="act_window_id" ref="action_izi_pos_exchange_service"/>
+        </record>
+
+        <record id="action_izi_pos_exchange_service_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_pos_exchange_service_form"/>
+            <field name="act_window_id" ref="action_izi_pos_exchange_service"/>
+        </record>
+
+        <menuitem id="menu_action_izi_pos_exchange_service"
+                  name="Exchange Service"
+                  parent="izi_pos_custom_backend.menu_point_of_sale_service"
+                  action="action_izi_pos_exchange_service" sequence="10"/>
+    </data>
+</odoo>

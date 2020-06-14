@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_pos_refund_invoice_make_payment_id8,izi_izi_pos_refund_invoice_make_payment_id8,model_refund_invoice_make_payment,pos_security.group_pos_supervisor_user,1,1,1,1

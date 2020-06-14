@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pop_up_pos_payment_service" model="ir.ui.view">
+            <field name="name">pos.payment.service.form.view</field>
+            <field name="model">pos.payment.service</field>
+            <field name="arch" type="xml">
+                <form string="Payment Service">
+                    <group>
+                        <field name="x_lock_amount" invisible="1"/>
+                        <field name="x_show_vc_code" invisible="1"/>
+                        <field name="x_show_vm_amount" invisible="1"/>
+                        <field name="x_show_deposit_amount" invisible="1"/>
+                        <field name="journal_id" required="1" options="{'no_create':1, 'no_create_edit':1}" domain="[('journal_user', '=', True)]"/>
+                        <field name="x_vc_code" attrs="{'invisible': [('x_show_vc_code', '=', False)], 'required': [('x_show_vc_code', '=', True)]}"/>
+                        <field name="x_vm_amount_total" attrs="{'invisible': [('x_show_vm_amount', '=', False)]}"/>
+                        <field name="x_deposit_amount_residual" attrs="{'invisible': [('x_show_deposit_amount', '=', False)]}"/>
+                        <field name="amount" required="1" attrs="{'readonly': [('x_lock_amount', '=', True)]}" force_save="1"/>
+                        <field name="using_service_id" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="process_payment_service" string="_Apply" type="object" class="btn-primary"/>
+                        <!--<button string="Cancel" class="btn-default" special="cancel"/>-->
+                        <button name="action_cancel" special="cancel" string="Cancel" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

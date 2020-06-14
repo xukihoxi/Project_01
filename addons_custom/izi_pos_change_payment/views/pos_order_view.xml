@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pos_order_change_payment" model="ir.ui.view">
+            <field name="name">Change Payment</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="date_order" position="after">
+                    <field name="x_status" invisible="1"/>
+                </field>
+                <button name="create_invoice" position="after">
+                    <button name="action_change_payment" type="object" string="Change Payment"
+                            attrs="{'invisible': ['|',('x_status', 'not in', ('new','done')), ('state', '!=', 'invoiced')]}"
+                            groups="izi_res_permissions.group_cashier"/>
+                    <button name="action_change_payment_done" type="object" string="Done Payment" attrs="{'invisible': [('x_status', '!=', 'change')]}"
+                            groups="izi_res_permissions.group_cashier"/>
+                </button>
+                <button name="%(point_of_sale.action_pos_payment)d" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':['|','|','&amp;','&amp;', ('state', '!=', 'to_payment'), ('x_pos_partner_refund_id','=', False),('x_status', '!=', 'change'), '&amp;','&amp;', ('state', '!=', 'draft'),('x_pos_partner_refund_id','!=', False), ('x_status', '!=', 'change'), '&amp;' ,('state', '=', 'invoiced'), ('x_status', '!=', 'change')]}
+                    </attribute>
+                </button>
+                <field name="statement_ids" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state', '!=', 'draft'),('x_status', '!=', 'change')]}
+                    </attribute>
+                </field>
+                <page name="note" position="after">
+                    <page name="change_payment" string="Change Payment">
+                        <field name="change_payment_ids" readonly="1">
+                            <tree default_order="stt desc">
+                                <field name="stt"/>
+                                <field name="statement_line_id"/>
+                                <field name="journal_id"/>
+                                <field name="amount" sum="Amount total"/>
+                                <field name="amount_currency"/>
+                                <field name="currency_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="pos_change_payment_form_inherit" model="ir.ui.view">
+            <field name="name">pos_change_payment</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+            <field name="arch" type="xml">
+                <field name="date_order" position="after">
+                    <field name="x_status" invisible="1"/>
+                </field>
+                <button name="create_invoice" position="after">
+                    <button name="action_change_payment" type="object" string="Change Payment"
+                            attrs="{'invisible': ['|',('x_status', 'not in', ('new','done')), ('state', '!=', 'invoiced')]}"
+                            groups="izi_res_permissions.group_cashier"/>
+                    <button name="action_change_payment_done" type="object" string="Done Payment" attrs="{'invisible': [('x_status', '!=', 'change')]}"
+                            groups="izi_res_permissions.group_cashier"/>
+                </button>
+                <button name="%(izi_virtual_money.izi_action_pos_payment_vm)d" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':['|','&amp;', ('state', '!=', 'to_payment'), ('x_pos_partner_refund_id','=', False), '&amp;', ('state', '!=', 'draft'),('x_pos_partner_refund_id','!=', False)]}
+                    </attribute>
+                </button>
+                <field name="statement_ids" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state', '!=', 'draft'),('x_status', '!=', 'change')]}
+                    </attribute>
+                </field>
+                <page name="note" position="after">
+                    <page name="change_payment" string="Change Payment">
+                        <field name="change_payment_ids" readonly="1">
+                            <tree default_order="stt desc">
+                                <field name="stt"/>
+                                <field name="statement_line_id"/>
+                                <field name="journal_id"/>
+                                <field name="amount" sum="Amount total"/>
+                                <field name="amount_currency"/>
+                                <field name="currency_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>

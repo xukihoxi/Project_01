@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_bank_statement_form_inherit" model="ir.ui.view">
+            <field name="name">account.bank.statement.form</field>
+            <field name="model">account.bank.statement</field>
+            <field name="inherit_id" ref="account.view_bank_statement_form"/>
+            <field name="arch" type="xml">
+                <field name="amount" position="after">
+                    <field name="x_amount_currency"/>
+                    <field name="x_currency_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

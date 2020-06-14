@@ -1,0 +1,425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_destroy_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 17:49+0000\n"
+"PO-Revision-Date: 2019-01-29 00:58+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "<b>Current details</b>"
+msgstr "<b>Dịch vụ đổi</b>"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "<b>Destroy Service</b>"
+msgstr "<b>Hủy dịch vụ</b>"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_amount_total
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Bạn có chắc chắn xác nhận đơn hủy dịch vụ"
+msgstr "Bạn có chắc chắn xác nhận đơn hủy dịch vụ"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+#: model:ir.ui.view,arch_db:pos_destroy_service.pos_destroy_service_view_pop_up
+#: selection:pos.destroy.service,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_card_id
+msgid "Card"
+msgstr "Thẻ dịch vụ"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_change_fee
+msgid "Change Fee"
+msgstr "Phí hủy dịch vụ"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Check card"
+msgstr "Tìm kiếm"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Compute"
+msgstr "Tính toán"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_create_uid
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_create_uid
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_create_uid
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_create_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_create_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_create_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_destroy_service
+#: model:ir.actions.act_window,name:pos_destroy_service.action_izi_pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_destroy_service_lines
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_destroy_service_id
+#: model:ir.ui.menu,name:pos_destroy_service.menu_action_izi_pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+#: model:ir.ui.view,arch_db:pos_destroy_service.pos_destroy_service_view_pop_up
+msgid "Destroy Service"
+msgstr "Hủy dịch vụ"
+
+#. module: pos_destroy_service
+#: code:addons/pos_destroy_service/models/destroy_service.py:369
+#, python-format
+msgid "Destroy Signature?"
+msgstr "Khách hàng ký xác nhận?"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_destroy_service_detail_lines
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_discount
+msgid "Discount"
+msgstr "Giảm giá"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_display_name
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_display_name
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_display_name
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+#: selection:pos.destroy.service,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: pos_destroy_service
+#: selection:pos.destroy.service,state:0
+msgid "Draft"
+msgstr "Tạo mới"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_stock_production_lot_form_destroy_service
+msgid "Dịch vụ"
+msgstr "Dịch vụ"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "General"
+msgstr "Thông tin"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_hand_count
+msgid "Hand qty"
+msgstr "SL tồn"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "HỦY DỊCH VỤ"
+msgstr "HỦY DỊCH VỤ"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_id
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_id
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_id
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service___last_update
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line___last_update
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail___last_update
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_write_uid
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_write_uid
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_write_uid
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_write_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_write_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_write_date
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_payment_destroy_service_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_stock_production_lot_form_destroy_service
+msgid "Lot"
+msgstr "Số Sê-ri"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_name
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_stock_production_lot_form_destroy_service
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_destroy_service
+#: code:addons/pos_destroy_service/models/destroy_service.py:94
+#: code:addons/pos_destroy_service/models/destroy_service.py:95
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_note
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Number"
+msgstr "Số"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_pos_order_id
+msgid "Old Order"
+msgstr "Đơn hàng cũ"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_new_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_pos_destroy_service_id
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_pos_destroy_service_id
+msgid "POs Destroy Service"
+msgstr "POs Destroy Service"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_payment_destroy_service_ids
+msgid "Paymnet Destroy Service"
+msgstr "Paymnet Destroy Service"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_price_subtotal_incl
+msgid "Price Subtotal"
+msgstr "Tổng phụ"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_price_unit
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_price_unit
+msgid "Price unit"
+msgstr "Đơn giá"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_pricelist_id
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_product_lot_id
+msgid "Product Lot"
+msgstr "Thẻ dịch vụ"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: pos_destroy_service
+#: selection:pos.destroy.service,state:0
+msgid "Refunded"
+msgstr "Đã refund"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_remain_amount
+msgid "Remain Amount"
+msgstr "Số tiền còn lại"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Send"
+msgstr "Gửi"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_serial
+msgid "Serial"
+msgstr "Thẻ DV"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_service_id
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_service_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+#: selection:pos.destroy.service,state:0
+msgid "Signature"
+msgstr "Chữ ký"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_signature_image
+msgid "Signature Image"
+msgstr "Hình ảnh chữ ký"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_subtotal_wo_discount
+msgid "Subtotal WO Discount"
+msgstr "Tổng tiền"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_amount_subtract
+msgid "Subtract"
+msgstr "Tổng"
+
+#. module: pos_destroy_service
+#: code:addons/pos_destroy_service/models/destroy_service.py:736
+#, python-format
+msgid "This invoice has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "This invoice has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: pos_destroy_service
+#: selection:pos.destroy.service,state:0
+msgid "To refund"
+msgstr "To refund"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_total_count
+msgid "Total qty"
+msgstr "SL tổng"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_used_count
+msgid "Used qty"
+msgstr "SL đã sử dụng"
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.izi_pos_destroy_service_form
+msgid "Vui lòng kiểm tra lại hình thức trả lại tiền trước khi gủi. Nếu bạn đã chắc chắn thì đồng ý"
+msgstr "Vui lòng kiểm tra lại hình thức trả lại tiền trước khi gủi. Nếu bạn đã chắc chắn thì đồng ý"
+
+#. module: pos_destroy_service
+#: selection:pos.destroy.service,state:0
+msgid "Wait Confirm"
+msgstr "Chờ xác nhận"
+
+#. module: pos_destroy_service
+#: selection:pos.destroy.service,state:0
+msgid "Wait Singature"
+msgstr "Chờ xác nhận của KH"
+
+#. module: pos_destroy_service
+#: model:ir.model.fields,field_description:pos_destroy_service.field_pos_destroy_service_line_detail_x_discount
+msgid "X Discount"
+msgstr "Khuyến mại"
+
+#. module: pos_destroy_service
+#: code:addons/pos_destroy_service/models/destroy_service.py:496
+#: code:addons/pos_destroy_service/models/destroy_service.py:577
+#: code:addons/pos_destroy_service/models/destroy_service.py:610
+#: code:addons/pos_destroy_service/models/destroy_service.py:641
+#, python-format
+msgid "You have to open at least one cashbox."
+msgstr "You have to open at least one cashbox."
+
+#. module: pos_destroy_service
+#: model:ir.ui.view,arch_db:pos_destroy_service.pos_destroy_service_view_pop_up
+msgid "_Apply"
+msgstr "_Áp dụng"
+
+#. module: pos_destroy_service
+#: model:ir.model,name:pos_destroy_service.model_pos_destroy_service
+msgid "pos.destroy.service"
+msgstr "pos.destroy.service"
+
+#. module: pos_destroy_service
+#: model:ir.model,name:pos_destroy_service.model_pos_destroy_service_line
+msgid "pos.destroy.service.line"
+msgstr "pos.destroy.service.line"
+
+#. module: pos_destroy_service
+#: model:ir.model,name:pos_destroy_service.model_pos_destroy_service_line_detail
+msgid "pos.destroy.service.line.detail"
+msgstr "pos.destroy.service.line.detail"
+
+#. module: pos_destroy_service
+#: model:ir.model,name:pos_destroy_service.model_pos_payment_destroy_service
+msgid "pos.payment.destroy.service"
+msgstr "pos.payment.destroy.service"
+
+#. module: pos_destroy_service
+#: model:ir.model,name:pos_destroy_service.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"

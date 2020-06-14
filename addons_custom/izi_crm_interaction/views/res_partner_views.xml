@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="res_partner_form" model="ir.ui.view">
+            <field name="name">Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="before">
+                    <field name="x_interaction_ids" invisible="1"/>
+                    <button type="object" name="action_view_interaction" class="oe_stat_button" icon="fa-calendar-o"
+                            context="{'search_default_partner_id': active_id,'default_partner_id': active_id}"
+                            attrs="{'invisible': [('customer', '=', False)]}">
+                        <field name="x_interaction_count" widget="statinfo" string="Interaction"/>
+                    </button>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Partner Interaction">
+                        <field name="x_interaction_ids" >
+                            <tree>
+                                <field name="type_id"/>
+                                <field name="date"/>
+                                <field name="user_id"/>
+                                <field name="note"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

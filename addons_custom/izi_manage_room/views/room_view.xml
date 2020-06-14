@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="izi_pos_service_room_list">
+            <field name="name">Service Room List</field>
+            <field name="model">pos.service.room</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="branch_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_pos_service_room_form">
+            <field name="name">Service Room Form</field>
+            <field name="model">pos.service.room</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <h2 class="text-center">DANH MỤC PHÒNG</h2>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="1"/>
+                            </group>
+                            <group>
+                                <field name="branch_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="note"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="izi_pos_service_room_action_window">
+            <field name="name">Pos Service Room</field>
+            <field name="res_model">pos.service.room</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+
+        <menuitem name="Room" id="izi_room_menu" parent="point_of_sale.menu_point_config_product"
+                  action="izi_pos_service_room_action_window" sequence="15" groups="point_of_sale.group_pos_manager"/>
+
+    </data>
+</odoo>

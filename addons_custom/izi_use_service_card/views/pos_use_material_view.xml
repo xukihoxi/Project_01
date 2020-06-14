@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pos_material_tree">
+            <field name="name">pos.use.material.tree</field>
+            <field name="model">pos.user.material</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state=='draft'" decoration-primary="state=='wait_material'"
+                      decoration-success="state in ('wait_confirm', 'adjust')"
+                      decoration-info="state in ('exported', 'done')">
+                    <field name="name"/>
+                    <field name="origin"/>
+                    <field name="date"/>
+                    <field name="customer_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pos_material_form">
+            <field name="name">pos.use.material.form</field>
+            <field name="model">pos.user.material</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="check_available" type="object" class="oe_highlight" string="Check Available"
+                                attrs="{'invisible': ['|',('state', 'not in', ('draft', 'wait_material')), ('type', '=', 'input')]}"/>
+                        <button name="force_available" type="object" class="oe_highlight" string="Force Available"
+                                attrs="{'invisible': ['|', '|', ('state', 'not in', ('draft', 'wait_material')), ('check_send', '=', True), ('type', '=', 'input')]}"/>
+                        <button name="action_done_not_product" type="object" class="oe_highlight" string="Done"
+                                attrs="{'invisible': ['|',('state', 'not in', ('draft', 'wait_material')), ('type', '=', 'input')]}"/>
+                        <button name="action_confirm_cancel" type="object" class="oe_highlight" string="Confirm"
+                                attrs="{'invisible': ['|', ('state', '!=', 'exported'), ('type', '=', 'output')]}"/>
+                        <button name="action_confirm" type="object" class="oe_highlight" string="Confirm"
+                                attrs="{'invisible': ['|', '|', ('state', 'not in', ('draft', 'wait_material')), ('check_send', '=', False), ('type', '=', 'input')]}"/>
+                        <button name="action_supervisor_confirm" type="object" string="Supervisor Confirm"
+                                class="oe_highlight" states="wait_confirm"
+                                groups="pos_security.group_pos_supervisor_user"/>
+                        <button name="action_adjust" type="object" string="Adjust" class="oe_highlight"
+                                attrs="{'invisible': ['|', ('state', '!=', 'exported'), ('type', '=', 'input')]}"/>
+                        <button name="action_confirm_adjust" type="object" states="adjust" string="Confirm Adjust"
+                                class="oe_highlight"/>
+                        <button name="action_done" type="object" class="oe_highlight" string="Done"
+                                attrs="{'invisible': ['|', ('state', '!=', 'exported'), ('type', '=', 'input')]}"/>
+                        <button name="action_back" type="object" string="Back" states="wait_confirm"
+                                groups="pos_security.group_pos_supervisor_user"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,exported,done" readonly="1"
+                               force_save="1"/>
+                    </header>
+                    <sheet>
+                        <h2 class="text-center">YÊU CẦU NGUYÊN VẬT LIỆU</h2>
+                        <h3 class="text-center">
+                            <field name="name"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%"
+                                   placeholder="Number" readonly="1"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="customer_id" readonly="1" force_save="1"/>
+                                <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}" readonly="1"
+                                       force_save="1" widget="many2many_tags"/>
+                                <field name="using_service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       readonly="1" force_save="1"
+                                       context="{'form_view_ref' : 'izi_use_service_card.use_service_card_form'}"/>
+                                <field name="service_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                <field name="quantity" readonly="1" force_save="1"/>
+                                <field name="check_send" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1" force_save="1"/>
+                                <field name="origin" readonly="1" force_save="1"/>
+                                <field name="type" required="1" readonly="1" force_save="1"/>
+                                <field name="picking_id" readonly="1" force_save="1"/>
+                                <field name="picking_type_id" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail">
+                                <button name="action_set_default_value" type="object" class="oe_highlight"
+                                        string="Set Value" confirm="Số lượng sử dụng bằng số lượng lý thuyết"
+                                        attrs="{'invisible': ['|',('state', 'not in', ('draft', 'wait_material')), ('type', '=', 'input')]}"/>
+                                <field name="use_move_line_ids"
+                                       attrs="{'readonly': ['|',('state', 'in', ('wait_confirm', 'exported', 'done')), ('type', '=', 'input')]}">
+                                    <tree editable="bottom" delete="false" create="false">
+                                        <field name="material_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               required="1" readonly="1" force_save="1"/>
+                                        <field name="uom_id" readonly="1" force_save="1"/>
+                                        <field name="quantity_remain_stock" readonly="1" force_save="1"/>
+                                        <field name="quantity" readonly="1" force_save="1"/>
+                                        <field name="quantity_used"/>
+                                        <field name="replace_material_id"
+                                               options="{'no_create':1, 'no_create_edit':1}"/>
+                                        <field name="uom_replace_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                        <field name="quantity_remain_stock_replace" readonly="1" force_save="1"/>
+                                        <field name="quantity_replace"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                        <field name="use"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="material_id"/>
+                                                <field name="uom_id" readonly="1" force_save="1"/>
+                                                <field name="quantity" force_save="1" readonly="1"/>
+                                                <field name="quantity_used"/>
+                                            </group>
+                                            <group>
+                                                <field name="use_material_id"/>
+                                                <field name="uom_replace_id"/>
+                                                <field name="replace_material_id"/>
+                                                <field name="quantity_remain_stock_replace"/>
+                                                <field name="quantity_replace"/>
+                                                <field name="state"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_pos_use_material">
+            <field name="name">Request Material</field>
+            <field name="res_model">pos.user.material</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('type_service', 'in', ['spa', 'guarantee_spa']),('using_service_id.pos_session_id.config_id.crm_team_id.x_member_ids','in',[uid,])]</field>
+            <field name="context">{'create':False}</field>
+        </record>
+
+        <record id="pos_use_material_spa_action_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="pos_material_tree"/>
+            <field name="act_window_id" ref="action_pos_use_material"/>
+        </record>
+
+        <record id="pos_use_material_spa_action_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="pos_material_form"/>
+            <field name="act_window_id" ref="action_pos_use_material"/>
+        </record>
+
+        <record id="pos_material_search_view" model="ir.ui.view">
+            <field name="name">pos_material_view_search</field>
+            <field name="model">pos.user.material</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="customer_id"
+                           filter_domain="['|','|','|','|','|','|',('customer_id.name','ilike',self),('customer_id.phone','ilike',self),('customer_id.mobile','ilike',self),('customer_id.x_code', 'ilike', self),('customer_id.display_name','ilike',self),('customer_id.ref','=',self),('customer_id.email','ilike',self)]"/>
+                    <field name="name" filter_domain="[('name', 'ilike', self)]"/>
+                    <group expand="0" name="group_by" string="Group By">
+                       <filter name="state" string="State" context="{'group_by': 'state'}"/>
+                       <filter name="customer_id" string="Partner" context="{'group_by': 'customer_id'}"/>
+                   </group>
+                </search>
+            </field>
+        </record>
+
+        <menuitem id="pos_use_material_menu" action="action_pos_use_material" parent="stock.menu_stock_warehouse_mgmt"/>
+    </data>
+</odoo>

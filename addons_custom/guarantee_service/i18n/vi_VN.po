@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* guarantee_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 08:54+0000\n"
+"PO-Revision-Date: 2019-05-06 15:58+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "BẢO HÀNH DỊCH VỤ"
+msgstr "BẢO HÀNH DỊCH VỤ"
+
+#. module: guarantee_service
+#: selection:guarantee.line,state:0
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form1
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "Card guarantee"
+msgstr "Thẻ bảo hành"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form1
+msgid "Card guuarantee"
+msgstr "Thẻ bảo hành"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form1
+msgid "CẬP NHẬT THẺ BẢO HÀNH"
+msgstr "CẬP NHẬT THẺ BẢO HÀNH"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: guarantee_service
+#: selection:guarantee.line,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: guarantee_service
+#: selection:guarantee.line,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: guarantee_service
+#: model:ir.actions.act_window,name:guarantee_service.view_guarantee_service_action
+#: model:ir.ui.menu,name:guarantee_service.menu_view_guarantee_service_action
+msgid "Guarantee"
+msgstr "Bảo hành"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_life_date
+msgid "Life Date"
+msgstr "Ngày hết hạn"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_name
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form1
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "Name"
+msgstr "Tên"
+
+#. module: guarantee_service
+#: code:addons/guarantee_service/models/guarantee.py:47
+#: code:addons/guarantee_service/models/guarantee.py:48
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_number
+msgid "Number"
+msgstr "Số"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: guarantee_service
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form
+#: model:ir.ui.view,arch_db:guarantee_service.view_card_guarantee_form1
+#: model:ir.ui.view,arch_db:guarantee_service.view_guarantee_service_form
+msgid "Send"
+msgstr "Gửi"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_lot_id
+msgid "Serial"
+msgstr "Thẻ DV"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_service_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: guarantee_service
+#: model:ir.model.fields,field_description:guarantee_service.field_guarantee_line_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: guarantee_service
+#: code:addons/guarantee_service/models/guarantee.py:80
+#: code:addons/guarantee_service/models/guarantee.py:105
+#, python-format
+msgid "Thẻ bảo hành"
+msgstr "Thẻ bảo hành"
+
+#. module: guarantee_service
+#: selection:guarantee.line,state:0
+msgid "Wait Confirm"
+msgstr "Chờ xác nhận"
+
+#. module: guarantee_service
+#: model:ir.model,name:guarantee_service.model_guarantee_line
+msgid "guarantee.line"
+msgstr "guarantee.line"

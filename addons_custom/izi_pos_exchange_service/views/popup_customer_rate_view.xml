@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_exchange_view_pop_up_rate_service" model="ir.ui.view">
+            <field name="name">izi_exchange_view_pop_up_rate_service</field>
+            <field name="model">izi.pos.exchange.service</field>
+            <field name="arch" type="xml">
+                <form string="Rate Service">
+                    <group>
+                        <field name="signature_image" widget="signature"/>
+                    </group>
+                    <footer>
+                        <button name="process_rate_service" string="_Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

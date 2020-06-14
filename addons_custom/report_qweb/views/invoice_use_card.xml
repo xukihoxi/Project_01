@@ -1,0 +1,488 @@
+<openerp>
+    <data>
+        <template id="report_template_invoice_use_service_view_gangnam">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div class="page background_gangnam">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+<!--                                .background_gangnam {-->
+<!--                                  background-image: url(/report_qweb/static/image/background_gangnam.png);-->
+<!--                                  background-size: cover;-->
+<!--                                  background-position: bottom center;-->
+<!--                                  background-repeat: no-repeat;-->
+<!--                                  min-height: 900px;-->
+<!--                                }-->
+                            </style>
+                            <div style="width: 100%">
+<!--                                <div style="width: 40%;float: left;margin-top: 20px">-->
+<!--                                    <img src="/report_qweb/static/image/logo_gangnam.png"-->
+<!--                                         style="max-width:230px;max-height:230px;"/>-->
+<!--                                </div>-->
+<!--                                <div style="width: 60%; margin-top: 30px;padding:5px;float: left;font-size:13px;">-->
+<!--                                    <div style="width: 100%; margin: 0px; padding: 0px;font-size:16px;">-->
+<!--                                        <b>VIỆN THẨM MỸ GANGNAM</b>-->
+<!--                                    </div>-->
+<!--                                    <div style="width: 100%; margin-top: 15px; padding: 0px;">-->
+<!--                                        <b>HÀ NỘI </b><t/>          :Số 454 Xã Đàn, Đống Đa-->
+<!--                                    </div>-->
+<!--                                    <div style="width: 100%; margin: 0px; padding: 0px;">-->
+<!--                                        <b>TP. HỒ CHÍ MINH </b> :Số 15 Nguyễn Hiền, Phường 4, Quận 3-->
+<!--                                    </div>-->
+<!--                                    <div style="width: 100%; margin: 0px; padding: 0px;">-->
+<!--                                        <b>HOTLINE         </b><t/>        :093.227.8888-18006257-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <br clear="both"/>
+                            </div>
+                            <div style="width: 100%; text-align: center;">
+                                <h3>
+                                    <b>HÓA ĐƠN SỬ DỤNG DỊCH VỤ </b>
+                                </h3>
+                                <em style="font-size:18px;">
+                                SỐ:<span style="font-size:18px;" t-field="o.name"/>
+                                </em>
+                            </div>
+                            <br clear="both"/>
+
+                            <table style="width:100%;  padding-left:40px; margin-left: 20px;font-size:16px">
+                                <tr>
+                                    <td class="float:left" width="20%">
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            Loại dịch vụ:
+                                        </div>
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            Khách hàng:
+                                        </div>
+                                        <div style="width: 100%;float: left;margin: 0px; padding:0px;">
+                                            <t t-if="o.type == 'service'">
+                                                Bảng giá:
+                                            </t>
+                                        </div>
+                                    </td>
+                                    <td class="float:left" width="30%">
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            <t t-if="o.type == 'service'"> Dịch vụ lẻ </t>
+                                            <t t-if="o.type == 'card'">Thẻ dịch vụ </t>
+                                            <t t-if="o.type == 'guarantee'">Bảo hành</t>
+                                        </div>
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            <span t-field="o.customer_id"/>
+                                        </div>
+                                        <div style="width: 100%;float: left;margin: 0px; padding:0px;">
+                                            <t t-if="o.type == 'service'">
+                                                <span t-field="o.pricelist_id.name"/>
+                                            </t>
+                                        </div>
+                                    </td>
+                                    <td class="float:left" width="50%">
+                                        <div style="width: 100%; float: left;margin: 0px; padding-right:40px;">
+                                            Ngày sử dụng dịch vụ:
+                                            <span style="float: right;" t-esc="context_timestamp(datetime.datetime.strptime(o.redeem_date, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                        </div>
+                                        <div style="width: 100%; float: left;margin: 0px; padding-right:40px;">
+                                            Thời gian bắt đầu:
+                                            <t t-if="o.date_start ">
+                                                <span style="float: right;" t-esc="context_timestamp(datetime.datetime.strptime(o.date_start, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span style="float: right;" t-field="o.date_start"/>
+                                            </t>
+                                        </div>
+                                        <div style="width: 100%;float: left;margin: 0px; padding-right:40px;">
+                                            Thời gian kết thúc:
+                                            <t t-if="o.date_end ">
+                                                <span style="float: right;" t-esc="context_timestamp(datetime.datetime.strptime(o.date_end, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span style="float: right;" t-field="o.date_end"/>
+                                            </t>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br clear="both"/>
+<!--                            <br clear="both"/>-->
+                            <div style="width: 100%;float: left;font-size:16px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;"> Thẻ dịch vụ  </p>
+                                            </th>
+                                            <th class="text-center" width="30%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;"> Dịch vụ/ sản phẩm </p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Tổng số lần được sử dụng </p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Số lần đã sử dụng</p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Số lần </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;"> Đơn vị </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Ghi chú  </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Kỹ thuật viên  </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Bác sĩ  </p>
+                                            </th>
+
+                                            <!--<th class="text-center" width="20%" style="padding:1px; margin: 1px;" rowspan="2">-->
+                                                <!--<p style="padding:1px; margin: 1px;">GHI CHÚ</p>-->
+                                            <!--</th>-->
+                                        </tr>
+                                        <tr></tr>
+                                        <tr t-foreach="o.service_card_ids" t-as="l"
+                                            style="padding:1px; margin: 1px">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <td id="td1" class="text-center" width="5%"
+                                                style="padding:1px; margin: 1px">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <td style="padding:1px; margin: 1px;text-align: left">
+                                                <span style="padding:1px; margin-left: 10px;"
+                                                      t-field="l.serial_id.name"/>
+                                            </td>
+                                            <td style="padding:1px; margin: 1px;text-align: left">
+                                                <t t-set="text_product" t-value="o.get_name_print_product(l.service_id)"/>
+                                                    <t t-esc="text_product"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.paid_count)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.used_count)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.quantity)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="l.uom_id.name"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="l.note"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <t t-foreach="l.employee_ids" t-as="x">
+                                                    <t t-esc="x.name"/>
+                                                </t>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <t t-foreach="l.doctor_ids" t-as="x">
+                                                    <t t-esc="x.name"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <table style="width:100%;  padding:0px; margin: 0px;font-size:16px">
+                                <tr>
+                                    <td class="text-center" width="50%">
+
+                                    </td>
+                                    <td class="text-center" width="50%">
+                                        <br/>
+                                        <p>
+                                            <b>Khách hàng xác nhận </b>
+                                            <t t-if="o.signature_image">
+                                                <div style="max-width: 300px;margin: auto;margin-top: 10px;">
+                                                    <span t-field="o.signature_image"  t-field-options='{"widget": "image"}'/>
+                                                </div>
+                                            </t>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_template_invoice_use_service_view_tata">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div class="page background_tata">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+<!--                                .background_tata {-->
+<!--                                  background-image: url(/report_qweb/static/image/background_tata.png);-->
+<!--                                  background-size: cover;-->
+<!--                                  background-position: bottom center;-->
+<!--                                  background-repeat: no-repeat;-->
+<!--                                  min-height: 900px;-->
+<!--                                }-->
+                            </style>
+                            <div style="width: 100%">
+<!--                                <div style="width: 40%;float: left;margin-top: 20px">-->
+<!--                                    <img src="/report_qweb/static/image/logo_gangnam.png"-->
+<!--                                         style="max-width:230px;max-height:230px;"/>-->
+<!--                                </div>-->
+<!--                                <div style="width: 60%; margin-top: 30px;padding:5px;float: left;font-size:13px;">-->
+<!--                                    <div style="width: 100%; margin: 0px; padding: 0px;font-size:16px;">-->
+<!--                                        <b>VIỆN THẨM MỸ GANGNAM</b>-->
+<!--                                    </div>-->
+<!--                                    <div style="width: 100%; margin-top: 15px; padding: 0px;">-->
+<!--                                        <b>HÀ NỘI </b><t/>          :Số 454 Xã Đàn, Đống Đa-->
+<!--                                    </div>-->
+<!--                                    <div style="width: 100%; margin: 0px; padding: 0px;">-->
+<!--                                        <b>TP. HỒ CHÍ MINH </b> :Số 15 Nguyễn Hiền, Phường 4, Quận 3-->
+<!--                                    </div>-->
+<!--                                    <div style="width: 100%; margin: 0px; padding: 0px;">-->
+<!--                                        <b>HOTLINE         </b><t/>        :093.227.8888-18006257-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <br clear="both"/>
+                            </div>
+                            <div style="width: 100%; text-align: center;">
+                                <h3>
+                                    <b>HÓA ĐƠN SỬ DỤNG DỊCH VỤ </b>
+                                </h3>
+                                <em style="font-size:18px;">
+                                SỐ:<span style="font-size:18px;" t-field="o.name"/>
+                                </em>
+                            </div>
+                            <br clear="both"/>
+
+                            <table style="width:100%;  padding-left:40px; margin-left: 20px;font-size:16px">
+                                <tr>
+                                    <td class="float:left" width="20%">
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            Loại dịch vụ:
+                                        </div>
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            Khách hàng:
+                                        </div>
+                                        <div style="width: 100%;float: left;margin: 0px; padding:0px;">
+                                            <t t-if="o.type == 'service'">
+                                                Bảng giá:
+                                            </t>
+                                        </div>
+                                    </td>
+                                    <td class="float:left" width="30%">
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            <t t-if="o.type == 'service'"> Dịch vụ lẻ </t>
+                                            <t t-if="o.type == 'card'">Thẻ dịch vụ </t>
+                                            <t t-if="o.type == 'guarantee'">Bảo hành</t>
+                                        </div>
+                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">
+                                            <span t-field="o.customer_id"/>
+                                        </div>
+                                        <div style="width: 100%;float: left;margin: 0px; padding:0px;">
+                                            <t t-if="o.type == 'service'">
+                                                <span t-field="o.pricelist_id.name"/>
+                                            </t>
+                                        </div>
+                                    </td>
+                                    <td class="float:left" width="50%">
+                                        <div style="width: 100%; float: left;margin: 0px; padding-right:40px;">
+                                            Ngày sử dụng dịch vụ:
+                                            <span style="float: right;" t-esc="context_timestamp(datetime.datetime.strptime(o.redeem_date, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                        </div>
+                                        <div style="width: 100%; float: left;margin: 0px; padding-right:40px;">
+                                            Thời gian bắt đầu:
+                                             <t t-if="o.date_start ">
+                                                <span style="float: right;" t-esc="context_timestamp(datetime.datetime.strptime(o.date_start, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                             </t>
+                                             <t t-else="">
+                                                 <span style="float: right;" t-field="o.date_start"/>
+                                             </t>
+                                        </div>
+                                        <div style="width: 100%;float: left;margin: 0px; padding-right:40px;">
+                                            Thời gian kết thúc:
+                                            <t t-if="o.date_end ">
+                                                <span style="float: right;" t-esc="context_timestamp(datetime.datetime.strptime(o.date_end, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span style="float: right;" t-field="o.date_end"/>
+                                            </t>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br clear="both"/>
+<!--                            <br clear="both"/>-->
+                            <div style="width: 100%;float: left;font-size:16px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="8%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;"> Thẻ dịch vụ  </p>
+                                            </th>
+                                            <th class="text-center" width="32%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;"> Dịch vụ/ sản phẩm </p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Tổng số lần được sử dụng </p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Số lần đã sử dụng</p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Số lần </p>
+                                            </th>
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;"> Đơn vị </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Ghi chú  </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Kỹ thuật viên  </p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;" rowspan="2">
+                                                <p style="padding:1px; margin: 1px;">Bác sĩ  </p>
+                                            </th>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr t-foreach="o.service_card_ids" t-as="l"
+                                            style="padding:1px; margin: 1px">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <td id="td1" class="text-center" width="5%"
+                                                style="padding:1px; margin: 1px">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <td style="padding:1px; margin: 1px;text-align: left">
+                                                <span style="padding:1px; margin-left: 10px;"
+                                                      t-field="l.serial_id.name"/>
+                                            </td>
+                                            <td style="padding:1px; margin: 1px;text-align: left">
+                                                <t t-set="text_product" t-value="o.get_name_print_product(l.service_id)"/>
+                                                    <t t-esc="text_product"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.paid_count)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.used_count)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.quantity)"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="l.uom_id.name"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="l.note"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <t t-foreach="l.employee_ids" t-as="x">
+                                                    <t t-esc="x.name"/>
+                                                </t>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <t t-foreach="l.doctor_ids" t-as="x">
+                                                    <t t-esc="x.name"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <table style="width:100%;  padding:0px; margin: 0px;font-size:16px">
+                                <tr>
+                                    <td class="text-center" width="50%">
+
+                                    </td>
+                                    <td class="text-center" width="50%">
+                                        <br/>
+                                        <p>
+                                            <b>Khách hàng xác nhận </b>
+                                            <t t-if="o.signature_image">
+                                                <div style="max-width: 300px;margin: auto;margin-top: 10px;">
+                                                    <span t-field="o.signature_image"  t-field-options='{"widget": "image"}'/>
+                                                </div>
+                                            </t>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!--<record id="paperformat_report_template_invoice_view" model="report.paperformat">-->
+            <!--<field name="name">Short (Half-A4)</field>-->
+            <!--<field name="default" eval="False"/>-->
+            <!--<field name="format">A5</field>-->
+            <!--<field name="orientation">Portrait</field>-->
+            <!--<field name="margin_top">0</field>-->
+            <!--<field name="margin_bottom">0</field>-->
+            <!--<field name="margin_left">0</field>-->
+            <!--<field name="margin_right">0</field>-->
+            <!--<field name="header_line" eval="False"/>-->
+            <!--<field name="header_spacing">0</field>-->
+            <!--<field name="dpi">96</field>-->
+        <!--</record>-->
+
+        <report
+                id="qweb_invoice_service_gangnam"
+                model="izi.service.card.using"
+                string="Receipt"
+                report_type="qweb-pdf"
+                name="report_qweb.report_template_invoice_use_service_view_gangnam"
+                file="report_qweb.report_template_invoice_use_service_view_gangnam"
+                paperformat="report_qweb.paperformat_report_template_invoice_view"
+                menu="False"/>
+
+        <report
+                id="qweb_invoiceuse_use_service_tata"
+                model="izi.service.card.using"
+                string="Receipt"
+                report_type="qweb-pdf"
+                name="report_qweb.report_template_invoice_use_service_view_tata"
+                file="report_qweb.report_template_invoice_use_service_view_tata"
+                paperformat="report_qweb.paperformat_report_template_invoice_view"
+                menu="False"/>
+
+        <record id="view_use_serive_receipt" model="ir.ui.view">
+            <field name="name">Receipt</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <button name="action_done" position="after">
+                    <button name="action_print" type="object" string="Print"
+                            states="rate,done"/>
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>

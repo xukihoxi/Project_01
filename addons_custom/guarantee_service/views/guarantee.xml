@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_card_guarantee_form" model="ir.ui.view">
+            <field name="name">view_card_guarantee_form</field>
+            <field name="model">guarantee.line</field>
+            <field name="arch" type="xml">
+                <form string="Card guuarantee">
+                    <header>
+                        <button name="action_send" type="object" class="oe_highlight" string="Send"
+                                states="draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,wait_confirm,done"
+                               readonly="1" force_save="1"/>
+                    </header>
+                    <h3 class="text-center">CẬP NHẬT THẺ BẢO HÀNH</h3>
+                    <h3 class="text-center">
+                        <field name="name" attrs="{'invisible': [('name', '=', 'New')]}" readonly="1"
+                               style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                               placeholder="Name"/>
+                    </h3>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="1" force_save="1"/>
+                            <field name="service_id" readonly="1" force_save="1"/>
+                            <field name="lot_id" attrs="{'invisible': [('lot_id', '=', False)]}" readonly="1"
+                                   force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="date" readonly="1" force_save="1"/>
+                            <field name="life_date" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1" required="1"/>
+                            <field name="qty" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1" required="1"/>
+                        </group>
+                    </group>
+                    <group attrs="{'invisible': [('state', '!=', 'draft')]}">
+                        <group>
+                            <field name="number"/>
+                        </group>
+                        <group>
+                            <button name="action_search_lot_number" type="object" string="Search" class="oe_highlight"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="view_card_guarantee_form1" model="ir.ui.view">
+            <field name="name">view_card_guarantee_form1</field>
+            <field name="model">guarantee.line</field>
+            <field name="arch" type="xml">
+                <form string="Card guuarantee">
+                    <header>
+                        <button name="action_send" type="object" class="oe_highlight" string="Send"
+                                states="draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,wait_confirm,done"
+                               readonly="1" force_save="1"/>
+                    </header>
+                    <h3 class="text-center">CẬP NHẬT THẺ BẢO HÀNH</h3>
+                    <h3 class="text-center">
+                        <field name="name" attrs="{'invisible': [('name', '=', 'New')]}" readonly="1"
+                               style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                               placeholder="Name"/>
+                    </h3>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="1" force_save="1"/>
+                            <field name="service_id" readonly="1" force_save="1"/>
+                            <field name="lot_id" attrs="{'invisible': [('lot_id', '=', False)]}" readonly="1"
+                                   force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="date" readonly="1" force_save="1"/>
+                            <field name="life_date" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1" required="1"/>
+                            <field name="qty" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

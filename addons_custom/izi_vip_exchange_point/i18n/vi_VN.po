@@ -1,0 +1,330 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_vip_exchange_point
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 10:11+0000\n"
+"PO-Revision-Date: 2019-05-06 17:14+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.lot_number_exchange_point_view
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Approval"
+msgstr "Chấp thuận"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Bạn có chắc chắn muốn hoàn tác đơn?"
+msgstr "Bạn có chắc chắn muốn hoàn tác đơn?"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.lot_number_exchange_point_view
+#: selection:izi.vip.exchange.point,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.lot_number_exchange_point_view
+msgid "Card"
+msgstr "Thẻ"
+
+#. module: izi_vip_exchange_point
+#: code:addons/izi_vip_exchange_point/models/exchange_point.py:163
+#: code:addons/izi_vip_exchange_point/models/exchange_point.py:198
+#, python-format
+msgid "Code card"
+msgstr "Mã thẻ"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Compute"
+msgstr "Tính toán"
+
+#. module: izi_vip_exchange_point
+#: selection:izi.vip.exchange.point,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model,name:izi_vip_exchange_point.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_create_uid
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_create_uid
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_create_date
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_create_date
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_partner_id
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_vip_exchange_point
+#: code:addons/izi_vip_exchange_point/models/exchange_point.py:179
+#: code:addons/izi_vip_exchange_point/models/exchange_point.py:212
+#, python-format
+msgid "Customer Signature?"
+msgstr "Khách hàng xác nhận?"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Details"
+msgstr "Các chi tiết"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_display_name
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_display_name
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+#: selection:izi.vip.exchange.point,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_vip_exchange_point
+#: selection:izi.vip.exchange.point,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_exchange_id
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_exchange_id
+msgid "Exchange"
+msgstr "Đổi"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_date_exchange
+msgid "Exchange date"
+msgstr "Ngày đổi"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_rank_id
+msgid "Hạng"
+msgstr "Hạng"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_id
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_id
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point___last_update
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line___last_update
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_write_uid
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_write_uid
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_write_date
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_write_date
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_lines
+msgid "Lines"
+msgstr "Lines"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_x_lot_number
+msgid "Lot number"
+msgstr "Mã thẻ"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_name
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_vip_exchange_point
+#: code:addons/izi_vip_exchange_point/models/exchange_point.py:53
+#: code:addons/izi_vip_exchange_point/models/exchange_point.py:54
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_note
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_number
+msgid "Number"
+msgstr "Số"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_pos_order_id
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_point_history_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_res_partner_x_point_history_ids
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_res_users_x_point_history_ids
+msgid "Point"
+msgstr "Điểm"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_point_exchange_id
+msgid "Point exchange"
+msgstr "Điểm đổi"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model,name:izi_vip_exchange_point.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_price_unit
+msgid "Price"
+msgstr "Giá"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: izi_vip_exchange_point
+#: selection:izi.vip.exchange.point,state:0
+msgid "Rate"
+msgstr "Xác nhận của khách hàng"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Refund"
+msgstr "Refund"
+
+#. module: izi_vip_exchange_point
+#: selection:izi.vip.exchange.point,state:0
+msgid "Refunded"
+msgstr "Refunded"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "Sent"
+msgstr "Đã gửi"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_vip_exchange_point
+#: selection:izi.vip.exchange.point,state:0
+msgid "To Confirm"
+msgstr "Chờ xác nhận"
+
+#. module: izi_vip_exchange_point
+#: selection:izi.vip.exchange.point,state:0
+msgid "To refund"
+msgstr "Chờ refund"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_total
+msgid "Total"
+msgstr "Tổng"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.lot_number_exchange_point_view
+msgid "Trong sản phẩm đổi điểm chưa dịch vụ, bạn cần gắn thẻ cho các dịch vụ đó!"
+msgstr "Trong sản phẩm đổi điểm chưa dịch vụ, bạn cần gắn thẻ cho các dịch vụ đó!"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_line_uom_id
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model.fields,field_description:izi_vip_exchange_point.field_izi_vip_exchange_point_vip_config_id
+msgid "Vip config"
+msgstr "Vip config"
+
+#. module: izi_vip_exchange_point
+#: model:ir.actions.act_window,name:izi_vip_exchange_point.action_izi_vip_exchange_point
+#: model:ir.ui.menu,name:izi_vip_exchange_point.izi_vip_exchange_point_menu
+msgid "Vip exchange point"
+msgstr "Vip exchange point"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model,name:izi_vip_exchange_point.model_izi_vip_exchange_point
+msgid "izi.vip.exchange.point"
+msgstr "izi.vip.exchange.point"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model,name:izi_vip_exchange_point.model_izi_vip_exchange_point_line
+msgid "izi.vip.exchange.point.line"
+msgstr "izi.vip.exchange.point.line"
+
+#. module: izi_vip_exchange_point
+#: model:ir.model,name:izi_vip_exchange_point.model_izi_vip_point_history
+msgid "izi.vip.point.history"
+msgstr "izi.vip.point.history"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.customer_form_view_for_pos_inherit
+msgid "Điểm tích lũy"
+msgstr "Điểm tích lũy"
+
+#. module: izi_vip_exchange_point
+#: model:ir.ui.view,arch_db:izi_vip_exchange_point.izi_vip_exchange_point_form_view
+msgid "ĐỔI ĐIỂM"
+msgstr "ĐỔI ĐIỂM"

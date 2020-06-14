@@ -1,0 +1,1069 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_use_service_card
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-28 20:22+0000\n"
+"PO-Revision-Date: 2018-12-29 03:35+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: selection:pos.user.material,state:0
+msgid "Adjust"
+msgstr "Điều chỉnh"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_adjust_active
+msgid "Adjust Active"
+msgstr "Đợi điều chỉnh"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_amount_total
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_amount
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Approve"
+msgstr "Chấp thuận"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using.line,work_type:0
+msgid "Book"
+msgstr "Book"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Bạn có chắc chắn muốn hủy đơn sử dụng dịch vụ này?"
+msgstr "Bạn có chắc chắn muốn hủy đơn sử dụng dịch vụ này?"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Bạn có chắc chắn muốn hủy đơn yêu cầu thu hồi thẻ này?"
+msgstr "Bạn có chắc chắn muốn hủy đơn yêu cầu thu hồi thẻ này?"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Bạn có chắc chắn muốn thay đổi nhân viên làm dịch vụ"
+msgstr "Bạn có chắc chắn muốn thay đổi nhân viên làm dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_request_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_choose_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_pos_payment_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_rate_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_refund_service
+#: selection:izi.service.card.using,option_refund:0
+#: selection:izi.service.card.using,state:0 selection:pos.user.material,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,type:0
+msgid "Card"
+msgstr "Thẻ dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Change"
+msgstr "Thay đổi"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:1898
+#, python-format
+msgid "Change_Service?"
+msgstr "Thay đổi nhân viên?"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+msgid "Check Available"
+msgstr "Kiểm tồn "
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_check_send
+msgid "Check send"
+msgstr "Check send"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:824
+#: code:addons/izi_use_service_card/models/use_service_card.py:1025
+#: code:addons/izi_use_service_card/models/use_service_card.py:1248
+#, python-format
+msgid "Choose Service?"
+msgstr "Chọn dịch vụ?"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_name
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+msgid "Confirm Adjust"
+msgstr "Xác nhận điều chỉnh"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_vc_code
+msgid "Coupon code"
+msgstr "Mã Coupon"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_create_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_create_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_customer_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_customer_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_customer_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_customer_comment
+msgid "Customer Comment"
+msgstr "Đánh giá của khách hàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_customer_rate
+msgid "Customer Rate"
+msgstr "Khách hàng đánh giá"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:1786
+#: code:addons/izi_use_service_card/models/use_service_card.py:1817
+#, python-format
+msgid "Customer Signature?"
+msgstr "Đánh giá của khách hàng ?"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_date_end
+msgid "Date End"
+msgstr "Thời gian kết thúc"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_date_start
+msgid "Date Start"
+msgstr "Thời gian bắt đầu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_debt_amount
+msgid "Debt Amount"
+msgstr "Tổng tiền nợ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_deposit_amount_residual
+msgid "Deposit Amount Residualt"
+msgstr "Số tiền ký gửi còn lại"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_surgery_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_request_material_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_detail_serial_id
+msgid "Detail Serial"
+msgstr "Chi tiết "
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Discount"
+msgstr "Giảm giá"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_discount
+msgid "Discount(%)"
+msgstr "Chiết khấu(%)"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_display_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+#: selection:izi.service.card.using,state:0 selection:pos.user.material,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,state:0 selection:pos.user.material,state:0
+msgid "Draft"
+msgstr "Tạo mới"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_employee_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_employee_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_employee_ids
+msgid "Employee"
+msgstr "Kỹ thuật viên(Book)"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_employee_tour_ids
+msgid "Employee Tour"
+msgstr "Kỹ thuật viên(Tour)"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using.line,customer_rate:0
+msgid "Excellent"
+msgstr "Rất hài lòng"
+
+#. module: izi_use_service_card
+#: selection:pos.user.material,state:0
+msgid "Exported"
+msgstr "Sẵn sàng"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+msgid "Force Available"
+msgstr "Force Available"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_force_available_active
+msgid "Force Available Active"
+msgstr "Force Available Active"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "General"
+msgstr "Thông tin"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_is_gift
+msgid "Gift"
+msgstr "Gift"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using.line,customer_rate:0
+msgid "Good"
+msgstr "Tạm hài lòng"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_search_view
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_guarantee_id
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Guarantee"
+msgstr "Bảo hành"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_image
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_new_image_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_old_image_ids
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Images"
+msgstr "Hình ảnh"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Information Genaral"
+msgstr "Thông tin chung"
+
+#. module: izi_use_service_card
+#: selection:pos.request.material,type:0 selection:pos.user.material,type:0
+msgid "Input"
+msgstr "Nhập lại hàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material___last_update
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_write_uid
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_write_date
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_src_location
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_src_location
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_material_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_material_id
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Material"
+msgstr "Nguyên vật liệu "
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_max_use_count
+msgid "Max Use Count"
+msgstr "Số lần sử dụng tối đa"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_merge
+msgid "Merge"
+msgstr "Ghép đơn xuất kho"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:1530
+#, python-format
+msgid "Method Refund?"
+msgstr "Phương thức Refund?"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Mã thẻ, Mã KH, SĐT KH ..."
+msgstr "Mã thẻ, Mã KH, SĐT KH ..."
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_name
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/pos_use_material.py:39
+#: code:addons/izi_use_service_card/models/pos_use_material.py:40
+#: code:addons/izi_use_service_card/models/request_material.py:33
+#: code:addons/izi_use_service_card/models/request_material.py:34
+#: code:addons/izi_use_service_card/models/use_service_card.py:108
+#: code:addons/izi_use_service_card/models/use_service_card.py:109
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_new_service_card_id
+msgid "New Service Card"
+msgstr "Thẻ mới"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using.line,customer_rate:0
+msgid "Normal"
+msgstr "Chưa hài lòng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_surgery_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_request_material_form
+msgid "Number"
+msgstr "Số"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_images_old_service_card_id
+msgid "Old Service Card"
+msgstr "Thẻ cũ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_option_refund
+msgid "Option Refund"
+msgstr "Loại refund"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_origin
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_origin
+msgid "Origin"
+msgstr "Tham chiếu"
+
+#. module: izi_use_service_card
+#: selection:pos.request.material,type:0 selection:pos.user.material,type:0
+msgid "OutPut"
+msgstr "Xuất nguyên liệu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_pttm
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_pttm
+msgid "PTTM"
+msgstr "PTTM"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_paid_count
+msgid "Paid Count"
+msgstr "Số lần sử dụng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_product_product_parent_id
+msgid "Parent"
+msgstr "Dự án cha"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_search_view
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_search_view
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_partner_search_id
+msgid "Partner Search"
+msgstr "Tên tìm kiếm"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_payment_amount
+msgid "Payment Amount"
+msgstr "Số tiền thanh toán"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/pos_payment_service.py:214
+#: code:addons/izi_use_service_card/models/use_service_card.py:1508
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_pos_payment_service
+#, python-format
+msgid "Payment Service"
+msgstr "Thanh toán dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pending
+msgid "Pending"
+msgstr "Tạm dừng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pending_note
+msgid "Pending Text"
+msgstr "Tạm dừng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_picking_id
+msgid "Picking"
+msgstr "Dịch chuyển"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pos_order_id
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pos_order_refund_id
+msgid "Pos Order Refund"
+msgstr "Đơn hàng refund"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pos_payment_service_ids
+msgid "Pos Payment Service"
+msgstr "Thanh toán dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pos_session_id
+msgid "Pos Session"
+msgstr "Phiên"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_price
+msgid "Price"
+msgstr "Giá"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_pricelist_id
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_product_product
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_product_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_uom_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_uom_id
+msgid "Product Uom"
+msgstr "Đơn vị"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_uom_replace_id
+msgid "Product Uom Replace"
+msgstr "Đơn vị"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_quantity
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_quantity
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_quantity
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_quantity
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_quantity
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_product_uom_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_quantity_remain_stock
+msgid "Quantity Remain Stock"
+msgstr "SL tồn kho"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_quantity_remain_stock_replace
+msgid "Quantity Remain Stock Replace"
+msgstr "SL tồn kho"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_quantity_replace
+msgid "Quantity Replace"
+msgstr "SL thay thế"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_quantity_used
+msgid "Quantity Use"
+msgstr "SL sử dụng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_rank_id
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+#: selection:izi.service.card.using,state:0
+msgid "Rate"
+msgstr "Đánh giá"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_choose_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_rate_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_refund_service
+msgid "Rate Service"
+msgstr "Đánh giá dịch vụ"
+
+#. module: izi_use_service_card
+#: selection:izi.using.stock.move.line,state:0
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_product_product_recipe_lines
+msgid "Recipe lines"
+msgstr "Nguyên vật liệu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_redeem_date
+msgid "Redeem Date"
+msgstr "Ngày sử dụng"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,option_refund:0
+msgid "Refund"
+msgstr "Refund"
+
+#. module: izi_use_service_card
+#: selection:izi.using.stock.move.line,state:0
+msgid "Replace"
+msgstr "Thay thế"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_replace_material_id
+msgid "Replace Material"
+msgstr "NVL thay thế"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/pos_use_material.py:550
+#: code:addons/izi_use_service_card/models/use_service_card.py:1883
+#: model:ir.actions.act_window,name:izi_use_service_card.action_pos_request_material
+#: model:ir.actions.act_window,name:izi_use_service_card.action_pos_use_material
+#: model:ir.ui.menu,name:izi_use_service_card.pos_use_material_menu
+#, python-format
+msgid "Request Material"
+msgstr "Yêu cầu nguyên vật liệu spa"
+
+#. module: izi_use_service_card
+#: model:ir.actions.act_window,name:izi_use_service_card.action_pos_use_material_surgery
+#: model:ir.ui.menu,name:izi_use_service_card.pos_use_material_menu_surgery
+msgid "Request Material Surgery"
+msgstr "Yêu cầu nguyên vật liệu phẫu thuật thẩm mỹ"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_surgery_form
+msgid "Send Material"
+msgstr "Gửi yêu cầu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_serial_id
+msgid "Serial"
+msgstr "Thẻ DV"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_serial_code
+msgid "Serial Code"
+msgstr "Mã thẻ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_service_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_service_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_service_ids
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+#: selection:izi.service.card.using,type:0
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_service_card1_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_service_card_ids
+msgid "Service Card"
+msgstr "Thẻ dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.product_product_view_inherit_for_service
+msgid "Service Recipe"
+msgstr "Nguyên phụ liệu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_service_product_id
+msgid "Service template"
+msgstr "Dịch vụ mẫu"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_search_view
+msgid "Session"
+msgstr "Phiên"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+msgid "Set Value"
+msgstr "Đặt giá trị theo lý thuyết"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_show_deposit_amount
+msgid "Show Deposit Amount"
+msgstr "Số tiền ký gửi"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:1635
+#, python-format
+msgid "Sign Customer?"
+msgstr "Sign Customer?"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_signature_image
+msgid "Signature Image"
+msgstr "Hình ảnh chữ ký"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_state
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_state
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_state
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_search_view
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_search_view
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_step
+msgid "Step"
+msgstr "Step"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_step_name
+msgid "Step name"
+msgstr "Tên bước"
+
+#. module: izi_use_service_card
+#: selection:izi.using.stock.move.line,state:0
+msgid "Stock Out"
+msgstr "Thiếu hàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_picking_type_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_picking_type_id
+msgid "Stock Picking Type"
+msgstr "Loại hoạt động"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+msgid "Supervisor Confirm"
+msgstr "Phê duyệt"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+msgid "Số lượng sử dụng bằng số lượng lý thuyết"
+msgstr "Số lượng sử dụng bằng số lượng lý thuyết"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "SỬ DỤNG DỊCH VỤ"
+msgstr "SỬ DỤNG DỊCH VỤ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_thuong
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_thuong
+msgid "Thuong"
+msgstr "Thuong"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:131
+#, python-format
+msgid "Thông báo"
+msgstr "Thông báo"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card_line.py:60
+#: code:addons/izi_use_service_card/models/use_service_card_line.py:74
+#, python-format
+msgid "Thẻ bảo hành"
+msgstr "Thẻ bảo hành"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using.line,work_type:0
+msgid "Tour"
+msgstr "Tour"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_type
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_type
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_vm_amount_total
+msgid "Tài khoản thẻ tiền"
+msgstr "Tài khoản thẻ tiền"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_service_recipe_line_product_uom_id
+msgid "Unit of measurement"
+msgstr "Đơn vị"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_uom_id
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_use
+msgid "Use"
+msgstr "Sử dụng?"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_use_material_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_using_stock_move_line_use_material_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_line_request_material_id
+msgid "Use Material"
+msgstr "Sử dụng nguyên vật liệu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_request_material_ids
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_use_move_line_ids
+msgid "Use Move Line"
+msgstr "Chi tiết"
+
+#. module: izi_use_service_card
+#: model:ir.actions.act_window,name:izi_use_service_card.use_service_card_action
+#: model:ir.ui.menu,name:izi_use_service_card.use_service_card_menu
+msgid "Use Service Card"
+msgstr "Sử dụng thẻ dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_used_count
+msgid "Used Count"
+msgstr "Số lần đã dùng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_using_id
+msgid "Using"
+msgstr "Đang sử dụng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_using_service_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_request_material_using_service_id
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_user_material_using_service_id
+msgid "Using service"
+msgstr "Sử dụng dịch vụ"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_show_button
+msgid "Visible"
+msgstr "Hiện"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:131
+#, python-format
+msgid "Vui lòng nhập mã thẻ !"
+msgstr "Vui lòng nhập mã thẻ !"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,state:0
+msgid "Wait Approve"
+msgstr "Đợi chấp thuận"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,state:0 selection:pos.user.material,state:0
+msgid "Wait Confirm"
+msgstr "Chờ xác nhận"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,state:0
+msgid "Wait Delivery"
+msgstr "Đợi nhập hàng"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,state:0 selection:pos.user.material,state:0
+msgid "Wait Material"
+msgstr "Chờ nguyên vật liệu"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_izi_service_card_using_line_work_type
+msgid "Work Type"
+msgstr "Hình thức"
+
+#. module: izi_use_service_card
+#: selection:izi.service.card.using,state:0
+msgid "Working"
+msgstr "Đang làm"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_lock_amount
+msgid "X Lock Amount"
+msgstr "X Lock Amount"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_partner_id
+msgid "X Partner"
+msgstr "Khách hàng"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_show_vc_code
+msgid "X Show Vc Code"
+msgstr "X Show Vc Code"
+
+#. module: izi_use_service_card
+#: model:ir.model.fields,field_description:izi_use_service_card.field_pos_payment_service_x_show_vm_amount
+msgid "X Show Vm Amount"
+msgstr "X Show Vm Amount"
+
+#. module: izi_use_service_card
+#: code:addons/izi_use_service_card/models/use_service_card.py:675
+#: code:addons/izi_use_service_card/models/use_service_card.py:1197
+#, python-format
+msgid "You have to open at least one cashbox."
+msgstr "You have to open at least one cashbox."
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_material_surgery_form
+msgid "YÊU CẦU NGUYÊN VẬT LIỆU"
+msgstr "YÊU CẦU NGUYÊN VẬT LIỆU"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_request_material_form
+msgid "YÊU CẦU THÊM NGUYÊN VẬT LIỆU"
+msgstr "YÊU CẦU THÊM NGUYÊN VẬT LIỆU"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.pop_up_change_employee_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.pos_request_material_form
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_choose_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_pos_payment_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_rate_service
+#: model:ir.ui.view,arch_db:izi_use_service_card.view_pop_up_refund_service
+msgid "_Apply"
+msgstr "_Áp dụng"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_izi_images
+msgid "izi.images"
+msgstr "izi.images"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_izi_service_card_using_line
+msgid "izi.service.card.using.line"
+msgstr "izi.service.card.using.line"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_izi_using_stock_move_line
+msgid "izi.using.stock.move.line"
+msgstr "izi.using.stock.move.line"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_pos_payment_service
+msgid "pos.payment.service"
+msgstr "pos.payment.service"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_pos_request_material
+msgid "pos.request.material"
+msgstr "pos.request.material"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_pos_request_material_line
+msgid "pos.request.material.line"
+msgstr "pos.request.material.line"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_pos_user_material
+msgid "pos.user.material"
+msgstr "pos.user.material"
+
+#. module: izi_use_service_card
+#: model:ir.model,name:izi_use_service_card.model_service_recipe_line
+msgid "service.recipe.line"
+msgstr "service.recipe.line"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Ảnh cũ"
+msgstr "Ảnh cũ"
+
+#. module: izi_use_service_card
+#: model:ir.ui.view,arch_db:izi_use_service_card.use_service_card_form
+msgid "Ảnh mới"
+msgstr "Ảnh mới"

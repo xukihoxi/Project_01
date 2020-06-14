@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="res_currency_rate_inherit" model="ir.ui.view">
+            <field name="name">res.currency.rate.list.view.inherit</field>
+            <field name="model">res.currency.rate</field>
+            <field name="inherit_id" ref="base.view_currency_rate_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="rate_vn"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-12 01:37+0000\n"
+"PO-Revision-Date: 2019-06-12 01:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_product_bom_service_ids
+msgid "Bill of Materials"
+msgstr "Định mức nguyên vật liệu"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_category_x_category_code
+msgid "Category code"
+msgstr "Mã nhóm sản phẩm"
+
+#. module: product_custom
+#: model:ir.actions.act_window,help:product_custom.product_template_service_action
+msgid "Click to define a new product."
+msgstr "Click to define a new product."
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_product_x_counted_work
+#: model:ir.model.fields,field_description:product_custom.field_product_template_x_counted_work
+msgid "Count Work"
+msgstr "Tính lần làm"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_product_x_guarantee
+#: model:ir.model.fields,field_description:product_custom.field_product_template_x_guarantee
+msgid "Guarantee"
+msgstr "Bảo hành"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_product_x_name_set_ids
+#: model:ir.ui.view,arch_db:product_custom.product_product_view_form_inherit_izi
+msgid "Name sets"
+msgstr "Bộ tên sản phẩm"
+
+#. module: product_custom
+#: model:ir.model.fields,field_description:product_custom.field_product_product_x_net_weight
+#: model:ir.model.fields,field_description:product_custom.field_product_template_x_net_weight
+msgid "Net Weight"
+msgstr "Net Weight"
+
+#. module: product_custom
+#: model:ir.model,name:product_custom.model_product_product
+#: model:ir.model.fields,field_description:product_custom.field_product_name_set_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: product_custom
+#: model:ir.model,name:product_custom.model_product_category
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: product_custom
+#: model:ir.model,name:product_custom.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: product_custom
+#: model:ir.actions.act_window,name:product_custom.product_template_service_action
+#: model:ir.ui.menu,name:product_custom.menu_pos_products_service
+#: model:ir.ui.menu,name:product_custom.menu_product_service_stock
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: product_custom
+#: model:ir.actions.act_window,help:product_custom.product_template_service_action
+msgid "The product form contains information to simplify the sale process: price, notes in the quotation,\n"
+"                    accounting data, procurement methods, etc."
+msgstr "The product form contains information to simplify the sale process: price, notes in the quotation,\n"
+"                    accounting data, procurement methods, etc."
+
+#. module: product_custom
+#: model:ir.model.fields,help:product_custom.field_product_product_x_net_weight
+#: model:ir.model.fields,help:product_custom.field_product_template_x_net_weight
+msgid "The weight of the contents in Kg, not including any packaging, etc."
+msgstr "The weight of the contents in Kg, not including any packaging, etc."
+
+#. module: product_custom
+#: model:ir.actions.act_window,help:product_custom.product_template_service_action
+msgid "You must define a product for everything you sell, whether it's a physical product, a consumable or\n"
+"                    a service you offer to customers."
+msgstr "You must define a product for everything you sell, whether it's a physical product, a consumable or\n"
+"                    a service you offer to customers."
+
+#. module: product_custom
+#: model:ir.model,name:product_custom.model_product_name_set
+msgid "product.name.set"
+msgstr "product.name.set"
+

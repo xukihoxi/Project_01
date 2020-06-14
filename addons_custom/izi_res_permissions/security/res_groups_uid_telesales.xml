@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--UID & Telesales-->
+    <record model="ir.module.category" id="category_uid_telesales">
+        <field name="name">UID - Telesales</field>
+    </record>
+
+    <record id="group_member_uid_telesales" model="res.groups">
+        <field name="name">Member UID - Telesales</field>
+        <field name="category_id" ref="izi_res_permissions.category_uid_telesales"/>
+    </record>
+
+    <record id="group_leader_uid_telesales" model="res.groups">
+        <field name="name">Leader UID - Telesales</field>
+        <field name="implied_ids" eval="[(4, ref('izi_res_permissions.group_member_uid_telesales'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_uid_telesales"/>
+    </record>
+</odoo>

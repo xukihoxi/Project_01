@@ -1,0 +1,1013 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_pos_custom_backend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-28 03:41+0000\n"
+"PO-Revision-Date: 2020-05-28 03:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_cosmetic_surgery_picking_type
+msgid " Cosmetic Surgery Picking Type"
+msgstr "Lý do xuất kho PTTM"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_discount_computed
+msgid " Discount Compute "
+msgstr " Discount Compute "
+
+#. module: izi_pos_custom_backend
+#: model:ir.actions.act_window,help:izi_pos_custom_backend.action_pos_session
+msgid "A session is a period of time, usually one day, during which\n"
+"                you sell through the point of sale. The user has to check the\n"
+"                currencies in your cash registers at the beginning and the end\n"
+"                of each session."
+msgstr "A session is a period of time, usually one day, during which\n"
+"                you sell through the point of sale. The user has to check the\n"
+"                currencies in your cash registers at the beginning and the end\n"
+"                of each session."
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_invoice_partner_form
+msgid "Account Invoices"
+msgstr "Công nợ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_active_pick
+msgid "Active Pick"
+msgstr "Active Pick"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/account_bank_statement.py:22
+#, python-format
+msgid "All the account entries lines must be processed in order to close the statement."
+msgstr "All the account entries lines must be processed in order to close the statement."
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_amount_debt
+msgid "Amount Debt"
+msgstr "Số tiền ghi nợ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_amount_invoice_payment
+msgid "Amount Invoice Payment"
+msgstr "Số tiền thanh toán trên hóa đơn"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_amount_payment
+msgid "Amount Payment"
+msgstr "Tổng tiền đã trả"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_amount_residual
+msgid "Amount Residual"
+msgstr "Amount Residual"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_pos_form_inherit
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_virtual_money_sell_form_inherit
+msgid "Approve"
+msgstr "Chấp thuận"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_auto_export_import_goods
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit
+msgid "Automatically import and export goods"
+msgstr "Tự đồng xuất/nhập kho hàng bán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_auto_export_import_materials
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit
+msgid "Automatically import and export raw materials"
+msgstr "Tự động xuất/nhập kho nguyên vật liệu"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_balance
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_balance
+msgid "Balance"
+msgstr "Số dư"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Sổ phụ từ Ngân hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Giao dịch trên sổ phụ ngân hàng"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:313
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:1463
+#, python-format
+msgid "Bạn chưa cấu hình thông số hệ thống cho mã dịch vụ ngoại lệ. Xin hãy liên hệ với người quản trị."
+msgstr "Bạn chưa cấu hình thông số hệ thống cho mã dịch vụ ngoại lệ. Xin hãy liên hệ với người quản trị."
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_virtual_money_sell_form_inherit
+msgid "Bạn có chắc chắn duyệt đơn?"
+msgstr "Bạn có chắc chắn duyệt đơn?"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_pos_form_inherit
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_virtual_money_sell_form_inherit
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_invoice_make_payment_form
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_pop_up_signature_customer
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_virtual_money_sell_money_form
+msgid "Cancel Refund"
+msgstr "Hủy refund"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_pop_up_pos_order_input_card
+msgid "Card number"
+msgstr "Số thẻ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_cashier_id
+msgid "Cashier"
+msgstr "Thu ngân"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_category_ids
+msgid "Category"
+msgstr "Chuyên mục"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_charge_refund
+msgid "Charge Refund"
+msgstr "Charge Refund"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_check_service
+msgid "Check Service"
+msgstr "Check Service"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:368
+#, python-format
+msgid "Chưa thiết lập thông số hệ thống cho mã dịch vụ ngoại lệ. Xin hãy liên hệ với người quản trị."
+msgstr "Chưa thiết lập thông số hệ thống cho mã dịch vụ ngoại lệ. Xin hãy liên hệ với người quản trị."
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_payment_x_customer_sign
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_customer_sign
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_account_payment_form
+msgid "Chữ ký khách hàng"
+msgstr "Chữ ký khách hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.actions.act_window,help:izi_pos_custom_backend.action_pos_session
+msgid "Click to start a new session."
+msgstr "Click để bắt đầu một phiên mới."
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_pop_up_pos_order_input_card
+msgid "Close"
+msgstr "Đóng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_conpute_id
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_conpute_id
+msgid "Compute View"
+msgstr "Compute View"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_pos_form_inherit
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_virtual_money_sell_form_inherit
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_virtual_money_sell_money_form
+msgid "Confirm Refund"
+msgstr "Xác nhận Refund"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_bank_statement_line_x_vc_id
+msgid "Coupon ID"
+msgstr "Coupon ID"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_vc_code
+msgid "Coupon code"
+msgstr "Mã Coupon"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_virtual_money_sell_money_form
+msgid "Create Invoice"
+msgstr "Tạo hóa đơn"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_create_uid
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_create_date
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_custom_discount
+msgid "Custom discount"
+msgstr "Custom discount"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_pop_up_signature_customer
+msgid "Customer Signature"
+msgstr "Khách hàng xác nhận"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:1394
+#, python-format
+msgid "Customer Signature?"
+msgstr "Customer Signature?"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.menu,name:izi_pos_custom_backend.res_partner_menu_pos
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_res_partner_debt_form
+msgid "Các hoá đơn công nợ"
+msgstr "Các hoá đơn công nợ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_invoice_partner_form
+msgid "Công nợ"
+msgstr "Công nợ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.actions.act_window,name:izi_pos_custom_backend.izi_action_res_partner_debt
+#: model:ir.ui.menu,name:izi_pos_custom_backend.izi_menu_res_partner_debt_debt
+msgid "Công nợ khách hàng"
+msgstr "Công nợ khách hàng"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order_line.py:107
+#, python-format
+msgid "Cảnh báo!"
+msgstr "Cảnh báo!"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_debt
+msgid "Debt"
+msgstr "Debt"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_deposit_amount_residual
+msgid "Deposit Amount Residualt"
+msgstr "Số tiền ký gửi còn lại"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_discount
+msgid "Discount"
+msgstr "Giảm giá"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_display_name
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_edit_price
+msgid "Edit price"
+msgstr "Edit price"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:17
+#, python-format
+msgid "Giảm giá"
+msgstr "Giảm giá"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:16
+#, python-format
+msgid "Giảm giá(%)"
+msgstr "Giảm giá(%)"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_invoice_partner_form
+msgid "History payment account invoices"
+msgstr "Lịch sử thanh toán công nợ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_payment_pos_order
+msgid "Huỷ"
+msgstr "Huỷ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_pos_form_inherit
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_virtual_money_sell_form_inherit
+msgid "Huỷ các thanh toán và thực hiện thanh toán lại?"
+msgstr "Huỷ các thanh toán và thực hiện thanh toán lại?"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_id
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_bank_statement_line_x_ignore_reconcile
+msgid "Ignore reconcile"
+msgstr "Ignore reconcile"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_account_invoice
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_invoice_id
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_invoice_make_payment
+msgid "Invoice Payment"
+msgstr "Hóa đơn thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_account_invoices
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_account_invoices_all
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_account_invoices
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_account_invoices_all
+msgid "Invoices"
+msgstr "Các hóa đơn"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_is_gift
+msgid "Is gift?"
+msgstr "Is gift?"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.menu,name:izi_pos_custom_backend.izi_menu_res_partner_debt
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment___last_update
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_write_uid
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_write_date
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_pos_order_line
+msgid "Lines of Point of Sale Orders"
+msgstr "Lines of Point of Sale Orders"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_lot_name
+msgid "Lot Name"
+msgstr "Mã thẻ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_lot_number
+msgid "Lot number"
+msgstr "Mã thẻ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lô/Số sê-ri"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_bank_statement_line_x_vc_name
+msgid "Lot/Serial Number"
+msgstr "Lot/Serial Number"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_loyal_total
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_loyal_total
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_loyal_total
+msgid "Loyal total"
+msgstr "Doanh thu tích lũy"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_history_order_line_view_partner_form
+msgid "Lịch sử đơn hàng"
+msgstr "Lịch sử đơn hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_mail_channel_id
+msgid "Mail Channel"
+msgstr "Mail Channel"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_invoice_make_payment_form
+msgid "Make Payment"
+msgstr "Tạo thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_material_picking_type_id
+msgid "Material Picking Type"
+msgstr "Material Picking Type"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_location_code
+msgid "Mã chi nhánh"
+msgstr "Mã chi nhánh"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,help:izi_pos_custom_backend.field_pos_config_x_location_code
+msgid "Mã này dùng để phân biệt khách ở các chi nhánh khác nhau, yêu cầu 2 kí tự!"
+msgstr "Mã này dùng để phân biệt khách ở các chi nhánh khác nhau, yêu cầu 2 kí tự!"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_name_set_id
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_pos_custom_backend
+#: sql_constraint:pos.order:0
+msgid "Name pos_order is unique"
+msgstr "Name pos_order is unique"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:11
+#, python-format
+msgid "Ngày tháng"
+msgstr "Ngày tháng"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:12
+#, python-format
+msgid "Người dùng"
+msgstr "Người dùng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.actions.act_window,help:izi_pos_custom_backend.action_pos_session
+msgid "Note that you may use the menu <i>Your Session</i>\n"
+"                to quickly open a new session."
+msgstr "Note that you may use the menu <i>Your Session</i>\n"
+"                to quickly open a new session."
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:308
+#, python-format
+msgid "Order is not paid."
+msgstr "Order is not paid."
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_owner_id
+msgid "Owner"
+msgstr "Chủ sở hữu"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/invoice_make_payment.py:183
+#, python-format
+msgid "PAID_"
+msgstr "PAID_"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit_izi_vip
+msgid "POS Category"
+msgstr "Nhóm sản phẩm trên pos"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_pos_partner_refund_id
+msgid "POS Order Refund"
+msgstr "POS Order Refund"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_mail_channel_payment_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_invoice_make_payment_form
+msgid "Pay Invoice"
+msgstr "Thanh toán hoá đơn"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_payment_pos_order
+msgid "Pay Order"
+msgstr "Pay Order"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/account_invoice.py:30
+#: code:addons/izi_pos_custom_backend/models/invoice_make_payment.py:71
+#: code:addons/izi_pos_custom_backend/models/invoice_make_payment.py:373
+#: code:addons/izi_pos_custom_backend/models/pos_payment.py:226
+#: model:ir.actions.act_window,name:izi_pos_custom_backend.izi_action_pos_payment_pos_order
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_bank_statement_line_x_payment_id
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_res_partner_debt_form
+#, python-format
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_payment_date
+msgid "Payment Date"
+msgstr "Ngày thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_journal_id
+msgid "Payment Mode"
+msgstr "Hình thức thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_payment_name
+msgid "Payment Reference"
+msgstr "Tham chiếu thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_payment_x_payment_debit
+msgid "Payment debit "
+msgstr "Payment debit "
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_account_payment
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_payment_ids
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_payment_ids
+msgid "Payments"
+msgstr "Các thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_point_bonus
+msgid "Point Bonus"
+msgstr "Điểm thưởng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Point of Sale Payment"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_point_total
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_point_total
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_point_total
+msgid "Point total"
+msgstr "Tổng điểm"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit_izi_vip
+msgid "Pos Category"
+msgstr "Nhóm sản phẩm trên pos"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit_izi_vip
+msgid "Pos Category."
+msgstr "Nhóm sản phẩm trên pos"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_pos_config_id
+msgid "Pos Config"
+msgstr "Điểm bán hàng"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_config_custom.py:57
+#: code:addons/izi_pos_custom_backend/models/pos_session.py:59
+#, python-format
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_product_pricelist
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_res_partner_debt_form
+msgid "Print"
+msgstr "In"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_promotion_test
+msgid "Promotion tester"
+msgstr "Promotion tester"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_qty
+msgid "Qty outgoing"
+msgstr "SL thực xuất"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_quantity_refund
+msgid "Quantity Refund"
+msgstr "SL refund"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_rank_id
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_virtual_money_sell_money_form
+msgid "Refund"
+msgstr "Refund"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_res_partner_debt_form
+msgid "Register Payment"
+msgstr "Register Payment"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_required_ref
+msgid "Required payment name"
+msgstr "Required payment name"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_loyal_id
+msgid "Revenue"
+msgstr "Doanh thu"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_virtual_money_sell_money_form
+msgid "Send"
+msgstr "Gửi"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_virtual_money_sell_money_form
+msgid "Send Refund"
+msgstr "Gửi"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.menu,name:izi_pos_custom_backend.menu_point_of_sale_service
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: izi_pos_custom_backend
+#: model:ir.actions.act_window,name:izi_pos_custom_backend.action_pos_session
+msgid "Sessions"
+msgstr "Phiên"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_show_deposit_amount
+msgid "Show Deposit Amount"
+msgstr "Số tiền ký gửi"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_show_vm_amount
+msgid "Show vm amount"
+msgstr "Show vm amount"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:2067
+#, python-format
+msgid "Sign Customer?"
+msgstr "Khách hàng xác nhận?"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_signature_image
+msgid "Signature Image"
+msgstr "Hình ảnh chữ ký"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/account_bank_statement.py:27
+#, python-format
+msgid "Statement %s confirmed, journal items were created."
+msgstr "Statement %s confirmed, journal items were created."
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit
+msgid "Stock location used for the material"
+msgstr "Lý do xuất nguyên vật liệu"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.pos_config_view_form_inherit
+msgid "Stock location used for the surgery"
+msgstr "Lý do xuát nguyên vật liệu PTTM"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_line_x_subtotal_wo_discount
+msgid "Subtotal W/O discount"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:13
+#, python-format
+msgid "Sản phẩm"
+msgstr "Sản phẩm"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order_line.py:109
+#, python-format
+msgid "Sản phẩm \"\" đang có số lượng tồn kho là "
+msgstr "Sản phẩm \"\" đang có số lượng tồn kho là "
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_is_ready
+msgid "Sẵn sàng"
+msgstr "Sẵn sàng"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:14
+#, python-format
+msgid "Số lượng"
+msgstr "Số lượng"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_session.py:31
+#, python-format
+msgid "The type of the journal for your payment method should be bank or cash "
+msgstr "The type of the journal for your payment method should be bank or cash "
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:804
+#, python-format
+msgid "This invoice has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "This invoice has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:1680
+#, python-format
+msgid "This invoice has been created from the point of sale sessionxx: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "This invoice has been created from the point of sale sessionxx: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_pos_filter_inherit
+msgid "To approve"
+msgstr "Đợi chấp thuận"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_total_order
+msgid "Total Order"
+msgstr "Doanh thu đơn hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_total_revenue
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_virtual_total
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_total_revenue
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_virtual_total
+msgid "Total Revenue"
+msgstr "Tổng doanh thu"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_amount_total
+msgid "Total W/O discount"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_total_overdue
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_total_overdue
+msgid "Total overdue"
+msgstr "Tổng tiền quá hạn"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:19
+#, python-format
+msgid "Trạng thái"
+msgstr "Trạng thái"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_invoice_make_payment_vm_amount
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_vm_amount_total
+msgid "Tài khoản thẻ tiền"
+msgstr "Tài khoản thẻ tiền"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_payment_pos_order
+msgid "Tạo thanh toán"
+msgstr "Tạo thanh toán"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_res_partner_debt_form
+msgid "Tất cả các hoá đơn"
+msgstr "Tất cả các hoá đơn"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:18
+#, python-format
+msgid "Tổng"
+msgstr "Tổng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,help:izi_pos_custom_backend.field_account_bank_statement_line_x_vc_name
+msgid "Unique Lot/Serial Number"
+msgstr "Unique Lot/Serial Number"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_config_x_users_ids
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_vip_discount
+msgid "VIP discount"
+msgstr "Chiết khấu VIP"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_vm_main_total
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_vm_sub_total
+msgid "VM main total"
+msgstr "VM main total"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_session.py:34
+#, python-format
+msgid "Vui lòng hoàn thành hết các đơn xuất, nhập kho bán trước khi đóng phiên "
+msgstr "Vui lòng hoàn thành hết các đơn xuất, nhập kho bán trước khi đóng phiên "
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_order_x_price_warning
+msgid "Warning"
+msgstr "Warning"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_card_ids
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_card_ids
+msgid "X Card"
+msgstr "X Card"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_crm_his_ids
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_crm_his_ids
+msgid "X Crm His"
+msgstr "X Crm His"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_lock_amount
+msgid "X Lock Amount"
+msgstr "X Lock Amount"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_partner_id
+msgid "X Partner"
+msgstr "Khách hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_partner_x_pmh_ids
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_res_users_x_pmh_ids
+msgid "X Pmh"
+msgstr "X Pmh"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_account_invoice_x_pos_order_id
+msgid "X Pos Order"
+msgstr "X Pos Order"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_show_vc_code
+msgid "X Show Vc Code"
+msgstr "X Show Vc Code"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model.fields,field_description:izi_pos_custom_backend.field_pos_make_payment_x_show_vm_amount
+msgid "X Show Vm Amount"
+msgstr "X Show Vm Amount"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/invoice_make_payment.py:171
+#, python-format
+msgid "Xuất hiện một hình thức thanh toán mới không được sử dụng trong phiên làm việc của bạn, vui lòng kiểm tra lại !"
+msgstr "Xuất hiện một hình thức thanh toán mới không được sử dụng trong phiên làm việc của bạn, vui lòng kiểm tra lại !"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_invoice_make_payment_form
+msgid "Xác nhận"
+msgstr "Xác nhận"
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_session.py:51
+#, python-format
+msgid "You cannot use the session of another user. This session is owned by %s. Please first close this one to use this point of sale."
+msgstr "You cannot use the session of another user. This session is owned by %s. Please first close this one to use this point of sale."
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_order.py:1070
+#, python-format
+msgid "You have to select a pricelist in the sale form !\n"
+"Please set one before choosing a product."
+msgstr "You have to select a pricelist in the sale form !\n"
+"Please set one before choosing a product."
+
+#. module: izi_pos_custom_backend
+#: code:addons/izi_pos_custom_backend/models/pos_session.py:27
+#, python-format
+msgid "Your ending balance is too different from the theoretical cash closing (%.2f), the maximum allowed is: %.2f. You can contact your manager to force it."
+msgstr "Your ending balance is too different from the theoretical cash closing (%.2f), the maximum allowed is: %.2f. You can contact your manager to force it."
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_pop_up_pos_order_input_card
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.view_pop_up_signature_customer
+msgid "_Apply"
+msgstr "_Áp dụng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_mail_channel_payment
+msgid "mail.channel.payment"
+msgstr "mail.channel.payment"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_pos_config
+msgid "pos.config"
+msgstr "pos.config"
+
+#. module: izi_pos_custom_backend
+#: model:ir.model,name:izi_pos_custom_backend.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:58
+#, python-format
+msgid "Đã hủy"
+msgstr "Đã hủy"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:61
+#, python-format
+msgid "Đã thanh toán"
+msgstr "Đã thanh toán"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:64
+#, python-format
+msgid "Đã vào sổ"
+msgstr "Đã vào sổ"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:67
+#, python-format
+msgid "Đã xuất hóa đơn"
+msgstr "Đã xuất hóa đơn"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:15
+#, python-format
+msgid "Đơn giá"
+msgstr "Đơn giá"
+
+#. module: izi_pos_custom_backend
+#. openerp-web
+#: code:addons/izi_pos_custom_backend/static/src/xml/order_line_detail.xml:10
+#, python-format
+msgid "Đơn hàng"
+msgstr "Đơn hàng"
+
+#. module: izi_pos_custom_backend
+#: model:ir.ui.view,arch_db:izi_pos_custom_backend.izi_view_pos_pos_form_inherit
+msgid "Đơn hàng này đang bán sản phẩm dưới giá tối thiểu. Bạn có chắc chắn duyệt đơn?"
+msgstr "Đơn hàng này đang bán sản phẩm dưới giá tối thiểu. Bạn có chắc chắn duyệt đơn?"
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_view_pos_body_area_tree" model="ir.ui.view">
+            <field name="name">izi.view.pos.body.area.tree</field>
+            <field name="model">body.area</field>
+            <field name="arch" type="xml">
+                <tree string="Body Area" editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="izi_view_pos_body_area_form" model="ir.ui.view">
+            <field name="name">izi.view.pos.body.area.form</field>
+            <field name="model">body.area</field>
+            <field name="arch" type="xml">
+                <form string="Body Area">
+                    <field name="name"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_izi_pos_body_area" model="ir.actions.act_window">
+            <field name="name">Body Area</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">body.area</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <menuitem name="Body Area" id="izi_body_area" parent="point_of_sale.menu_point_config_product"
+                  action="action_izi_pos_body_area" />
+    </data>
+</odoo>

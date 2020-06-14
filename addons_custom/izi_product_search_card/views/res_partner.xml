@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_res_partner_search_inherit" model="ir.ui.view">
+            <field name="name">Res Partner search inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="action_search" string="Search" type="object" class="oe_highlight" attrs="{'invisible': [('customer','=',False)]}"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Danh sách các loại VIP -->
+    <data>
+        <record model="ir.ui.view" id="view_vip_rank_form">
+            <field name="name">crm.vip.rank.form</field>
+            <field name="model">crm.vip.rank</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                        <div class="oe_title">
+                            <label for="name" string="Tên hạng" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="level"/>
+                                <field name="descx"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                                <field name="active_month"/>
+                                <field name="discount_service"/>
+                                <field name="discount_product"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="except_product_ids">
+                                <tree editable="top">
+                                    <field name="product_id"/>
+                                    <field name="max_amount"/>
+                                    <field name="discount"/>
+                                </tree>
+                            </field>
+                            <field name="policy"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vip_rank_tree">
+            <field name="name">crm.vip.rank.tree</field>
+            <field name="model">crm.vip.rank</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="active"/>
+                    <field name="active_month"/>
+                    <field name="level"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_vip_rank" model="ir.actions.act_window">
+            <field name="name">Các hạng VIP</field>
+            <field name="res_model">crm.vip.rank</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="vip_rank_setting_menu" action="action_vip_rank" parent="crm.crm_menu_config" sequence="10"/>
+    </data>
+
+    <!-- Các qui tắc lên/xuống hạng -->
+    <data>
+        <record model="ir.ui.view" id="view_vip_rank_rule_form">
+            <field name="name">crm.vip.rank.rule.form</field>
+            <field name="model">crm.vip.rank.rule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="current_rank_id" required="1"
+                                    options="{'no_create':1, 'no_edit':1, 'no_open':1}"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="rank_id"/>
+                                    <field name="revenue"/>
+                                    <field name="type"/>
+                                    <field name="reward_points" attrs="{'readonly':[('type', 'not in', ['up', 'suddenly'])]}"/>
+                                </tree>
+                            </field>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vip_rank_rule_tree">
+            <field name="name">crm.vip.rank.rule.tree</field>
+            <field name="model">crm.vip.rank.rule</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="current_rank_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_vip_rank_rule" model="ir.actions.act_window">
+            <field name="name">Quy tắc lên/xuống hạng VIP</field>
+            <field name="res_model">crm.vip.rank.rule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="vip_rank_rule_setting_menu" action="action_vip_rank_rule" parent="crm.crm_menu_config" sequence="11"/>
+    </data>
+</odoo>

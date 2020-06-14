@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <record id="izi_view_bundle_therapy_tree" model="ir.ui.view">
+            <field name="name">izi.view.bundle.therapy.tree</field>
+            <field name="model">bundle.therapy</field>
+            <field name="arch" type="xml">
+                <tree string="Bundle Therapy" create="0">
+                    <field name="name"/>
+                    <field name="order_id"/>
+                    <field name="amount_total"/>
+                    <field name="file_attach"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="izi_view_bundle_therapy_form" model="ir.ui.view">
+            <field name="name">izi.view.bundle.therapy.form</field>
+            <field name="model">bundle.therapy</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Tên gói trị liệu..." attrs="{'required': 1}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="order_id"/>
+                                <field name="file_attach"/>
+                            </group>
+                            <group>
+                                <field name="amount_total"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Bundle Therapy Line">
+                                <field name="bundle_therapy_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="product_id" attrs="{'required': 1}"/>
+                                        <field name="uom_id"/>
+                                        <field name="qty"/>
+                                        <field name="body_area_ids" widget="many2many_tags"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_izi_bundle_therapy" model="ir.actions.act_window">
+            <field name="name">Bundle Therapy</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bundle.therapy</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Bundle Therapy" id="izi_bundle_therapy" parent="izi_therapy_record.izi_therapy_record_menu"
+                      action="action_izi_bundle_therapy"/>
+    </data>
+</odoo>

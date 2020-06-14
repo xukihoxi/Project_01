@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Danh sách các kết quả tương tác khách hàng -->
+        <record model="ir.ui.view" id="result_interaction_tree_view">
+            <field name="name">Result interaction</field>
+            <field name="model">survey.user_input_line</field>
+            <field name="arch" type="xml">
+                <tree default_order='x_partner_interaction_date desc' >
+                    <field name="x_partner_id"/>
+                    <field name="survey_id"/>
+                    <field name="x_user_id"/>
+                    <field name="x_partner_interaction_date"/>
+                    <field name="question_id"/>
+                    <field name="value_suggested"/>
+                    <field name="date_create"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view các kết quả tương tác khách hàng -->
+        <record model="ir.ui.view" id="result_interaction_form_view">
+            <field name="name">Result interaction</field>
+            <field name="model">survey.user_input_line</field>
+            <field name="arch" type="xml">
+                <form readonly="1">
+                    <sheet>
+                        <group col="4">
+                            <field name="x_partner_interaction_id"/>
+                            <field name="x_partner_interaction_date"/>
+                            <field name="x_user_id"/>
+                            <field name="date_create"/>
+                            <field name="x_partner_id"/>
+                            <field name="question_id"/>
+                            <field name="survey_id"/>
+                            <field name="value_suggested"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search kết quả tương tác khách hàng -->
+        <record model="ir.ui.view" id="result_interaction_search_view">
+            <field name="name">Result interaction</field>
+            <field name="model">survey.user_input_line</field>
+            <field name="arch" type="xml">
+                <search string="Result interaction">
+                    <field name="x_partner_id"/>
+                    <field name="survey_id"/>
+                    <field name="x_user_id"/>
+                    <field name="question_id"/>
+                    <filter string="Today Activities" name="activities_today"
+                        domain="[('x_partner_interaction_date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter string="Nhắc lịch liệu trình" name="type_remind"
+                        domain="[('x_partner_interaction_id.type_id.name', '=', 'Nhắc lịch liệu trình')]"/>
+                    <separator/>
+                    <filter string="Nhắc lịch bảo hành" name="type_remind_guarantee"
+                        domain="[('x_partner_interaction_id.type_id.name', '=', 'Nhắc lịch bảo hành')]"/>
+                    <separator/>
+                    <filter string="Chăm sóc sau khi khách làm dịch vụ" name="type_taking_care_after_do_service"
+                        domain="[('x_partner_interaction_id.type_id.name', '=', 'Chăm sóc sau khi khách làm dịch vụ')]"/>
+                    <separator/>
+                    <filter string="Xác nhận Booking/Meeting" name="type_confirm_booking_meeting"
+                        domain="[('x_partner_interaction_id.type_id.name', '=', 'Xác nhận Booking/Meeting')]"/>
+                    <separator/>
+                    <filter string="Remarketing" name="type_remarketing"
+                        domain="[('x_partner_interaction_id.type_id.name', '=', 'Remarketing')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner interaction" context="{'group_by': 'x_partner_interaction_id'}"/>
+                        <filter string="User" context="{'group_by': 'x_user_id'}"/>
+                        <filter string="Partner" context="{'group_by':'x_partner_id'}"/>
+                        <filter string="Survey" context="{'group_by':'survey_id'}"/>
+                        <filter string="Question" context="{'group_by':'question_id'}"/>
+                        <filter string="Result" context="{'group_by':'value_suggested'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Hành động kết quả tương tác khách hàng -->
+        <record model="ir.actions.act_window" id="result_interaction_action_window">
+            <field name="name">Result interaction</field>
+            <field name="res_model">survey.user_input_line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('result_interaction_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('result_interaction_form_view')})]"/>
+            <field name="domain">[('x_partner_interaction_id','!=', False)]</field>
+        </record>
+
+        <menuitem name="Result interaction" id="result_interaction_menu" parent="izi_crm_interaction.partner_interaction_main_menu" sequence="10"
+                  action="result_interaction_action_window"/>
+    </data>
+</odoo>

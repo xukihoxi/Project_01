@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="category_branch">
+        <field name="name">Branch</field>
+    </record>
+
+    <!--Thu ngân-->
+    <record id="group_cashier" model="res.groups">
+        <field name="name">Cashier</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Tư vấn viên-->
+    <record id="group_consultant" model="res.groups">
+        <field name="name">Consultant</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Kế toán kho-->
+    <record id="group_inventory_accounting" model="res.groups">
+        <field name="name">Inventory accounting</field>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Lễ tân-->
+    <record id="group_receptionist" model="res.groups">
+        <field name="name">Receptionist</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Kỹ thuật viên-->
+    <record id="group_therapist" model="res.groups">
+        <field name="name">Therapist</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Shop trưởng-->
+    <record id="group_leader_shop" model="res.groups">
+        <field name="name">Leader shop</field>
+        <field name="implied_ids" eval="[(4, ref('izi_res_permissions.group_cashier'))
+                                        , (4, ref('izi_res_permissions.group_consultant'))
+                                        , (4, ref('izi_res_permissions.group_inventory_accounting'))
+                                        , (4, ref('izi_res_permissions.group_receptionist'))
+                                        , (4, ref('izi_res_permissions.group_therapist'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+</odoo>

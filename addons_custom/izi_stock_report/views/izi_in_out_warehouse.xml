@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+
+        <record id="izi_in_out_warehouse_form" model="ir.ui.view">
+            <field name="name">General account of input - output</field>
+            <field name="model">izi.in.out.warehouse</field>
+            <field name="arch" type="xml">
+                <form string="Choose your warehouse">
+                <group>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="all"/>
+                    </group>
+                    <group>
+                        <field name="to_date" required="1"/>
+                        <field name="warehouse_id" domain="[('user_ids','=', uid)]" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_checkboxes" attrs="{'invisible': [('all', '=', True)],'required': [('all', '=', False)]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="open_table" string="General account of input - output" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="izi_in_out_warehouse_line_pivot" model="ir.ui.view">
+            <field name="name">General account of input - output</field>
+            <field name="model">izi.in.out.warehouse.line</field>
+            <field name="arch" type="xml">
+                <pivot string="General account of input - output">
+                    <field name="product_id" type="row"/>
+                    <field name="purchase_quantity" type="measure"/>
+                    <field name="sale_quantity" type="measure"/>
+                    <field name="sale_refund" type="measure"/>
+                    <field name="purchase_refund" type="measure"/>
+                    <field name="out_transfer" type="measure"/>
+                    <field name="in_transfer" type="measure"/>
+                    <field name="out_inventory" type="measure"/>
+                    <field name="in_inventory" type="measure"/>
+                    <field name="warehouse_id" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="izi_in_out_warehouse_line_search" model="ir.ui.view">
+            <field name="name">izi.in.out.warehouse.line</field>
+            <field name="model">izi.in.out.warehouse.line</field>
+            <field name="arch" type="xml">
+                <search string="General account of input - output search">
+                    <field name="product_id"/>
+                    <field name="lot_id"/>
+                    <field name="categ_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="date_inventory"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_izi_in_out_warehouse_report" model="ir.actions.act_window">
+            <field name="name">General account of input - output</field>
+            <field name="res_model">izi.in.out.warehouse</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_in_out_warehouse_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_izi_in_out_warehouse_report" name="General account of input - output report" parent="stock.menu_warehouse_report" sequence="100" action="action_izi_in_out_warehouse_report"/>
+
+    </data>
+</odoo>

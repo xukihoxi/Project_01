@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="izi_crm_team_form_view" model="ir.ui.view">
+            <field name="name">izi_crm_lead_view</field>
+            <field name="model">crm.team</field>
+            <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+            <field name="priority">12</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='dashboard']" position="before">
+                    <page name="x_members" string="Team Members">
+                        <field name="x_member_ids"/>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='members']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('team_type', 'in', ['pos', 'ebay', 'uid_tele'])]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

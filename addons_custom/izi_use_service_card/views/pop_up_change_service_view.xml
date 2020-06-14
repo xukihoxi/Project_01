@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pop_up_change_employee_service" model="ir.ui.view">
+            <field name="name">use.service.card.form</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2 class="text-center">SỬ DỤNG DỊCH VỤ</h2>
+                        <h3 class="text-center">
+                            <field name="name"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%"
+                                   readonly="1" attrs="{'invisible': [('name', '=', '/')]}"/>
+                        </h3>
+                        <group>
+                            <field name="type" widget="radio" required="1" readonly="1" force_save="1"
+                               options="{'horizontal': true}"/>
+                        </group>
+                        <group readonly="1" force_save="1">
+                            <group>
+                                <field name="serial_code" widget="enter2action"
+                                       attrs="{'action_element_class': '.izi_btn_action_search_serial', 'invisible': ['|',('type', '!=', 'card'), ('state', '!=', 'draft')]}"
+                                       placeholder="Mã thẻ, Mã KH, SĐT KH ..." class="text-left"/>
+                            </group>
+                            <group>
+                                <button name="action_search_serial" type="object" string="Search"
+                                        class="oe_edit_only oe_highlight izi_btn_action_search_serial"
+                                        attrs="{'invisible': ['|',('type', '!=', 'card'),('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <!--<field name="serial_code"-->
+                                           <!--attrs="{'invisible': ['|',('type', '!=', 'card'), ('state', '!=', 'draft')]}"-->
+                                            <!--placeholder="Mã thẻ, Mã KH, SĐT KH ..." class="text-left"-->
+                                           <!--/>-->
+                                <!--<br/>-->
+                                <field name="customer_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       readonly="1" force_save="1"/>
+                                <field name="rank_id" readonly="1" force_save="1"/>
+                                <field name="pricelist_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       readonly="1" force_save="1"/>
+                                <label for="pending"/>
+                                <div class="o_row">
+                                     <field name="pending" attrs="{'readonly': [('state', '!=', 'working')]}"/>
+                                    <button name="action_pending" type="object" string="Done" attrs="{'invisible': ['|', ('pending', '=', False), ('state', '!=', 'done')]}" class="oe_highliht"/>
+                                </div>
+                                <field name="pending_note" attrs="{'invisible': [('pending', '=', False)], 'readonly': [('state', '!=', 'working')]}"/>
+                                <field name="merge" readonly="1" force_save="1"/>
+                            </group>
+                            <group>
+                                <!--<button name="action_search_serial" type="object" string="Search"-->
+                                        <!--class="oe_edit_only oe_highlight"-->
+                                        <!--attrs="{'invisible': ['|',('type', '!=', 'card'),('state', '!=', 'draft')]}"/>-->
+                                <!--<br/>-->
+                                <field name="redeem_date" readonly="1" force_save="1"/>
+                                <field name="date_start" readonly="1" force_save="1"/>
+                                <field name="date_end" readonly="1" force_save="1"/>
+                                <field name="user_id" attrs="{'invisible': [('type', '!=', 'service')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="pos_order_id" readonly="1" force_save="1" attrs="{'invisible': [('pos_order_id', '=', False)]}"/>
+                                <field name="pos_order_refund_id" readonly="1" force_save="1" attrs="{'invisible': [('pos_order_refund_id', '=', False)]}"/>
+                                <field name="pos_session_id" invisible="1"/>
+                                <field name="option_refund" attrs="{'invisible': [('state', 'not in', ('wait_confirm', 'wait_delivery', 'cancel'))]}" readonly="1" force_save="1"/>
+                                <field name="state" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="General" attrs="{'invisible': [('type', '=', 'service')]}">
+                                <field name="service_card_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" invisible="1"/>
+                                        <field name="serial_id" options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>
+                                        <field name="detail_serial_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               invisible="1"/>
+                                        <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               readonly="1" force_save="1"/>
+                                        <field name="max_use_count" readonly="1" force_save="1" invisible="1"/>
+                                        <field name="paid_count" readonly="1" force_save="1"/>
+                                        <field name="used_count" readonly="1" force_save="1"/>
+                                        <field name="quantity" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="uom_id" readonly="1" force_save="1"/>
+                                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                               widget="many2many_tags"/>
+                                        <field name="doctor_ids"  domain="[('job_id.x_code', '=', 'BS')]" options="{'no_create':1, 'no_create_edit':1}"
+                                               widget="many2many_tags" />
+                                        <field name="work_type" required="1" invisible="1"/>
+                                        <!--<field name="customer_rate" widget="sentiment_icon" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>-->
+                                        <!--<field name="customer_comment" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>-->
+                                        <!--<field name="show_button" invisible="1"/>-->
+                                        <!--<button name="action_guarantee" attrs="{'invisible': ['|',('show_button', '=', False),('parent.state', 'not in', ('rate', 'done'))]}"-->
+                                                <!--string="Guarantee" type="object"/>-->
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="name" invisible="1"/>
+                                                <field name="serial_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                                <field name="detail_serial_id"
+                                                       options="{'no_create':1, 'no_create_edit':1}"
+                                                       invisible="1"/>
+                                                <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                                <field name="max_use_count" invisible="1"/>
+                                                <field name="paid_count"/>
+                                            </group>
+                                            <group>
+                                                <field name="used_count"/>
+                                                <field name="quantity"/>
+                                                <field name="uom_id"/>
+                                                <field name="employee_ids" widget="many2many_tags"/>
+                                                <field name="doctor_ids" domain="[('job_id.x_code', '=', 'BS')]" widget="many2many_tags" />
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                                <!--<group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">-->
+                                    <!--<div class="oe_subtotal_footer_separator oe_inline">-->
+                                        <!--<label for="amount_total"/>-->
+                                    <!--</div>-->
+                                    <!--<field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"-->
+                                           <!--widget="monetary"/>-->
+                                <!--</group>-->
+                            </page>
+                            <page string="Service" attrs="{'invisible': [('type', '=', 'card')]}">
+                                <field name="service_card1_ids">
+                                    <tree editable="bottom" delete="false" create="false">
+                                        <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               domain="[('product_tmpl_id.type', '=', 'service')]" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="quantity" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="price_unit" readonly="1" force_save="1"/>
+                                        <field name="discount" force_save="1"/>
+                                        <field name="amount" readonly="1" force_save="1"/>
+                                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                               widget="many2many_tags"/>
+                                        <field name="doctor_ids" domain="[('job_id.x_code', '=', 'BS')]" options="{'no_create':1, 'no_create_edit':1}"
+                                               widget="many2many_tags" />
+                                        <field name="work_type" required="1" invisible="1"/>
+                                        <!--<field name="customer_rate" widget="sentiment_icon" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>-->
+                                        <!--<field name="customer_comment" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>-->
+                                        <!--<field name="show_button" invisible="1"/>-->
+                                        <!--<button name="action_guarantee" attrs="{'invisible': ['|',('show_button', '=', False),('parent.state', 'not in', ('rate', 'done'))]}"-->
+                                                <!--string="Guarantee" type="object"/>-->
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                                <field name="quantity"/>
+                                                <field name="price_unit"/>
+                                            </group>
+                                            <group>
+                                                <field name="discount"/>
+                                                <field name="amount"/>
+                                                <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                                       required="1" widget="many2many_tags"/>
+                                                <field name="doctor_ids" domain="[('job_id.x_code', '=', 'BS')]" options="{'no_create':1, 'no_create_edit':1}"
+                                                       widget="many2many_tags"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="action_apply_change_employee" string="_Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

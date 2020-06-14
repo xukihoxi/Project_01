@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_pos_revenue_allocation" model="ir.sequence">
+            <field name="name">pos_revenue_allocation</field>
+            <field name="code">pos.revenue.allocation</field>
+            <field name="prefix">RLL%(y)s%(month)s/</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

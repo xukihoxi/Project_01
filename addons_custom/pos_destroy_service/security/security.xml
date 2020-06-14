@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--<record id="pos_destroy_service_sale_user_rule" model="ir.rule">-->
+            <!--<field name="name">POS destroy service Sale User</field>-->
+            <!--<field name="model_id" ref="model_pos_destroy_service"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[('create_uid','=',user.id)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="pos_destroy_service_sale_all_user_rule" model="ir.rule">-->
+            <!--<field name="name">POS destroy service Sale all user</field>-->
+            <!--<field name="model_id" ref="model_pos_destroy_service"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[('session_id.config_id','=',user.x_pos_config_id.id)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="pos_destroy_service_sale_sale_manager_rule" model="ir.rule">-->
+            <!--<field name="name">POS destroy service Sale manager</field>-->
+            <!--<field name="model_id" ref="model_pos_destroy_service"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[(1, '=', 1)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('sales_team.group_sale_manager'))]"/>-->
+        <!--</record>-->
+    </data>
+</openerp>

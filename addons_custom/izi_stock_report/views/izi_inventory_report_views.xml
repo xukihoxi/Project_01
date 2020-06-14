@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+
+        <record id="view_inventory_report_form" model="ir.ui.view">
+            <field name="name">Inventory report</field>
+            <field name="model">izi.inventory.report</field>
+            <field name="arch" type="xml">
+                <form string="Choose your warehouse">
+                <group>
+                    <group>
+                        <field name="all"/>
+                        <field name="warehouse_id" domain="[('user_ids','=', uid)]" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_checkboxes" attrs="{'invisible': [('all', '=', True)],'required': [('all', '=', False)]}"/>
+                    </group>
+                    <group>
+                        <field name="compute_at_date" widget="radio" default="0"/>
+                        <field name="date" attrs="{'invisible': [('compute_at_date', '=', 0)]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="open_table" string="Inventory Quantities" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="view_inventory_report_pivot" model="ir.ui.view">
+            <field name="name">Inventory report</field>
+            <field name="model">izi.inventory.line</field>
+            <field name="arch" type="xml">
+                <pivot string="Inventory report">
+                    <field name="product_id" type="row"/>
+                    <field name="quantity" type="measure"/>
+                    <field name="warehouse_id" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_inventory_report_search" model="ir.ui.view">
+            <field name="name">izi.inventory.line.search</field>
+            <field name="model">izi.inventory.line</field>
+            <field name="arch" type="xml">
+                <search string="Inventory report search">
+                    <field name="product_id"/>
+                    <field name="lot_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="quantity"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_stock_quantity_report" model="ir.actions.act_window">
+            <field name="name">Inventory Report</field>
+            <field name="res_model">izi.inventory.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_inventory_report_form"/>
+            <field name="target">new</field>
+            <field name="context">{'default_compute_at_date': 0}</field>
+        </record>
+
+        <menuitem id="menu_stock_inventory_quantity_report" name="Inventory Report" parent="stock.menu_warehouse_report" sequence="100" action="action_stock_quantity_report"/>
+
+    </data>
+</odoo>

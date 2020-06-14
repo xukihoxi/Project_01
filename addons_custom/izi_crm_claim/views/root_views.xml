@@ -1,0 +1,5 @@
+<odoo>
+    <data>
+        <menuitem name="Claim manager" id="crm_claim_main_menu" parent="crm.crm_menu_root" sequence="2"/>
+    </data>
+</odoo>

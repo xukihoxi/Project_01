@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for sale.order -->
+        <record id="seq_bundle_therapy" model="ir.sequence">
+            <field name="name">Bundle Therapy</field>
+            <field name="code">bundle.therapy</field>
+            <field name="prefix">GLT_%(day)s%(month)s%(y)s_</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_body_index" model="ir.sequence">
+            <field name="name">Body Index</field>
+            <field name="code">body.index</field>
+            <field name="prefix">CSCT_%(day)s%(month)s%(y)s_</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_prescription_task" model="ir.sequence">
+            <field name="name">Prescription Task</field>
+            <field name="code">prescription.task</field>
+            <field name="prefix">PCD_%(day)s%(month)s%(y)s_</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

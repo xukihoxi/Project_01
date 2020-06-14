@@ -1,0 +1,11 @@
+.o_report_layout_standard {
+  font-family: 'Lato';
+}
+.o_report_layout_standard {
+  background-image: url(/report_qweb/static/image/backgroud.png);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  min-height: 900px;
+}
+/*# sourceMappingURL=layout_background.css.map*/

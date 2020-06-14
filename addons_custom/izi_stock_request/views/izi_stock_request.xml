@@ -1,0 +1,224 @@
+<odoo>
+    <data>
+        <record id="izi_stock_request_form_view" model="ir.ui.view">
+            <field name="name">Request Form</field>
+            <field name="model">izi.stock.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_import_line" type="object" class="oe_highlight" string="Import"
+                                attrs="{'invisible': [('field_binary_import', '=', False)]}"/>
+                        <button name="action_send" states="draft" string="Send"
+                                type="object" class="oe_highlight"/>
+                        <button name="action_assign" states="checked_inventory" string="Check Availability"
+                                type="object" class="oe_highlight" groups="stock.group_stock_manager"/>
+                        <button name="action_transfer" states="ready" string="Confirm"
+                                type="object" class="oe_highlight" groups="stock.group_stock_manager"/>
+                        <button name="action_cancel" type="object" string="Cancel" states="ready"
+                                groups="stock.group_stock_manager"/>
+                        <button name="action_back" type="object" string="Back" states="ready" groups="stock.group_stock_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,ready,done"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center" attrs="{'invisible': [('type', '!=', 'request')]}">YÊU CẦU HÀNG HÓA</h3>
+                        <h3 class="text-center" attrs="{'invisible': [('type', '=', 'request')]}">ĐIỀU PHỐI HÀNG HÓA
+                        </h3>
+                        <h3 class="text-center">
+                            <field name="name" readonly="1" required="1"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Number"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" required="1"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly':['|','&amp;',('state','!=',('checked_inventory')),('type','!=','request'),
+                                                    '&amp;',('state','!=','draft'),('type','=','request')]}"/>
+                                <field name="location_id" domain="[('usage','=','internal'),('user_ids','in',(uid))]"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly': [('state', 'not in', ('draft','checked_inventory'))],'invisible':[('state', '=', 'draft')],'required':[('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="des_warehouse_id" required="1"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly':['|','&amp;',('state','!=',('checked_inventory')),('type','!=','request'),
+                                                    '&amp;',('state','!=','draft'),('type','=','request')]}"/>
+                                <field name="des_location_id" required="1" domain="[('usage','=','internal'),('user_ids','in',(uid))]"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly':['|','&amp;',('state','!=',('checked_inventory')),('type','!=','request'),
+                                                    '&amp;',('state','!=','draft'),('type','=','request')]}"/>
+                                <field name="type" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="Mẫu import có định dạng là xls hoặc xlsx"/>
+                                <field name="line_id" model="tree" context="{'readonly_by_pass': True}"
+                                       attrs="{'readonly': [('state', 'not in', ('draft','ready','checked_inventory'))]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                               required="1"
+                                               attrs="{'readonly':['|','&amp;',('parent.state','!=',('checked_inventory')),('parent.type','!=','request'),
+                                                    '&amp;',('parent.state','!=','draft'),('parent.type','=','request')]}"/>
+                                        <field name="uom_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                               required="1"
+                                               attrs="{'readonly':['|','&amp;',('parent.state','!=',('checked_inventory')),('parent.type','!=','request'),
+                                                    '&amp;',('parent.state','!=','draft'),('parent.type','=','request')]}"/>
+                                        <field name="qty"
+                                               attrs="{'readonly':[('parent.state','!=','draft')],'required':[('parent.type','=','request')]}"/>
+                                        <field name="reserved_availability" readonly="1" force_save="1"/>
+                                        <field name="qty_confirm"
+                                               attrs="{'readonly':[('parent.state','!=','ready')]}"/>
+                                        <field name="note"
+                                               attrs="{'readonly':['|','&amp;',('parent.state','!=',('checked_inventory')),('parent.type','!=','request'),
+                                                    '&amp;',('parent.state','!=','draft'),('parent.type','=','request')]}"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="total_request"/>
+                                    <field name="total_confirm"/>
+                                </group>
+                            </page>
+                            <page string="Infomation">
+                                <group>
+                                    <group>
+                                        <field name="transfer_id" readonly="1"
+                                               attrs="{'invisible': [('transfer_id','=',False)]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="date" required="1"
+                                               attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                        <field name="note" placeholder="Note"
+                               attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_stock_request_tree_view" model="ir.ui.view">
+            <field name="name">Request Tree</field>
+            <field name="model">izi.stock.request</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'"
+                      decoration-muted="state in ('cancel')"
+                      decoration-danger="state not in ('cancel', 'done','draft')">
+                    <field name="name"/>
+                    <field name="warehouse_id"/>
+                    <field name="location_id"/>
+                    <field name="des_warehouse_id"/>
+                    <field name="des_location_id"/>
+                    <field name="date"/>
+                    <field name="type_request"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--yeucaudi-->
+        <record id="izi_stock_request_come_action" model="ir.actions.act_window">
+            <field name="name">Request come Goods</field>
+            <field name="res_model">izi.stock.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'readonly_by_pass':True,'create':False,'delete':False}</field>
+            <field name="domain">
+                [('state','!=','draft'),('type','=','request'),('warehouse_id.user_ids','in',(uid))]
+            </field>
+        </record>
+        <record id="izi_stock_request_come_action_tree_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="izi_stock_request_tree_view"/>
+            <field name="act_window_id" ref="izi_stock_request_come_action"/>
+        </record>
+
+        <record id="izi_stock_request_come_action_form_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_stock_request_form_view"/>
+            <field name="act_window_id" ref="izi_stock_request_come_action"/>
+        </record>
+
+        <menuitem id="menu_izi_stock_request_goods" parent="izi_stock_transfer.menu_stock_transfer" sequence="3"
+                  name="Request goods"
+                  groups="stock.group_stock_user"/>
+        <menuitem id="menu_izi_stock_request_come_action" parent="menu_izi_stock_request_goods" sequence="2"
+                  groups="stock.group_stock_user"
+                  action="izi_stock_request_come_action"/>
+
+        <!--dieuphoi-->
+        <record id="izi_stock_request_coordinator_action" model="ir.actions.act_window">
+            <field name="name">Coordinator Goods</field>
+            <field name="res_model">izi.stock.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">
+                {'readonly_by_pass':True,'default_type':'coordinator','default_state':'checked_inventory'}
+            </field>
+            <field name="domain">[('type','=','coordinator')]</field>
+        </record>
+
+        <record id="izi_stock_request_coordinator_action_tree_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="izi_stock_request_tree_view"/>
+            <field name="act_window_id" ref="izi_stock_request_coordinator_action"/>
+        </record>
+
+        <record id="izi_stock_request_coordinator_action_form_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_stock_request_form_view"/>
+            <field name="act_window_id" ref="izi_stock_request_coordinator_action"/>
+        </record>
+
+        <menuitem id="menu_izi_stock_request_coordinator_action" parent="izi_stock_transfer.menu_stock_transfer"
+                  sequence="5"
+                  groups="stock.group_stock_manager"
+                  action="izi_stock_request_coordinator_action"/>
+
+        <!--yeucaudi-->
+        <record id="izi_stock_request_go_action" model="ir.actions.act_window">
+            <field name="name">Request go Goods</field>
+            <field name="res_model">izi.stock.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'readonly_by_pass':True,'default_type':'request'}</field>
+            <field name="domain">[('type','=','request'),('des_warehouse_id.user_ids','in',(uid))]
+            </field>
+        </record>
+
+        <record id="izi_stock_request_go_action_tree_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="izi_stock_request_tree_view"/>
+            <field name="act_window_id" ref="izi_stock_request_go_action"/>
+        </record>
+
+        <record id="izi_stock_request_go_action_form_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_stock_request_form_view"/>
+            <field name="act_window_id" ref="izi_stock_request_go_action"/>
+        </record>
+
+        <menuitem id="menu_izi_stock_request_go_action" parent="menu_izi_stock_request_goods" sequence="1"
+                  groups="stock.group_stock_user"
+                  action="izi_stock_request_go_action"/>
+    </data>
+</odoo>

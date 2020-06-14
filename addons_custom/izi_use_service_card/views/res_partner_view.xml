@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template id="history_use_service" name="history_use_service_js" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/izi_use_service_card/static/src/js/employee_card_detail.js"/>
+            </xpath>
+        </template>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_history_service_view_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.presenter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='accounting']" position="before">
+                    <page string="Lịch sử sử dụng dịch vụ" name="history_service">
+                        <field name="id" widget="use_service_detail" style="width:100%;"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

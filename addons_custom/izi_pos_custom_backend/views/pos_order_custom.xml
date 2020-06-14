@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="point_of_sale.view_pos_pos_form" model="ir.ui.view">
+            <field name="name">pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <form string="Point of Sale Orders">
+                    <header>
+                        <field name="x_type" invisible="1"/>
+                        <field name="x_promotion_test" invisible="1"/>
+                        <field name="x_discount_computed" invisible="1"/>
+                        <!--<field name="x_custom_discount" invisible="1"/>-->
+                        <button name="%(point_of_sale.action_pos_payment)d"
+                                type="action" string="Payment" class="oe_highlight"
+                                context="{'pos_session_id' : session_id, 'izi_recompute_order_discount':True}"
+                                attrs="{'invisible':['|','&amp;', ('state', '!=', 'to_payment'), ('x_pos_partner_refund_id','=', False), '&amp;', ('state', '!=', 'draft'),('x_pos_partner_refund_id','!=', False)]}"
+                                groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                        <button name="action_pos_order_invoice" string="Invoice" type="object" states="paid"
+                                attrs="{'readonly': [('partner_id','=',False)]}"/>
+                        <button name="refund" string="Return Products" type="object"
+                                invisible="1"/>
+                        <button name="action_compute_order_discount" string="Discount compute" type="object"
+                                attrs="{'invisible':['|',('state','!=','draft'), ('x_pos_partner_refund_id','!=', False)]}"/>
+                        <button name="action_send_payment"
+                                attrs="{'invisible':['|',('state','!=','draft'), ('x_pos_partner_refund_id','!=', False)]}"
+                                type="object" class="oe_highlight" string="Send"/>
+                        <!--<button name="action_set_custom_discount" string="Lưu khuyến mại riêng" type="object"-->
+                        <!--attrs="{'invisible': ['|', '|', '|',('state','!=','draft'), ('x_pos_partner_refund_id','!=', False), ('x_discount_computed', '=', True), ('x_custom_discount', '=', True)]}"/>-->
+                        <button name="action_customer_signature" string="Customer Signature" type="object"
+                                states="customer_comment" class="oe_highlight"/>
+<!--                        <button name="action_setting_picking" string="Seting Picking" type="object"-->
+<!--                                attrs="{'invisible': ['|', ('x_pos_partner_refund_id', '!=',False), ('state', '!=', 'customer_comment')]}"/>-->
+                        <button name="refund" string="Refund" type="object"
+                                attrs="{'invisible':['|', '|',('state','not in',('done','invoiced', 'paid')), ('x_pos_partner_refund_id','!=', False),('x_type', 'in', ('3', '4','5'))]}"/>
+                        <button name="send_refund" type="object" string="Send Refund" class="oe_highlight"
+                                attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=', 'draft')]}"/>
+                        <button name="action_cancel_refund" type="object" string="Back Refund"
+                                attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=','to_approve')]}"
+                                groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                        <button name="confirm_refund" type="object" string="Confirm Refund" class="oe_highlight"
+                                attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=','to_approve')]}"
+                                groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                        <button name="create_invoice" type="object" string="Create Invoice"
+                                invisible="1"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,paid,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_invoice"
+                                    string="Invoice"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible':[('state','!=','invoiced')]}">
+                            </button>
+                        </div>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('name','=','/')]}"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%"
+                                   placeholder="Number" readonly="1"/>
+                        </h3>
+                        <group name="order_fields">
+                            <group>
+                                <field name="partner_id" domain="[('customer', '=', True)]"
+                                       context="{'search_default_customer':1, 'form_view_ref': 'res_partner_custom.res_partner_custom_form_view'}"
+                                       options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                       attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"
+                                       required="1"/>
+                                <field name="pricelist_id"
+                                       context="{'domain_by_session_id': session_id}"
+                                       options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                       attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                                <field name="date_order" readonly="1"/>
+                                <!--<field name="x_rank_id" options="{'no_create':1, 'no_create_edit':1}" readonly="1"-->
+                                <!--force_save="1"/>-->
+                                <!--<field name="x_owner_id" domain="[('customer', '=', True)]"-->
+                                <!--context="{'search_default_customer':1}" options="{'no_quick_create': True}"-->
+                                <!--attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>-->
+                                <!--<field name="x_loyal_total" readonly="1" force_save="1"/>-->
+                                <field name="x_total_order" readonly="1"/>
+                                <field name="x_debt" invisible="1"/>
+                                <field name="session_id" readonly="1" force_save="1" invisible="1"/>
+                                <field name="fiscal_position_id" options="{'no_create': True}" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="user_id" force_save="1"
+                                       attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                                <!--<field name="x_point_bonus" readonly="1" force_save="1"/>-->
+                                <field name="x_cashier_id" readonly="1" force_save="1"/>
+                                <field name="x_pos_partner_refund_id" readonly="1" force_save="1"
+                                       attrs="{'invisible': [('x_pos_partner_refund_id', '=', False)]}"/>
+                                <!--Dự án Amia không sử dụng chức năng này 29/11/2019-->
+                                <field name="x_price_warning" invisible="1" readonly="1" force_save="1" style="color:red;font-weight: bold;"/>
+                            </group>
+                        </group>
+                        <!--Dự án 3Tgroup không sử dụng chức năng này 11/06/2019-->
+                        <group attrs="{'invisible': True}">
+                            <!--<group attrs="{'invisible': ['|',('state', '!=', 'draft'), ('x_pos_partner_refund_id', '!=', False)]}">-->
+                            <group>
+                                <field name="x_lot_number" widget="enter2action"
+                                       attrs="{'invisible': ['|',('state', '!=', 'draft'), ('x_pos_partner_refund_id', '!=', False)], 'action_element_class': '.izi_btn_action_check_card'}"/>
+                            </group>
+                            <group>
+                                <button name="action_search_lot_number" type="object" string="Search"
+                                        class="oe_highlight izi_btn_action_check_card"
+                                        attrs="{'invisible': ['|',('state', '!=', 'draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="Products">
+                                <field name="lines" colspan="4" nolabel="1">
+                                    <tree string="Order lines" editable="bottom">
+                                        <field name="x_check_service" invisible="1"/>
+                                        <field name="x_charge_refund" invisible="1"/>
+                                        <field name="x_edit_price" invisible="1"/>
+                                        <field name="product_id" context="{'izi_pos_product_search':True}"
+                                               options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                               domain="[('product_tmpl_id.x_type_card', '=', 'none'), ('available_in_pos','=',True)]"/>
+                                        <!--<field name="x_name_set_id" attrs="{'readonly': [('product_id', '=', False)]}" domain="[('product_id', '=', product_id)]" options="{'no_create': True}"/>-->
+                                        <field name="lot_name" readonly="1" force_save="1"/>
+                                        <!--<field name="x_uom_id" readonly="1" force_save="1"/>-->
+                                        <field name="qty"
+                                               attrs="{'readonly': [('x_check_service', '=', True), ('parent.x_pos_partner_refund_id', '!=', False)]}"
+                                               force_save="1"/>
+                                        <field name="x_qty" invisible="True"
+                                               attrs="{'readonly': [('parent.x_pos_partner_refund_id', '!=', False)]}"
+                                               force_save="1"/>
+                                        <field name="price_unit" widget="monetary"
+                                               attrs="{'readonly': [('x_edit_price', '=', False)]}" force_save="1"/>
+                                        <field name="discount" widget="monetary"/>
+                                        <field name="x_discount" widget="monetary"/>
+                                        <field name="tax_ids_after_fiscal_position" widget="many2many_tags"
+                                               invisible="1"/>
+                                        <field name="tax_ids" widget="many2many_tags" invisible="1"/>
+                                        <field name="price_subtotal" widget="monetary" invisible="1"/>
+                                        <field name="x_subtotal_wo_discount" widget="monetary" invisible="1"/>
+                                        <field name="price_subtotal_incl" widget="monetary"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="amount_tax" widget="monetary"/>
+                                    <field name="x_amount_total" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                    <!--<field name="x_vip_discount" class="oe_subtotal_footer_separator"-->
+                                    <!--widget="monetary"/>-->
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                        <button name="button_dummy" states="draft" string="(update)" invisible="1"
+                                                class="oe_edit_only oe_link"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Payments">
+                                <field name="statement_ids" colspan="4" nolabel="1" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom" string="Statement lines" default_order='id'>
+                                        <field name="journal_id" readonly="1"/>
+                                        <field name="statement_id" readonly="1"/>
+                                        <field name="amount" readonly="1"/>
+                                        <field name="x_vc_name" readonly="1" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="extra" string="Extra Info">
+                                <group string="General Information">
+                                    <field name="company_id" groups="base.group_multi_company"/>
+                                    <field name="location_id" widget="selection"
+                                           groups="stock.group_stock_multi_locations"/>
+                                    <field name="picking_id" readonly="1"/>
+                                    <field name="pos_reference"/>
+                                    <field name="x_signature_image" widget="image" readonly="1" force_save="1"/>
+                                    <!--<field name="x_signature_image_refund" widget="image" readonly="1" force_save="1" attrs="{'invisible':[('x_pos_partner_refund_id','=', False)]}"/>-->
+                                </group>
+                                <group string="Accounting Information">
+                                    <group>
+                                        <field name="sale_journal" domain="[('type','=','sale')]"/>
+                                        <field name="account_move" readonly="1"
+                                               attrs="{'invisible':[('state','!=','done')]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Notes" name="note">
+                                <field name="note" attrs="{'readonly':[('state','in',('done','invoiced', 'paid'))]}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="point_of_sale.view_pos_order_tree" model="ir.ui.view">
+            <field name="name">pos.order.tree</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <tree string="POS Orders" decoration-info="state == 'draft'"
+                      decoration-danger="state in ('to_confirm','to_approve','customer_comment')"
+                      decoration-muted="state in ('done','invoiced')">
+                    <field name="name"/>
+                    <field name="pos_reference"/>
+                    <field name="partner_id"/>
+                    <field name="date_order"/>
+                    <field name="user_id"/>
+                    <field name="amount_total" sum="Amount total" widget="monetary"/>
+                    <field name="x_amount_residual" sum="Amount residual" widget="monetary"/>
+                    <field name="x_amount_invoice_payment" sum="Amount Payment" widget="monetary"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="state"/>
+                    <field name="session_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="point_of_sale.action_pos_pos_form" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain">[('x_type', '!=', '2')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new order.
+                </p>
+                <p>
+                    Use this menu to browse previous orders. To record new
+                    orders, you may use the menu
+                    <i>Your Session</i>
+                    for
+                    the touchscreen interface.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

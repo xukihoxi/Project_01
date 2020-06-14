@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pop_up_masseage" model="ir.ui.view">
+            <field name="name">pos.payment.service.form.inherit</field>
+            <field name="model">pos.payment.service</field>
+            <field name="arch" type="xml">
+                <form string="Update">
+                    <p>Số tiền điều chỉnh (làm tròn) không thể lớn hơn 1.000 VNĐ</p>
+                    <footer>
+                        <button name="action_cancel" special="cancel" string="Cancel" type="object"/>
+                    </footer>
+                </form>
+
+            </field>
+        </record>
+    </data>
+</odoo>

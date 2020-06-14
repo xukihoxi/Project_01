@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="izi_pos_config_form_view_inherit" model="ir.ui.view">
+            <field name="name">izi.pos.config.form.view.inherit</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <div id="payment_methods" position="after">
+                    <!--Các phương thức thanh toán đa tiền tệ-->
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="x_journal_currency_ids"/>
+                            <div class="content-group mt16">
+                                <field name="x_journal_currency_ids" colspan="4" nolabel="1" widget="many2many_tags"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--<record id="room_branch_manager_rule" model="ir.rule">-->
+            <!--<field name="name">Room Branch Manager</field>-->
+            <!--<field name="model_id" ref="model_pos_service_room"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">[('branch_id','in',[branch.id for branch in user.branch_ids])]</field>-->
+            <!--<field name="groups" eval="[(4, ref('izi_branch.group_branch_user_manager'))]"/>-->
+        <!--</record>-->
+
+
+        <!--<record id="room_branch_user_rule" model="ir.rule">-->
+            <!--<field name="name">Room Branch User</field>-->
+            <!--<field name="model_id" ref="model_pos_service_room"/>-->
+            <!--<field name="global" eval="True"/>-->
+            <!--<field name="domain_force">['|',('branch_id','=',False),('branch_id','=',user.branch_id.id)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('izi_branch.group_branch_user'))]"/>-->
+        <!--</record>-->
+    </data>
+</odoo>

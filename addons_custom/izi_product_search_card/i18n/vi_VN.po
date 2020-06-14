@@ -1,0 +1,1574 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_product_search_card
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:46+0000\n"
+"PO-Revision-Date: 2019-05-06 16:47+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "- First Number:"
+msgstr "- First Number:"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_invoice_ids
+msgid "Account Invoice"
+msgstr "Hóa đơn"
+
+#. module: izi_product_search_card
+#: code:addons/izi_product_search_card/models/invoice_debit_transient.py:32
+#, python-format
+msgid "Account Invoice?"
+msgstr "Hóa đơn?"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_journal_id
+msgid "Account Jouranl"
+msgstr "Phương thức thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_payment_id
+msgid "Account Payment"
+msgstr "Phiếu thanh toán"
+
+#. module: izi_product_search_card
+#: selection:izi.card.service.lot.transient,x_status:0
+#: selection:izi.pmh.service.lot.transient,x_status:0
+msgid "Actived"
+msgstr "đã kích hoạt"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Additional notes..."
+msgstr "Ghi chú thêm..."
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_amount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_x_amount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_x_amount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_amount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_amount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_money
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_money_order
+msgid "Amount Order"
+msgstr "Tồng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_amount_total
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_amount_total
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: izi_product_search_card
+#: selection:debit.product.transient,state:0
+msgid "Approved"
+msgstr "Chấp thuận"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Auto-detect"
+msgstr "Auto-detect"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Bill"
+msgstr "Hoá đơn"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Bill Date"
+msgstr "Ngày hóa đơn"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Bill lines"
+msgstr "Dòng hoá đơn"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Calender Service Reminder"
+msgstr "Lịch sử chăm sóc khách hàng"
+
+#. module: izi_product_search_card
+#: selection:izi.service.card.detail.transient,state:0
+#: selection:pos.virtual.money.transient,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_product_search_card
+#: selection:invoice.customer.transient,state:0
+#: selection:izi.pos.order.line.transient,state:0
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: izi_product_search_card
+#: selection:crm.service.calender.reminder.transient,type:0
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_card_ids
+msgid "Card"
+msgstr "Thẻ dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Cards service"
+msgstr "Thẻ dịch vụ"
+
+#. module: izi_product_search_card
+#: selection:pos.customer.deposit.transient,type:0
+msgid "Cash"
+msgstr "Hoàn tiền"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_check_card
+msgid "Check Card"
+msgstr "Kiểm tra TDV"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_check_pmh
+msgid "Check Pmh"
+msgstr "Kiểm tra PMH"
+
+#. module: izi_product_search_card
+#: selection:crm.vip.customer.history.transient,state:0
+msgid "Chờ duyệt"
+msgstr "Chờ duyệt"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_serial
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_code
+msgid "Code customer"
+msgstr "Mã khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_old_code
+msgid "Code old customer"
+msgstr "Mã cũ khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_date
+msgid "Create date"
+msgstr "Ngày tạo"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_create_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_create_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_credit
+msgid "Credit"
+msgstr "Có"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Credit Note"
+msgstr "Giấy báo có"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_destroy_detail_line_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_current_detail_line_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_current_detail_line_ids
+msgid "Curent exchange"
+msgstr "Dịch vụ đổi"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_x_customer_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_x_customer_id
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,state:0
+msgid "Customer Comment"
+msgstr "Đánh giá"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_customer_sign
+msgid "Customer Sign"
+msgstr "Chữ ký"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_date_order
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_date_today
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_date_today
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_date_today
+msgid "Date Today"
+msgstr "Ngày"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_date_due
+msgid "Date due"
+msgstr "Ngày hết hạn"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_date_invoice
+msgid "Date invoice"
+msgstr "Ngày công nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_debit_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_debit
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_debit_good_id
+msgid "Debit Good"
+msgstr "Đơn nợ hàng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Debit goods"
+msgstr "Quản lý nợ hàng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Debit product"
+msgstr "Quản lý nợ hàng"
+
+#. module: izi_product_search_card
+#: selection:debit.product.transient,state:0
+msgid "Debited"
+msgstr "Ghi nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_debt_amount
+msgid "Debt amount"
+msgstr "Số tiền ghi nợ"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,x_type:0
+msgid "Default"
+msgstr "Mặc định"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: selection:pos.customer.deposit.transient,type:0
+msgid "Deposit"
+msgstr "Đặt cọc"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_deposit_id
+msgid "Deposit ID"
+msgstr "Mã đặt cọc"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_destroy_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_destroy_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_destroy_id
+#: selection:izi.card.service.lot.transient,x_status:0
+#: selection:izi.pmh.service.lot.transient,x_status:0
+msgid "Destroy"
+msgstr "Hủy"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_pos_destroy_service_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_destroy_service_ids
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: selection:izi.pos.order.line.transient,x_type:0
+msgid "Destroy Service"
+msgstr "Hủy dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_destroy_date
+msgid "Destroy date"
+msgstr "Ngày"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_card_detail_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_exchange_card_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_use_card_ids
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_x_discount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_x_discount
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_discount
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Discount"
+msgstr "Giảm giá"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_display_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_amount
+msgid "Doanh thu"
+msgstr "Doanh thu"
+
+#. module: izi_product_search_card
+#: selection:debit.product.transient,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_product_search_card
+#: selection:invoice.customer.transient,state:0
+msgid "Draft"
+msgstr "Tạo mới"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Draft Bill"
+msgstr "Draft Bill"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Draft Credit Note"
+msgstr "Draft Credit Note"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_email
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_employee_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_employee
+msgid "Employee"
+msgstr "Kỹ thuật viên"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_exchange_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_exchange_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_exchange_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_exchange_id
+msgid "Exchange"
+msgstr "Đổi dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_exchange_detail_id
+msgid "Exchange Detail"
+msgstr "Đổi dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_exchange_date
+msgid "Exchange date"
+msgstr "Ngày đổi"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_to_subtract_count
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_to_subtract_count
+msgid "Exchange qty"
+msgstr "Số lượng đổi"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_expired
+#: selection:izi.service.card.detail.transient,state:0
+msgid "Expired"
+msgstr "Ngày hết hạn"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Expridate"
+msgstr "Ngày hết hạn"
+
+#. module: izi_product_search_card
+#: selection:crm.service.calender.reminder.transient,master_type:0
+msgid "HTKH"
+msgstr "Hỏi thăm khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_qty_hand
+msgid "Hand"
+msgstr "SL tồn"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_hand_count
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_hand_count
+msgid "Hand qty"
+msgstr "Số lượng tồn"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "History Payment Invoice"
+msgstr "Lịch sử thanh toán công nợ"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "History Return Product"
+msgstr "Lịch sử trả hàng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "History exchange service"
+msgstr "Lịch sử đổi dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "History order"
+msgstr "Lịch sử đơn hàng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid "History use service"
+msgstr "Lịch sử sử dụng dịch vụ "
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "History use vitual money"
+msgstr "Lịch sử sử dụng thẻ tiền"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_rank_current
+msgid "Hạng hiện tại"
+msgstr "Hạng hiện tại"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_rank_request
+msgid "Hạng yêu cầu"
+msgstr "Hạng yêu cầu"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_image
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_image_ids
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_x_search_id
+msgid "Image Service"
+msgstr "Hình ảnh"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_invoice_id
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,state:0
+msgid "Invoiced"
+msgstr "Đã xuất hóa đơn"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note___last_update
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_write_uid
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_write_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_life_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_life_date
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_life_date
+msgid "Life date"
+msgstr "Ngày hết hạn"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_is_load_image
+msgid "Load image"
+msgstr "Load image"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_lot_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_lot_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_lot_id
+msgid "Lot"
+msgstr "Lot"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_lot_name
+msgid "Lot name"
+msgstr "Tên lot"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_lot_id
+msgid "Lot/Serial"
+msgstr "Lô/Số sê-ri"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_typex
+msgid "Loại tài khoản"
+msgstr "Loại tài khoản"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_service_calender_ids
+msgid "Lịch sử chăm sóc khách hàng"
+msgstr "Lịch sử chăm sóc khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_crm_vip_customer_history_transient
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_vip_history_ids
+msgid "Lịch sử lên hạng"
+msgstr "Lịch sử lên hạng"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_invoice_make_payment_transient
+msgid "Lịch sử thanh toán công nợ"
+msgstr "Lịch sử thanh toán công nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_return_product_transient
+msgid "Lịch sử trả nợ hàng"
+msgstr "Lịch sử trả nợ hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_manage_user_id
+msgid "Manage User"
+msgstr "Nhân viên chịu trách nhiệm"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_master_type
+msgid "Master Type"
+msgstr "Loai"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Meeting"
+msgstr "Cuộc họp"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.report_template_history_use_service
+msgid "Mã khách hàng:"
+msgstr "Mã khách hàng:"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.report_template_history_use_service
+msgid "Mã đơn SDDV"
+msgstr "Mã đơn SDDV"
+
+#. module: izi_product_search_card
+#: selection:crm.service.calender.reminder.transient,master_type:0
+msgid "NLKH"
+msgstr "Nhăc lịch khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_name
+msgid "Name customer"
+msgstr "Tên khách hàng"
+
+#. module: izi_product_search_card
+#: selection:izi.card.service.lot.transient,x_status:0
+#: selection:izi.pmh.service.lot.transient,x_status:0
+#: selection:izi.pos.order.line.transient,state:0
+msgid "New"
+msgstr "Tạo mới"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_new_destroy_detail_line_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_new_service_detail_line_ids
+msgid "New exchange"
+msgstr "Dịch vụ muốn đổi"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_new_count
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_new_count
+msgid "New qty"
+msgstr "Số lượng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_approved_date
+msgid "Ngày duyệt"
+msgstr "Ngày duyệt"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_date
+msgid "Ngày ghi nhận"
+msgstr "Ngày ghi nhận"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Ngày yêu cầu"
+msgstr "Ngày yêu cầu"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_approved_uid
+msgid "Người duyệt"
+msgstr "Người duyệt"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_note
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_note
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_note
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_note
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_note_before_custom
+msgid "Note Before Custom"
+msgstr "Ngày trước đến làm dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_number
+msgid "Number"
+msgstr "Số"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_old_revenue
+msgid "Old Revenue"
+msgstr "Doanh thu cũ"
+
+#. module: izi_product_search_card
+#: selection:invoice.customer.transient,state:0
+msgid "Open"
+msgstr "Tạo mới"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_order_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_order_id
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_order_payment_id
+msgid "Order Payment"
+msgstr "Đơn hàng thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Order payment"
+msgstr "Đơn hàng thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_order_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_order_id
+msgid "Order ref"
+msgstr "Đơn hàng mua"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_origin
+msgid "Origin"
+msgstr "Tham chiếu"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Other Info"
+msgstr "Thông tin khác"
+
+#. module: izi_product_search_card
+#: selection:invoice.customer.transient,state:0
+#: selection:izi.pos.order.line.transient,state:0
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_partner_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_product_search_card
+#: selection:pos.customer.deposit.transient,type:0
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_payment_amount
+msgid "Payment Amount"
+msgstr "Số tiền thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_payment_date
+msgid "Payment Date"
+msgstr "Ngày thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_phone
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_picking_id
+msgid "Picking"
+msgstr "Dịch chuyển kho"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_pmh_ids
+msgid "Pmh"
+msgstr "PMH"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_point_history_ids
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_point
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Point"
+msgstr "Điểm"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,state:0
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Preview"
+msgstr "Xem trước"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_price_unit
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_price_unit
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_price_unit
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_price_unit
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_price_unit
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_price_unit
+msgid "Price unit"
+msgstr "Đơn giá"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_product_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_product_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_product_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_product_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_product_id
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_product_search_card
+#: model:ir.ui.menu,name:izi_product_search_card.menu_action_izi_product_search_card
+msgid "Product Serial Search"
+msgstr "Tra cứu tài khoản KH"
+
+#. module: izi_product_search_card
+#: model:ir.ui.menu,name:izi_product_search_card.menu_action_izi_product_search_card_default_user
+msgid "Product Serial Search DefaultUsser"
+msgstr "Tra cứu thông tin khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_product_uom
+msgid "Product Uom"
+msgstr "Đơn vị"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Product searial search"
+msgstr "Tra cứu tài khoản KH"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid "Product searial search default user"
+msgstr "Tra cứu thông tin khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.actions.act_window,name:izi_product_search_card.action_izi_product_search_card
+msgid "Product serial search"
+msgstr "Tra cứu tài khoản KH"
+
+#. module: izi_product_search_card
+#: model:ir.actions.act_window,name:izi_product_search_card.action_izi_product_search_card_default_user
+msgid "Product serial search default user"
+msgstr "Tra cứu thông tin khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_qty
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_qty_debit
+msgid "Qty Debit"
+msgstr "SL nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_qty_depot
+msgid "Qty Depot"
+msgstr "SL đã trả"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_qty_transfer
+msgid "Qty Transfer"
+msgstr "SL yêu cầu"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_qty_use
+msgid "Qty used"
+msgstr "Số lượng đã sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_deposit_ids
+msgid "Quanr lý tiền đặt cọc"
+msgstr "Quanr lý tiền đặt cọc"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_quantity_done
+msgid "Quantity Done"
+msgstr "Quantity Done"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_quantity_used
+msgid "Quantity Used"
+msgstr "Số lượng sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_invoice_ids
+msgid "Quản lý công nợ"
+msgstr "Quản lý công nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_debit_product_ids
+msgid "Quản lý nợ hàng"
+msgstr "Quản lý nợ hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_make_payment_ids
+msgid "Quản lý thanh toán công nợ"
+msgstr "Quản lý thanh toán công nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_return_product_ids
+msgid "Quản lý trả hàng"
+msgstr "Quản lý trả hàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_rank
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: izi_product_search_card
+#: selection:debit.product.transient,state:0
+msgid "Rate"
+msgstr "Đánh giá"
+
+#. module: izi_product_search_card
+#: selection:izi.service.card.detail.transient,state:0
+#: selection:pos.virtual.money.transient,state:0
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_redeem_date
+msgid "Redeem Date"
+msgstr "Ngày sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_remain_amount
+msgid "Remain amount"
+msgstr "Số tiền còn lại"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_residual
+msgid "Residual"
+msgstr "Số tiền còn nợ"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_revenue_ids
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Revenue"
+msgstr "Doanh thu"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_scheduled_date
+msgid "Scheduled Date"
+msgstr "Ngày theo kế hoạch"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid ""
+"Search infomation (Card service code, customer code or\n"
+"                                phone)"
+msgstr "Tìm kiếm thông tin (mã TDV/PMH, Mã KH hoặc SĐT)"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_serial_id
+msgid "Serial"
+msgstr "Thẻ DV"
+
+#. module: izi_product_search_card
+#: selection:crm.service.calender.reminder.transient,type:0
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_product_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_service_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_new_exchange_service_transient_service_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_service_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_service_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_product_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_service_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_service
+#: selection:izi.pos.order.line.transient,x_type:0
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_service_calender_reminder_id
+msgid "Service Calender"
+msgstr "Lịch nhắc dịch vụ khách hàng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Services"
+msgstr "Các dịch vụ"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_session_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_session_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_state
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_state
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_statement_id
+msgid "Statement ref"
+msgstr "Tham chiếu thanh toán"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_state
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_state
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_x_status
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_x_status
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_state
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_amount_subtract
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_amount_total
+msgid "Subtract"
+msgstr "Tổng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Taxes"
+msgstr "Các loại thuế"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,x_type:0
+msgid "Thẻ tiền"
+msgstr "Thẻ tiền"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,state:0
+msgid "To approve"
+msgstr "Đã chấp chuận"
+
+#. module: izi_product_search_card
+#: selection:izi.pos.order.line.transient,state:0
+msgid "To confirm"
+msgstr "Đã xác nhận"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_total_quantity
+msgid "Toal Quantity"
+msgstr "Tổng SL"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_price_subtotal_incl
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_amount_money
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_amount_money_use
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_total_point
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_total_revenue
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_total_qty
+msgid "Total"
+msgstr "Tổng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_total_revenue
+msgid "Total Revenue"
+msgstr "Tổng doanh thu"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_total_count
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_total_count
+msgid "Total qty"
+msgstr "SL tổng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_state
+msgid "Trạng thái"
+msgstr "Trạng thái"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_type
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_product_search_card
+#: selection:pos.virtual.money.transient,typex:0
+msgid "Tài khoản chính"
+msgstr "Tài khoản chính"
+
+#. module: izi_product_search_card
+#: selection:pos.virtual.money.transient,typex:0
+msgid "Tài khoản khuyến mại"
+msgstr "Tài khoản khuyến mại"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_amount_total
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_total_deposit
+msgid "Tổng"
+msgstr "Tổng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_amount_total_money
+msgid "Tổng tiền"
+msgstr "Tổng tiền"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_uom_id
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_image_service_transient_use_service_id
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form_default_user
+msgid "Use Service"
+msgstr "Nhật ký sử dụng dịch vụ"
+
+#. module: izi_product_search_card
+#: selection:izi.card.service.lot.transient,x_status:0
+#: selection:izi.pmh.service.lot.transient,x_status:0
+msgid "Used"
+msgstr "Đã sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_money_used
+msgid "Used amount"
+msgstr "Số tiền sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Used date"
+msgstr "Ngày sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_used_count
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_used_count
+msgid "Used qty"
+msgstr "SL đã sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_user_id
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_using_id
+#: selection:izi.card.service.lot.transient,x_status:0
+#: selection:izi.pmh.service.lot.transient,x_status:0
+msgid "Using"
+msgstr "Đang sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Vendor Bill"
+msgstr "Hóa đơn Nhà cung cấp"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "Vendor Reference"
+msgstr "Tham chiếu NCC"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Vip history"
+msgstr "Lịch sử lên hạng"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Virtual Money"
+msgstr "Thẻ tiền"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_virtual_money_ids
+msgid "Virtual money"
+msgstr "Thẻ tiề"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_vm_id
+msgid "Virtual money ID"
+msgstr "Thẻ tiền"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_virtual_money_history_ids
+msgid "Virtual money history"
+msgstr "Lịch sử sử dụng thẻ tiền"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.izi_product_search_card_form
+msgid "Voucher/Coupon"
+msgstr "PMH"
+
+#. module: izi_product_search_card
+#: selection:debit.product.transient,state:0
+msgid "Waiting"
+msgstr "Chờ dịch chuyển khác"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_product_search_card_x_partner_note_ids
+msgid "X Partner Note"
+msgstr "X Partner Note"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_service_calender_reminder_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_history_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_crm_vip_customer_revenue_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_debit_product_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_customer_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_invoice_make_payment_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_current_exchange_service_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_destroy_card_detail_history_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_exchange_card_detail_history_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_line_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_destroy_service_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_service_card_detail_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_use_card_detail_history_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_vip_point_history_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_customer_deposit_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_history_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_pos_virtual_money_transient_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_res_partner_note_x_search_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_return_product_transient_x_search_id
+msgid "X Search"
+msgstr "Tìm kiếm"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_x_type
+msgid "X Type"
+msgstr "Loại"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_x_user_id
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_x_user_id
+msgid "X User"
+msgstr "Người sử dụng"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pos_order_line_transient_x_discount
+msgid "XDiscount"
+msgstr "Giảm giá"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "You have"
+msgstr "You have"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_crm_service_calender_reminder_transient
+msgid "crm.service.calender.reminder.transient"
+msgstr "crm.service.calender.reminder.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_crm_vip_customer_revenue_transient
+msgid "crm.vip.customer.revenue.transient"
+msgstr "crm.vip.customer.revenue.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_debit_product_transient
+msgid "debit.product.transient"
+msgstr "debit.product.transient"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "for this supplier. You can allocate them to mark this bill as paid."
+msgstr "for this supplier. You can allocate them to mark this bill as paid."
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_image_service_transient
+msgid "image.service.transient"
+msgstr "image.service.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_invoice_customer_transient
+msgid "invoice.customer.transient"
+msgstr "invoice.customer.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_card_service_lot_transient
+msgid "izi.card.service.lot.transient"
+msgstr "izi.card.service.lot.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_current_exchange_service_transient
+msgid "izi.current.exchange.service.transient"
+msgstr "izi.current.exchange.service.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_destroy_card_detail_history_transient
+msgid "izi.destroy.card.detail.history.transient"
+msgstr "izi.destroy.card.detail.history.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_exchange_card_detail_history_transient
+msgid "izi.exchange.card.detail.history.transient"
+msgstr "izi.exchange.card.detail.history.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_new_exchange_service_transient
+msgid "izi.new.exchange.service.transient"
+msgstr "izi.new.exchange.service.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_pmh_service_lot_transient
+msgid "izi.pmh.service.lot.transient"
+msgstr "izi.pmh.service.lot.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_pos_destroy_service_line_transient
+msgid "izi.pos.destroy.service.line.transient"
+msgstr "izi.pos.destroy.service.line.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_pos_destroy_service_transient
+msgid "izi.pos.destroy.service.transient"
+msgstr "izi.pos.destroy.service.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_pos_order_line_transient
+msgid "izi.pos.order.line.transient"
+msgstr "izi.pos.order.line.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_product_search_card
+msgid "izi.product.search.card"
+msgstr "izi.product.search.card"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_service_card_detail_transient
+msgid "izi.service.card.detail.transient"
+msgstr "izi.service.card.detail.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_use_card_detail_history_transient
+msgid "izi.use.card.detail.history.transient"
+msgstr "izi.use.card.detail.history.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_izi_vip_point_history_transient
+msgid "izi.vip.point.history.transient"
+msgstr "izi.vip.point.history.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_card_service_lot_transient_name
+#: model:ir.model.fields,field_description:izi_product_search_card.field_izi_pmh_service_lot_transient_name
+msgid "name"
+msgstr "Tên"
+
+#. module: izi_product_search_card
+#: model:ir.ui.view,arch_db:izi_product_search_card.invoice_supplier_form_view_transient
+msgid "outstanding debits"
+msgstr "Dư nợ"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_pos_customer_deposit_transient
+msgid "pos.customer.deposit.transient"
+msgstr "pos.customer.deposit.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_pos_virtual_money_history_transient
+msgid "pos.virtual.money.history.transient"
+msgstr "pos.virtual.money.history.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_pos_virtual_money_transient
+msgid "pos.virtual.money.transient"
+msgstr "pos.virtual.money.transient"
+
+#. module: izi_product_search_card
+#: model:ir.model,name:izi_product_search_card.model_res_partner_note
+msgid "res.partner.note"
+msgstr "res.partner.note"
+
+#. module: izi_product_search_card
+#: selection:crm.vip.customer.history.transient,state:0
+msgid "Đã duyệt"
+msgstr "Đã duyệt"
+
+#. module: izi_product_search_card
+#: selection:crm.vip.customer.history.transient,state:0
+msgid "Đã từ chối"
+msgstr "Đã từ chối"

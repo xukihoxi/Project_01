@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="cash_management_view_move_form" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="after">
+                    <field name="product_id" string="Mã chi phí/Sản phẩm"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="cash_management_view_account_move_filter" model="ir.ui.view">
+            <field name="name">account.move.select</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_move_filter"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="x_products_str" string="Mã chi phí/Sản phẩm"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,125 @@
+<openerp>
+    <data>
+        <template id="izi_code_card_layout">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+
+        <template id="report_template_code_card_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="izi_product_release.izi_code_card_layout" t-lang="en_US">
+                        <div class="page">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                            </style>
+                            <div style="width: 100%; height: 70px;">
+                                <div style="width: 20%; height: 70px;float: left;padding-right:20px;">
+                                </div>
+                                <div style="width: 60%; height: 60px; margin-top: 100px; padding: 5px; float: left;">
+                                    <h4 style="margin-top: 0px;text-align: center; font-weight: 500; margin: 0px;">
+                                        <b>DANH SÁCH MÃ THẺ DỊCH VỤ / PHIẾU MUA HÀNG</b>
+                                    </h4>
+                                </div>
+                                <div style="width: 20%; height: 70px;float: left;text-align: center;padding-left: 30px;margin-top:20px">
+                                </div>
+                                <br clear="both"/>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <div style="width: 100%;float: left; margin-top: 5px;">
+                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="20%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Mã</p>
+                                            </th>
+                                            <th class="text-center" width="20%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Ngày hết hạn</p>
+                                            </th>
+                                            <th class="text-center" width="20%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Người sở hữu</p>
+                                            </th>
+                                            <th class="text-center" width="20%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Thạng thái</p>
+                                            </th>
+                                            <th class="text-center" width="15%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Ghi chú</p>
+                                            </th>
+                                        </tr>
+                                        <tr t-foreach="o.production_lot_ids" t-as="l"
+                                            style="padding:1px; margin: 1px">
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-field="l.name"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-if="l.life_date">
+                                                    <t t-esc="datetime.datetime.strptime(l.life_date, '%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y %H:%M:%S')"/>
+                                                </span>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-field="l.x_customer_id"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-field="l.x_status"/>
+                                            </td>
+                                            <td class="text-center" style="padding:1px; margin: 1px">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_qweb_code_card" model="report.paperformat">
+            <field name="name">A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">96</field>
+
+        </record>
+
+        <report
+                id="qweb_code_card"
+                model="izi.product.release"
+                string="Code card"
+                report_type="qweb-pdf"
+                name="izi_product_release.report_template_code_card_view"
+                file="izi_product_release.report_template_code_card_view"
+                paperformat="izi_product_release.paperformat_qweb_code_card"
+
+        />
+        <record id="view_report_template_code_card_view" model="ir.ui.view">
+            <field name="name">report_template_code_card_view</field>
+            <field name="model">izi.product.release</field>
+            <field name="inherit_id" ref="product_release_form_view"/>
+            <field name="arch" type="xml">
+                <button name="action_transfer" position="after">
+                    <button name="action_to_print" type="object" string="Print" states="done"/>
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>

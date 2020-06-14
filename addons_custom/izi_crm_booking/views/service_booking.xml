@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="service_booking_form_view">
+            <field name="name">Services Booking form view</field>
+            <field name="model">service.booking</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="type" invisible="1" attrs="{'readonly':[('state','not in',('new'))]}"/>
+                        <button name="action_confirm" string="Confirm" type="object" states="new" class="oe_highlight"/>
+                        <button name="action_order" string="Create order" type="object" states="confirmed"
+                                attrs="{'invisible': ['|', ('type', '=', 'service')]}"
+                                class="oe_highlight"/>
+                        <button name="action_no_sale" string="No sale" type="object" states="confirmed"
+                                attrs="{'invisible': ['|', ('type', '=', 'service')]}"
+                                class="oe_highlight"/>
+                        <button name="action_back_to_new" string="Back to new" type="object"
+                                 states="confirmed" confirm="Bạn có chắc chắn muốn quay lại trạng thái mới"/>
+                        <button name="action_done" string="Make done" type="object" states="working"
+                                attrs="{'invisible': ['|', ('type', '=', 'meeting')]}"
+                                class="oe_highlight"/>
+<!--                        <button name="action_working" string="Working" type="object" states="confirmed"-->
+<!--                                attrs="{'invisible': ['|', ('type', '=', 'meeting')]}"-->
+<!--                                class="oe_highlight"/>-->
+                        <button name="action_redeem" string="Redeem" type="object" states="confirmed"
+                                attrs="{'invisible': ['|', ('type', '=', 'meeting')]}"
+                                class="oe_highlight"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="new,confirmed,working"
+                                confirm="Bạn có chắc chắn muốn hủy bỏ lịch đặt hẹn này"/>
+                        <button name="action_booking" type="object" states="cancel" string="Booking"/>
+                        <button name="action_meeting" type="object" states="cancel" string="Meeting"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,confirmed,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <div class="oe_title">
+                                <h1 class="text-center">
+                                    <field name="name" class="oe_inline" readonly="1"
+                                           attrs="{'invisible': [('name', '=', False)]}"/>
+                                </h1>
+                            </div>
+                        </group>
+                        <label for="customer_id" string="Customer" domain="[('customer', '=', True)]"
+                               context="{'search_default_customer':1, 'form_view_ref':'izi_partner.customer_form_view_ref', 'limit_company': 1}"
+                               attrs="{'readonly':[('state','not in',('new'))]}"/>
+                        <h2>
+                            <field name="customer_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"
+                                   context="{'search_default_customer':1}"
+                                   attrs="{'readonly':[('state','not in',('new'))]}" required="1"/>
+                        </h2>
+                        <group>
+                            <group>
+                                <field name="branch_id"
+                                       options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"
+                                       attrs="{'readonly':[('state','not in',('new'))]}" invisible="1"/>
+                                <field name="team_id" required="1" force_save="1"
+                                       attrs="{'readonly':[('state','not in',('new'))]}"/>
+                                <field name="company_id" invisible="1" force_save="1"
+                                       attrs="{'readonly':[('state','not in',('new'))]}"/>
+                                <field name="user_id" force_save="1"
+                                       attrs="{'readonly':[('state','not in',('new'))]}"/>
+                                <field name="config_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="contact_number" attrs="{'readonly':[('state','not in',('new'))]}"/>
+<!--                                <field name="customer_qty" attrs="{'readonly':[('state','not in',('new'))]}"/>-->
+                                <field name="create_uid" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="date" readonly="1" force_save="1"/>
+                                <field name="time_from" attrs="{'readonly':[('state','not in',('new', 'confirmed'))]}"
+                                       required="1"/>
+                                <field name="time_to" attrs="{'readonly':[('state','not in',('new', 'confirmed'))]}"
+                                       required="1"/>
+                                <field name="is_create_event" attrs="{'readonly':[('state','not in',('new'))]}"/>
+                                <field name="have_deals" readonly="True"/>
+                            </group>
+                            <group>
+                                <field name="note" attrs="{'readonly':[('state','not in',('new'))]}"/>
+<!--                                <field name="ref_sale_order_id" readonly="1"/>-->
+                                <field name="ref_order_id" readonly="1"/>
+                                <field name="use_service_id" readonly="1" attrs="{'invisible': [('type', '=', 'meeting')]}"/>
+                                <field name="crm_lead_id" readonly="1" force_save="1" attrs="{'invisible': [('crm_lead_id', '=', False)]}"/>
+                                <field name="reason_no_sale" readonly="1"
+                                       attrs="{'invisible': [('state', '!=', 'no_sale')]}"/>
+                                <field name="parent_id" readonly="1" force_save="1" attrs="{'invisible': [('parent_id', '=', False)]}"/>
+                                <field name="expected_revenue"/>
+                                <field name="real_revenue" attrs="{'readonly': 1}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Services" attrs="{'invisible': [('type', '=', 'meeting')], 'readonly':[('state','not in',('new'))]}">
+                                <field name="services" context="{'tree_view_ref': 'izi_crm_booking.product_product_tree_view_p1000'}">
+                                    <tree editable="bottom">
+                                        <field name="default_code"/>
+                                        <field name="name"/>
+<!--                                        <field name="x_duration" widget="float_time" sum="Total duration"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Products">
+                                <field name="product_ids" attrs="{'readonly':[('state','not in',('new'))]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" required="1"/>
+                                        <field name="qty" required="1"/>
+                                        <field name="amount_total" required="1" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Beds" attrs="{'invisible': [('type', '=', 'meeting')], 'readonly':[('state','not in',('new'))]}">
+                                <field name="beds"
+                                       context="{'time_from': time_from, 'time_to': time_to, 'tree_view_ref': 'izi_manage_room.izi_pos_service_bed_list'}">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="code"/>
+<!--                                        <field name="description"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Employees" attrs="{'invisible': [('type', '=', 'meeting')], 'readonly':[('state','not in',('new'))]}">
+                                <field name="employees"
+                                       context="{'default_company_id': company_id, 'time_from': time_from, 'time_to': time_to, 'tree_view_ref': 'izi_crm_booking.view_employee_tree_p1000'}">
+                                    <tree>
+                                        <field name="x_employee_code"/>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="service_booking_calendar_view" model="ir.ui.view">
+            <field name="name">Service booking calendar view</field>
+            <field name="model">service.booking</field>
+            <field name="arch" type="xml">
+                <calendar string="Service_booking"
+                          date_start="time_from"
+                          date_stop="time_to"
+                          color="state"
+                          quick_add="False">
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="note"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_service_booking_search">
+            <field name="name">service.booking.search</field>
+            <field name="model">service.booking</field>
+            <field name="arch" type="xml">
+                <search string="Service Booking">
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="user_id"/>
+                    <filter string="My Activities" name="activities_my"
+                        domain="[('user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter string="Today Activities" name="activities_today"
+                        domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <!--<filter string="Today Activities" name="activities_today"-->
+                        <!--domain="['&amp;', ('time_from', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),-->
+                                     <!--('time_from', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))-->
+                            <!--]"/>-->
+                    <!--<filter string="Future Activities" name="activities_upcoming_all"-->
+                        <!--domain="[('time_from', '&gt;', context_today().strftime('%Y-%m-%d 23:59:59'))-->
+                        <!--]"/>-->
+                    <filter string="Future Activities" name="activities_upcoming_all"
+                        domain="[('date', '&gt;', context_today().strftime('%Y-%m-%d'))
+                        ]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="User"  context="{'group_by': 'user_id'}"/>
+                        <filter string="State" context="{'group_by':'state'}"/>
+                        <filter string="Branch" context="{'group_by':'branch_id'}"/>
+                        <filter string="Customer" context="{'group_by':'customer_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="services_booking_tree_view">
+            <field name="name">Services Booking tree view</field>
+            <field name="model">service.booking</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'new'"
+                      decoration-muted="state == 'cancel'"
+                      decoration-danger="state in ('working', 'confirmed')">
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="branch_id"/>
+                    <field name="user_id"/>
+                    <field name="note"/>
+                    <field name="time_from"/>
+                    <field name="time_to"/>
+                    <field name="expected_revenue"/>
+                    <field name="real_revenue"/>
+                    <field name="have_deals"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_service_booking" model="ir.actions.act_window">
+            <field name="name">Booking</field>
+            <field name="res_model">service.booking</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('type','=','service')]</field>
+            <field name="context">{'default_type' : 'service'}
+            </field>
+        </record>
+
+
+        <record id="action_customer_meeting" model="ir.actions.act_window">
+            <field name="name">Meeting</field>
+            <field name="res_model">service.booking</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('type','=','meeting')]</field>
+            <field name="context">{'default_type' : 'meeting'}
+            </field>
+        </record>
+
+        <record id="action_customer_general" model="ir.actions.act_window">
+            <field name="name">General</field>
+            <field name="res_model">service.booking</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="action_service_booking_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="services_booking_tree_view"/>
+            <field name="act_window_id" ref="action_service_booking"/>
+        </record>
+
+        <record id="action_service_booking_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="service_booking_form_view"/>
+            <field name="act_window_id" ref="action_service_booking"/>
+        </record>
+
+        <record id="service_booking_calendar_view_calender" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="service_booking_calendar_view"/>
+            <field name="act_window_id" ref="action_service_booking"/>
+        </record>
+
+        <record id="action_customer_meeting_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="services_booking_tree_view"/>
+            <field name="act_window_id" ref="action_customer_meeting"/>
+        </record>
+
+        <record id="action_customer_meeting_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="service_booking_form_view"/>
+            <field name="act_window_id" ref="action_customer_meeting"/>
+        </record>
+
+        <record id="action_customer_meeting_calender" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="service_booking_calendar_view"/>
+            <field name="act_window_id" ref="action_customer_meeting"/>
+        </record>
+
+         <record id="action_customer_general_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="services_booking_tree_view"/>
+            <field name="act_window_id" ref="action_customer_general"/>
+        </record>
+
+        <record id="action_customer_general_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="service_booking_form_view"/>
+            <field name="act_window_id" ref="action_customer_general"/>
+        </record>
+
+        <record id="action_customer_general_calender" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="service_booking_calendar_view"/>
+            <field name="act_window_id" ref="action_customer_general"/>
+        </record>
+
+        <menuitem id="crm_service_booking_category"
+                  name="Booking/Meeting"
+                  parent="crm.crm_menu_pipeline"
+                  sequence="7"/>
+
+        <menuitem id="menu_service_booking"
+                  name="Service Booking"
+                  action="action_service_booking"
+                  parent="izi_crm_booking.crm_service_booking_category"
+                  sequence="1"/>
+
+        <menuitem id="menu_customer_meeting"
+                  name="Customer meeting"
+                  action="action_customer_meeting"
+                  parent="izi_crm_booking.crm_service_booking_category"
+                  sequence="5"/>
+
+        <menuitem id="menu_customer_general"
+                  name="Customer general"
+                  action="action_customer_general"
+                  parent="izi_crm_booking.crm_service_booking_category"
+                  sequence="7"/>
+
+
+        <record id="izi_service_booking_form_pos" model="ir.ui.view">
+            <field name="name">form</field>
+            <field name="model">service.booking</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="selection" required="1" widget="radio"/>
+                        </group>
+                        <group>
+                            <field name="config_id" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_pos" string="Create" type="object" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

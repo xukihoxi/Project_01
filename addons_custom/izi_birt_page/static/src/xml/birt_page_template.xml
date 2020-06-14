@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="BirtPageWidget">
+            <!--<span t-attf-style="background-color: {{ widget.color }};">HEADER HERE</span>-->
+            <iframe t-attf-src="{{widget.birt_link}}" style="height: 100%; width:100%;"></iframe>
+    </t>
+</templates>

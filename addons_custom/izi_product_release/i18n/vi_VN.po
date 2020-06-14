@@ -1,0 +1,538 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_product_release
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:43+0000\n"
+"PO-Revision-Date: 2019-05-06 16:45+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.report_template_code_card_view
+msgid "<b>DANH SÁCH MÃ THẺ DỊCH VỤ / PHIẾU MUA HÀNG</b>"
+msgstr "<b>DANH SÁCH MÃ THẺ DỊCH VỤ / PHIẾU MUA HÀNG</b>"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: izi_product_release
+#: selection:izi.product.release,state:0
+#: selection:stock.production.lot,x_status:0
+msgid "Actived"
+msgstr "Kích hoạt"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_product_product_x_amount
+#: model:ir.model.fields,field_description:izi_product_release.field_product_template_x_amount
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:67
+#, python-format
+msgid "Bạn chưa cấu hình mã kho tổng "
+msgstr "Bạn chưa cấu hình mã kho tổng "
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:75
+#, python-format
+msgid "Bạn chưa cấu hình sản phẩm cho phôi."
+msgstr "Bạn chưa cấu hình sản phẩm cho phôi."
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:64
+#, python-format
+msgid "Bạn chưa cấu hình thông số hệ thống cho địa điểm tổng. Xin hãy liên hệ với người quản trị."
+msgstr "Bạn chưa cấu hình thông số hệ thống cho địa điểm tổng. Xin hãy liên hệ với người quản trị."
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Bạn có chắc chắn muốn kích hoạt tất cả các mã đã tạo trong lần phát hành này?"
+msgstr "Bạn có chắc chắn muốn kích hoạt tất cả các mã đã tạo trong lần phát hành này?"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_campaign_id
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: izi_product_release
+#: selection:izi.product.release,state:0
+#: selection:izi.service.card.detail,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_card_blank_id
+msgid "Card Blank"
+msgstr "Phôi thẻ"
+
+#. module: izi_product_release
+#: model:ir.actions.act_window,help:izi_product_release.action_product_release_form
+msgid "Click to create a times release coupon and card"
+msgstr "Click tạo mới thẻ dịch vụ, phiếu mua hàng"
+
+#. module: izi_product_release
+#: model:ir.actions.report,name:izi_product_release.qweb_code_card
+msgid "Code card"
+msgstr "Mã thẻ"
+
+#. module: izi_product_release
+#: model:ir.actions.act_window,name:izi_product_release.action_product_release_form
+msgid "Coupon, Card Release"
+msgstr "Phát hành thẻ dịch vụ, phiếu mua hàng"
+
+#. module: izi_product_release
+#: model:ir.ui.menu,name:izi_product_release.menu_product_release
+msgid "Coupon, card release"
+msgstr "Phát hành thẻ dịch vụ, phiếu mua hàng"
+
+#. module: izi_product_release
+#: selection:izi.product.release,state:0
+msgid "Created"
+msgstr "Đã tạo"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_create_uid
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_date
+msgid "Created date"
+msgstr "Ngày tạo"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_create_date
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_customer_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_release_location_id
+msgid "Delivery to"
+msgstr "Kho phát hành"
+
+#. module: izi_product_release
+#: selection:stock.production.lot,x_status:0
+msgid "Destroy"
+msgstr "Hủy"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_card_detail_ids
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Details"
+msgstr "Các chi tiết"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_product_product_x_discount
+#: model:ir.model.fields,field_description:izi_product_release.field_product_template_x_discount
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_discount
+msgid "Discount"
+msgstr "Giảm giá"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_display_name
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_product_release
+#: selection:izi.product.release,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_product_release
+#: selection:izi.product.release,state:0
+msgid "Draft"
+msgstr "Bản thảo"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Dịch vụ"
+msgstr "Dịch vụ"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_expired_type
+msgid "Expire type"
+msgstr "Phương thức hết hạn"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_expired_date
+msgid "Expired date"
+msgstr "Ngày hết hạn"
+
+#. module: izi_product_release
+#: selection:izi.product.release,expired_type:0
+msgid "Fixed"
+msgstr "Định trước"
+
+#. module: izi_product_release
+#: selection:izi.product.release,expired_type:0
+#: selection:izi.product.release,use_type:0
+msgid "Flexible"
+msgstr "Linh hoạt"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Generate coupon"
+msgstr "Tạo mã"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.report_template_code_card_view
+msgid "Ghi chú"
+msgstr "Ghi chú"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_qty_hand
+msgid "Hand"
+msgstr "SL tồn"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_id
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release___last_update
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_write_uid
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_write_date
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Lot"
+msgstr "Số Sê-ri"
+
+#. module: izi_product_release
+#: model:ir.model,name:izi_product_release.model_stock_production_lot
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_lot_id
+msgid "Lot/Serial"
+msgstr "Lô/Số sê-ri"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/product_template_custom.py:19
+#, python-format
+msgid "Loại thẻ là phiếu mua hàng, bạn cần thêm tổng tiền hoặc phần trăm giảm giá cho phiếu này!"
+msgstr "Loại thẻ là phiếu mua hàng, bạn cần thêm tổng tiền hoặc phần trăm giảm giá cho phiếu này!"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/product_template_custom.py:21
+#, python-format
+msgid "Loại thẻ là phiếu mua hàng, tổng tiền hoặc phần trăm giảm giá của phiếu này phải lớn hơn 0!"
+msgstr "Loại thẻ là phiếu mua hàng, tổng tiền hoặc phần trăm giảm giá của phiếu này phải lớn hơn 0!"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_move_ids
+msgid "Move"
+msgstr "Dịch chuyển"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.report_template_code_card_view
+msgid "Mã"
+msgstr "Mã"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_name
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:72
+#: code:addons/izi_product_release/models/izi_product_release.py:73
+#: selection:stock.production.lot,x_status:0
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+#: model:ir.ui.view,arch_db:izi_product_release.report_template_code_card_view
+msgid "Ngày hết hạn"
+msgstr "Ngày hết hạn"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:93
+#, python-format
+msgid "Ngày hết hạn phải lớn hơn ngày phát hành !!!"
+msgstr "Ngày hết hạn phải lớn hơn ngày phát hành !!!"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+#: model:ir.ui.view,arch_db:izi_product_release.report_template_code_card_view
+msgid "Người sở hữu"
+msgstr "Người sở hữu"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Người sủ dụng"
+msgstr "Người sủ dụng"
+
+#. module: izi_product_release
+#: selection:product.template,x_type_card:0
+msgid "None"
+msgstr "None"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_note
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_validity
+msgid "Num of active days (month)"
+msgstr "Số tháng hiệu lực"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Number"
+msgstr "Số"
+
+#. module: izi_product_release
+#: model:ir.actions.act_window,help:izi_product_release.action_product_release_form
+msgid "Odoo ....................."
+msgstr "ERP Viet ....................."
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "PHÁT HÀNH THẺ DỊCH VỤ - PHIẾU MUA HÀNG"
+msgstr "PHÁT HÀNH THẺ DỊCH VỤ - PHIẾU MUA HÀNG"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_payment_amount
+msgid "Payment Amount"
+msgstr "Số tiền thanh toán"
+
+#. module: izi_product_release
+#: selection:product.template,x_type_card:0
+msgid "Phiếu mua hàng"
+msgstr "Phiếu mua hàng"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_picking_id
+msgid "Picking"
+msgstr "Dịch chuyển kho"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_location_id
+msgid "Picking to"
+msgstr "Kho nhận"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.view_report_template_code_card_view
+msgid "Print"
+msgstr "In"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_product_release
+#: model:ir.model,name:izi_product_release.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_production_lot_ids
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Product detail"
+msgstr "Chi tiết thẻ"
+
+#. module: izi_product_release
+#: model:ir.actions.act_window,name:izi_product_release.action_transfer_to_stock
+msgid "Product serial transfer"
+msgstr "Product serial transfer"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_qty_use
+msgid "Qty used"
+msgstr "Số lượng đã sử dụng"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: izi_product_release
+#: selection:izi.service.card.detail,state:0
+msgid "Ready"
+msgstr "Ready"
+
+#. module: izi_product_release
+#: selection:izi.product.release,use_type:0
+msgid "Real name"
+msgstr "Đích danh"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_move_x_release_id
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_release_id
+msgid "Release"
+msgstr "Phiếu phát hành"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_remain_amount
+msgid "Remain amount"
+msgstr "Số tiền còn lại"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_product_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_state
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: izi_product_release
+#: model:ir.model,name:izi_product_release.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:88
+#, python-format
+msgid "Số tháng hết hạn phải lớn hơn 0 !!!"
+msgstr "Số tháng hết hạn phải lớn hơn 0 !!!"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.report_template_code_card_view
+msgid "Thạng thái"
+msgstr "Thạng thái"
+
+#. module: izi_product_release
+#: selection:product.template,x_type_card:0
+msgid "Thẻ bào hành"
+msgstr "Thẻ bào hành"
+
+#. module: izi_product_release
+#: code:addons/izi_product_release/models/izi_product_release.py:98
+#, python-format
+msgid "Thẻ bảo hành chỉ được sử dụng đích danh. Vui lòng kiểm tra lại!!!"
+msgstr "Thẻ bảo hành chỉ được sử dụng đích danh. Vui lòng kiểm tra lại!!!"
+
+#. module: izi_product_release
+#: selection:product.template,x_type_card:0
+msgid "Thẻ dịch vụ"
+msgstr "Thẻ dịch vụ"
+
+#. module: izi_product_release
+#: selection:product.template,x_type_card:0
+msgid "Thẻ đổ tồn"
+msgstr "Thẻ đổ tồn"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_service_card_detail_total_qty
+msgid "Total"
+msgstr "Tổng"
+
+#. module: izi_product_release
+#: model:ir.model,name:izi_product_release.model_stock_picking
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "Transfer"
+msgstr "Chuyển hàng"
+
+#. module: izi_product_release
+#: selection:izi.product.release,state:0
+msgid "Transfering"
+msgstr "Đang chuyển"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_product_product_x_type_card
+#: model:ir.model.fields,field_description:izi_product_release.field_product_template_x_type_card
+msgid "Type Card"
+msgstr "Loại thẻ"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_izi_product_release_use_type
+msgid "Use type"
+msgstr "Phương thức sử dụng"
+
+#. module: izi_product_release
+#: selection:stock.production.lot,x_status:0
+msgid "Used"
+msgstr "Đã sử dụng"
+
+#. module: izi_product_release
+#: model:ir.model.fields,field_description:izi_product_release.field_stock_production_lot_x_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_product_release
+#: selection:stock.production.lot,x_status:0
+msgid "Using"
+msgstr "Đang sử dụng"
+
+#. module: izi_product_release
+#: model:ir.model,name:izi_product_release.model_izi_product_release
+msgid "izi.product.release"
+msgstr "Phát hành"
+
+#. module: izi_product_release
+#: model:ir.model,name:izi_product_release.model_izi_service_card_detail
+msgid "izi.service.card.detail"
+msgstr "izi.service.card.detail"
+
+#. module: izi_product_release
+#: model:ir.ui.view,arch_db:izi_product_release.product_release_form_view
+msgid "release form"
+msgstr "release form"

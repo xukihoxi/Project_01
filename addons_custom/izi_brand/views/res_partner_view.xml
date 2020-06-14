@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_brand_view_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.brand</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="type" position="before">
+                    <field name="create_date" invisible="1"/>
+                    <field name="x_brand_id" placeholder="Brand" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('x_brand_id', '!=', False)], 'required': [('customer', '=', True)]}" force_save="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

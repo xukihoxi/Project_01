@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="izi_stock_production_lot_form_destroy_service" model="ir.ui.view">
+        <field name="name">izi_stock_production_lot_form</field>
+        <field name="model">stock.production.lot</field>
+        <field name="arch" type="xml">
+            <form string="Lot" create="false" edit="false">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name"/>
+                        </div>
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="x_customer_id"/>
+                            <field name="x_user_id"/>
+                            <field name="x_order_id"/>
+                        </group>
+                        <group>
+                            <field name="life_date"/>
+                            <field name="x_status"/>
+                            <field name="x_discount"/>
+                            <field name="x_amount"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Dịch vụ">
+                            <field name="x_card_detail_ids" readonly="1">
+                                <tree create="false" edit="false">
+                                    <field name="product_id"/>
+                                    <field name="total_qty"/>
+                                    <field name="qty_hand"/>
+                                    <field name="qty_use"/>
+                                    <field name="price_unit"/>
+                                    <field name="amount_total"/>
+                                    <field name="remain_amount"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

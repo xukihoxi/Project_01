@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_cong_no_ncc_form" model="ir.ui.view">
+            <field name="name">Rpt Cong No NCC </field>
+            <field name="model">rpt.cong.no.ncc</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="crm_team_id" options="{'no_create':1, 'no_create_edit':1}" required="1"/>
+                        <field name="select_all_partner"/>
+                        <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_all_partner','=',True)],'required': [('select_all_partner','=',False)]}"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_cong_no_ncc_action" model="ir.actions.act_window">
+            <field name="name">Rpt Cong No NCC</field>
+            <field name="res_model">rpt.cong.no.ncc</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="rpt_cong_no_ncc_menu" action="rpt_cong_no_ncc_action" name="Rpt Cong No NCC" parent="point_of_sale.menu_point_rep"/>
+    </data>
+</odoo>

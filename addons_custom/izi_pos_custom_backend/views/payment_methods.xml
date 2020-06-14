@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Chỉnh view -->
+<data>
+    <!-- Form thanh toán đơn hàng -->
+    <record id="izi_view_pos_payment_pos_order" model="ir.ui.view">
+        <field name="name">izi.pos.make.payment.form</field>
+        <field name="model">pos.make.payment</field>
+        <field name="arch" type="xml">
+        <form string="Pay Order">
+            <group>
+                <field name="journal_id" options="{'no_create_edit':True, 'no_open':True}" domain="[('journal_user', '=', True), ('code', '!=', 'debt')]"/>
+                <field name="x_vc_code" attrs="{'invisible': [('x_show_vc_code', '=', False)], 'required': [('x_show_vc_code', '=', True)]}"/>
+                <field name="x_vm_amount_total" attrs="{'invisible': [('x_show_vm_amount', '=', False)]}"/>
+                <field name="x_deposit_amount_residual" attrs="{'invisible': [('x_show_deposit_amount', '=', False)]}"/>
+                <field name="amount" attrs="{'readonly': [('x_lock_amount', '=', True)]}"/>
+                <field name="payment_name" attrs="{'required': [('x_required_ref', '=', True)]}"/>
+                <field name="session_id" invisible="1"/>
+                <field name="x_lock_amount" invisible="1"/>
+                <field name="x_show_vc_code" invisible="1"/>
+                <field name="x_show_vm_amount" invisible="1"/>
+                <field name="x_show_deposit_amount" invisible="1"/>
+                <field name="x_required_ref" invisible="1"/>
+            </group>
+            <footer>
+                <button name="check" context="{'izi_pos_check':True}" string="Tạo thanh toán" type="object" class="btn-primary"/>
+                <button special="cancel" string="Huỷ" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <!-- Action thanh toán đơn hàng-->
+    <record id="izi_action_pos_payment_pos_order" model="ir.actions.act_window">
+        <field name="name">Payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">pos.make.payment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" eval="izi_view_pos_payment_pos_order"/>
+        <field name="target">new</field>
+        <field name="context">{'izi_recompute_order_discount':True}</field>
+    </record>
+
+</data>
+</odoo>

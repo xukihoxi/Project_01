@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="pos_revenue_allocation_use_service_form_inherit" model="ir.ui.view">
+            <field name="name">pos_revenue_allocation.use_service</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="state" widget="statusbar" statusbar_visible="draft,wait_material,working,rate,done" invisible="1"/>
+                    <field name="type" widget="radio" invisible="1"
+                           options="{'horizontal': true}"/>
+                    <field name="x_user_id" string="Beneficiary" widget="many2many_tags"
+                           attrs="{'invisible': [('type', '!=', 'service')], 'readonly': [('state', '!=', 'draft')]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

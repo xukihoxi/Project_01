@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="izi_view_pos_payment_vm" model="ir.ui.view">
+            <field name="name">izi.pos.make.payment.form</field>
+            <field name="model">pos.make.payment</field>
+            <field name="arch" type="xml">
+                <form string="Pay Order">
+                    <group>
+                        <field name="journal_id" context="{'izi_vm_journal': x_vm_journal_ids}" options="{'no_create': True, 'no_open': True, 'no_edit': True}"/>
+                        <field name="amount" widget="monetary"/>
+                        <field name="payment_name"/>
+                        <field name="session_id" invisible="1"/>
+                        <field name="x_vm_journal_ids" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="check" context="{'izi_coin_payment': True}" string="Tạo thanh toán" type="object"
+                                class="btn-primary"/>
+                        <button special="cancel" string="Huỷ" class="btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_action_pos_payment_vm" model="ir.actions.act_window">
+            <field name="name">Payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.make.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" eval="izi_view_pos_payment_vm"/>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Sell virtual money form -->
+        <record id="view_pos_pos_form_izi_vm_sell" model="ir.ui.view">
+            <field name="name">pos.order.form.izi_vm.sell</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <form string="Point of Sale Orders">
+                    <field name="create_date" invisible="1"/>
+                    <field name="x_vm_journal" invisible="1"/>
+                    <field name="x_has_paid" invisible="1"/>
+                    <header>
+                        <button name="%(izi_virtual_money.izi_action_pos_payment_vm)d"
+                                string="Payment" class="oe_highlight" type="action" states="draft"
+                                context="{'pricelist_id': pricelist_id, 'pos_session_id' : session_id, 'izi_journal_ids_vm': x_vm_journal, 'izi_coin_payment': True}"/>
+                        <button name="action_customer_signature" string="Customer Signature" type="object"
+                                states="customer_comment" class="oe_highlight"/>
+                        <button name="action_pos_order_invoice" string="Invoice" type="object" states="paid"
+                                attrs="{'readonly': [('partner_id','=',False)]}"/>
+                        <button name="action_compute_order_discount" string="Discount compute" type="object"
+                                attrs="{'invisible':['|', ('x_has_paid', '=', True), ('state','!=','draft')]}"/>
+                        <button name="refund" string="Return Products" type="object" invisible="1"/>
+                        <button name="action_open_popup_search_card" string="Search card" type="object"
+                                attrs="{'invisible':[('state', '!=', 'draft')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,paid,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_invoice"
+                                    string="Invoice"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible':[('state','!=','invoiced')]}">
+                            </button>
+                        </div>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible':[('create_date', '=', False)]}"
+                                   style="margin-right: 35%; margin-left: 35%; max-width: 30%" placeholder="Number"
+                                   readonly="1"/>
+                        </h3>
+                        <group name="order_fields">
+                            <group>
+                                <field name="partner_id" domain="[('customer', '=', True)]"
+                                       context="{'search_default_customer':1}"
+                                       attrs="{'readonly': ['|', ('x_has_paid', '=', True), ('state','!=','draft')]}"
+                                       required="1"/>
+                                <field name="session_id" readonly="1" force_save="1" invisible="1"/>
+                                <field name="fiscal_position_id" options="{'no_create': True}" invisible="1"/>
+                                <field name="x_expired" invisible="1"/>
+                                <field name="pricelist_id" context="{'domain_by_session_id': session_id}" options="{'no_create':True, 'no_open':True}"
+                                       attrs="{'readonly': ['|', ('x_has_paid', '=', True), ('state','!=','draft')]}"/>
+                                <field name="date_order"
+                                       attrs="{'readonly': ['|', ('x_has_paid', '=', True), ('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="user_id" force_save="1"
+                                       attrs="{'readonly': ['|', ('x_has_paid', '=', True), ('state','!=','draft')]}"
+                                       options="{'no_open':True, 'no_create':True, 'no_edit':True}"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="Products">
+                                <field name="lines" colspan="4" nolabel="1"
+                                       attrs="{'readonly': ['|', ('x_has_paid', '=', True), ('state','!=','draft')]}">
+                                    <tree string="Order lines" editable="bottom" create="0">
+                                        <field name="product_id" readonly="1" force_save="1"/>
+                                        <field name="qty"/>
+                                        <field name="price_unit" widget="monetary" readonly="1" force_save="1"/>
+                                        <field name="discount" widget="monetary"/>
+                                        <field name="price_subtotal" widget="monetary" readonly="1"/>
+                                        <field name="price_subtotal_incl" widget="monetary" readonly="1"/>
+                                        <field name="tax_ids" widget="many2many_tags" invisible="1"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="amount_tax" widget="monetary"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                        <button name="button_dummy"
+                                                states="draft" string="(update)" class="oe_edit_only oe_link"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Payments">
+                                <field name="statement_ids" colspan="4" nolabel="1">
+                                    <tree editable="bottom" string="Statement lines" create="0" edit="0">
+                                        <field name="journal_id"/>
+                                        <field name="statement_id"/>
+                                        <field name="amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="extra" string="Extra Info">
+                                <group string="General Information">
+                                    <field name="company_id" groups="base.group_multi_company"/>
+                                    <field name="location_id" widget="selection"
+                                           groups="stock.group_stock_multi_locations"/>
+                                    <field name="user_id"/>
+                                    <field name="picking_id" invisible="1"/>
+                                    <field name="pos_reference"/>
+                                </group>
+                                <group string="Accounting Information">
+                                    <group>
+                                        <field name="sale_journal" domain="[('type','=','sale')]"/>
+                                        <field name="account_move" readonly="1"
+                                               attrs="{'invisible':[('state','!=','done')]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Notes" name="note">
+                                <field name="note" attrs="{'readonly':[('state','in',('done','invoiced', 'paid'))]}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Sell virtual money list -->
+        <record id="view_pos_order_tree_izi_vm_sell" model="ir.ui.view">
+            <field name="name">pos.order.tree.izi_vm.sell</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <tree string="POS Orders" decoration-info="state == 'draft'"
+                      decoration-danger="state not in ('done','paid','draft','invoiced')"
+                      decoration-muted="state in ('done','invoiced')">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="date_order"/>
+                    <field name="user_id"/>
+                    <field name="amount_total" sum="Amount total" widget="monetary"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="state"/>
+                    <field name="session_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Sell virtual money action -->
+        <record id="action_pos_pos_form_izi_vm_sell" model="ir.actions.act_window">
+            <field name="name">Sell virtual money</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="view_id" eval="view_pos_pos_form_izi_vm_sell"/>-->
+            <field name="domain">[('x_type', '=', '2')]</field>
+            <field name="context">{'izi_sell_vm':True}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new order.
+                </p>
+                <p>
+                    Use this menu to browse previous orders. To record new
+                    orders, you may use the menu <i>Your Session</i> for
+                    the touchscreen interface.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_pos_pos_form_izi_vm_sell_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_pos_order_tree_izi_vm_sell"/>
+            <field name="act_window_id" ref="action_pos_pos_form_izi_vm_sell"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_pos_pos_form_izi_vm_sell_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_pos_pos_form_izi_vm_sell"/>
+            <field name="act_window_id" ref="action_pos_pos_form_izi_vm_sell"/>
+        </record>
+
+        <!-- Sell virtual money menu -->
+        <menuitem id="menu_point_of_sale_sell_vm" parent="point_of_sale.menu_point_of_sale"
+                  action="action_pos_pos_form_izi_vm_sell"
+                  sequence="3" groups="point_of_sale.group_pos_manager,point_of_sale.group_pos_user"/>
+    </data>
+</odoo>

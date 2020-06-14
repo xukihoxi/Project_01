@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+        <record id="pos_revenue_allocation_pos_form_inherit" model="ir.ui.view">
+            <field name="name">pos_revenue_allocation.pos</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="state" widget="statusbar" statusbar_visible="draft,paid,done" invisible="1"/>
+                    <field name="x_pos_partner_refund_id" invisible="1"/>
+                    <field name="x_user_id" string="Beneficiary" widget="many2many_tags"
+                           attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                </field>
+                <page name="note" position="after">
+                    <page name="allocation" string="Allocation details">
+                        <button name="action_allocation" type="object" states="paid,done,invoiced" string="Allocation"
+                                class="oe_highlight"
+                                groups="point_of_sale.group_pos_manager, izi_res_permissions.category_leader_shop"/>
+                        <field name="x_allocation_ids" readonly="1">
+                            <tree default_order="product_id desc">
+                                <field name="employee_id"/>
+                                <field name="product_id"/>
+                                <field name="percent"/>
+                                <field name="amount" sum="Amount total"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="pos_revenue_allocation_money_form_inherit" model="ir.ui.view">
+            <field name="name">pos_revenue_allocation.money</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="state" widget="statusbar" statusbar_visible="draft,paid,done" invisible="1"/>
+                    <field name="x_pos_partner_refund_id" invisible="1"/>
+                    <field name="x_user_id" string="Beneficiary" widget="many2many_tags"
+                           attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                </field>
+                <page name="note" position="after">
+                    <page name="allocation" string="Allocation details">
+                        <button name="action_allocation" type="object" states="paid,done,invoiced" string="Allocation"
+                                class="oe_highlight"
+                                groups="point_of_sale.group_pos_manager, izi_res_permissions.category_leader_shop"/>
+                        <field name="x_allocation_ids" readonly="1">
+                            <tree default_order="employee_id desc" >
+                                <field name="employee_id"/>
+                                <field name="percent"/>
+                                <field name="amount" sum="Amount total"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>

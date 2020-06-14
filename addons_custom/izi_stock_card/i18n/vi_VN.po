@@ -1,0 +1,231 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_stock_card
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:50+0000\n"
+"PO-Revision-Date: 2019-05-06 16:53+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_stock_card
+#: model:ir.ui.view,arch_db:izi_stock_card.sc_stock_card_form_view
+msgid "<b>Stock card</b>"
+msgstr "<b>Stock card</b>"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_closing_stock
+msgid "Closing stock"
+msgstr "Tồn cuối kỳ"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_create_uid
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_create_date
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_date_time
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_name
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_display_name
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: izi_stock_card
+#: model:ir.ui.view,arch_db:izi_stock_card.sc_stock_card_form_view
+msgid "Generate stock card"
+msgstr "Lấy thông tin"
+
+#. module: izi_stock_card
+#: selection:scstock.card,state:0
+msgid "Generated"
+msgstr "Generated"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_id
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_stock_card
+#: model:ir.ui.view,arch_db:izi_stock_card.sc_stock_card_form_view
+msgid "In Excel"
+msgstr "In Excel"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_inventory
+msgid "Inventory"
+msgstr "Tồn kho"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_inventory_exchange
+msgid "Inventory Exchange"
+msgstr "Inventory Exchange"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card___last_update
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_write_uid
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_write_date
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_move_lines
+msgid "Move Lines"
+msgstr "Move Lines"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_date
+msgid "Move date"
+msgstr "Move date"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,help:izi_stock_card.field_scstock_card_line_date
+msgid "Move date: scheduled date until move is done, then date of actual move processing"
+msgstr "Ngày dịch chuyển: ngày dự kiến cho tới khi dịch chuyển kho được hoàn thành, sau đó ngày dịch chuyển thực tế được xử lý"
+
+#. module: izi_stock_card
+#: model:ir.ui.view,arch_db:izi_stock_card.sc_stock_card_form_view
+msgid "Moves"
+msgstr "Moves"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_opening_stock
+msgid "Opening stock"
+msgstr "Tồn đầu kỳ"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_quant_in
+msgid "Quantity in"
+msgstr "SL nhập"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_quant_in_exchange
+msgid "Quantity in exchange"
+msgstr "Quantity in exchange"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_quant_out
+msgid "Quantity out"
+msgstr "SL xuất"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_quant_out_exchange
+msgid "Quantity out exchange"
+msgstr "Quantity out exchange"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_reference
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: izi_stock_card
+#: model:ir.actions.act_window,name:izi_stock_card.action_sc_stock_card
+#: model:ir.ui.menu,name:izi_stock_card.menu_sc_stock_card
+msgid "SC Stock card"
+msgstr "Thẻ kho"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_stock_card_id
+msgid "Stock Card"
+msgstr "Thẻ kho"
+
+#. module: izi_stock_card
+#: model:ir.ui.view,arch_db:izi_stock_card.sc_stock_card_form_view
+msgid "Stock card"
+msgstr "Thẻ kho"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_line_move_id
+msgid "Stock move"
+msgstr "Stock move"
+
+#. module: izi_stock_card
+#: selection:scstock.card,state:0
+msgid "Temp"
+msgstr "Temp"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_temp_inventory
+msgid "Temporary inventory"
+msgstr "Temporary inventory"
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_to_date
+msgid "To date"
+msgstr "Đến ngày "
+
+#. module: izi_stock_card
+#: model:ir.model.fields,field_description:izi_stock_card.field_scstock_card_product_uom
+msgid "Unit of measurement"
+msgstr "Đơn vị"
+
+#. module: izi_stock_card
+#: model:ir.model,name:izi_stock_card.model_scstock_card
+msgid "scstock.card"
+msgstr "scstock.card"
+
+#. module: izi_stock_card
+#: model:ir.model,name:izi_stock_card.model_scstock_card_line
+msgid "scstock.card.line"
+msgstr "scstock.card.line"

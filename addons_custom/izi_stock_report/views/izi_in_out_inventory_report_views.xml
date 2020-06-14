@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+
+        <record id="izi_in_out_inventory_report_form" model="ir.ui.view">
+            <field name="name">izi.in.out.inventory.report.form</field>
+            <field name="model">izi.in.out.inventory.report</field>
+            <field name="arch" type="xml">
+                <form string="Choose your warehouse">
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="all"/>
+                        </group>
+                        <group>
+                            <field name="to_date" required="1"/>
+
+                            <field name="warehouse_id" domain="[('user_ids','=', uid)]" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_checkboxes" attrs="{'invisible': [('all', '=', True)],'required': [('all', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="open_table" string="General account of input - output - inventory" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_in_out_inventory_report_tree" model="ir.ui.view">
+            <field name="name">Input - output - inventory report</field>
+            <field name="model">izi.in.out.inventory.line.report</field>
+            <field name="arch" type="xml">
+                <tree string="Input - output - inventory report" create="false" edit="false" delete="false">
+                    <field name="warehouse_id"/>
+                    <field name="product_id"/>
+                    <field name="lot_id"/>
+                    <field name="opening_stock" sum="opening_stock"/>
+                    <field name="purchase_quantity" sum="purchase_quantity"/>
+                    <field name="purchase_refund" sum="purchase_refund"/>
+                    <field name="sale_quantity" sum="sale_quantity"/>
+                    <field name="sale_refund" sum="sale_refund"/>
+                    <field name="in_transfer" sum="in_transfer"/>
+                    <field name="out_transfer" sum="out_transfer"/>
+                    <field name="in_inventory" sum="in_inventory"/>
+                    <field name="out_inventory" sum="out_inventory"/>
+                    <field name="closing_stock" sum="closing_stock"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="izi_in_out_inventory_report_search" model="ir.ui.view">
+            <field name="name">izi.in.out.inventory.line.report.search</field>
+            <field name="model">izi.in.out.inventory.line.report</field>
+            <field name="arch" type="xml">
+                <search string="Input - output - inventory report search">
+                    <field name="product_id"/>
+                    <field name="lot_id"/>
+                    <field name="warehouse_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_izi_in_out_inventory_report" model="ir.actions.act_window">
+            <field name="name">General account of input - output - inventory</field>
+            <field name="res_model">izi.in.out.inventory.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_in_out_inventory_report_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--<menuitem id="menu_izi_in_out_inventory_report" name="Input - output - inventory report" parent="stock.menu_warehouse_report" sequence="100" action="action_izi_in_out_inventory_report"/>-->
+
+    </data>
+</odoo>

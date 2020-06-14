@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- Add fields to sell virtual money form -->
+        <record id="izi_virtual_money_sell_money_form" model="ir.ui.view">
+            <field name="name">pos.order.form.sell.virtual_money</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//field[@name='partner_id']" position="after">-->
+                    <!--<field name="x_rank_id" options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>-->
+                    <!--&lt;!&ndash;<field name="x_point_bonus" attrs="{'readonly': [('state','!=','draft')]}"/>&ndash;&gt;-->
+                <!--</xpath>-->
+                <field name="x_expired" position="before">
+                    <!--<field name="x_loyal_total" readonly="1"/>-->
+                    <!--<field name="x_total_order" readonly="1"/>-->
+                    <field name="x_pos_partner_refund_id" readonly="1" force_save="1"
+                           attrs="{'invisible': [('x_pos_partner_refund_id', '=', False)]}"/>
+                    <field name="x_debt" invisible="1"/>
+                </field>
+                <field name="pos_reference" position="after">
+                    <field name="x_signature_image" widget="image" readonly="1" force_save="1"/>
+                </field>
+                <!--<field name="date_order" position="after">-->
+                    <!--<field name="x_point_bonus" readonly="1"/>-->
+                <!--</field>-->
+                <field name="price_subtotal_incl" position="before">
+                    <field name="x_subtotal_wo_discount" widget="monetary"/>
+                </field>
+                <!--<field name="amount_tax" position="after">-->
+                    <!--<field name="x_amount_total" class="oe_subtotal_footer_separator" widget="monetary"/>-->
+                    <!--<field name="x_vip_discount" class="oe_subtotal_footer_separator" widget="monetary"/>-->
+                <!--</field>-->
+                <xpath expr="//button[@name='refund']" position="after">
+                    <button name="refund" string="Refund" type="object"
+                            attrs="{'invisible':[('state','not in',('done','invoiced', 'paid'))]}"/>
+                    <button name="send_refund" type="object" string="Send Refund" class="oe_highlight"
+                            attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=', 'draft')]}"/>
+                    <button name="action_cancel_refund" type="object" string="Cancel Refund"
+                            attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=','to_approve')]}"
+                            groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                    <button name="confirm_refund" type="object" string="Confirm Refund" class="oe_highlight"
+                            attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=','to_approve')]}"
+                            groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesalesr"/>
+                    <button name="create_invoice" type="object" string="Create Invoice"
+                            invisible="1"/>
+                    <button name="action_send_payment"
+                                attrs="{'invisible':['|',('state','!=','draft'), ('x_pos_partner_refund_id','!=', False)]}"
+                                type="object" class="oe_highlight" string="Send"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_pop_up_pos_order_input_card" model="ir.ui.view">
+            <field name="name">pos.order.input_card</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <form string="Card number">
+                    <group>
+                        <field name="x_lot_number"/>
+                    </group>
+                    <footer>
+                        <button name="action_search_lot_number" string="_Apply" type="object" class="btn-primary"/>
+                        <button class="btn-default" special="cancel" string="Close"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Sửa form ghi nhận thanh toán -->
+        <record id="izi_view_pos_payment_vm_inherit" model="ir.ui.view">
+            <field name="name">izi.pos.make.payment.form inherit</field>
+            <field name="model">pos.make.payment</field>
+            <field name="inherit_id" ref="izi_virtual_money.izi_view_pos_payment_vm"/>
+            <field name="arch" type="xml">
+                <field name="amount" position="after">
+                    <field name="x_deposit_amount_residual" widget="monetary" attrs="{'invisible': [('x_show_deposit_amount', '=', False)]}"/>
+                </field>
+                <field name="x_vm_journal_ids" position="after">
+                    <field name="x_show_deposit_amount" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

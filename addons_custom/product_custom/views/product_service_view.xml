@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="product_template_service_action" model="ir.actions.act_window">
+            <field name="name">Services</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="context">{"default_type":'service'}</field>
+            <field name="domain">[('type','=','service'),('default_code','not in',('PDDV','COIN','DISCOUNT'))]
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new product.
+                </p>
+                <p>
+                    You must define a product for everything you sell, whether it's a physical product, a consumable or
+                    a service you offer to customers.
+                </p>
+                <p>
+                    The product form contains information to simplify the sale process: price, notes in the quotation,
+                    accounting data, procurement methods, etc.
+                </p>
+            </field>
+        </record>
+        <menuitem id="menu_product_service_stock" name="Services" action="product_template_service_action"
+                  parent="stock.menu_stock_inventory_control" sequence="1"/>
+        <menuitem id="menu_pos_products_service"
+                  action="product_template_service_action"
+                  parent="point_of_sale.pos_config_menu_catalog"
+                  sequence="6"/>
+
+
+    </data>
+</odoo>

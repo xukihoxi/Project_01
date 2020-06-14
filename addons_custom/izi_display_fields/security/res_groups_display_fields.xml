@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Root Display fileds-->
+    <record model="ir.module.category" id="category_display_fields">
+        <field name="name">Display fields</field>
+    </record>
+
+    <record id="group_display_phone" model="res.groups">
+        <field name="name">Display phone</field>
+        <field name="category_id" ref="izi_display_fields.category_display_fields"/>
+    </record>
+</odoo>

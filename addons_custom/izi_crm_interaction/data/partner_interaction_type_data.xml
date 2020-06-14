@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record model="partner.interaction.type" id="type_remind">
+        <field name="name">Nhắc lịch liệu trình</field>
+    </record>
+    <record model="partner.interaction.type" id="type_remind_guarantee">
+        <field name="name">Nhắc lịch bảo hành</field>
+    </record>
+    <record model="partner.interaction.type" id="type_taking_care_after_do_service">
+        <field name="name">Chăm sóc sau khi khách làm dịch vụ</field>
+    </record>
+    <record model="partner.interaction.type" id="type_confirm_booking_meeting">
+        <field name="name">Xác nhận Booking/Meeting</field>
+    </record>
+    <record model="partner.interaction.type" id="type_remarketing">
+        <field name="name">Remarketing</field>
+    </record>
+</odoo>

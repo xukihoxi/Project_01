@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="add_product_ctg_view">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"></field>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="before">
+                    <field name="x_category_code" required="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

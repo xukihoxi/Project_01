@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_by_payment_form_revenue" model="ir.ui.view">
+            <field name="name">Rpt Payment Revenue </field>
+            <field name="model">rpt.by.payment.revunue</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="config_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_by_payment_revunue_action" model="ir.actions.act_window">
+            <field name="name">Report by Payment Revenue</field>
+            <field name="res_model">rpt.by.payment.revunue</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="rpt_by_payment_reveneu_menu" action="rpt_by_payment_revunue_action" name="Report by Payment Revenue" parent="point_of_sale.menu_point_rep"/>
+    </data>
+</odoo>

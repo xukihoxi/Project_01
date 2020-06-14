@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="cssStyleSheets">
+        <structure>
+            <property name="fileName">style_Birt.css</property>
+            <property name="useExternalCss">false</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="location_id" id="375">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">25</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="584">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/erp_amia_191205</property>
+            <property name="odaUser">odoo_amia_beauty</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">YW1pYV9iZWF1dHkkaXppMjAxOQ==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="374">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">x_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">x_code</text-property>
+                    <text-property name="heading">x_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">product_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">product_name</text-property>
+                    <text-property name="heading">product_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">default_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">default_code</text-property>
+                    <text-property name="heading">default_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">name</text-property>
+                    <text-property name="heading">name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">total_qty</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">total_qty</text-property>
+                    <text-property name="heading">total_qty</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">don_vi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">don_vi</text-property>
+                    <text-property name="heading">don_vi</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">location_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">location_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">x_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">product_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">default_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">total_qty</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">don_vi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">x_code</property>
+                    <property name="nativeName">x_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">product_name</property>
+                    <property name="nativeName">product_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">default_code</property>
+                    <property name="nativeName">default_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">total_qty</property>
+                    <property name="nativeName">total_qty</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">don_vi</property>
+                    <property name="nativeName">don_vi</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT 
+	x_code,
+	pt.name product_name,pt.default_code, a.name,
+	SUM(quantity) as total_qty, pu.name don_vi
+FROM
+	stock_quant quant join product_product pp ON quant.product_id = pp.id
+	JOIN product_template pt ON pp.product_tmpl_id = pt.id
+	JOIN stock_location st ON st.id = quant.location_id
+	JOIN product_category a on a.id=pt.categ_id
+	JOIN product_uom pu on pt.uom_id = pu.id
+WHERE
+	(quant.location_id = ANY( string_to_array( ?, ',')::integer[]) or ? = '0')
+AND pp.active = TRUE
+GROUP BY
+	x_code,
+	pt.name,
+	pt.categ_id,
+	pt.uom_id,
+pt.default_code,
+pu.name ,
+a.name
+ORDER BY pt.default_code]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>x_code</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>x_code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>x_code</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>product_name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>product_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>product_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>default_code</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>default_code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>default_code</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>name</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>name</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>total_qty</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>17</design:precision>
+            <design:scale>17</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>total_qty</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>total_qty</design:label>
+            <design:formattingHints>
+              <design:displaySize>25</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <cubes>
+        <tabular-cube name="Data Cube" id="376">
+            <property name="dimensions">
+                <tabular-dimension name="Group" id="377">
+                    <property name="defaultHierarchy">NewTabularHierarchy</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy" id="378">
+                            <property name="levels">
+                                <tabular-level name="x_code" id="379">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">x_code</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+                <tabular-dimension name="Group1" id="380">
+                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy1" id="381">
+                            <property name="levels">
+                                <tabular-level name="name" id="382">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">name</property>
+                                </tabular-level>
+                                <tabular-level name="default_code" id="383">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">default_code</property>
+                                </tabular-level>
+                                <tabular-level name="product_name" id="384">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">product_name</property>
+                                </tabular-level>
+                                <tabular-level name="don_vi" id="539">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">don_vi</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+            </property>
+            <property name="measureGroups">
+                <tabular-measure-group name="Summary Field" id="385">
+                    <property name="measures">
+                        <tabular-measure name="total_qty" id="386">
+                            <expression name="measureExpression" type="javascript">dataSetRow["total_qty"]</expression>
+                            <property name="dataType">float</property>
+                        </tabular-measure>
+                    </property>
+                </tabular-measure-group>
+            </property>
+            <property name="dataSet">Data Set</property>
+        </tabular-cube>
+    </cubes>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="494">
+            <column id="495"/>
+            <row id="498">
+                <cell id="499">
+                    <label id="501">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">BÁO CÁO TỒN KHO</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <extended-item extensionName="Crosstab" extensionVersion="3.7.0" id="542">
+            <property name="cube">Data Cube</property>
+            <property name="measures">
+                <extended-item extensionName="MeasureView" id="570">
+                    <property name="measure">total_qty</property>
+                    <property name="detail">
+                        <extended-item extensionName="AggregationCell" id="571">
+                            <property name="aggregationOnRow">Group1/don_vi</property>
+                            <property name="aggregationOnColumn">Group/x_code</property>
+                            <property name="backgroundColor">#FFFFFF</property>
+                            <property name="content">
+                                <data id="572">
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0.00{RoundingMode=HALF_UP}</property>
+                                        <property name="locale">vi_VN</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="resultSetColumn">total_qty_Group1/don_vi_Group/x_code</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="aggregations">
+                        <extended-item extensionName="AggregationCell" id="581">
+                            <property name="aggregationOnRow">Group1/don_vi</property>
+                            <property name="backgroundColor">#FFFFFF</property>
+                            <property name="content">
+                                <data id="582">
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0.00{RoundingMode=HALF_UP}</property>
+                                        <property name="locale">vi_VN</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="resultSetColumn">total_qty_Group1/don_vi</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="header">
+                        <extended-item extensionName="CrosstabCell" id="573">
+                            <property name="content">
+                                <data name="x_code1" id="569">
+                                    <property name="resultSetColumn">x_code</property>
+                                </data>
+                            </property>
+                            <property name="backgroundColor">#FFFFFF</property>
+                        </extended-item>
+                        <extended-item extensionName="CrosstabCell" id="583">
+                            <property name="backgroundColor">#FFFFFF</property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="rows">
+                <extended-item extensionName="CrosstabView" id="544">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="545">
+                            <property name="dimension">Group1</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View4" id="546">
+                                    <property name="level">Group1/name</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="547">
+                                            <property name="content">
+                                                <data name="name1" id="548">
+                                                    <property name="resultSetColumn">name</property>
+                                                </data>
+                                            </property>
+                                            <property name="backgroundColor">#FFFFFF</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View5" id="550">
+                                    <property name="level">Group1/default_code</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="551">
+                                            <property name="content">
+                                                <data name="default_code1" id="553">
+                                                    <property name="resultSetColumn">default_code</property>
+                                                </data>
+                                            </property>
+                                            <property name="backgroundColor">#FFFFFF</property>
+                                            <property name="textAlign">left</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View6" id="555">
+                                    <property name="level">Group1/product_name</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="556">
+                                            <property name="content">
+                                                <data name="product_name1" id="558">
+                                                    <property name="textAlign">left</property>
+                                                    <property name="resultSetColumn">product_name</property>
+                                                </data>
+                                            </property>
+                                            <property name="backgroundColor">#FFFFFF</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View7" id="560">
+                                    <property name="level">Group1/don_vi</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="561">
+                                            <property name="content">
+                                                <data name="don_vi" id="563">
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">don_vi</property>
+                                                </data>
+                                            </property>
+                                            <property name="backgroundColor">#FFFFFF</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="grandTotalLocation">after</property>
+                </extended-item>
+            </property>
+            <property name="columns">
+                <extended-item extensionName="CrosstabView" id="565">
+                    <property name="grandTotal">
+                        <extended-item extensionName="CrosstabCell" id="580">
+                            <property name="backgroundColor">#FFFFFF</property>
+                        </extended-item>
+                    </property>
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="566">
+                            <property name="dimension">Group</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View8" id="567">
+                                    <property name="level">Group/x_code</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="568">
+                                            <property name="backgroundColor">#FFFFFF</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="grandTotalLocation">after</property>
+                </extended-item>
+            </property>
+            <property name="header">
+                <extended-item extensionName="CrosstabCell" id="575">
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="576">
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="577">
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="578">
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="543">
+                    <property name="content">
+                        <label id="549">
+                            <text-property name="text">NHÓM</text-property>
+                        </label>
+                    </property>
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="552">
+                    <property name="content">
+                        <label id="554">
+                            <text-property name="text">MÃ SẢN PHẨM</text-property>
+                        </label>
+                    </property>
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="557">
+                    <property name="content">
+                        <label id="559">
+                            <text-property name="text">TÊN SẢN PHẨM</text-property>
+                        </label>
+                    </property>
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="562">
+                    <property name="content">
+                        <label id="564">
+                            <text-property name="text">ĐVT</text-property>
+                        </label>
+                    </property>
+                    <property name="backgroundColor">#FFFFFF</property>
+                </extended-item>
+            </property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">name</property>
+                    <expression name="expression">dimension["Group1"]["name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">default_code</property>
+                    <expression name="expression">dimension["Group1"]["default_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">product_name</property>
+                    <expression name="expression">dimension["Group1"]["product_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">don_vi</property>
+                    <expression name="expression">dimension["Group1"]["don_vi"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">x_code</property>
+                    <expression name="expression">dimension["Group"]["x_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">total_qty_Group1/don_vi_Group/x_code</property>
+                    <expression name="expression">measure["total_qty"]</expression>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Group1/don_vi</value>
+                        <value>Group/x_code</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">total_qty_Group1/don_vi</property>
+                    <expression name="expression">measure["total_qty"]</expression>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Group1/don_vi</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>

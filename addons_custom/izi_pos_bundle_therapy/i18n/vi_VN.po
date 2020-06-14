@@ -1,0 +1,362 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_pos_bundle_therapy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-11 03:43+0000\n"
+"PO-Revision-Date: 2020-06-11 03:43+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.view_pos_bundle_therapy_pos_form
+msgid "(update)"
+msgstr "(cập nhật)"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_amount_total
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_x_barem_id
+msgid "Barem"
+msgstr "Barem"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.actions.act_window,name:izi_pos_bundle_therapy.action_izi_pos_body_area
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_line_x_body_area_ids
+#: model:ir.ui.menu,name:izi_pos_bundle_therapy.izi_body_area
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_pos_body_area_form
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_pos_body_area_tree
+msgid "Body Area"
+msgstr "Vùng cơ thể"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_line_body_area_ids
+msgid "Body area"
+msgstr "Body area"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_bundle_therapy_barem_line_ids
+msgid "Bundle Line"
+msgstr "Chi tiết gói"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_therapy_record_form_inherit
+msgid "Bundle Therapies"
+msgstr "Gói liệu trình"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.actions.act_window,name:izi_pos_bundle_therapy.action_izi_bundle_therapy
+#: model:ir.ui.menu,name:izi_pos_bundle_therapy.izi_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_tree
+msgid "Bundle Therapy"
+msgstr "Bundle Therapy"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.actions.act_window,name:izi_pos_bundle_therapy.action_izi_bundle_therapy_barem
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_bundle_therapy_barem_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_name
+#: model:ir.ui.menu,name:izi_pos_bundle_therapy.izi_bundle_therapy_barem
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_barem_form
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_barem_tree
+msgid "Bundle Therapy Barem"
+msgstr "Barem gói liệu trình"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_name
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_barem_form
+msgid "Bundle Therapy Barem Line"
+msgstr "Sản phẩm hỗ trợ trong gói liệu trình"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_form
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_therapy_record_form_inherit
+msgid "Bundle Therapy Line"
+msgstr "Gói liệu trình chi tiết"
+
+#. module: izi_pos_bundle_therapy
+#: code:addons/izi_pos_bundle_therapy/models/pos_order.py:69
+#, python-format
+msgid "Bạn chưa tính toán và nhập sản phẩm bổ trợ cho gói liệu trình!"
+msgstr "Bạn chưa tính toán và nhập sản phẩm bổ trợ cho gói liệu trình!"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_x_categ_id
+msgid "Category"
+msgstr "Chuyên mục"
+
+#. module: izi_pos_bundle_therapy
+#: code:addons/izi_pos_bundle_therapy/models/pos_order.py:39
+#, python-format
+msgid "Chỉ bán bán một loại sản phẩm trong đơn bán gói liệu trình!"
+msgstr "Chỉ bán bán một loại sản phẩm trong đơn bán gói liệu trình!"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.view_pos_bundle_therapy_pos_form
+msgid "Compute Barem"
+msgstr "Tính toán Barem gói liệu trình"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_therapy_record_form_inherit
+msgid "Create Order"
+msgstr "Tạo đơn hàng"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_create_uid
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_create_uid
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_create_uid
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_create_date
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_create_date
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_create_date
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,help:izi_pos_bundle_therapy.field_pos_order_complement_uom_id
+msgid "Default Unit of Measure used for all stock operation."
+msgstr "Đơn vị đo mặc định dùng cho tất cả các hoạt động liên quan đến hàng tồn kho."
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_display_name
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_display_name
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_display_name
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_pos_bundle_therapy
+#: code:addons/izi_pos_bundle_therapy/models/bundle_therapy_barem.py:26
+#: code:addons/izi_pos_bundle_therapy/models/bundle_therapy_barem.py:30
+#, python-format
+msgid "Giá trị Barem nhập vào bị trùng với barem khác!"
+msgstr "Giá trị Barem nhập vào bị trùng với barem khác!"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_barem_form
+msgid "Giá trị lớn nhất..."
+msgstr "Giá trị gói lớn nhất..."
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_barem_form
+msgid "Giá trị nhỏ nhất..."
+msgstr "Giá trị gói nhỏ nhất..."
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area___last_update
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem___last_update
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line___last_update
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_write_uid
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_write_uid
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_write_date
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_write_date
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_pos_order_line
+msgid "Lines of Point of Sale Orders"
+msgstr "Lines of Point of Sale Orders"
+
+#. module: izi_pos_bundle_therapy
+#: code:addons/izi_pos_bundle_therapy/models/bundle_therapy_barem.py:23
+#, python-format
+msgid "Lỗi khoảng giá trị Barem!"
+msgstr "Lỗi khoảng giá trị Barem!"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_body_area_name
+msgid "Name Area"
+msgstr "Tên vùng"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_note
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_x_number_massage
+msgid "Number Massage"
+msgstr "Số buổi Massage"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.view_pos_bundle_therapy_pos_form
+msgid "Order lines"
+msgstr "Chi tiết đơn hàng"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Point of Sale Payment"
+
+#. module: izi_pos_bundle_therapy
+#: code:addons/izi_pos_bundle_therapy/models/therapy_record.py:22
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_pos_order_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_pos_order_id
+#, python-format
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_name
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_x_pos_order_complement_ids
+msgid "Pos Order Complement"
+msgstr "Pos Order Complement"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_product_product
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_product_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.view_pos_bundle_therapy_pos_form
+msgid "Product Complement"
+msgstr "Sản phẩm bổ trợ"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.view_pos_bundle_therapy_pos_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_qty
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_qty_max
+msgid "Qty max"
+msgstr "Qty max"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_product_id
+msgid "Service medicine"
+msgstr "Dịch vụ"
+
+#. module: izi_pos_bundle_therapy
+#: code:addons/izi_pos_bundle_therapy/models/pos_order.py:74
+#, python-format
+msgid "Số lượng sản phẩm/ Dịch vụ %s bổ trợ vượt quá số lượng cho phép! %s/%s"
+msgstr "Số lượng sản phẩm/ Dịch vụ %s bổ trợ vượt quá số lượng cho phép! %s/%s"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_x_therapy_record_id
+msgid "Therapy Record"
+msgstr "Hồ sơ trị liệu"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_form
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_therapy_record_form_inherit
+msgid "Tên gói trị liệu..."
+msgstr "Tên gói trị liệu..."
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_line_uom_id
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_pos_order_complement_uom_id
+msgid "Unit of  Measure"
+msgstr "Đơn vị"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_value_bundle_max
+msgid "Value Bundle Max"
+msgstr "Giá trị gói liệu trình lớn nhất"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model.fields,field_description:izi_pos_bundle_therapy.field_bundle_therapy_barem_value_bundle_min
+msgid "Value Bundle Min"
+msgstr "Giá trị gói liệu trình nhỏ nhất"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.ui.view,arch_db:izi_pos_bundle_therapy.izi_view_bundle_therapy_barem_form
+msgid "Value in the range"
+msgstr "Giá trị gọi trị liệu trong khoảng"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_body_area
+msgid "body.area"
+msgstr "Vùng cơ thể"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_bundle_therapy
+msgid "bundle.therapy"
+msgstr "bundle.therapy"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_bundle_therapy_barem
+msgid "bundle.therapy.barem"
+msgstr "Barem gói liệu trình"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_bundle_therapy_barem_line
+msgid "bundle.therapy.barem.line"
+msgstr "Các sản phẩm hỗ trợ"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_bundle_therapy_line
+msgid "bundle.therapy.line"
+msgstr "bundle.therapy.line"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_pos_order_complement
+msgid "pos.order.complement"
+msgstr "pos.order.complement"
+
+#. module: izi_pos_bundle_therapy
+#: model:ir.model,name:izi_pos_bundle_therapy.model_therapy_record
+msgid "therapy.record"
+msgstr "therapy.record"
+

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Chỉnh view -->
+    <data>
+        <!-- Form thanh toán đơn hàng -->
+        <record id="view_pos_pos_form_inherit" model="ir.ui.view">
+            <field name="name">pos.order.form.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="x_vc_name" position="after">
+                    <field name="x_amount_currency"/>
+                    <field name="x_currency_id"/>
+                    <field name="x_currency_rate_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_pos_pos_form_izi_vm_sell_inherit_view" model="ir.ui.view">
+            <field name="name">pos.order.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+            <field name="arch" type="xml">
+                <field name="amount" position="after">
+                    <field name="x_amount_currency"/>
+                    <field name="x_currency_id"/>
+                    <field name="x_currency_rate_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

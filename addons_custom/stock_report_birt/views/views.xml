@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="import_and_export_inventory_form_view" model="ir.ui.view">
+            <field name="name">import and export inventory form view</field>
+            <field name="model">report.import.and.export.inventory</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                        <field name="rpt_location_id" domain="[('usage','=','internal')]" required="1" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_import_and_export_inventory" type="object"
+                                string="Print report"/>
+                        <button class="oe_highlight" name="create_report_import_and_export_inventory_ex" type="object"
+                                string="Print report ex"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_import_and_export_inventory" model="ir.actions.act_window">
+            <field name="name">Import export Inventory</field>
+            <field name="res_model">report.import.and.export.inventory</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="import_and_export_inventory_menu" name="Report import and export inventory"
+                  action="action_import_and_export_inventory"
+                  parent="stock.menu_warehouse_report"/>
+    </data>
+</odoo>

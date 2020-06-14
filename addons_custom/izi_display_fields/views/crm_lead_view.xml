@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="display_phone_crm_lead_kanban">
+            <field name="name">Leads</field>
+            <field name="inherit_id" ref="izi_crm_lead.izi_crm_case_kanban_view_leads"/>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <xpath expr='//kanban/templates/t/div/div[2]/div[3]' position="replace">
+                    <div class="text-muted o_kanban_record_subtitle" groups="izi_display_fields.group_display_phone">
+                        SĐT:
+                        <field name="phone" groups="izi_display_fields.group_display_phone"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

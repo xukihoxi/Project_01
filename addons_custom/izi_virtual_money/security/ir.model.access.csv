@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_pos_virtual_money,access_pos_virtual_money,model_pos_virtual_money,,1,0,0,0
+access_pos_virtual_money_history,access_pos_virtual_money_history,model_pos_virtual_money_history,,1,0,0,0
+
+access_pos_virtual_money_group_pos_user,access_pos_virtual_money group_pos_user,model_pos_virtual_money,point_of_sale.group_pos_user,1,1,1,0
+access_pos_virtual_money_history_group_pos_user,access_pos_virtual_money_history group_pos_user,model_pos_virtual_money_history,point_of_sale.group_pos_user,1,1,1,0

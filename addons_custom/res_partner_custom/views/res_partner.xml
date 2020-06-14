@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_presenter_view_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.presenter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="x_presenter"/>
+                    <field name="x_visiting_last"/>
+                </field>
+                <xpath expr="//field[@name='type']" position="after">
+					<field name="x_code" readonly="1" force_save="1"/>
+					<field name="x_birthday"/>
+                    <field name="x_age" readonly="1"/>
+				</xpath>
+                <xpath expr="//div[@class='o_address_format']" position="attributes">
+                    <attribute name="attrs">{'invisible': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="street"/>
+                    <field name="country_id" placeholder="Country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                    <field name="state_id" placeholder="State" options="{&quot;no_open&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'country_id': country_id, 'zip': zip}"/>
+                    <field name="x_district_id" context="{'state_id': state_id}"/>
+                </xpath>
+                <xpath expr="//field[@name='lang']" position="after">
+                    <field name="x_sex"/>
+                    <field name="x_old_code"/>
+                    <field name="source_id" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" attrs="{'readonly': [('x_old_code', '!=', False)]}"/>
+                    <field name="x_crm_lead_tag_ids" widget="many2many_tags"/>
+                    <field name="x_link_facebook"/>
+                    <field name="x_link_zalo"/>
+                </xpath>
+                <field name="category_id" position="after">
+                    <field name="x_manage_user_id" groups="pos_security.group_pos_supervisor_user" invisible="1"/>
+                </field>
+                <field name="category_id" position="after">
+                    <field name="x_revenue_old"/>
+                </field>
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page string="Hồ sơ khách hàng" invisible="1">
+                        <field name="x_images" widget="many2many_binary"/>
+                    </page>
+                </xpath>
+                <field name="user_id" position="after">
+                    <field name="x_crm_team_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                </field>
+                <xpath expr="//page[@name='internal_notes']" position="attributes">
+                    <attribute name="attrs">{'invisible':1}</attribute>
+                </xpath>
+                <field name="lang" position="after">
+                    <field name="comment"/>
+                </field>
+            </field>
+        </record>
+
+
+        <record id="uizi_images_profile_customer_view_form" model="ir.ui.view">
+            <field name="name">Image</field>
+            <field name="model">izi.images.profile.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="image" nolabel="1" widget="image"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_partner_custom_form_view" model="ir.ui.view">
+            <field name="name">Partner</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4">
+                            <group>
+                                <field name="name"/>
+                                <field name="phone" groups="izi_display_fields.group_display_phone"/>
+                                <field name="x_code"/>
+                                <field name="mobile" groups="izi_display_fields.group_display_phone"/>
+                                <field name="x_old_code"/>
+                                <field name="user_id"/>
+                                <field name="x_brand_id"/>
+                                <field name="x_crm_team_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_partner_add_tab_other_info_form_view" model="ir.ui.view">
+            <field name="name">add_tab_other_info</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='accounting']" position="after">
+                    <!-- Thêm tab thông tin khác -->
+                    <page string="Other information" name="other_infor">
+                        <div string="Contacts &amp; Address">
+                            <group string="Contacts &amp; Address">
+                                <field name="child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_lang': lang,}">
+                                <kanban>
+                                    <field name="color"/>
+                                    <field name="name"/>
+                                    <field name="title"/>
+                                    <field name="type"/>
+                                    <field name="email"/>
+                                    <field name="parent_id"/>
+                                    <field name="is_company"/>
+                                    <field name="function"/>
+                                    <field name="phone"/>
+                                    <field name="street"/>
+                                    <field name="street2"/>
+                                    <field name="zip"/>
+                                    <field name="city"/>
+                                    <field name="country_id"/>
+                                    <field name="mobile"/>
+                                    <field name="state_id"/>
+                                    <field name="image_small"/>
+                                    <field name="lang"/>
+                                    <!-- fields in form x2many view to diminish requests -->
+                                    <field name="comment"/>
+                                    <field name="customer"/>
+                                    <field name="display_name"/>
+                                    <field name="supplier"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+                                            <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                                <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                                <div class="o_kanban_image">
+                                                    <img t-if="record.image_small.raw_value" t-att-src="'data:image/png;base64,'+record.image_small.raw_value"/>
+                                                    <t t-if="!record.image_small.raw_value">
+                                                        <img t-if="record.type.raw_value === 'delivery'" t-att-src="_s + &quot;/base/static/src/img/truck.png&quot;"/>
+                                                        <img t-if="record.type.raw_value === 'invoice'" t-att-src="_s + &quot;/base/static/src/img/money.png&quot;"/>
+                                                        <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
+                                                            <img t-if="record.is_company.raw_value === true" t-att-src="_s + &quot;/base/static/src/img/company_image.png&quot;"/>
+                                                            <img t-if="record.is_company.raw_value === false" t-att-src="_s + &quot;/base/static/src/img/avatar.png&quot;"/>
+                                                        </t>
+                                                    </t>
+                                                </div>
+                                                <div class="oe_kanban_details">
+                                                    <field name="name"/>
+                                                    <div t-if="record.function.raw_value"><field name="function"/></div>
+                                                    <div t-if="record.email.raw_value"><field name="email" widget="email"/></div>
+                                                    <div t-if="record.type.raw_value != 'contact'">
+                                                        <div>
+                                                            <field name="zip"/>
+                                                            <field name="city"/>
+                                                        </div>
+                                                        <field t-if="record.state_id.raw_value" name="state_id"/>
+                                                        <field name="country_id"/>
+                                                    </div>
+                                                    <div t-if="record.phone.raw_value">Phone: <field name="phone"/></div>
+                                                    <div t-if="record.mobile.raw_value">Mobile: <field name="mobile"/></div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                                <form string="Contact / Address">
+                                    <sheet>
+                                        <!-- parent_id and type fields needed in attrs in base_address_city module which overwrites
+                                        _fields_view_get() of partner. It would be better to put those fields there but the web client
+                                        dosen't support when a field is displayed several times in the same view.-->
+                                        <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
+                                        <field name="parent_id" invisible="1"/>
+                                        <hr/>
+                                        <group>
+                                            <group attrs="{'invisible': [('type','=', 'contact')]}">
+                                                <label for="street" string="Address"/>
+                                                <div>
+                                                    <div class="o_address_format" name="div_address">
+                                                        <field name="street" placeholder="Street..." class="o_address_street"/>
+                                                        <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                                        <field name="city" placeholder="City" class="o_address_city"/>
+                                                        <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" context="{'country_id': country_id, 'zip': zip}"/>
+                                                        <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                                        <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                                                    </div>
+                                                </div>
+                                            </group>
+                                            <group>
+                                                <field name="name" string="Contact Name" attrs="{'required' : [('type', '=', 'contact')]}"/>
+                                                <field name="title" placeholder="e.g. Mr." attrs="{'invisible': [('type','!=', 'contact')]}"/>
+                                                <field name="function" placeholder="e.g. Sales Director" attrs="{'invisible': [('type','!=', 'contact')]}"/>
+                                                <field name="email"/>
+                                                <field name="phone" widget="phone"/>
+                                                <field name="mobile" widget="phone"/>
+                                                <field name="comment" placeholder="internal note..."/>
+                                            </group>
+                                        </group>
+                                        <field name="supplier" invisible="True"/>
+                                        <field name="customer" invisible="True"/>
+                                        <field name="lang" invisible="True"/>
+                                        <field name="image" invisible="True"/>
+                                    </sheet>
+                                </form>
+                            </field>
+                            </group>
+                        </div>
+                        <div string="Sales &amp; Purchases">
+                           <group>
+                               <group string="Sale" name="sale">
+                                    <field name="customer"/>
+                                    <field name="user_id"/>
+                                    <field name="x_crm_team_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                    <field name="opt_out" string="Mailing Opt-Out" groups="base.group_no_one"/>
+                                    <field name="message_bounce" groups="base.group_no_one"/>
+                                    <field name="property_product_pricelist" groups="product.group_sale_pricelist" attrs="{'invisible': [('is_company','=',False),('parent_id','!=',False)]}"/>
+                                    <div name="parent_pricelists" groups="product.group_sale_pricelist" colspan="2" attrs="{'invisible': ['|',('is_company','=',True),('parent_id','=',False)]}">
+                                        <p>Pricelists are managed on <button name="open_commercial_entity" type="object" string="the parent company" class="oe_link"/></p>
+                                    </div>
+                                    <field name="property_payment_term_id" widget="selection"/>
+                                    <field name="trust" groups="base.group_no_one"/>
+                                </group>
+                               <group string="Purchase" name="purchase">
+                                    <field name="supplier"/>
+                                    <field name="property_purchase_currency_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="property_supplier_payment_term_id" widget="selection"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </group>
+                               <group string="Payments" name="banks">
+                                    <field name="currency_id" invisible="1"/>
+                                    <div>
+                                        <button type="action" class="btn-link"
+                                            name="%(base.action_res_partner_bank_account_form)d"
+                                            context="{'search_default_partner_id': active_id, 'default_partner_id': active_id}">
+                                            <field string="Bank account(s)" name="bank_account_count" widget="statinfo"/>
+                                        </button>
+                                        <button type="action" class="btn-link"
+                                            name="%(payment.payment_token_action)d"
+                                            context="{'search_default_partner_id': active_id}">
+                                            <field name="payment_token_count" widget="statinfo" string="Credit card(s)"/>
+                                        </button>
+                                    </div>
+                                </group>
+                               <group string="Accounting Entries" name="accounting_entries" groups="account.group_account_user">
+                                    <field name="property_account_receivable_id"/>
+                                    <field name="property_account_payable_id"/>
+                                </group>
+                               <group name="container_row_stock" groups="base.group_no_one">
+                                    <group string="Warehouse" name="warehouse">
+                                        <field name="property_stock_customer" domain="[('usage','=','customer')]"/>
+                                        <field name="property_stock_supplier" domain="[('usage','=','supplier')]"/>
+                                    </group>
+                               </group>
+                               <group string="Misc">
+                                    <field name="ref"/>
+                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                    <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)]}" options="{'no_create': True}"/>
+                                </group>
+                               <group string="Point of Sale" name="point_of_sale">
+                                    <field name="barcode" />
+                                </group>
+                               <group string="Fiscal Information" name="fiscal_information">
+                                    <field name="property_account_position_id" options="{'no_create': True, 'no_open': True}"/>
+                                </group>
+                           </group>
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_partner_hidden_page_form_view" model="ir.ui.view">
+            <field name="name">hidden_page</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="attributes">
+                    <attribute name="attrs">{'invisible':1}</attribute>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                    <attribute name="attrs">{'invisible':1}</attribute>
+                </xpath>
+                <xpath expr="//page[@name='accounting']" position="attributes">
+                    <attribute name="attrs">{'invisible':1}</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <menuitem name="Customers" id="customer_root_main_menu" parent="crm.crm_menu_root" sequence="2"/>
+
+        <menuitem name="Customers" id="customer_menu" parent="res_partner_custom.customer_root_main_menu" sequence="1"
+                  action="base.action_partner_form"/>
+
+        <menuitem name="Sources" id="source_menu" parent="res_partner_custom.customer_root_main_menu" sequence="2"
+                  action="utm.utm_source_action"/>
+    </data>
+</odoo>

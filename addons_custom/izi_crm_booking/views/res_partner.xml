@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_respartner_service_booking_inherit" model="ir.ui.view">
+            <field name="name">Res Partner service booking inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="action_meeting" string="Meeting" type="object" class="oe_highlight" attrs="{'invisible': [('customer','=',False)]}"/>
+                        <button name="action_booking" string="Booking" type="object" class="oe_highlight" attrs="{'invisible': [('customer','=',False)]}"/>
+                    </header>
+                </xpath>
+                <xpath expr="//button[@name='toggle_active']" position="before">
+                    <field name="x_service_booking_ids" invisible="1"/>
+                    <button type="object"
+                        name="action_view_service_booking"
+                        class="oe_stat_button"
+                        icon="fa-calendar-o"
+                        attrs="{'invisible': [('x_service_booking_count', '=', 0)]}" groups="base.group_user">
+                        <field name="x_service_booking_count" widget="statinfo" string="Booking/Meeting"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

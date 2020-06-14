@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_manage_room_id,izi_manage_room_name,model_pos_service_bed,point_of_sale.group_pos_manager,1,1,1,1
+access_izi_manage_room_id1,izi_manage_room_name1,model_pos_service_bed,point_of_sale.group_pos_user,1,1,0,0
+access_izi_manage_room_id2,izi_manage_room_name2,model_pos_service_room,point_of_sale.group_pos_user,1,1,0,0
+access_izi_manage_room_id3,izi_manage_room_name3,model_pos_service_room,point_of_sale.group_pos_manager,1,1,1,1

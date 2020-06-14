@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record id="izi_product_split_detail_form" model="ir.ui.view">
+            <field name="name">product_splitting_form</field>
+            <field name="model">izi.product.split.detail</field>
+            <field name="arch" type="xml">
+                <form string="Splitting">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">CHI TIẾT TÁCH SẢN PHẨM</h3>
+                        <group>
+                            <group>
+                                <field name="product_id" attrs="{'readonly':[('state', '=', 'done')]}"
+                                       domain="[('x_type_card', '=', 'none'),('type', '=', 'product')]"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="product_uom_id" attrs="{'readonly':[('state', '=', 'done')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                            </group>
+                            <group>
+                                <field name="product_uom_qty" attrs="{'readonly':[('state', '=', 'done')]}"/>
+                            </group>
+                        </group>
+                        <field name="out_put_product_lines" attrs="{'readonly':[('state', '=', 'done')]}">
+                            <tree editable="bottom">
+                                <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                       domain="[('default_code', '!=', 'PHOI'),('x_type_card', '=', 'none'),('type', '=', 'product')]"/>
+                                <field name="product_uom_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="product_uom_qty"/>
+                            </tree>
+                        </field>
+                        <field name="note" attrs="{'readonly':[('state', '=', 'done')]}"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_product_split_detail_tree" model="ir.ui.view">
+            <field name="name">product_splitting_tree</field>
+            <field name="model">izi.product.split.detail</field>
+            <field name="arch" type="xml">
+                <tree string="Splitting">
+                    <field name="product_id"/>
+                    <field name="create_date"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

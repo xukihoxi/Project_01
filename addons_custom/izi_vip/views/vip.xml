@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Danh sách KH VIP -->
+    <data>
+        <record id="open_wizard_request_uprank" model="ir.actions.act_window">
+            <field name="name">Yêu cầu lên hạng</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.vip.customer.uprank</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_vip_view_vip_form">
+            <field name="name">crm.vip.customer.form</field>
+            <field name="model">crm.vip.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="%(open_wizard_request_uprank)d" type="action" string="Yêu cầu lên hạng"/>
+                    </header>
+                    <sheet>
+                        <field name="create_date" invisible="1"/>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="partner_id" string="Tên khách hàng" class="oe_edit_only"/>
+                            <h1>
+                                <field name="partner_id" attrs="{'readonly': [('create_date', '!=', False)]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_code" readonly="1"/>
+                                <field name="phone" readonly="1"/>
+                                <field name="email" readonly="1"/>
+                                <field name="birthday" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="address" readonly="1"/>
+                                <field name="uprank_date" readonly="1"/>
+                                <field name="vip_rank" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Lịch sử lên hạng">
+                                <field name="vip_history_ids">
+                                    <tree create="0" edit="0" decoration-muted="type == 'down'">
+                                        <field name="create_date" string="Ngày yêu cầu"/>
+                                        <field name="rank_current"/>
+                                        <field name="rank_request"/>
+                                        <field name="approved_uid"/>
+                                        <field name="approved_date"/>
+                                        <field name="state"/>
+                                        <field name="type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Doanh thu">
+                                <field name="revenue_ids">
+                                    <tree create="0" edit="0">
+                                        <field name="order_id"/>
+                                        <field name="journal_id"/>
+                                        <field name="date"/>
+                                        <field name="amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_vip_view_vip_tree">
+            <field name="name">crm.vip.customer.tree</field>
+            <field name="model">crm.vip.customer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="partner_id" readonly="1"/>
+                    <field name="phone" readonly="1"/>
+                    <field name="email" readonly="1"/>
+                    <field name="user_id" readonly="1"/>
+                    <field name="uprank_date" readonly="1"/>
+                    <field name="uprank_expire_date" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_vip_view_vip_kanban">
+            <field name="name">crm.vip.customer.kanban.view</field>
+            <field name="model">crm.vip.customer</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="image"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_res_partner_kanban">
+                                <div class="o_kanban_image">
+                                    <t t-if="record.image.raw_value">
+                                        <img t-att-src="kanban_image('crm.vip.customer', 'image', record.id.raw_value)"/>
+                                    </t>
+                                    <t t-if="!record.image.raw_value">
+                                        <img t-att-src="_s + &quot;/base/static/src/img/avatar.png&quot;"/>
+                                    </t>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                                    <ul>
+                                        <li t-if="record.email.raw_value" class="o_text_overflow">
+                                            <field name="email"/>
+                                        </li>
+                                    </ul>
+                                    <div class="oe_kanban_partner_links"/>
+                                </div>
+                            </div>
+
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="action_vip_customer" model="ir.actions.act_window">
+            <field name="name">Khách hàng VIP</field>
+            <field name="res_model">crm.vip.customer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain"></field>
+            <field name="context"></field>
+        </record>
+
+        <menuitem id="res_partner_menu_crm_izi" parent="crm.res_partner_menu_crm" action="base.action_partner_form" sequence="1"/>
+        <menuitem id="vip_customer_menu_izi" action="action_vip_customer" parent="crm.res_partner_menu_crm" sequence="2"/>
+
+        <record model="ir.ui.view" id="izi_vip_view_vip_customer_history_form">
+            <field name="name">crm.vip.customer.history.form</field>
+            <field name="model">crm.vip.customer.history</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="vip_custom_id" readonly="1"/>
+                                <field name="rank_current" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="state" readonly="1"/>
+                                <field name="rank_request" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+
+    <!-- Danh sách VIP cần duyệt-->
+    <data>
+        <record model="ir.ui.view" id="view_vip_customer_confirm_form">
+            <field name="name">crm.vip.customer.confirm.form</field>
+            <field name="model">crm.vip.customer.confirm</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false">
+                    <field name="type" invisible="1"/>
+                    <header>
+                        <button name="action_approve_confirm_uprank" string="Duyệt lên hạng"
+                                type="object" class="oe_highlight" groups="sales_team.group_sale_manager"
+                                attrs="{'invisible':[('state','!=','new')]}"
+                                confirm="Bạn đã chắc chắn lên hạng cho khách hàng này?"/>
+                        <button name="action_reject_confirm_uprank" string="Huỷ yêu cầu"
+                                type="object" groups="sales_team.group_sale_manager"
+                                attrs="{'invisible':[('state', '!=', 'new')]}"
+                                confirm="Bạn đã chắc chắn huỷ yêu cầu lên hạng cho khách hàng này?"/>
+                        <button name="action_super_approve_confirm_uprank" string="Duyệt lên hạng"
+                                type="object" class="oe_highlight" groups="pos_security.group_pos_supervisor_user"
+                                attrs="{'invisible':[('state','!=','confirm')]}"
+                                confirm="This is an except up rank request, are you sure to approve?"/>
+                        <button name="action_reject_confirm_uprank" string="Huỷ yêu cầu"
+                                type="object" groups="pos_security.group_pos_supervisor_user"
+                                attrs="{'invisible':[('state','!=', 'confirm')]}"
+                                confirm="Bạn đã chắc chắn huỷ yêu cầu lên hạng cho khách hàng này?"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="partner_id" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_code" readonly="1"/>
+                                <field name="phone" readonly="1"/>
+                                <field name="email" readonly="1"/>
+                                <field name="birthday" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="address" readonly="1"/>
+                                <field name="rank_current" readonly="1"/>
+                                <field name="rank_request" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vip_customer_confirm_tree">
+            <field name="name">crm.vip.customer.confirm.tree</field>
+            <field name="model">crm.vip.customer.confirm</field>
+            <field name="arch" type="xml">
+                <tree create="0" decoration-danger="state in ('new', 'confirm')" decoration-muted="state == 'cancel'">
+                    <field name="partner_id" readonly="1"/>
+                    <field name="phone" readonly="1"/>
+                    <field name="email" readonly="1"/>
+                    <field name="user_id" readonly="1"/>
+                    <field name="rank_current" readonly="1"/>
+                    <field name="rank_request" readonly="1"/>
+                    <field name="state" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_vip_customer_confirm" model="ir.actions.act_window">
+            <field name="name">Xác nhận lên hạng</field>
+            <field name="res_model">crm.vip.customer.confirm</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="vip_customer_confirm_menu" groups="sales_team.group_sale_manager,pos_security.group_pos_supervisor_user"
+                  action="action_vip_customer_confirm" parent="crm.res_partner_menu_crm" sequence="3"/>
+    </data>
+
+</odoo>

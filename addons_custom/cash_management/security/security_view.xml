@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="cash_management_group_group_hr_expense_user" model="ir.rule">
+            <field name="name">Cash Management Group hr_expense_user</field>
+            <field name="model_id" ref="cash_management.model_account_cash"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id','=',user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('hr_expense.group_hr_expense_user'))]"/>
+            <!--<field name="perm_read" eval="True"/>-->
+            <!--<field name="perm_write" eval="False"/>-->
+            <!--<field name="perm_create" eval="True"/>-->
+            <!--<field name="perm_unlink" eval="True"/>-->
+        </record>
+
+        <record id="cash_management_group_hr_expense_manager" model="ir.rule">
+            <field name="name">Cash Management group hr_expense_manager</field>
+            <field name="model_id" ref="cash_management.model_account_cash"/>
+            <field name="domain_force">[]
+            </field>
+            <field name="groups" eval="[(4, ref('hr_expense.group_hr_expense_manager'))]"/>
+            <!--<field name="perm_read" eval="True"/>-->
+            <!--<field name="perm_write" eval="False"/>-->
+            <!--<field name="perm_create" eval="True"/>-->
+            <!--<field name="perm_unlink" eval="True"/>-->
+        </record>
+    </data>
+</odoo>

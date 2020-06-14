@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pos_debit_good_history" model="ir.ui.view">
+            <field name="name">pos_debit_good_history</field>
+            <field name="model">pos.debit.good.history</field>
+            <field name="arch" type="xml">
+                <form string="Customer Signature">
+                    <group>
+                        <field name="note"/>
+                        <field name="signature_image" widget="signature"/>
+                    </group>
+                    <footer>
+                        <button name="action_done" string="Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

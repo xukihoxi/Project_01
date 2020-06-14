@@ -1,0 +1,448 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_pos_debt_goods
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:18+0000\n"
+"PO-Revision-Date: 2019-05-06 16:26+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_amount_payment
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Amount payment"
+msgstr "Số tiền thanh toán"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient_approved
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_pos_debit_good_history
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: izi_pos_debt_goods
+#: selection:pos.debit.good,state:0
+msgid "Approved"
+msgstr "Chấp thuận"
+
+#. module: izi_pos_debt_goods
+#: code:addons/izi_pos_debt_goods/models/stock_backorder.py:22
+#, python-format
+msgid "Back order <em>%s</em> <b>cancelled</b>."
+msgstr "Back order <em>%s</em> <b>đã hủy</b>."
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_stock_backorder_confirmation
+msgid "Backorder Confirmation"
+msgstr "Xác nhận dơn hàng dự trữ"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient_approved
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_pos_debit_good_history
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Cancel Approved"
+msgstr "Hủy chấp thuận"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_config_x_card_picking_type_id
+msgid "Card Picking Type"
+msgstr "Loại dịch chuyển thẻ & phiếu mua hàng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_create_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_create_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_create_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_create_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_create_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_create_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_create_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_create_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_create_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_create_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_create_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_create_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_pos_debit_good_history
+msgid "Customer Signature"
+msgstr "Khách hàng xác nhận"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "DEBIT GOODS"
+msgstr "QUẢN LÝ NỢ HÀNG"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_debit_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_debit_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_debit_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_debit_id
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_debit_line_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_debit_line_id
+msgid "Debit Line"
+msgstr "Chi tiết"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Debit goods"
+msgstr "Quản lý nợ hàng"
+
+#. module: izi_pos_debt_goods
+#: selection:pos.debit.good,state:0
+msgid "Debited"
+msgstr "Yêu cầu"
+
+#. module: izi_pos_debt_goods
+#: model:ir.actions.act_window,name:izi_pos_debt_goods.view_debit_goods_action
+#: model:ir.ui.menu,name:izi_pos_debt_goods.izi_menu_pos_transfer_outgoing
+msgid "Debt goods"
+msgstr "Quản lý nợ hàng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_display_name
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_display_name
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_display_name
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_display_name
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_display_name
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_display_name
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+#: selection:pos.debit.good,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_ids
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "History"
+msgstr "Lịch sử"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_pos_debt_goods
+#: code:addons/izi_pos_debt_goods/models/pos_debit_good.py:84
+#, python-format
+msgid "Khách hàng xác nhận"
+msgstr "Khách hàng xác nhận"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good___last_update
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history___last_update
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line___last_update
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient___last_update
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved___last_update
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line___last_update
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_write_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_write_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_write_uid
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_write_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_write_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_write_date
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_ids
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_ids
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_line_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_ids
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_line_id
+msgid "Line"
+msgstr "Line"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient_approved
+msgid "Lines"
+msgstr "Chi tiết"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_name
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_pos_debt_goods
+#: code:addons/izi_pos_debt_goods/models/pos_debit_good.py:29
+#: code:addons/izi_pos_debt_goods/models/pos_debit_good.py:30
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_note
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_old_code
+msgid "Old code"
+msgstr "Mã cũ"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_order_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_order_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_order_id
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_tree
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_picking_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_picking_id
+msgid "Picking"
+msgstr "Dịch chuyển kho"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.pos_config_view_form_card
+msgid "Picking type for card service"
+msgstr "Picking type for card service"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_price_subtotal_incl
+msgid "Price Subtotal"
+msgstr "Tổng phụ"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_product_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_product_id
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Qty"
+msgstr "SL mua"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient_approved
+msgid "Qty debit"
+msgstr "SL nợ"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Qty depot"
+msgstr "SL đã trả"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_transient_approved
+msgid "Qty transfer"
+msgstr "SL yêu cầu"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_qty_debit
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_qty_debit
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_qty_debit
+msgid "Quantity debit"
+msgstr "SL nợ"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_qty_depot
+msgid "Quantity depot"
+msgstr "SL đã trả"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_line_qty_transfer
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_approved_line_qty_transfer
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_transient_line_qty_transfer
+msgid "Quantity transfer"
+msgstr "SL yêu cầu"
+
+#. module: izi_pos_debt_goods
+#: selection:pos.debit.good,state:0
+msgid "Rate"
+msgstr "Xác nhận của khách hàng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Returns"
+msgstr "Trả hàng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_history_signature_image
+msgid "Signature Image"
+msgstr "Hình ảnh chữ ký"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model.fields,field_description:izi_pos_debt_goods.field_pos_debit_good_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_pos_debt_goods
+#: code:addons/izi_pos_debt_goods/models/create_picking.py:47
+#: code:addons/izi_pos_debt_goods/models/pos_debt_goods.py:47
+#, python-format
+msgid "This transfer has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "This transfer has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: izi_pos_debt_goods
+#: code:addons/izi_pos_debt_goods/models/pos_debit_good.py:52
+#: code:addons/izi_pos_debt_goods/models/pos_debit_good.py:114
+#, python-format
+msgid "Thẻ bảo hành"
+msgstr "Thẻ bảo hành"
+
+#. module: izi_pos_debt_goods
+#: model:ir.ui.view,arch_db:izi_pos_debt_goods.view_debit_goods_form
+msgid "Total"
+msgstr "Tổng"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_stock_picking
+msgid "Transfer"
+msgstr "Chuyển hàng"
+
+#. module: izi_pos_debt_goods
+#: selection:pos.debit.good,state:0
+msgid "Waiting"
+msgstr "Chờ chuyển kho"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_config
+msgid "pos.config"
+msgstr "pos.config"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good
+msgid "pos.debit.good"
+msgstr "pos.debit.good"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good_history
+msgid "pos.debit.good.history"
+msgstr "pos.debit.good.history"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good_line
+msgid "pos.debit.good.line"
+msgstr "pos.debit.good.line"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good_transient
+msgid "pos.debit.good.transient"
+msgstr "pos.debit.good.transient"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good_transient_approved
+msgid "pos.debit.good.transient.approved"
+msgstr "pos.debit.good.transient.approved"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good_transient_approved_line
+msgid "pos.debit.good.transient.approved.line"
+msgstr "pos.debit.good.transient.approved.line"
+
+#. module: izi_pos_debt_goods
+#: model:ir.model,name:izi_pos_debt_goods.model_pos_debit_good_transient_line
+msgid "pos.debit.good.transient.line"
+msgstr "pos.debit.good.transient.line"

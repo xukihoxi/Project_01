@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+		<record id="izi_vip_view_partner_form" model="ir.ui.view">
+			<field name="name">izi_vip.res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+		        <!-- Add extend fields to customer form -->
+				<xpath expr="//field[@name='type']" position="after">
+					<field name="x_code" readonly="1" force_save="1"/>
+					<field name="x_birthday"/>
+                    <field name="x_age" readonly="1"/>
+                    <field name="x_level_age_id" readonly="1"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_partner_custom_level_form" model="ir.ui.view">
+            <field name="name">Custom Level</field>
+            <field name="model">level.age</field>
+            <field name="arch" type="xml">
+                <form string="Partner Level">
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="age_start"/>
+                        <field name="age_end"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_partner_custom_level_list" model="ir.ui.view">
+            <field name="name">Custom Levels</field>
+            <field name="model">level.age</field>
+            <field eval="6" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Partner Levels">
+                    <field name="name"/>
+                    <field name="age_start"/>
+                    <field name="age_end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_partner_level_form" model="ir.actions.act_window">
+            <field name="name">Custom Levels</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">level.age</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new partner levl.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            action="action_partner_level_form"
+            id="menu_partner_level_form"
+            name="Custom Levels"
+            sequence="15"
+            parent="contacts.res_partner_menu_config"
+        />
+	</data>
+</odoo>

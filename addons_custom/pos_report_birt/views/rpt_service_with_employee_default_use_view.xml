@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_service_with_employee_default_use_form" model="ir.ui.view">
+            <field name="name">rpt.service.with.employee.default.use.form</field>
+            <field name="model">rpt.service.with.employee.default.use</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                        <field name="employee_id" readonly="1" force_save="1"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_excel" type="object"
+                                string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_service_with_employee_default_use_action" model="ir.actions.act_window">
+            <field name="name">Rpt Service With Employee Default Use</field>
+            <field name="res_model">rpt.service.with.employee.default.use</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="rpt_service_with_employee_default_use_menu" action="rpt_service_with_employee_default_use_action" name="Rpt Service Employee Default Use"
+                  parent="point_of_sale.menu_point_rep"/>
+    </data>
+</odoo>

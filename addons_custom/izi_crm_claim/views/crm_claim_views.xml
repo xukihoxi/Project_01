@@ -1,0 +1,136 @@
+<odoo>
+    <data>
+        <menuitem name="Claim manager" id="crm_claim_main_menu" parent="crm.crm_menu_root" sequence="2"/>
+
+        <!-- Danh sách các khiếu nại -->
+        <record model="ir.ui.view" id="crm_claim_tree_view">
+            <field name="name">Claim</field>
+            <field name="model">crm.claim</field>
+            <field name="arch" type="xml">
+                <tree default_order='claim_date desc' >
+                    <field name="partner_id"/>
+                    <field name="type_id"/>
+                    <field name="claim_date"/>
+                    <field name="content"/>
+                    <field name="handler_id"/>
+                    <field name="deadline"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view khiếu nại -->
+        <record model="ir.ui.view" id="crm_claim_form_view">
+            <field name="name">Claim</field>
+            <field name="model">crm.claim</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_assign" string="Assign" type="object" class="oe_highlight" states="new"/>
+                        <button name="action_handle" string="Handle" type="object" class="oe_highlight" states="processing"/>
+                        <button name="action_refuse" string="Refuse" type="object" states="new,processing"/>
+                        <button name="action_back" string="Back" type="object" states="processing,done,refuse"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,processing,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="claim_date" attrs="{'readonly': [('state', '!=', 'new')], 'required': True}"/>
+                        </group>
+                        <group col="4">
+                            <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('state', '!=', 'new')], 'required': True}"/>
+                            <field name="user_id"/>
+                            <field name="type_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('state', '!=', 'new')], 'required': True}"/>
+                            <field name="crm_team_id"/>
+                            <field name="content" attrs="{'readonly': [('state', '!=', 'new')], 'required': True}"/>
+                        </group>
+                        <group col="4">
+                            <field name="handler_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="deadline" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                        </group>
+                        <group string="Handle" col="4">
+                            <field name="cause" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="resolution" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="cause_refuse" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                        </group>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Hành động khiếu nại -->
+        <record model="ir.actions.act_window" id="crm_claim_action_window">
+            <field name="name">Claim</field>
+            <field name="res_model">crm.claim</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem name="Claim" id="crm_claim_menu" parent="izi_crm_claim.crm_claim_main_menu" sequence="1"
+                  action="crm_claim_action_window"/>
+
+        <!-- Form view popup giao việc -->
+        <record model="ir.ui.view" id="crm_claim_popup_assign_form_view">
+            <field name="name">Claim</field>
+            <field name="model">crm.claim</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="handler_id" options="{'no_create':1, 'no_create_edit':1}" required="True"/>
+                            <field name="deadline" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_assign" string="Assign" type="object" class="oe_highlight"/>
+                             or <button class="btn-default" special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Form view popup xử lý -->
+        <record model="ir.ui.view" id="crm_claim_popup_handle_form_view">
+            <field name="name">Claim</field>
+            <field name="model">crm.claim</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="cause" required="True"/>
+                            <field name="resolution" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_handle" string="handle" type="object" class="oe_highlight"/>
+                             or <button class="btn-default" special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Form view popup từ chối -->
+        <record model="ir.ui.view" id="crm_claim_popup_refuse_form_view">
+            <field name="name">Claim</field>
+            <field name="model">crm.claim</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="cause_refuse" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_refuse" string="Refuse" type="object" class="oe_highlight"/>
+                             or <button class="btn-default" special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

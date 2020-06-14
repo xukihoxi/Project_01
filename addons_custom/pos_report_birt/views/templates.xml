@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" name="Hr Interview Assets" inherit_id="web.assets_backend">
+        <xpath expr="//script[last()]" position="after">
+            <link rel="stylesheet" type="text/css" href="/hr_interview/static/src/css/hr_interview.css"/>
+
+            <script type="text/javascript" src="/pos_report_birt/static/src/js/display_iframe.js"/>
+        </xpath>
+    </template>
+
+</odoo>

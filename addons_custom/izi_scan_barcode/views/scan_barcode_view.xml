@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="scan_barcode" name="scan_barcode" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/izi_scan_barcode/static/src/js/main.js"></script>
+        </xpath>
+    </template>
+</odoo>
+

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_vip_config_id1,izi_vip_config_name1,model_izi_vip_config,point_of_sale.group_pos_manager,1,1,1,1
+access_izi_vip_config_id2,izi_vip_config_name2,model_izi_vip_config_eviction,point_of_sale.group_pos_manager,1,1,1,1
+access_izi_vip_config_id3,izi_vip_config_name3,model_izi_vip_config_eviction_line,point_of_sale.group_pos_manager,1,1,1,1
+access_izi_vip_config_id4,izi_vip_config_name4,model_izi_vip_config_accumulation,point_of_sale.group_pos_manager,1,1,1,1
+access_izi_vip_config_id5,izi_vip_config_name5,model_izi_vip_config,point_of_sale.group_pos_user,1,0,0,0
+access_izi_vip_config_id6,izi_vip_config_name6,model_izi_vip_config_eviction,point_of_sale.group_pos_user,1,0,0,0
+access_izi_vip_config_id7,izi_vip_config_name7,model_izi_vip_config_eviction_line,point_of_sale.group_pos_user,1,0,0,0
+access_izi_vip_config_id8,izi_vip_config_name8,model_izi_vip_config_accumulation,point_of_sale.group_pos_user,1,0,0,0

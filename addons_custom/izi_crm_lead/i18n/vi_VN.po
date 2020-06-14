@@ -1,0 +1,638 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_crm_lead
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:02+0000\n"
+"PO-Revision-Date: 2019-05-06 16:03+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&lt;', 2)]}\">\n"
+"                                        Meetings\n"
+"                                    </span>\n"
+"                                    <span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&gt;', 1)]}\">\n"
+"                                        Meeting\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&lt;', 2)]}\">\n"
+"                                        Meetings\n"
+"                                    </span>\n"
+"                                    <span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&gt;', 1)]}\">\n"
+"                                        Meeting\n"
+"                                    </span>"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "<span class=\"o_stat_text\">Orders</span>"
+msgstr "<span class=\"o_stat_text\">Orders</span>"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "<span class=\"oe_grey\">at</span>"
+msgstr "<span class=\"oe_grey\">at</span>"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Activities Todo"
+msgstr "Activities Todo"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_tree_view_oppor
+msgid "Avg. of Probability"
+msgstr "Avg. of Probability"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_birthday
+msgid "BirthDay"
+msgstr "Ngày sinh"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:87
+#: code:addons/izi_crm_lead/models/crm_lead.py:174
+#, python-format
+msgid "Bạn chưa thêm sản phẩm cho đơn báo giá dự kiến"
+msgstr "Bạn chưa thêm sản phẩm cho đơn báo giá dự kiến"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_create_form_view_oppor
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:202
+#: code:addons/izi_crm_lead/models/crm_lead.py:244
+#: code:addons/izi_crm_lead/models/crm_lead.py:277
+#: code:addons/izi_crm_lead/models/crm_lead.py:305
+#: code:addons/izi_crm_lead/models/crm_lead.py:336
+#: code:addons/izi_crm_lead/models/crm_lead.py:356
+#: code:addons/izi_crm_lead/models/crm_lead.py:374
+#: code:addons/izi_crm_lead/models/crm_lead.py:400
+#: code:addons/izi_crm_lead/models/crm_lead.py:417
+#, python-format
+msgid "Choice create form"
+msgstr "Choice create form"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:81
+#: code:addons/izi_crm_lead/models/crm_lead.py:164
+#, python-format
+msgid "Chưa có nhân viên bán hàng (tư vấn)!"
+msgstr "Chưa có nhân viên bán hàng (tư vấn)!"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "City"
+msgstr "Thành phố"
+
+#. module: izi_crm_lead
+#: selection:crm.lead,x_selection:0
+msgid "Coin"
+msgstr "Thẻ tiền"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Company"
+msgstr "Công ty"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Contact Information"
+msgstr "Thông tin liên hệ"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_create_form_view_oppor
+msgid "Create"
+msgstr "Tạo"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Creation Month"
+msgstr "Tháng tạo"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_tree_view_oppor
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: izi_crm_lead
+#: selection:crm.lead,x_selection:0
+msgid "Deposit"
+msgstr "Đặt cọc"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Edit"
+msgstr "Sửa"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_employee_id
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Expected Closing Date"
+msgstr "Ngày đóng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_tree_view_oppor
+msgid "Expected Revenues"
+msgstr "Doanh thu mong đợi"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Future Activities"
+msgstr "Future Activities"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Ghi chú:"
+msgstr "Ghi chú:"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Internal Notes"
+msgstr "Ghi chú nội bộ"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_type_partner
+msgid "Is Customer"
+msgstr "Là khách hàng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "KH liên quan:"
+msgstr "KH liên quan:"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Late Activities"
+msgstr "Late Activities"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_lead_id
+msgid "Lead"
+msgstr "Đầu mối"
+
+#. module: izi_crm_lead
+#: model:ir.model,name:izi_crm_lead.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Đầu mối/Cơ hội"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_lines
+msgid "Lines"
+msgstr "Sản phẩm đề xuất"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Lost"
+msgstr "Thất bại"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Lost Reason"
+msgstr "Lost Reason"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Mark Lost"
+msgstr "Đánh dấu thất bại"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Mark Won"
+msgstr "Đánh dấu thắng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Marketing"
+msgstr "Marketing"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Medium"
+msgstr "Trung bình"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "My Pipeline"
+msgstr "My Pipeline"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:68
+#: code:addons/izi_crm_lead/models/crm_lead.py:69
+#: selection:crm.lead,type_partner:0
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "New Order"
+msgstr "New Order"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "New quotes"
+msgstr "New quotes"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Ngày tạo:"
+msgstr "Ngày tạo:"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Nhân viên tư vấn:"
+msgstr "Nhân viên tư vấn:"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "No salesperson"
+msgstr "No salesperson"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_crm_lead
+#: model:ir.actions.act_window,help:izi_crm_lead.izi_crm_lead_opportunities_tree_view
+msgid ""
+"Odoo helps you keep track of your sales pipeline to follow\n"
+"                    up potential sales and better forecast your future revenues."
+msgstr ""
+"Odoo helps you keep track of your sales pipeline to follow\n"
+"                    up potential sales and better forecast your future revenues."
+
+#. module: izi_crm_lead
+#: selection:crm.lead,type_partner:0
+msgid "Old"
+msgstr "Old"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_tree_view_oppor
+msgid "Opportunities"
+msgstr "Các cơ hội"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Opportunities that are assigned to me"
+msgstr "Cơ hội được giao cho bạn"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:41
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_service_card_using_x_opportunity_id
+#: model:ir.model.fields,field_description:izi_crm_lead.field_pos_customer_deposit_line_x_opportunity_id
+#: model:ir.model.fields,field_description:izi_crm_lead.field_pos_order_x_opportunity_id
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_tree_view_oppor
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+#, python-format
+msgid "Opportunity"
+msgstr "Cơ hội"
+
+#. module: izi_crm_lead
+#: selection:crm.lead,x_selection:0
+msgid "Order"
+msgstr "Order"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_selection
+msgid "Order form"
+msgstr "Order form"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Order lines"
+msgstr "Order lines"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Overdue Opportunities"
+msgstr "Overdue Opportunities"
+
+#. module: izi_crm_lead
+#: model:ir.actions.act_window,name:izi_crm_lead.izi_crm_lead_opportunities_tree_view
+msgid "Pipeline"
+msgstr "Cơ hội bán hàng"
+
+#. module: izi_crm_lead
+#: model:ir.model,name:izi_crm_lead.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_config_id
+msgid "Pos Config"
+msgstr "Pos Config"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_pos_order_ids
+msgid "Pos order"
+msgstr "Pos order"
+
+#. module: izi_crm_lead
+#: model:ir.actions.act_window,name:izi_crm_lead.x_pos_action_orders
+msgid "Pos orders"
+msgstr "Pos orders"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Quotes"
+msgstr "Quotes"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Restore"
+msgstr "Restore"
+
+#. module: izi_crm_lead
+#: model:ir.model,name:izi_crm_lead.model_crm_team
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Sales Channel"
+msgstr "Sales Channel"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Salesperson"
+msgstr "Nhân viên bán hàng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Search Opportunities"
+msgstr "Tìm kiếm các Cơ hội"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Show all opportunities for which the next action date is before today"
+msgstr "Show all opportunities for which the next action date is before today"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Show all opportunities with a deadline for which the next action date is before today"
+msgstr "Show all opportunities with a deadline for which the next action date is before today"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Stage"
+msgstr "Trạng thái"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Street 2..."
+msgstr "Street 2..."
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "Street..."
+msgstr "Địa chỉ..."
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_pos_amount_total
+msgid "Sum of Orders"
+msgstr "Sum of Orders"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "SĐT:"
+msgstr "SĐT:"
+
+#. module: izi_crm_lead
+#: sql_constraint:crm.lead:0
+msgid "Số điện thoại này đã tồn tại !"
+msgstr "Số điện thoại này đã tồn tại !"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Tag"
+msgstr "Từ khóa"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_team_form_view
+msgid "Team Members"
+msgstr "Các thành viên trong nhóm"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Today Activities"
+msgstr "Today Activities"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_izi_crm_lead_quotes_total_amount
+msgid "Total amount"
+msgstr "Total amount"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+msgid "Tên Kh:"
+msgstr "Tên Kh:"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Unassigned"
+msgstr "Chưa được gán"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_kanban_view_leads
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,help:izi_crm_lead.field_crm_lead_x_pos_amount_total
+msgid "Untaxed Total of Confirmed Orders"
+msgstr "Untaxed Total of Confirmed Orders"
+
+#. module: izi_crm_lead
+#: selection:crm.lead,x_selection:0
+msgid "Use Service"
+msgstr "Use Service"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_team_x_member_ids
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_view_crm_case_opportunities_filter
+msgid "Won"
+msgstr "Thắng"
+
+#. module: izi_crm_lead
+#: model:ir.model.fields,field_description:izi_crm_lead.field_crm_lead_x_stage
+msgid "X Stage"
+msgstr "X Stage"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:96
+#, python-format
+msgid "Xin hãy cấu hình chức vụ nhân viên tư vấn với mã là 'NVTV'"
+msgstr "Xin hãy cấu hình chức vụ nhân viên tư vấn với mã là 'NVTV'"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:219
+#, python-format
+msgid "Bạn phải mở phiên trước khi tạo đơn hàng mới."
+msgstr "Bạn phải mở phiên trước khi tạo đơn hàng mới."
+
+#. module: izi_crm_lead
+#: model:ir.actions.act_window,help:izi_crm_lead.izi_crm_lead_opportunities_tree_view
+msgid ""
+"You will be able to plan meetings and phone calls from\n"
+"                    opportunities, convert them into quotations, attach related\n"
+"                    documents, track all discussions, and much more."
+msgstr ""
+"You will be able to plan meetings and phone calls from\n"
+"                    opportunities, convert them into quotations, attach related\n"
+"                    documents, track all discussions, and much more."
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: izi_crm_lead
+#: model:ir.ui.view,arch_db:izi_crm_lead.izi_crm_case_form_view_oppor
+msgid "e.g. Product Pricing"
+msgstr "e.g. Product Pricing"
+
+#. module: izi_crm_lead
+#: model:ir.model,name:izi_crm_lead.model_izi_crm_lead_quotes
+msgid "izi.crm.lead.quotes"
+msgstr "izi.crm.lead.quotes"
+
+#. module: izi_crm_lead
+#: model:ir.model,name:izi_crm_lead.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: izi_crm_lead
+#: model:ir.model,name:izi_crm_lead.model_pos_customer_deposit_line
+msgid "pos.customer.deposit.line"
+msgstr "pos.customer.deposit.line"
+
+#. module: izi_crm_lead
+#: code:addons/izi_crm_lead/models/crm_lead.py:83
+#: code:addons/izi_crm_lead/models/crm_lead.py:166
+#, python-format
+msgid "Đơn này không phải giao cho bạn, bạn không được xác nhận!"
+msgstr "Đơn này không phải giao cho bạn, bạn không được xác nhận!"

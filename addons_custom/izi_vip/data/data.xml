@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="crm.vip.rank" id="vip_rank_base">
+            <field name="name">Thành viên</field>
+            <field name="code">TV</field>
+            <field name="descx">Thành viên</field>
+            <field name="level">99</field>
+        </record>
+
+        <record id="cron_update_customer_vip_rank" model="ir.cron">
+            <field name="name">VIP Customer: Update rank</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_crm_vip_customer"/>
+            <field name="state">code</field>
+            <field name="code">model.schedule_update_rank()</field>
+            <field name="nextcall" eval="(DateTime.now()).strftime('%Y-%m-%d 15:00:00')" />
+        </record>
+
+        <record id="cron_down_customer_vip_rank" model="ir.cron">
+            <field name="name">VIP Customer: Down rank</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">months</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="active" eval="False"/>
+            <field name="model_id" ref="model_crm_vip_customer"/>
+            <field name="state">code</field>
+            <field name="code">model.set_down_rank()</field>
+        </record>
+    </data>
+</odoo>

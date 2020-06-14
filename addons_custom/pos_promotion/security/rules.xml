@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!--<record id="assigned_pos_promotion_rule_1" model="ir.rule">-->
+            <!--<field name="name">PoS Manager: read, write and create promotion for assigned point of sale</field>-->
+            <!--<field name="model_id" ref="pos_promotion.model_pos_promotion"/>-->
+            <!--<field name="groups" eval="[(4, ref('point_of_sale.group_pos_manager'))]"/>-->
+            <!--<field name="domain_force">[('pos_id', '=', user.x_pos_config_id.id)]</field>-->
+            <!--<field name="perm_read" eval="True"/>-->
+            <!--<field name="perm_write" eval="True"/>-->
+            <!--<field name="perm_create" eval="True"/>-->
+            <!--<field name="perm_unlink" eval="True"/>-->
+        <!--</record>-->
+    </data>
+</odoo>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_exchange_service_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.exchange.service</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="res_partner_custom.res_partner_add_tab_other_info_form_view"/>
+            <field name="arch" type="xml">
+<!--                Đổi dịch vụ-->
+                <xpath expr="//page[@name='other_infor']" position="before">
+                    <page name="exchange_service" string="Đổi dịch vụ">
+                        <field name="exchange_service_ids" readonly="1">
+                            <tree default_order='id desc'>
+                                <field name="id" invisible="1"/>
+                                <field name="product_lot_id"/>
+                                <field name="name"/>
+                                <field name="exchange_date"/>
+                                <field name="amount_current" widget="integer"/>
+                                <field name="amount_new" widget="integer"/>
+                                <field name="amount_total" widget="integer"/>
+                                <field name="state"/>
+                            </tree>
+                            <form string="Exchange Service" create="false" edit="false">
+                                <sheet>
+                                    <h3 class="text-center">ĐỔI DỊCH VỤ</h3>
+                                    <h3 class="text-center">
+                                        <field name="name" readonly="1" required="1" attrs="{'invisible': [('name','=','/')]}"
+                                               style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                               placeholder="Number"/>
+                                    </h3>
+                                    <group>
+                                        <group>
+                                            <field name="partner_id" readonly="1"/>
+                                            <field name="product_lot_id" readonly="1"/>
+                                            <field name="state"/>
+                                        </group>
+                                        <group>
+                                            <field name="exchange_date" readonly="1"/>
+                                            <field name="session_id" invisible="1"/>
+                                            <field name="pricelist_id"
+                                                   context="{'domain_by_session_id': session_id}"
+                                                   attrs="{'readonly': [('state','!=','draft')]}"/>
+                                            <field name="pos_order_id" readonly="1"
+                                                   attrs="{'invisible': [('pos_order_id', '=', False)]}"/>
+                                        </group>
+                                    </group>
+                                    <field name="note" placeholder="Note" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <notebook colspan="4">
+                                        <page string="General">
+                                            <div style="padding-top:20px;padding-bottom:20px">
+                                                <b>Current details</b>
+                                            </div>
+                                            <field name="current_detail_line_ids"
+                                                   attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                                <tree editable="bottom" create="false">
+                                                    <field name="service_id" readonly="1"/>
+                                                    <field name="total_count" readonly="1"/>
+                                                    <field name="hand_count" readonly="1"/>
+                                                    <field name="used_count" readonly="1"/>
+                                                    <field name="price_unit" readonly="1" widget="integer"/>
+                                                    <field name="amount_total" readonly="1" widget="integer"/>
+                                                    <field name="to_subtract_count"/>
+                                                    <field name="amount_subtract" widget="integer"/>
+                                                </tree>
+                                            </field>
+                                            <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                                <label for="amount_current"/>
+                                                <field name="amount_current" nolabel="1" widget="integer"/>
+                                            </group>
+                                            <div class="oe_clear"/>
+
+                                            <div style="padding-top:20px;padding-bottom:20px">
+                                                <b>New details</b>
+                                            </div>
+                                            <field name="new_service_detail_line_ids"
+                                                   attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                                <tree editable="bottom">
+                                                    <field name="service_id" domain="[('type', '=', 'service')]" required="1"/>
+                                                    <field name="new_count"/>
+                                                    <field name="price_unit" widget="integer"/>
+                                                    <field name="amount_total" widget="integer"/>
+                                                </tree>
+                                            </field>
+                                            <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                                <label for="amount_new"/>
+                                                <field name="amount_new" nolabel="1" widget="integer"/>
+                                                <div style="float:right">--------------------------------------------------</div>
+                                                <br/>
+                                                <field name="amount_total" widget="integer"/>
+                                            </group>
+                                            <div class="oe_clear"/>
+
+                                        </page>
+                                        <page string="Payments">
+                                            <field name="statement_ids" colspan="4" nolabel="1">
+                                                <tree editable="bottom" string="Statement lines">
+                                                    <field name="journal_id" readonly="1"/>
+                                                    <field name="statement_id" readonly="1"/>
+                                                    <field name="amount" readonly="1" widget="integer"/>
+                                                    <field name="x_vc_name" readonly="1"/>
+                                                </tree>
+                                            </field>
+                                        </page>
+                                        <page string="Rate">
+                                            <form>
+                                                <group>
+                                                    <group>
+                                                        <field name="signature_image" widget="image" readonly="1" force_save="1"/>
+                                                    </group>
+                                                </group>
+                                            </form>
+                                        </page>
+                                    </notebook>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

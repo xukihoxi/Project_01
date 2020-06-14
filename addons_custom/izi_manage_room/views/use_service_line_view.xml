@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_service_card_choose_bed_view" model="ir.ui.view">
+            <field name="name">Service card using line</field>
+            <field name="model">izi.service.card.using.line</field>
+            <field name="priority">1000</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="branch_id" invisible="1"/>
+                        <field name="bed_ids" domain="[('room_id.branch_id', '=', branch_id), ('state', '=', 'ready')]" required="0" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                    </group>
+                    <footer>
+                        <button type="object" name="action_confirm_bed" string="Confirm"/> or
+                        <button name="cancel" string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_service_card_choose_doctor_view" model="ir.ui.view">
+            <field name="name">Service card using line</field>
+            <field name="model">izi.service.card.using.line</field>
+            <field name="priority">1001</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="doctor_ids" domain="[('job_id.x_code', '=', 'BS')]" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                    </group>
+                    <footer>
+                        <button type="object" name="action_done" string="Done"/> or
+                        <button name="cancel" string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pop_up_refund_service" model="ir.ui.view">
+            <field name="name">izi.service.card.using.form.view.refund</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="arch" type="xml">
+                <form string="Rate Service">
+                    <group>
+                        <field name="option_refund" widget="radio" required="1"/>
+                        <field name="note" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="process_refund" string="_Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

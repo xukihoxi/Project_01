@@ -1,0 +1,110 @@
+<odoo>
+    <data>
+        <record id="inventory_product_delivery_tree_view" model="ir.ui.view">
+            <field name="name">inventory.product.delivery_tree_view</field>
+            <field name="model">inventory.product.delivery</field>
+            <field name="arch" type="xml">
+                <tree string="inventory.product.delivery" default_order="create_date desc">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="delivery_date"/>
+                    <field name="partner_id"/>
+                    <field name="str_rec_partner"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="inventory_product_delivery_form_view" model="ir.ui.view">
+            <field name="name">inventory.product.delivery_form_view</field>
+            <field name="model">inventory.product.delivery</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="do_check_inventory" string="Check inventory" class="oe_highlight"
+                                attrs="{'invisible':['|',('type','=','in'), ('state','!=','draft')]}" type="object"/>
+                        <button name="do_inventory_transfer" string="Input" class="oe_highlight"
+                                attrs="{'invisible':['|',('type','=','out'), ('state','!=','ready')]}" type="object"/>
+                        <button name="do_inventory_transfer" string="Output" class="oe_highlight"
+                                attrs="{'invisible':['|',('type','=','in'), ('state','!=','ready')]}" type="object"/>
+                        <button name="action_confirm" string="Confirm" class="oe_highlight"
+                                states="confirm" type="object"/>
+                        <button name="re_check_inventory" string="Re check inventory"
+                                attrs="{'invisible':['|',('type','=','in'), ('state','not in',('ready','not_available','partially_available'))]}"
+                                type="object"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <h2 colspan="2">Nhập/ Xuất trực tiếp</h2>
+                            <h3>
+                                <field name="name" colspan="2" nolabel="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('name', '=', '/')]}"/>
+                            </h3>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="type" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="location_id" domain="[('user_ids', 'child_of', [uid])]" attrs="{'readonly': [('state', '=', 'done')],'invisible':[('type','=','in')]}" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="is_loss" attrs="{'readonly': [('state', '=', 'done')],'invisible':[('type','=','in')]}"/>
+                                <field name="dest_location_id" domain="[('user_ids', 'child_of', [uid])]" attrs="{'readonly': ['|', ('state', '=', 'done'), ('type', '=', 'out')]}" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}" force_save="1"/>
+                                <field name="picking_id"/>
+                            </group>
+                            <group>
+                                <field name="partner_id"
+                                       attrs="{'readonly': [('state', '=', 'done')]}" required="1"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                       context="{'get_by_code': 1, 'inventory_product_delivery': 1}"/>
+                                <field name="rec_partner_id"
+                                       attrs="{'readonly': [('state', '=', 'done')], 'required': [('type', '=', 'out')]}"
+                                       context="{'get_by_code': 1, 'inventory_product_delivery': 1}"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="str_rec_partner"
+                                       attrs="{'readonly': [('state', '=', 'done')], 'required': [('type', '=', 'out')]}"
+                                />
+                                <field name="delivery_date" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            </group>
+                            <group colspan="2">
+                                <field name="note" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="delivery_lines" nolabel="1" colspan="2"
+                                   attrs="{'readonly': [('state', '=', 'done')]}">
+                                <tree editable="bottom">
+                                    <field name="product_id"
+                                           options="{'no_open': 0, 'no_create': 1, 'no_create_edit': 1}"/>
+                                    <field name="product_uom_id"
+                                           options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                    <field name="product_uom_qty"/>
+                                    <field name="delivery_reason" attrs="{'readonly': [('state', '=', 'done')]}"
+                                           options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                    <field name="account_id" attrs="{'readonly': [('state', '=', 'done')]}"
+                                           options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                    <field name="standard_price" groups="stock.group_stock_manager"/>
+                                    <field name="note"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="state_text"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_inventory_product_delivery" model="ir.actions.act_window">
+            <field name="name">Product delivery</field>
+            <field name="res_model">inventory.product.delivery</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['|', ('location_id.user_ids','in',[uid,]), ('dest_location_id.user_ids','in',[uid,])]</field>
+        </record>
+
+        <menuitem
+                id="menu_inventory_product_delivery"
+                parent="stock.menu_stock_warehouse_mgmt"
+                action="action_inventory_product_delivery"
+                groups="stock.group_stock_manager"/>
+    </data>
+</odoo>

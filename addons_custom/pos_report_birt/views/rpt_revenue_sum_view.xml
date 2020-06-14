@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="rpt_revenue_allocation_sum_form" model="ir.ui.view">
+            <field name="name">Rpt Pos Revennua Sum</field>
+            <field name="model">rpt.revenue.allocation.sum</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="select_all"/>
+                            <field name="crm_team_ids" widget="many2many_tags"
+                                   required="1"
+                                   options="{'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="select_all_employee"/>
+                            <field name="employee_ids" widget="many2many_tags"
+                                   required="1"
+                                   options="{'no_create': 1, 'no_create_edit': 1}"/>
+                        </group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_excel" type="object"
+                                string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="rpt_pos_revenue_sum_action" model="ir.actions.act_window">
+            <field name="name">Rpt Pos Revenue Sum</field>
+            <field name="res_model">rpt.revenue.allocation.sum</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="rpt_revenue_sum_menu" action="rpt_pos_revenue_sum_action" name="Rpt Revenue Allocation Sum"
+                  parent="point_of_sale.menu_point_rep"/>
+    </data>
+</odoo>

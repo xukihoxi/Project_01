@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="izi_crm_claim_assets_backend" name="izi_crm_claim assets" inherit_id="web.assets_backend">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/izi_crm_claim/static/src/js/display_iframe.js.js"/>
+            </xpath>
+        </template>
+    </data>
+
+    <record model="ir.ui.view" id="crm_claim_report_form_view">
+        <field name="name">Claim report</field>
+        <field name="model">crm.claim.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="url_report" widget="display_iframe"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="crm_claim_report_action_window">
+            <field name="name">Claim report</field>
+            <field name="res_model">crm.claim.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+        </record>
+
+    <menuitem id="crm_claim_report_menu" name="Claim Report" action="izi_crm_claim.crm_claim_report_action_window"
+              parent="izi_crm_claim.crm_claim_main_menu"/>
+</odoo>

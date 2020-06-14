@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Chương trình khuyến mại -->
+	<data>
+        <record id="view_pos_promo_promo_form" model="ir.ui.view">
+            <field name="name">view.pos_promo.promo.form</field>
+            <field name="model">pos.promotion</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_activate" type="object" string="Activate" attrs="{'invisible':[('state','!=','draft')]}"
+                            confirm="Promotion that activated cannot be edit anymore, continue?"/>
+                        <button name="button_deactivate" type="object" string="Deactivate" attrs="{'invisible':[('state','!=','activated')]}"
+                            confirm="Deactivate this promotion? This action cannot be undo and cannot be activate it again!"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="campaign_id" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1" options="{'no_create':1, 'no_edit':1, 'no_open':1, 'no_quick_create':1}"/>
+                                <field name="pos_id" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1" options="{'no_create':1, 'no_edit':1, 'no_open':1, 'no_quick_create':1}"/>
+                                <field name="vip_include"/>
+                            </group>
+                            <group>
+                                <field name="date_start" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="date_end" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group colspan="2">
+                                <notebook>
+                                    <page string="Promotion">
+                                        <field name="line_ids" nolabel="1">
+                                            <tree editable="bottom">
+                                                <field name="sequence"/>
+                                                <field name="rule_ids" widget="many2many_tags"
+                                                       options="{'no_create':1, 'no_edit':1, 'no_quick_create':1}" required="1"/>
+                                                <field name="action_ids" widget="many2many_tags"
+                                                       options="{'no_create':1, 'no_edit':1, 'no_quick_create':1}" required="1"/>
+                                                <field name="apply_once"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </group>
+                        </group>
+                    </sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_pos_promo_promo_tree" model="ir.ui.view">
+            <field name="name">view.pos_promo.promo.tree</field>
+            <field name="model">pos.promotion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="campaign_id"/>
+                    <field name="pos_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_pos_promo_promo" model="ir.actions.act_window">
+            <field name="name">PoS promotion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.promotion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_pos_promo_promo" parent="point_of_sale.menu_point_config_product"
+                  action="action_pos_promo_promo" sequence="6" groups="point_of_sale.group_pos_manager"/>
+	</data>
+
+    <!-- Các điều kiện của chương trình khuyến mại -->
+	<data>
+        <record id="view_pos_promo_promo_rule_form" model="ir.ui.view">
+            <field name="name">view.pos_promo.promo_rule.form</field>
+            <field name="model">pos.promotion.rule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2 class="text-center">ĐIỀU KIỆN KHUYẾN MẠI</h2>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="type" required="1"/>
+                            </group>
+                            <group>
+                                <field name="count" required="1"
+                                    attrs="{'invisible':[('type', '=', 'partner')]}"/>
+                            </group>
+                            <label for="domain"/>
+                            <field name="domain" required="1"/>
+                            <label for="context"/>
+                            <field name="context"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_pos_promo_promo_rule_tree" model="ir.ui.view">
+            <field name="name">view.pos_promo.promo_rule.tree</field>
+            <field name="model">pos.promotion.rule</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="domain"/>
+                    <field name="context"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_pos_promo_promo_rule" model="ir.actions.act_window">
+            <field name="name">PoS promotion rules</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.promotion.rule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_pos_promo_promo_rule" parent="point_of_sale.menu_point_config_product"
+                  action="action_pos_promo_promo_rule" sequence="7" groups="point_of_sale.group_pos_manager"/>
+	</data>
+
+    <!-- Các áp dụng của chương trình khuyến mại -->
+	<data>
+        <record id="view_pos_promo_promo_action_form" model="ir.ui.view">
+            <field name="name">view.pos_promo.promo_action.form</field>
+            <field name="model">pos.promotion.action</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2 class="text-center"> ÁP DỤNG KHUYẾN MẠI</h2>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="button_activate" type="object"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="type" required="1"/>
+                            </group>
+                            <group>
+								<field name="discount" attrs="{'required':[('type', 'in', 'x1', 'discount_amount', 'discount_percent')], 'invisible':[('type', 'not in', ['x1', 'discount_amount', 'discount_percent'])]}"/>
+								<field name="domain" attrs="{'required':[('type', '=', 'x1')], 'invisible':[('type', 'not in', ['x1'])]}"/>
+                                <field name="product_id" options="{'no_create':1, 'no_edit':1, 'no_open':1, 'no_quick_create':1}"
+                                       attrs="{'required':[('type', 'in', ['fixed_percent', 'discount_amount'])], 'invisible':[('type', 'not in', ['fixed_percent', 'discount_amount'])]}"/>
+                            </group>
+							<label for="line_ids" attrs="{'invisible':[('type', 'in', ['x1', 'discount_amount', 'discount_percent'])]}"/>
+							<field name="line_ids" attrs="{'invisible':[('type', 'in', ['x1', 'discount_amount', 'discount_percent'])]}">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="product_id"
+                                           attrs="{'column_invisible':[('parent.type', 'in', ['fixed_percent'])]}"/>
+									<field name="product_qtt" attrs="{'column_invisible': [('parent.type', 'not in', ['fixed_percent', 'gift'])]}"/>
+									<field name="price_percent" attrs="{'column_invisible': [('parent.type', 'not in', 'fixed_percent')]}"/>
+									<field name="product_price" attrs="{'column_invisible': [('parent.type', 'not in', ['fixed_price'])]}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_pos_promo_promo_action_tree" model="ir.ui.view">
+            <field name="name">view.pos_promo.promo_action.tree</field>
+            <field name="model">pos.promotion.action</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_pos_promo_promo_action" model="ir.actions.act_window">
+            <field name="name">PoS promotion action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.promotion.action</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_pos_promo_promo_action" parent="point_of_sale.menu_point_config_product"
+                  action="action_pos_promo_promo_action" sequence="7" groups="point_of_sale.group_pos_manager"/>
+	</data>
+
+    <!-- Sửa view -->
+    <data>
+        <record id="izi_pos_promotion_order_form1" model="ir.ui.view">
+            <field name="name">pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='lines']/tree/field[@name='product_id']" position="before">
+                    <field name="x_is_gift" invisible="1"/>
+                </xpath>
+                <!--<field name="x_vip_discount" position="before">-->
+                    <!--<field name="x_discount_promo" class="oe_subtotal_footer_separator" widget="monetary"/>-->
+                <!--</field>-->
+                <field name="date_order" position="after">
+                    <field name="x_promotion_id" options="{'no_create':True, 'no_open':True}"
+                           context="{'izi_pos_promotion':True, 'izi_session_id': session_id}"
+                           attrs="{'readonly': ['|',('state','!=','draft')]}"/>
+                </field>
+            </field>
+        </record>
+        <record id="izi_pos_promotion_order_form2" model="ir.ui.view">
+            <field name="name">pos.order.form.virtual money</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='lines']/tree/field[@name='product_id']" position="before">
+                    <field name="x_is_gift" invisible="1"/>
+                </xpath>
+                <!--<field name="x_vip_discount" position="before">-->
+                    <!--<field name="x_discount_promo" class="oe_subtotal_footer_separator" widget="monetary"/>-->
+                <!--</field>-->
+                <field name="date_order" position="after">
+                    <field name="x_promotion_id" options="{'no_create':True, 'no_open':True}"
+                           context="{'izi_pos_promotion':True, 'izi_session_id': session_id}"
+                           attrs="{'readonly': ['|',('state','!=','draft')]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

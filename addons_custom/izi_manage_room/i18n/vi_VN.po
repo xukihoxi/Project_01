@@ -1,0 +1,308 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_manage_room
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-28 17:00+0000\n"
+"PO-Revision-Date: 2019-06-28 17:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "<span>Back</span>"
+msgstr "<span>Quay lại</span>"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "<span>Choose bed</span>"
+msgstr "<span>Chọn giường</span>"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "<span>Done</span>"
+msgstr "<span>Hoàn thành</span>"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_active
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_izi_service_card_using_line_bed_ids
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_bed_ids
+#: model:ir.ui.menu,name:izi_manage_room.izi_bed_menu
+msgid "Bed"
+msgstr "Giường"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_branch_id
+msgid "Branch"
+msgstr "Chi nhánh"
+
+#. module: izi_manage_room
+#: selection:pos.service.bed,state:0
+msgid "Busy"
+msgstr "Đang bận"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_choose_bed_view
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_choose_doctor_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_code
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_manage_room
+#: sql_constraint:pos.service.bed:0
+#: sql_constraint:pos.service.room:0
+msgid "Code is unique"
+msgstr "Mã phòng không được trùng"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_color
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_choose_bed_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_count_bed
+msgid "Count Bed"
+msgstr "Số giường"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_create_uid
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_create_date
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_pos_service_bed_form
+msgid "DANH MỤC GIƯỜNG"
+msgstr "DANH MỤC GIƯỜNG"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_pos_service_room_form
+msgid "DANH MỤC PHÒNG"
+msgstr "DANH MỤC PHÒNG"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_date_start
+msgid "Data Start"
+msgstr "Data Start"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_display_name
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_choose_doctor_view
+#: selection:izi.service.card.using.line,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "Dịch vụ:"
+msgstr "Dịch vụ:"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "Giường:"
+msgstr "Giường:"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_hour
+msgid "Hour"
+msgstr "Giờ"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_id
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "Khách hàng:"
+msgstr "Khách hàng:"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "Kỹ thuật viên:"
+msgstr "Kỹ thuật viên:"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed___last_update
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_write_uid
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_write_date
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_pos_service_bed_form
+#: selection:pos.service.bed,state:0
+msgid "Maintenance"
+msgstr "Sửa chữa"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_minutes
+msgid "Minutes"
+msgstr "Phút"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_name
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_manage_room
+#: selection:izi.service.card.using.line,state:0
+msgid "New"
+msgstr "Trống"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_room_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_izi_service_card_using_line_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_manage_room
+#: model:ir.actions.act_window,name:izi_manage_room.izi_pos_service_bed_action_window
+msgid "Pos Service Bed"
+msgstr "Quản lý giường"
+
+#. module: izi_manage_room
+#: model:ir.actions.act_window,name:izi_manage_room.izi_pos_service_room_action_window
+msgid "Pos Service Room"
+msgstr "Quản lý phòng"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_pos_service_bed_form
+#: selection:pos.service.bed,state:0
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_room_id
+#: model:ir.ui.menu,name:izi_manage_room.izi_room_menu
+msgid "Room"
+msgstr "Phòng"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_seconds
+msgid "Seconds"
+msgstr "Giây"
+
+#. module: izi_manage_room
+#: model:ir.model.fields,field_description:izi_manage_room.field_izi_service_card_using_line_state
+#: model:ir.model.fields,field_description:izi_manage_room.field_pos_service_bed_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.pos_service_room_kanban
+msgid "Thời gian làm:"
+msgstr "Thời gian làm:"
+
+#. module: izi_manage_room
+#: model:ir.actions.act_window,name:izi_manage_room.dashboard_action
+msgid "Trạng thái công việc"
+msgstr "Trạng thái công việc"
+
+#. module: izi_manage_room
+#: model:ir.ui.menu,name:izi_manage_room.menu_dashboard_maintenance
+msgid "Trạng thái công việc chung"
+msgstr "Trạng thái công việc chung"
+
+#. module: izi_manage_room
+#: model:ir.actions.act_window,name:izi_manage_room.dashboard_room_action
+#: model:ir.ui.menu,name:izi_manage_room.menu_dashboard_room
+msgid "Trạng thái giường"
+msgstr "Trạng thái giường"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_kanban_view_leads
+msgid "Trạng thái:"
+msgstr "Trạng thái:"
+
+#. module: izi_manage_room
+#: selection:izi.service.card.using.line,state:0
+msgid "Working"
+msgstr "Đang làm"
+
+#. module: izi_manage_room
+#: model:ir.actions.act_window,help:izi_manage_room.dashboard_action
+msgid "[('using_id.state', 'in', ('wait_material','working','rate'))]<br>"
+msgstr "[('using_id.state', 'in', ('wait_material','working','rate'))]<br>"
+
+#. module: izi_manage_room
+#: model:ir.model,name:izi_manage_room.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: izi_manage_room
+#: model:ir.model,name:izi_manage_room.model_izi_service_card_using_line
+msgid "izi.service.card.using.line"
+msgstr "izi.service.card.using.line"
+
+#. module: izi_manage_room
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_choose_bed_view
+#: model:ir.ui.view,arch_db:izi_manage_room.izi_service_card_choose_doctor_view
+msgid "or"
+msgstr "hoặc"
+
+#. module: izi_manage_room
+#: model:ir.model,name:izi_manage_room.model_pos_service_bed
+msgid "pos.service.bed"
+msgstr "pos.service.bed"
+
+#. module: izi_manage_room
+#: model:ir.model,name:izi_manage_room.model_pos_service_room
+msgid "pos.service.room"
+msgstr "pos.service.room"
+
+#. module: izi_manage_room
+#: model:ir.model,name:izi_manage_room.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"
+

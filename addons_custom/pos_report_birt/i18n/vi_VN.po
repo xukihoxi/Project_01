@@ -1,0 +1,636 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_report_birt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-31 04:29+0000\n"
+"PO-Revision-Date: 2019-10-31 04:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_select_all
+msgid "All Employee"
+msgstr "Tất cả nhân viên"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_select_all_partner
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_select_all_partner
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_select_all
+msgid "All Partner"
+msgstr "Tất cả khách hàng"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_select_all
+msgid "All Pos config"
+msgstr "Tất cả điêm bán hàng"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_select_all
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_select_all
+msgid "All Session"
+msgstr "Tất cả các phiên"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_select_all
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_select_all
+msgid "All Team"
+msgstr "Tất cả chi nhánh"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_branch_ids
+msgid "Branches"
+msgstr "Chi nhánh"
+
+#. module: pos_report_birt
+#: code:addons/pos_report_birt/models/report_by_payment.py:29
+#: code:addons/pos_report_birt/models/report_by_payment.py:52
+#: code:addons/pos_report_birt/models/report_revenue_by_month.py:38
+#: code:addons/pos_report_birt/models/report_revenue_by_month.py:68
+#: code:addons/pos_report_birt/models/report_statement_customer_by_date.py:19
+#: code:addons/pos_report_birt/models/report_statement_customer_by_date.py:37
+#: code:addons/pos_report_birt/models/rpt_cong_no_kh.py:46
+#: code:addons/pos_report_birt/models/rpt_cong_no_kh.py:80
+#: code:addons/pos_report_birt/models/rpt_cong_no_ncc.py:28
+#: code:addons/pos_report_birt/models/rpt_cong_no_ncc.py:62
+#: code:addons/pos_report_birt/models/rpt_dinh_luong_nvl.py:20
+#: code:addons/pos_report_birt/models/rpt_dinh_luong_nvl.py:45
+#: code:addons/pos_report_birt/models/rpt_doanh_thu_master.py:29
+#: code:addons/pos_report_birt/models/rpt_doanh_thu_master.py:52
+#: code:addons/pos_report_birt/models/rpt_employee.py:17
+#: code:addons/pos_report_birt/models/rpt_employee.py:38
+#: code:addons/pos_report_birt/models/rpt_payment_session.py:34
+#: code:addons/pos_report_birt/models/rpt_payment_session.py:57
+#: code:addons/pos_report_birt/models/rpt_point_partner.py:34
+#: code:addons/pos_report_birt/models/rpt_point_partner.py:67
+#: code:addons/pos_report_birt/models/rpt_pos_money_session.py:40
+#: code:addons/pos_report_birt/models/rpt_pos_money_session.py:58
+#: code:addons/pos_report_birt/models/rpt_pos_revenue_allocation.py:39
+#: code:addons/pos_report_birt/models/rpt_pos_revenue_allocation.py:93
+#: code:addons/pos_report_birt/models/rpt_rank_partner.py:34
+#: code:addons/pos_report_birt/models/rpt_rank_partner.py:66
+#: code:addons/pos_report_birt/models/rpt_revenue_detail.py:149
+#: code:addons/pos_report_birt/models/rpt_revenue_detail.py:199
+#: code:addons/pos_report_birt/models/rpt_revenue_sum.py:146
+#: code:addons/pos_report_birt/models/rpt_revenue_sum.py:176
+#: code:addons/pos_report_birt/models/rpt_service_with_employee.py:42
+#: code:addons/pos_report_birt/models/rpt_service_with_employee.py:78
+#: code:addons/pos_report_birt/models/rpt_service_with_employee_default_use.py:24
+#: code:addons/pos_report_birt/models/rpt_service_with_employee_default_use.py:44
+#: code:addons/pos_report_birt/models/rpt_use_service.py:55
+#: code:addons/pos_report_birt/models/rpt_use_service.py:81
+#, python-format
+msgid "Bạn phải cấu hình birt_url"
+msgstr "Bạn phải cấu hình birt_url"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_crm_team_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_crm_team_id
+msgid "CRM"
+msgstr "CRM"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_create_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_create_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_display_name
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_employee_ids
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_employee_ids
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_employee_ids
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_employee_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_employee_ids
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_from_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use___last_update
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_write_uid
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_employee_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_write_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_statement_customer_date_partner_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_kh_partner_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_cong_no_ncc_partner_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_point_partner_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_config_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_config_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_config_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_config_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_config_ids
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_config_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_config_ids
+msgid "Pos Config"
+msgstr "Điểm bán hàng"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_session_session_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_money_sesion_session_id
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_product_order_session_id
+msgid "Pos Session"
+msgstr "Phiên"
+
+#. module: pos_report_birt
+#: model:ir.ui.view,arch_db:pos_report_birt.report_revenue_by_month_form
+#: model:ir.ui.view,arch_db:pos_report_birt.report_statement_customer_by_date_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_by_payment_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_by_payment_form_revenue
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_by_payment_session_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_cong_no_kh_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_cong_no_ncc_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_employee_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_pos_money_session_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_pos_revenue_allocation_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_product_order_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_revenue_allocation_detail_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_revenue_allocation_sum_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_service_with_employee_default_use_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_service_with_employee_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_use_service_form
+msgid "Print Report"
+msgstr "In báo cáo"
+
+#. module: pos_report_birt
+#: model:ir.ui.view,arch_db:pos_report_birt.report_revenue_by_month_form
+#: model:ir.ui.view,arch_db:pos_report_birt.report_statement_customer_by_date_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_by_payment_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_by_payment_form_revenue
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_by_payment_session_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_cong_no_kh_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_cong_no_ncc_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_employee_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_pos_money_session_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_pos_revenue_allocation_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_product_order_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_revenue_allocation_detail_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_revenue_allocation_sum_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_service_with_employee_default_use_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_service_with_employee_form
+#: model:ir.ui.view,arch_db:pos_report_birt.rpt_use_service_form
+msgid "Print Report Excel"
+msgstr "In Excel"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_rank_partner_rank_id
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_by_payment_revunue_action
+#: model:ir.ui.menu,name:pos_report_birt.rpt_by_payment_reveneu_menu
+msgid "Report by Payment Revenue"
+msgstr "Báo cáo doanh thu theo cơ sở"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_employee_action
+msgid "Report list employee"
+msgstr "Báo cáo danh sách nhân viên"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.report_revenue_by_month_action
+#: model:ir.ui.menu,name:pos_report_birt.report_revenue_by_month_menu
+msgid "Report revenue by month"
+msgstr "Doanh thu theo tháng"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.report_statement_customer_by_date_action
+#: model:ir.ui.menu,name:pos_report_birt.report_statement_customer_by_date_menu
+msgid "Report statement customer by date"
+msgstr "Sao kê khách hàng theo ngày"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_pos_money_session_action
+msgid "Rpt By Money Session"
+msgstr "Báo cáo két tiền "
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_by_payment_action
+#: model:ir.ui.menu,name:pos_report_birt.rpt_by_payment_menu
+msgid "Rpt By Payment"
+msgstr "Báo cáo doanh thu"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_by_payment_session_action
+#: model:ir.ui.menu,name:pos_report_birt.rpt_by_payment_session_menu
+msgid "Rpt By Payment Session"
+msgstr "Báo cáo phiên"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_cong_no_kh_action
+#: model:ir.ui.menu,name:pos_report_birt.rpt_cong_no_kh_menu
+msgid "Rpt Cong No KH"
+msgstr "Báo cáo công nợ khách hàng"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_cong_no_ncc_action
+#: model:ir.ui.menu,name:pos_report_birt.rpt_cong_no_ncc_menu
+msgid "Rpt Cong No NCC"
+msgstr "Báo cáo công nợ nhà cung cấp"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_employe_menu
+msgid "Rpt Employee"
+msgstr "Danh sách nhân viên"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_money_session_menu
+msgid "Rpt Pos Money Session"
+msgstr "Báo cáo két tiền mặt"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_pos_revenue_allocation_action
+msgid "Rpt Pos Revenue Allocation"
+msgstr "Báo cáo phân bổ doanh thu chi tiết"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_pos_revenue_detail_action
+msgid "Rpt Pos Revenue Detial"
+msgstr "Báo cáo phân bổ doanh thu chi tiết"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_pos_revenue_sum_action
+msgid "Rpt Pos Revenue Sum"
+msgstr "Rpt Pos Revenue Sum"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_product_order
+msgid "Rpt Product Order"
+msgstr "Rpt Product Order"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_product_order_action
+msgid "Rpt Product Order "
+msgstr "Rpt Product Order "
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_pos_money_session_menu
+msgid "Rpt Revenue Allocation"
+msgstr "Báo cáo phân bổ doanh thu chi tiết"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_revenue_datil_menu
+msgid "Rpt Revenue Allocation Detail"
+msgstr "Báo cáo phân bổ doanh thu chi tiết"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_revenue_sum_menu
+msgid "Rpt Revenue Allocation Sum"
+msgstr "Báo cáo phân bổ doanh thu tổng"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_service_with_employee_menu
+msgid "Rpt Service Employee"
+msgstr "Báo cáo nhân viên làm dịch vụ"
+
+#. module: pos_report_birt
+#: model:ir.ui.menu,name:pos_report_birt.rpt_service_with_employee_default_use_menu
+msgid "Rpt Service Employee Default Use"
+msgstr "Báo cáo nhân viên làm dịch vụ (Người dùng)"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_service_with_employee_action
+msgid "Rpt Service With Employee"
+msgstr "Báo cáo nhân viên làm dịch vụ"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_service_with_employee_default_use_action
+msgid "Rpt Service With Employee Default Use"
+msgstr "Báo cáo nhân viên làm dịch vụ (Người dùng)"
+
+#. module: pos_report_birt
+#: model:ir.actions.act_window,name:pos_report_birt.rpt_use_service_action
+#: model:ir.ui.menu,name:pos_report_birt.rpt_use_service_menu
+msgid "Rpt Use Service"
+msgstr "Báo cáo sử dụng dịch vụ"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_select_all_config
+msgid "Select All Config"
+msgstr "Tất cả điểm bán hàng"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_select_all_service
+msgid "Select All Service"
+msgstr "Tất cả dịch vụ"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_select_all
+msgid "Select all"
+msgstr "Chọn hết"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_select_all_employee
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_select_all_employee
+msgid "Select all employee"
+msgstr "Chọn tất cả nhân viên"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_service_ids
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_crm_team_ids
+msgid "Team"
+msgstr "Thành viên"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_crm_team_ids
+msgid "Teams"
+msgstr "Nhóm bán hàng"
+
+#. module: pos_report_birt
+#: model:ir.model.fields,field_description:pos_report_birt.field_report_revenue_by_month_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_revunue_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_by_payment_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_material_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_pos_revenue_allocation_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_detail_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_revenue_allocation_sum_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_default_use_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_service_with_employee_to_date
+#: model:ir.model.fields,field_description:pos_report_birt.field_rpt_use_service_to_date
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_report_history_use_service
+msgid "report.history.use.service"
+msgstr "report.history.use.service"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_report_revenue_by_month
+msgid "report.revenue.by.month"
+msgstr "report.revenue.by.month"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_report_statement_customer_date
+msgid "report.statement.customer.date"
+msgstr "report.statement.customer.date"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_by_payment
+msgid "rpt.by.payment"
+msgstr "rpt.by.payment"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_by_payment_revunue
+msgid "rpt.by.payment.revunue"
+msgstr "rpt.by.payment.revunue"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_by_payment_session
+msgid "rpt.by.payment.session"
+msgstr "rpt.by.payment.session"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_cong_no_kh
+msgid "rpt.cong.no.kh"
+msgstr "rpt.cong.no.kh"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_cong_no_ncc
+msgid "rpt.cong.no.ncc"
+msgstr "rpt.cong.no.ncc"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_employee
+msgid "rpt.employee"
+msgstr "rpt.employee"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_material
+msgid "rpt.material"
+msgstr "rpt.material"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_point_partner
+msgid "rpt.point.partner"
+msgstr "rpt.point.partner"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_pos_money_sesion
+msgid "rpt.pos.money.sesion"
+msgstr "rpt.pos.money.sesion"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_pos_revenue_allocation
+msgid "rpt.pos.revenue.allocation"
+msgstr "rpt.pos.revenue.allocation"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_product_order
+msgid "rpt.product.order"
+msgstr "rpt.product.order"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_rank_partner
+msgid "rpt.rank.partner"
+msgstr "rpt.rank.partner"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_revenue_allocation_detail
+msgid "rpt.revenue.allocation.detail"
+msgstr "rpt.revenue.allocation.detail"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_revenue_allocation_sum
+msgid "rpt.revenue.allocation.sum"
+msgstr "rpt.revenue.allocation.sum"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_service_with_employee
+msgid "rpt.service.with.employee"
+msgstr "rpt.service.with.employee"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_service_with_employee_default_use
+msgid "rpt.service.with.employee.default.use"
+msgstr "rpt.service.with.employee.default.use"
+
+#. module: pos_report_birt
+#: model:ir.model,name:pos_report_birt.model_rpt_use_service
+msgid "rpt.use.service"
+msgstr "rpt.use.service"
+

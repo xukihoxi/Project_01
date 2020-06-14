@@ -1,0 +1,337 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pos_digital_sign_sum_list">
+            <field name="name">pos.sum.digital.sign.list</field>
+            <field name="model">pos.sum.digital.sign</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <!--<field name="sign_digital"/>-->
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="pos_digital_sign_sum_form">
+            <field name="name">pos.sum.digital.sign.form</field>
+            <field name="model">pos.sum.digital.sign</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="apply_all" type="object" states="draft" string="Apply All" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done" readonly="1" force_save="1"/>
+                    </header>
+                    <sheet>
+                        <h2 class="text-center">KHÁCH HÀNG KÝ XÁC NHẬN</h2>
+                        <h3 class="text-center">
+                            <field name="name"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%"
+                                   readonly="1" attrs="{'invisible': [('name', '=', '/')]}"/>
+                        </h3>
+                        <group>
+                            <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" readonly=" 1" force_save="1"/>
+                            <field name="date" readonly="1" force_save="1"/>
+                            <field name="sign_digital" widget="signature"/>
+                        </group>
+                        <notebook>
+                            <page string="Use Service Line">
+                                <field name="sign_use_service_line_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="serial_id" readonly="1" force_save="1"/>
+                                        <field name="service_id" readonly="1" force_save="1"/>
+                                        <!--<field name="paid_count" readonly="1" force_save="1"/>-->
+                                        <!--<field name="used_count" readonly="1" force_save="1"/>-->
+                                        <!--<field name="quantity" readonly="1" force_save="1"/>-->
+                                        <field name="employee_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                        <field name="doctor_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                        <field name="customer_rate" widget="sentiment_icon" show_all_icon="true"/>
+                                        <field name="customer_comment"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="serial_id" readonly="1" force_save="1"/>
+                                                <field name="service_id" readonly="1" force_save="1"/>
+                                                <field name="employee_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                                <field name="doctor_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                            </group>
+                                            <group>
+                                                <field name="paid_count" readonly="1" force_save="1"/>
+                                                <field name="used_count" readonly="1" force_save="1"/>
+                                                <field name="quantity" readonly="1" force_save="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Order Line">
+                                <field name="sign_order_line_ids" create="false" delete="false">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="order_id" readonly="1" force_save="1"/>
+                                        <field name="create_date" readonly="1" force_save="1"/>
+                                        <field name="product_id" readonly="1" force_save="1"/>
+                                        <field name="qty" readonly="1" force_save="1"/>
+                                        <field name="x_qty" readonly="1" force_save="1"/>
+                                        <field name="price_unit" readonly="1" force_save="1"/>
+                                        <field name="discount" readonly="1" force_save="1"/>
+                                        <field name="x_discount" readonly="1" force_save="1"/>
+                                        <field name="x_subtotal_wo_discount" force_save="1" readonly="1" sum="Amount"/>
+                                        <field name="price_subtotal_incl" readonly="1" force_save="1" sum="Subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Account Bank Statement">
+                                <field name="sign_account_bank_statement_lines_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="statement_id" force_save="1" readonly="1"/>
+                                        <field name="ref" readonly="1" force_save="1"/>
+                                        <field name="date" readonly="1" force_save="1"/>
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="journal_id" readonly="1" force_save="1"/>
+                                        <field name="amount" sum="Amount" readonly="1" force_save="1"/>
+                                        <field name="x_vc_name" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Order">
+                                <field name="sign_order_ids" create="false" delete="false">
+                                    <field name="sign_use_service_ids" create="false" delete="false" context="{'form_view_ref':'izi_use_service_card.use_service_card_form'}"/>
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="pos_reference" readonly="1" force_save="1"/>
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="date_order" readonly="1" force_save="1"/>
+                                        <field name="user_id" readonly="1" force_save="1"/>
+                                        <field name="amount_total" sum="Amount" readonly="1" force_save="1"/>
+                                        <field name="state" force_save="1" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Use Service" >
+                                <field name="sign_use_service_ids" create="false" delete="false" context="{'form_view_ref':'izi_use_service_card.use_service_card_form'}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="serial_code" readonly="1" force_save="1"/>
+                                        <field name="type" readonly="1" force_save="1"/>
+                                        <field name="redeem_date" readonly="1" force_save="1"/>
+                                        <field name="customer_id" readonly="1" force_save="1"/>
+                                        <field name="pricelist_id" readonly="1" force_save="1"/>
+                                        <field name="option_refund" readonly="1" force_save="1"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Destroy Service" >
+                                <field name="sign_destroy_service_ids" create="false" delete="false">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="date" readonly="1" force_save="1"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                        <field name="note" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Exchange Service">
+                                <field name="sign_exchange_service_ids" create="false" delete="false" context="{'form_view_ref':'izi_pos_exchange_service.izi_pos_exchange_service_form'}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="exchange_date" readonly="1" force_save="1"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                        <field name="note" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <!--<page string="Debit Good">-->
+                                <!--<field name="sign_debit_good_ids" create="false" delete="false">-->
+                                    <!--<tree editable="bottom" create="false" delete="false">-->
+                                        <!--<field name="name" readonly="1" force_save="1"/>-->
+                                        <!--<field name="partner_id" readonly="1" force_save="1"/>-->
+                                        <!--<field name="write_date" readonly="1" force_save="1"/>-->
+                                        <!--<field name="state" readonly="1" force_save="1"/>-->
+                                    <!--</tree>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="pos_digital_sign_sum_action_window">
+            <field name="name">Pos Digital Sum</field>
+            <field name="res_model">pos.sum.digital.sign</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="context">{'create':False}</field>
+        </record>
+
+         <record id="pos_digital_sign_action_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="pos_digital_sign_sum_list"/>
+            <field name="act_window_id" ref="pos_digital_sign_sum_action_window"/>
+        </record>
+
+        <record id="pos_digital_sign_action_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="pos_digital_sign_sum_form"/>
+            <field name="act_window_id" ref="pos_digital_sign_sum_action_window"/>
+        </record>
+
+        <!--<menuitem id="pos_digital_sign_menu" action="pos_digital_sign_sum_action_window" parent="izi_pos_custom_backend.menu_point_of_sale_service" name="Pos Sum Digital"/>-->
+
+
+        <record model="ir.ui.view" id="pos_digital_sign_sum_pop_up_form">
+            <field name="name">pos.sum.digital.sign.form.popup</field>
+            <field name="model">pos.sum.digital.sign</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2 class="text-center">KHÁCH HÀNG KÝ XÁC NHẬN</h2>
+                        <h3 class="text-center">
+                            <field name="name"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%"
+                                   readonly="1" attrs="{'invisible': [('name', '=', '/')]}"/>
+                        </h3>
+                        <group>
+                            <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" readonly=" 1" force_save="1" invisible="1"/>
+                            <field name="date" readonly="1" force_save="1" invisible="1"/>
+                            <field name="sign_digital" widget="signature"/>
+                            <field name="customer_comment"/>
+                            <field name="state" invisible="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Use Service Line">
+                                <field name="sign_use_service_line_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="serial_id" readonly="1" force_save="1"/>
+                                        <field name="service_id" readonly="1" force_save="1"/>
+                                        <!--<field name="paid_count" readonly="1" force_save="1"/>-->
+                                        <!--<field name="used_count" readonly="1" force_save="1"/>-->
+                                        <!--<field name="quantity" readonly="1" force_save="1"/>-->
+                                        <field name="employee_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                        <field name="doctor_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                        <field name="customer_rate" widget="sentiment_icon" show_all_icon="true"/>
+                                        <field name="customer_comment"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="serial_id" readonly="1" force_save="1"/>
+                                                <field name="service_id" readonly="1" force_save="1"/>
+                                                <field name="employee_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                                <field name="doctor_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                                            </group>
+                                            <group>
+                                                <field name="paid_count" readonly="1" force_save="1"/>
+                                                <field name="used_count" readonly="1" force_save="1"/>
+                                                <field name="quantity" readonly="1" force_save="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Order Line">
+                                <field name="sign_order_line_ids" create="false" delete="false">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="order_id" readonly="1" force_save="1"/>
+                                        <field name="create_date" readonly="1" force_save="1"/>
+                                        <field name="product_id" readonly="1" force_save="1"/>
+                                        <field name="qty" readonly="1" force_save="1"/>
+                                        <field name="x_qty" readonly="1" force_save="1"/>
+                                        <field name="price_unit" readonly="1" force_save="1"/>
+                                        <field name="discount" readonly="1" force_save="1"/>
+                                        <field name="x_discount" readonly="1" force_save="1"/>
+                                        <field name="x_subtotal_wo_discount" force_save="1" readonly="1" sum="Amount"/>
+                                        <field name="price_subtotal_incl" readonly="1" force_save="1" sum="Subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Account Bank Statement">
+                                <field name="sign_account_bank_statement_lines_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="statement_id" force_save="1" readonly="1"/>
+                                        <field name="ref" readonly="1" force_save="1"/>
+                                        <field name="date" readonly="1" force_save="1"/>
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="journal_id" readonly="1" force_save="1"/>
+                                        <field name="amount" sum="Amount" readonly="1" force_save="1"/>
+                                        <field name="x_vc_name" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Order">
+                                <field name="sign_order_ids" create="false" delete="false">
+                                    <field name="sign_use_service_ids" create="false" delete="false" context="{'form_view_ref':'izi_use_service_card.use_service_card_form'}"/>
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="pos_reference" readonly="1" force_save="1"/>
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="date_order" readonly="1" force_save="1"/>
+                                        <field name="user_id" readonly="1" force_save="1"/>
+                                        <field name="amount_total" sum="Amount" readonly="1" force_save="1"/>
+                                        <field name="state" force_save="1" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Use Service" >
+                                <field name="sign_use_service_ids" create="false" delete="false" context="{'form_view_ref':'izi_use_service_card.use_service_card_form'}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="serial_code" readonly="1" force_save="1"/>
+                                        <field name="type" readonly="1" force_save="1"/>
+                                        <field name="redeem_date" readonly="1" force_save="1"/>
+                                        <field name="customer_id" readonly="1" force_save="1"/>
+                                        <field name="pricelist_id" readonly="1" force_save="1"/>
+                                        <field name="option_refund" readonly="1" force_save="1"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Destroy Service" >
+                                <field name="sign_destroy_service_ids" create="false" delete="false">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="date" readonly="1" force_save="1"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                        <field name="note" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Exchange Service">
+                                <field name="sign_exchange_service_ids" create="false" delete="false" context="{'form_view_ref':'izi_pos_exchange_service.izi_pos_exchange_service_form'}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="exchange_date" readonly="1" force_save="1"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                        <field name="note" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+<!--                            <page string="Debit Good">-->
+<!--                                <field name="sign_debit_good_ids" create="false" delete="false">-->
+<!--                                    <tree editable="bottom" create="false" delete="false">-->
+<!--                                        <field name="name" readonly="1" force_save="1"/>-->
+<!--                                        <field name="partner_id" readonly="1" force_save="1"/>-->
+<!--                                        <field name="write_date" readonly="1" force_save="1"/>-->
+<!--                                        <field name="state" readonly="1" force_save="1"/>-->
+<!--                                    </tree>-->
+<!--                                </field>-->
+<!--                            </page>-->
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="apply_all" type="object" string="Apply All" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

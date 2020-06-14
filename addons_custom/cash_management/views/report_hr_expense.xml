@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_account_cash_expense_root">
+        <t t-raw="0"/>
+    </template>
+
+    <template id="report_account_hr_expense">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="cash_management.report_account_cash_expense_root" t-lang="vi_VN">
+                    <div class="page">
+                        <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 50%;font-size:20px">
+                                        <p>
+                                            <strong>
+                                                <span t-field="o.company_id.name"/>
+                                            </strong>
+                                        </p>
+
+                                        <p>
+                                            <strong>
+                                                <t t-if="o.company_id.partner_id.street">
+                                                    <t t-esc="o.company_id.partner_id.street"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.city">,
+                                                    <t t-esc="o.company_id.partner_id.city"/>
+                                                </t>
+                                                <t t-if="not o.company_id.partner_id.city and o.company_id.partner_id.state_id">
+                                                    ,
+                                                    <t t-esc="o.company_id.partner_id.state_id.name"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.country_id">,
+                                                    <t t-esc="o.company_id.partner_id.country_id.name"/>
+                                                </t>
+                                            </strong>
+                                        </p>
+                                    </td>
+                                    <td style="width: 50%;font-size:20px">
+                                        <p style="text-align: center;">(Ban hành theo TT số 200/2014/QĐ-BTC<br/>ngày
+                                            22/12/2014 của Bộ trưởng Bộ Tài Chính)
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <p>
+                                            <span style="font-size:25px;">
+                                                <strong>
+                                                    PHIẾU CHI
+                                                </strong>
+                                            </span>
+                                            <span style="font-size:20px;float:right">
+                                                <strong>
+                                                    Quyển sổ:....................
+                                                </strong>
+                                            </span>
+                                        </p>
+
+                                        <p style="font-size:20px;">
+                                            <em>Ngày
+                                                <span t-esc="o.date.day"/>
+                                                tháng
+                                                <span t-esc="o.date.month"/>
+                                                năm
+                                                <span t-esc="o.date.year"/>
+                                            </em>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;font-size:20px;">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 25%;"/>
+                                    <td style="width: 25%;"/>
+                                    <td style="width:25%;"/>
+                                    <td style="width: 25%;">
+                                        <table border="0" cellpadding="1" cellspacing="1"
+                                               style="width:100%;font-size:20px;">
+                                            <tbody>
+                                                <tr style="text-align:left; vertical-align:top; width:40px">
+                                                    <td style="width:25%">
+                                                        <strong>Nợ:</strong>
+                                                    </td>
+                                                    <td style="width:25%">
+                                                        <span t-field="o.account_id.code"/>
+                                                    </td>
+                                                    <td style="width:50%">
+                                                        <t t-esc="'{:,.0f}'.format(o.unit_amount).replace(',', '.')"/>
+                                                    </td>
+                                                </tr>
+                                                <tr t-foreach="o.tax_ids" t-as="l"
+                                                    style="text-align:left; vertical-align:top; width:40px">
+                                                    <td style="width:25%"/>
+                                                    <td style="width:25%">
+                                                        <span t-field="l.account_id.code"/>
+                                                    </td>
+                                                    <td style="width:50%">
+                                                        <t t-esc="'{:,.0f}'.format(o.unit_amount * l.amount/100).replace(',', '.')"/>
+                                                    </td>
+                                                </tr>
+                                                <tr style="text-align:left; vertical-align:top; width:40px">
+                                                    <td style="width:25%">
+                                                        <strong>Có:</strong>
+                                                    </td>
+                                                    <td style="width:25%">
+                                                        <t t-if="o.sheet_id">
+                                                            <t t-esc="o.sheet_id.bank_journal_id.default_credit_account_id.code"/>
+                                                        </t>
+                                                    </td>
+                                                    <td style="width:50%">
+                                                        <t t-esc="'{:,.0f}'.format(o.unit_amount).replace(',', '.')"/>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table align="center" border="0" cellpadding="1" cellspacing="1"
+                               style="width:100%;font-size:20px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">
+                                            Họ và tên người nhận tiền:
+                                            <span t-field="o.employee_id.name"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">Địa chỉ:
+                                            <t t-if="o.company_id.partner_id">
+                                                <t t-if="o.company_id.partner_id.street">
+                                                    <t t-esc="o.company_id.partner_id.street"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.city">,
+                                                    <t t-esc="o.company_id.partner_id.city"/>
+                                                </t>
+                                                <t t-if="not o.company_id.partner_id.city and o.company_id.partner_id.state_id">
+                                                    ,
+                                                    <t t-esc="o.company_id.partner_id.state_id.name"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.country_id">,
+                                                    <t t-esc="o.company_id.partner_id.country_id.name"/>
+                                                </t>
+                                            </t>
+                                            <t t-if="not o.company_id.partner_id">
+                                                <t t-if="o.employee_id.address_home_id">
+                                                    <t t-esc="o.employee_id.address_home_id"/>
+                                                </t>
+                                            </t>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">
+                                            Lý do chi:
+                                            <span t-field="o.name"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <t t-set="amount_words" t-value="o.get_amount_word()"/>
+                                        <p style="font-size:20px;">Số tiền:
+                                            <strong>
+                                                <t t-esc="'{:,.0f}'.format(o.total_amount).replace(',', '.')"/>
+                                                <t t-esc="o.currency_id.name"/>
+                                            </strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">Viết bằng chữ:
+                                            <t t-esc="amount_words"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">Kèm theo: .......... chứng từ gốc</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;font-size:20px;">
+                                        <p>
+                                            Ngày
+                                            <span t-esc="o.date.day"/>
+                                            tháng
+                                            <span t-esc="o.date.month"/>
+                                            năm
+                                            <span t-esc="o.date.year"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="1" cellspacing="1"
+                                               style="width:100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;font-size:20px">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Giám đốc</strong>
+                                                        </p>
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên, đóng
+                                                                    dấu)
+                                                                </span>
+                                                            </em>
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Kế toán trưởng</strong>
+                                                        </p>
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên)</span>
+                                                            </em>
+                                                        </p>
+                                                    </td>
+
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Thủ quỹ</strong>
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>(Ký, họ tên)</em>
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Người lập phiếu</strong>
+
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên)</span>
+                                                            </em>
+                                                            <p style="height: 70px"/>
+                                                            <span style="font-size:20px;" t-esc="o.create_uid.name"/>
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Người nhận tiền</strong>
+
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên)</span>
+                                                            </em>
+                                                            <p style="height: 70px"/>
+                                                            <span style="font-size:20px;" t-esc="o.employee_id.name"/>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p style="font-size:20px;">Đã nhận đủ số tiền (viết bằng chữ):
+                                            <t t-esc="amount_words"/>
+                                        </p>
+                                        <p style="font-size:20px;">+ Tỉ giá ngoại tệ (vàng bạc, đá quý):</p>
+                                        <p style="font-size:20px;">+ Số tiền quy đổi:</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr style="width:100%"/>
+                    <div class="page">
+                        <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 50%;font-size:20px">
+                                        <p>
+                                            <strong>
+                                                <span t-field="o.company_id.name"/>
+                                            </strong>
+                                        </p>
+
+                                        <p>
+                                            <strong>
+                                                <t t-if="o.company_id.partner_id.street">
+                                                    <t t-esc="o.company_id.partner_id.street"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.city">,
+                                                    <t t-esc="o.company_id.partner_id.city"/>
+                                                </t>
+                                                <t t-if="not o.company_id.partner_id.city and o.company_id.partner_id.state_id">
+                                                    ,
+                                                    <t t-esc="o.company_id.partner_id.state_id.name"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.country_id">,
+                                                    <t t-esc="o.company_id.partner_id.country_id.name"/>
+                                                </t>
+                                            </strong>
+                                        </p>
+                                    </td>
+                                    <td style="width: 50%;font-size:20px">
+                                        <p style="text-align: center;">(Ban hành theo TT số 200/2014/QĐ-BTC<br/>ngày
+                                            22/12/2014 của Bộ trưởng Bộ Tài Chính)
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <p>
+                                            <span style="font-size:25px;">
+                                                <strong>
+                                                    PHIẾU CHI
+                                                </strong>
+                                            </span>
+                                            <span style="font-size:20px;float:right">
+                                                <strong>
+                                                    Quyển sổ:....................
+                                                </strong>
+                                            </span>
+                                        </p>
+
+                                        <p style="font-size:20px;">
+                                            <em>Ngày
+                                                <span t-esc="o.date.day"/>
+                                                tháng
+                                                <span t-esc="o.date.month"/>
+                                                năm
+                                                <span t-esc="o.date.year"/>
+                                            </em>
+                                            <span style="font-size:20px;float:right">
+                                                <strong>
+                                                    Số:
+                                                    <span style="color:white">yển sổ:...................</span>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;font-size:20px;">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 25%;"/>
+                                    <td style="width: 25%;"/>
+                                    <td style="width:25%;"/>
+                                    <td style="width: 25%;">
+                                        <table border="0" cellpadding="1" cellspacing="1"
+                                               style="width:100%;font-size:20px;">
+                                            <tbody>
+                                                <tr style="text-align:left; vertical-align:top; width:40px">
+                                                    <td style="width:25%">
+                                                        <strong>Nợ:</strong>
+                                                    </td>
+                                                    <td style="width:25%">
+                                                        <span t-field="o.account_id.code"/>
+                                                    </td>
+                                                    <td style="width:50%">
+                                                        <t t-esc="'{:,.0f}'.format(o.unit_amount).replace(',', '.')"/>
+                                                    </td>
+                                                </tr>
+                                                <tr t-foreach="o.tax_ids" t-as="l"
+                                                    style="text-align:left; vertical-align:top; width:40px">
+                                                    <td style="width:25%"/>
+                                                    <td style="width:25%">
+                                                        <span t-field="l.account_id.code"/>
+                                                    </td>
+                                                    <td style="width:50%">
+                                                        <t t-esc="'{:,.0f}'.format(o.unit_amount * l.amount/100).replace(',', '.')"/>
+                                                    </td>
+                                                </tr>
+                                                <tr style="text-align:left; vertical-align:top; width:40px">
+                                                    <td style="width:25%">
+                                                        <strong>Có:</strong>
+                                                    </td>
+                                                    <td style="width:25%">
+                                                        <t t-if="o.sheet_id">
+                                                            <t t-esc="o.sheet_id.bank_journal_id.default_credit_account_id.code"/>
+                                                        </t>
+                                                    </td>
+                                                    <td style="width:50%">
+                                                        <t t-esc="'{:,.0f}'.format(o.unit_amount).replace(',', '.')"/>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table align="center" border="0" cellpadding="1" cellspacing="1"
+                               style="width:100%;font-size:20px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">
+                                            Họ và tên người nhận tiền:
+                                            <span t-field="o.employee_id.name"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">Địa chỉ:
+                                            <t t-if="o.company_id.partner_id">
+                                                <t t-if="o.company_id.partner_id.street">
+                                                    <t t-esc="o.company_id.partner_id.street"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.city">,
+                                                    <t t-esc="o.company_id.partner_id.city"/>
+                                                </t>
+                                                <t t-if="not o.company_id.partner_id.city and o.company_id.partner_id.state_id">
+                                                    ,
+                                                    <t t-esc="o.company_id.partner_id.state_id.name"/>
+                                                </t>
+                                                <t t-if="o.company_id.partner_id.country_id">,
+                                                    <t t-esc="o.company_id.partner_id.country_id.name"/>
+                                                </t>
+                                            </t>
+                                            <t t-if="not o.company_id.partner_id">
+                                                <t t-if="o.employee_id.address_home_id">
+                                                    <t t-esc="o.employee_id.address_home_id"/>
+                                                </t>
+                                            </t>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">
+                                            Lý do chi:
+                                            <span t-field="o.name"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <t t-set="amount_words" t-value="o.get_amount_word()"/>
+                                        <p style="font-size:20px;">Số tiền:
+                                            <strong>
+                                                <t t-esc="'{:,.0f}'.format(o.total_amount).replace(',', '.')"/>
+                                                <t t-esc="o.currency_id.name"/>
+                                            </strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">Viết bằng chữ:
+                                            <t t-esc="amount_words"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:20px;">Kèm theo: .......... chứng từ gốc</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;font-size:20px;">
+                                        <p>
+                                            Ngày
+                                            <span t-esc="o.date.day"/>
+                                            tháng
+                                            <span t-esc="o.date.month"/>
+                                            năm
+                                            <span t-esc="o.date.year"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="1" cellspacing="1"
+                                               style="width:100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;font-size:20px">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Giám đốc</strong>
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên, đóng
+                                                                    dấu)
+                                                                </span>
+                                                            </em>
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Kế toán trưởng</strong>
+                                                        </p>
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên)</span>
+                                                            </em>
+                                                        </p>
+                                                    </td>
+
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Thủ quỹ</strong>
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>(Ký, họ tên)</em>
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Người lập phiếu</strong>
+
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên)</span>
+                                                            </em>
+                                                            <p style="height: 70px"/>
+                                                            <span style="font-size:20px;" t-esc="o.create_uid.name"/>
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center; vertical-align:top; width: 20%;">
+                                                        <p style="font-size:20px;">
+                                                            <strong>Người nhận tiền</strong>
+
+                                                        </p>
+
+                                                        <p style="font-size:20px;">
+                                                            <em>
+                                                                <span style="text-align: center;">(Ký, họ tên)</span>
+                                                            </em>
+                                                            <p style="height: 70px"/>
+                                                            <span style="font-size:20px;" t-esc="o.employee_id.name"/>
+                                                        </p>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p style="font-size:20px;">Đã nhận đủ số tiền (viết bằng chữ):
+                                            <t t-esc="amount_words"/>
+                                        </p>
+                                        <p style="font-size:20px;">+ Tỉ giá ngoại tệ (vàng bạc, đá quý):</p>
+                                        <p style="font-size:20px;">+ Số tiền quy đổi:</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <style>
+                        p {margin:0;}
+                    </style>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="paperformat_custom_no_margin" model="report.paperformat">
+        <field name="name">Custom A4 without borders</field>
+        <field name="default" eval="False"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">25</field>
+        <field name="margin_right">25</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+    </record>
+
+    <report
+            id="action_report_hr_expense"
+            string="Expence Report"
+            model="hr.expense"
+            report_type="qweb-pdf"
+            name="cash_management.report_account_hr_expense"
+            file="cash_management.report_account_hr_expense"
+            print_report_name="'Income - %s - %s' % (object.employee_id.name, (object.name).replace('/', ''))"
+            paperformat="paperformat_custom_no_margin"
+    />
+
+</odoo>

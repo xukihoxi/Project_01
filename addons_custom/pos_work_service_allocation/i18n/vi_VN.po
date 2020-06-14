@@ -1,0 +1,200 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_work_service_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-28 03:41+0000\n"
+"PO-Revision-Date: 2018-12-28 11:06+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: pos_work_service_allocation
+#: selection:pos.work.service.allocation.line,work_type:0
+msgid "Book"
+msgstr "Book"
+
+#. module: pos_work_service_allocation
+#: model:ir.ui.view,arch_db:pos_work_service_allocation.pos_work_service_allocation_form
+msgid "CHI TIẾT CÔNG LÀM DỊCH VỤ"
+msgstr "CHI TIẾT CÔNG LÀM DỊCH VỤ"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_create_uid
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_create_date
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_date
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_work_service_allocation
+#: model:ir.ui.view,arch_db:pos_work_service_allocation.pos_work_service_allocation_form
+msgid "Detail Work Service"
+msgstr "Chi tiết"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_display_name
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_work_service_allocation
+#: selection:pos.work.service.allocation,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: pos_work_service_allocation
+#: selection:pos.work.service.allocation,state:0
+msgid "Draft"
+msgstr "Tạo mới"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_employee
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_employee_id
+msgid "Employee"
+msgstr "Kỹ thuật viên"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_id
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation___last_update
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_write_uid
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_write_date
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_work_service_allocation
+#: code:addons/pos_work_service_allocation/models/pos_work_service_allocation.py:21
+#: code:addons/pos_work_service_allocation/models/pos_work_service_allocation.py:22
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_partner_id
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_pos_work_lines
+msgid "Pos Work Line"
+msgstr "Pos Work Line"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_izi_service_card_using_pos_work_service_lines
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_pos_work_service_id
+msgid "Pos Work Service"
+msgstr "Pos Work Service"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_service_id
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_service_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_pos_session_id
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_pos_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: pos_work_service_allocation
+#: selection:pos.work.service.allocation.line,work_type:0
+msgid "Tour"
+msgstr "Tour"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_use_service_id
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_use_service_id
+msgid "Use Service"
+msgstr "Nhật ký sử dụng dịch vụ"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_use_service_line_id
+msgid "Use Service Line"
+msgstr "Chi tiết sử dụng dịch vụ"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_work_change
+msgid "Work Change"
+msgstr "Số lương thực"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_work_lt
+msgid "Work Lt"
+msgstr "Số lượng lý thuyết"
+
+#. module: pos_work_service_allocation
+#: model:ir.ui.view,arch_db:pos_work_service_allocation.service_card_using_line
+msgid "Work Service"
+msgstr "Lượt làm kỹ thuật viên"
+
+#. module: pos_work_service_allocation
+#: model:ir.actions.act_window,name:pos_work_service_allocation.action_pos_work_service_allocation
+#: model:ir.ui.menu,name:pos_work_service_allocation.pos_work_service_allocation_menu
+msgid "Work Service Allocation"
+msgstr "Lượt làm kỹ thuật viên"
+
+#. module: pos_work_service_allocation
+#: model:ir.model.fields,field_description:pos_work_service_allocation.field_pos_work_service_allocation_line_work_type
+msgid "Work Type"
+msgstr "Hình thức"
+
+#. module: pos_work_service_allocation
+#: model:ir.model,name:pos_work_service_allocation.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: pos_work_service_allocation
+#: model:ir.model,name:pos_work_service_allocation.model_pos_work_service_allocation
+msgid "pos.work.service.allocation"
+msgstr "pos.work.service.allocation"
+
+#. module: pos_work_service_allocation
+#: model:ir.model,name:pos_work_service_allocation.model_pos_work_service_allocation_line
+msgid "pos.work.service.allocation.line"
+msgstr "pos.work.service.allocation.line"

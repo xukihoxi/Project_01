@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="cash_management_form_inherit" model="ir.ui.view">
+            <field name="name">cash.management.pos</field>
+            <field name="model">account.cash</field>
+            <field name="inherit_id" ref="cash_management.view_account_cash_form_view"/>
+            <field name="arch" type="xml">
+                <field name="journal_id" position="after">
+                    <field name="x_user_id" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                    <field name="revenue_id" readonly="1" force_save="1" attrs="{'invisible': [('revenue_id', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

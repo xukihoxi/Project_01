@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="display_phone_partner_form" model="ir.ui.view">
+            <field name="name">Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="replace">
+                    <field name="phone" groups="izi_display_fields.group_display_phone"/>
+                </xpath>
+                <xpath expr="//field[@name='mobile']" position="replace">
+                    <field name="mobile" groups="izi_display_fields.group_display_phone"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="display_phone_partner_tree" model="ir.ui.view">
+            <field name="name">Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="replace">
+                    <field name="phone" groups="izi_display_fields.group_display_phone"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

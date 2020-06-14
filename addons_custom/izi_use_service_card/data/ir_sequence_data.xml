@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_izi_use_service_card_dv" model="ir.sequence">
+            <field name="name">DV</field>
+            <field name="code">izi.service.card.using</field>
+            <field name="prefix">DV%(y)s%(month)s/</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+         <record id="sequence_izi_use_service_card_yc" model="ir.sequence">
+            <field name="name">YC/NVL</field>
+            <field name="code">pos.user.material</field>
+            <field name="prefix">YC/NVL/%(y)s%(month)s/</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

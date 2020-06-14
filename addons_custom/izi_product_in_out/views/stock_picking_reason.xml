@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="stock_picking_reason_tree_view" model="ir.ui.view">
+            <field name="name">stock_picking_reason_tree_view</field>
+            <field name="model">stock.picking.reason</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="in_or_out"/>
+                    <field name="account"/>
+                </tree>
+            </field>
+        </record>
+        <record id="stock_picking_reason_form_view" model="ir.ui.view">
+            <field name="name">stock_picking_reason_form_view</field>
+            <field name="model">stock.picking.reason</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="in_or_out"/>
+                            <field name="account"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_stock_picking_reason" model="ir.actions.act_window">
+            <field name="name">Reasons of picking</field>
+            <field name="res_model">stock.picking.reason</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="menu_stock_picking_reason"
+                parent="stock.menu_stock_config_settings"
+                groups="stock.group_stock_manager"
+                action="action_stock_picking_reason"/>
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_crm_interaction_izi_crm_interaction,izi_crm_interaction.izi_crm_interaction,model_izi_crm_interaction_izi_crm_interaction,,1,0,0,0

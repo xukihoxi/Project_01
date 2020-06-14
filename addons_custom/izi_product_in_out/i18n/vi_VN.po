@@ -1,0 +1,387 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_product_in_out
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:35+0000\n"
+"PO-Revision-Date: 2019-05-06 16:43+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_account_id
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_move_account_id
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_account
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: izi_product_in_out
+#: code:addons/izi_product_in_out/models/models.py:515
+#: selection:product.delivery.line,state:0
+#, python-format
+msgid "Available"
+msgstr "Sẵn sàng"
+
+#. module: izi_product_in_out
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_form_view
+msgid "Check inventory"
+msgstr "Kiểm tra tồn kho"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,state:0
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_create_uid
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_create_uid
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_create_date
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_create_date
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_move_debit_owner_id
+msgid "Debit owner"
+msgstr "Debit owner"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_delivery_lines
+msgid "Delivery Lines"
+msgstr "Delivery Lines"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_display_name
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_display_name
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_is_loss
+msgid "From/To loss"
+msgstr "Nhập/Xuất trực tiếp"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_id
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_id
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,type:0
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_form_view
+msgid "Input"
+msgstr "Input"
+
+#. module: izi_product_in_out
+#: selection:stock.picking.reason,in_or_out:0
+msgid "Internal delivery"
+msgstr "Internal delivery"
+
+#. module: izi_product_in_out
+#: selection:stock.picking.reason,in_or_out:0
+msgid "Internal receipt"
+msgstr "Internal receipt"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_res_partner_inventory_delivery_ids
+#: model:ir.model.fields,field_description:izi_product_in_out.field_res_users_inventory_delivery_ids
+msgid "Inventory"
+msgstr "Tồn kho"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_delivery_date
+msgid "Inventory Date"
+msgstr "Ngày kiểm kho"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery___last_update
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line___last_update
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_write_uid
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_write_uid
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_write_date
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_write_date
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_dest_location_id
+msgid "Loss location"
+msgstr "Loss location"
+
+#. module: izi_product_in_out
+#: model:ir.ui.view,arch_db:izi_product_in_out.izi_inventory_delivery_partner_form
+msgid "Lịch sử tặng quà sinh nhật"
+msgstr "Lịch sử tặng quà sinh nhật"
+
+#. module: izi_product_in_out
+#: sql_constraint:inventory.product.delivery:0
+msgid "Mã phiếu xuất phải là duy nhất!"
+msgstr "Mã phiếu xuất phải là duy nhất!"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_name
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_product_in_out
+#: code:addons/izi_product_in_out/models/models.py:297
+#, python-format
+msgid "Nhập điều chỉnh kho: "
+msgstr "Nhập điều chỉnh kho: "
+
+#. module: izi_product_in_out
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_form_view
+msgid "Nhập/ Xuất trực tiếp"
+msgstr "Nhập/ Xuất trực tiếp"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,state:0
+#: selection:product.delivery.line,state:0
+msgid "Not available"
+msgstr "Hết hàng"
+
+#. module: izi_product_in_out
+#: code:addons/izi_product_in_out/models/models.py:501
+#, python-format
+msgid "Not available (%s)"
+msgstr "Hết hàng (%s)"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_note
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_product_in_out
+#: code:addons/izi_product_in_out/models/models.py:504
+#, python-format
+msgid "Only %s available"
+msgstr "Only %s available"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,type:0
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_form_view
+msgid "Output"
+msgstr "Output"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,state:0
+#: selection:product.delivery.line,state:0
+msgid "Partially available"
+msgstr "Không đủ hàng"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_product_in_out
+#: model:ir.actions.act_window,name:izi_product_in_out.action_inventory_product_delivery
+#: model:ir.ui.menu,name:izi_product_in_out.menu_inventory_product_delivery
+#: selection:stock.picking.reason,in_or_out:0
+msgid "Product delivery"
+msgstr "Xuất nhập hàng chi phí"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_move_promotion_id
+msgid "Promotion reason"
+msgstr "Lý do xuất"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_product_uom_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: izi_product_in_out
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_form_view
+msgid "Re check inventory"
+msgstr "Kiểm tra lại tồn kho"
+
+#. module: izi_product_in_out
+#: selection:product.delivery.line,state:0
+msgid "Ready"
+msgstr "Sẵn sàng xuất kho"
+
+#. module: izi_product_in_out
+#: selection:inventory.product.delivery,state:0
+msgid "Ready to transfer"
+msgstr "Sẵn sàng dịch chuyển"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_delivery_reason
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_x_reason
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_scrap_x_note
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: izi_product_in_out
+#: model:ir.actions.act_window,name:izi_product_in_out.action_stock_picking_reason
+#: model:ir.ui.menu,name:izi_product_in_out.menu_stock_picking_reason
+msgid "Reasons of picking"
+msgstr "Lý do xuất"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_partner_id
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_partner_id
+msgid "Receive unit"
+msgstr "Bộ phận"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_rec_partner_id
+msgid "Recipients"
+msgstr "Người nhận"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_str_rec_partner
+msgid "Recipients name"
+msgstr "Tên người nhận"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_standard_price
+msgid "Standard price"
+msgstr "Giá vốn"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_state
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_state_text
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_picking_id
+msgid "Stock picking"
+msgstr "Stock picking"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_transfer_id
+msgid "The transfer"
+msgstr "The transfer"
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_stock_picking
+msgid "Transfer"
+msgstr "Chuyển hàng"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_inventory_product_delivery_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_in_or_out
+msgid "Type of transfer"
+msgstr "Type of transfer"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_product_delivery_line_product_uom_id
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: izi_product_in_out
+#: model:ir.model.fields,field_description:izi_product_in_out.field_stock_picking_reason_name
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: izi_product_in_out
+#: code:addons/izi_product_in_out/models/models.py:314
+#, python-format
+msgid "Xuất chi phí - "
+msgstr "Xuất chi phí - "
+
+#. module: izi_product_in_out
+#: code:addons/izi_product_in_out/models/models.py:279
+#, python-format
+msgid "Xuất điều chỉnh kho: "
+msgstr "Xuất điều chỉnh kho: "
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_inventory_product_delivery
+#: model:ir.ui.view,arch_db:izi_product_in_out.inventory_product_delivery_tree_view
+msgid "inventory.product.delivery"
+msgstr "inventory.product.delivery"
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_product_delivery_line
+msgid "product.delivery.line"
+msgstr "product.delivery.line"
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_stock_picking_reason
+msgid "stock.picking.reason"
+msgstr "stock.picking.reason"
+
+#. module: izi_product_in_out
+#: model:ir.model,name:izi_product_in_out.model_stock_scrap
+msgid "stock.scrap"
+msgstr "stock.scrap"

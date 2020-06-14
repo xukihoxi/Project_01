@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id='service_card_using_line'>
+            <field name="name">izi.service.card.using.inherit.pos</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="priority" eval="35"/>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <page name="information_genaral" position="after">
+                    <page name="work_service" string="Work Service" groups="pos_security.group_pos_supervisor_user">
+                        <field name="pos_work_service_lines">
+                            <tree editable="bottom" create="false" delete="false">
+                                <field name="pos_session_id" invisible="1"/>
+                                <field name="partner_id" invisible="1"/>
+                                <field name="date" invisible="1"/>
+                                <field name="service_id" readonly="1" force_save="1"/>
+                                <field name="employee_id" readonly="1" force_save="1"/>
+                                <field name="work_lt" readonly="1" force_save="1"/>
+                                <field name="work_change"/>
+                                <field name="work_nv" readonly="1" force_save="1"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="pos_session_id" invisible="1"/>
+                                        <field name="partner_id" invisible="1"/>
+                                        <field name="date" invisible="1"/>
+                                        <field name="service_id" readonly="1" force_save="1"/>
+                                        <field name="employee_id" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="work_lt" readonly="1" force_save="1"/>
+                                        <field name="work_change" readonly="1" force_save="1"/>
+                                        <field name="work_nv" readonly="1" force_save="1"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </page>
+                <!--<field name="type" position="after">-->
+                    <!--<button name="action_all_work_one" type="object" class="oe_highlight" string="action"/>-->
+                <!--</field>-->
+            </field>
+        </record>
+    </data>
+</odoo>

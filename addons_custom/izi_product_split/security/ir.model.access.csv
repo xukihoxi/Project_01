@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_product_split_id1,izi_product_split_name1,model_izi_product_split,stock.group_stock_user,1,1,1,1
+access_izi_product_split_id2,izi_product_split_name2,model_izi_product_split_detail,stock.group_stock_user,1,1,1,1
+access_izi_product_split_id3,izi_product_split_name3,model_izi_product_split_detail_line,stock.group_stock_user,1,1,1,1

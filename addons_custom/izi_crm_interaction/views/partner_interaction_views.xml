@@ -1,0 +1,165 @@
+<odoo>
+    <data>
+        <!-- Danh sách các tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_tree_view">
+            <field name="name">Partner interaction</field>
+            <field name="model">partner.interaction</field>
+            <field name="arch" type="xml">
+                <tree default_order='date desc' >
+                    <field name="partner_id"/>
+                    <field name="type_id"/>
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <field name="note"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_form_view">
+            <field name="name">Partner interaction</field>
+            <field name="model">partner.interaction</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_done" string="Done" type="object" class="oe_highlight" states="draft"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="draft"/>
+                        <button name="action_create_service_booking" string="Create service booking" type="object" class="oe_highlight" states="done"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <field name="x_user_input_line_ids" invisible="1"/>
+                            <button type="object" name="action_view_user_input_line" class="oe_stat_button" icon="fa-calendar-o"
+                                    context="{'search_default_x_partner_interaction_id': active_id}">
+                                <field name="x_user_input_line_count" widget="statinfo" string="User input line"/>
+                            </button>
+                        </div>
+                        <field name="type_name" invisible="1"/>
+                        <group col="4">
+                            <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" domain="[('customer', '=', True)]" attrs="{'required': 1}"/>
+                            <field name="date" attrs="{'required': 1}"/>
+                            <field name="type_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'required': 1}"/>
+                            <field name="user_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'required': 1}"/>
+                            <field name="survey_id" readonly="1" forcesave="1"/>
+                            <field name="survey_user_input_id" readonly="1" forcesave="1"/>
+                        </group>
+                        <button name="action_input_result_interaction" string="Input result interaction" type="object" class="oe_highlight"/>
+                        <notebook>
+                            <page string="Note">
+                                <field name="note"/>
+                            </page>
+                            <page string="Reference">
+                                <group>
+                                    <field name="using_id" domain="[('customer_id', '=', partner_id), ('state', '=', 'done')]"
+                                           options="{'no_create':1, 'no_create_edit':1}"
+                                           attrs="{'invisible': [('type_name', 'not in', [('Nhắc lịch liệu trình'), ('Nhắc lịch bảo hành'), ('Chăm sóc sau khi khách làm dịch vụ')])],
+                                                    }"/>
+
+                                    <field name="using_line_id" domain="[('using_id', '=', using_id)]"
+                                           options="{'no_create':1, 'no_create_edit':1}"
+                                           attrs="{'invisible': [('type_name', 'not in', [('Nhắc lịch liệu trình'), ('Nhắc lịch bảo hành'), ('Chăm sóc sau khi khách làm dịch vụ')])],
+                                                   }"/>
+
+                                    <field name="service_booking_id" domain="[('customer_id', '=', partner_id), ('state', '=', 'new')]"
+                                           options="{'no_create':1, 'no_create_edit':1}"
+                                           attrs="{'invisible': [('type_name', 'not in', [('Xác nhận Booking/Meeting')])],
+                                                   }"/>
+                                </group>
+                            </page>
+                            <page string="Images">
+                                <div>Ảnh </div>
+                                <field name="partner_interaction_image_ids">
+                                    <tree>
+                                        <field name="image_small" widget="image" readonly="1"/>
+                                        <field name="name" readonly="1"/>
+                                    </tree>
+                                    <form>
+                                        <label for="name"/>
+                                        <field name="name"/>
+                                        <field name="image" widget="image"/>
+                                    </form>
+                                </field>
+                                <!--<field name="partner_interaction_image_ids">-->
+                                    <!--<kanban>-->
+                                        <!--<field name="id"/>-->
+                                        <!--<field name="image"/>-->
+                                        <!--<templates>-->
+                                            <!--<t t-name="kanban-box">-->
+                                                <!--<div class="oe_kanban_global_click">-->
+                                                    <!--<div class="o_kanban_image">-->
+                                                        <!--<img t-att-src="kanban_image('partner.interaction.images', 'image', record.id.value)"-->
+                                                             <!--class="oe_kanban_picture"/>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</t>-->
+                                        <!--</templates>-->
+                                    <!--</kanban>-->
+                                <!--</field>-->
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_search_view">
+            <field name="name">Partner interaction</field>
+            <field name="model">partner.interaction</field>
+            <field name="arch" type="xml">
+                <search string="Partner interaction">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <filter string="Nhắc lịch liệu trình" name="type_remind"
+                        domain="[('type_id.name', '=', 'Nhắc lịch liệu trình')]"/>
+                    <separator/>
+                    <filter string="Nhắc lịch bảo hành" name="type_remind_guarantee"
+                        domain="[('type_id.name', '=', 'Nhắc lịch bảo hành')]"/>
+                    <separator/>
+                    <filter string="Chăm sóc sau khi khách làm dịch vụ" name="type_taking_care_after_do_service"
+                        domain="[('type_id.name', '=', 'Chăm sóc sau khi khách làm dịch vụ')]"/>
+                    <separator/>
+                    <filter string="Xác nhận Booking/Meeting" name="type_confirm_booking_meeting"
+                        domain="[('type_id.name', '=', 'Xác nhận Booking/Meeting')]"/>
+                    <separator/>
+                    <filter string="Remarketing" name="type_remarketing"
+                        domain="[('type_id.name', '=', 'Remarketing')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="User"  context="{'group_by': 'user_id'}"/>
+                        <filter string="State" context="{'group_by':'state'}"/>
+                        <filter string="Partner" context="{'group_by':'partner_id'}"/>
+                        <filter string="Type" context="{'group_by':'type_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Hành động tương tác khách hàng -->
+        <record model="ir.actions.act_window" id="partner_interaction_action_window">
+            <field name="name">Partner interaction</field>
+            <field name="res_model">partner.interaction</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem name="Partner interaction" id="partner_interaction_main_menu" parent="crm.crm_menu_root" sequence="2"/>
+
+        <menuitem name="Partner interaction" id="partner_interaction_menu" parent="izi_crm_interaction.partner_interaction_main_menu" sequence="1"
+                  action="partner_interaction_action_window"/>
+
+
+        <record id="partner_interaction_images_view_form" model="ir.ui.view">
+            <field name="name">Image</field>
+            <field name="model">partner.interaction.images</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="image" nolabel="1" widget="image"/>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

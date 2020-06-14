@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_pos_exchange_service_id2,izi_pos_exchange_service_name2,model_izi_pos_exchange_service,point_of_sale.group_pos_user,1,1,1,1
+access_izi_pos_exchange_service_id4,izi_pos_exchange_service_name4,model_izi_current_exchange_service,point_of_sale.group_pos_user,1,1,1,1
+access_izi_pos_exchange_service_id6,izi_pos_exchange_service_name6,model_izi_new_exchange_service,point_of_sale.group_pos_user,1,1,1,1

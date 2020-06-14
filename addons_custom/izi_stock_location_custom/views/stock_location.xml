@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record model="ir.ui.view" id="izi_stock_location_custom_view">
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"></field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <label for="x_code" class="oe_edit_only"/>
+                <h1>
+                    <field name="x_code" required="1"/>
+                </h1>
+            </field>
+            <field name="comment" position="after">
+                <field name="user_ids" string="Users">
+                    <tree editable="1">
+                        <field name="name"/>
+                        <field name="email"/>
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+</odoo>

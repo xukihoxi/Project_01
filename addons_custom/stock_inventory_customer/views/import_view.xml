@@ -1,0 +1,156 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="import_stock_inventory_customer_form_view">
+            <field name="name">stock_inventory_customer Form</field>
+            <field name="model">stock.inventory.customer.update</field>
+            <field name="arch" type="xml">
+                <form string="Update inventory">
+                    <header>
+                        <button name="action_update" type="object" class="oe_highlight" states="draft" string="Update"/>
+                        <button name="action_confirm" type="object" class="oe_highlight" states="draft"
+                                string="Confirm"/>
+                        <button name="action_check" type="object" class="oe_highlight" states="updated" string="Done"/>
+                        <button name="action_back" type="object" states="updated" string="Back"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,updated,done"/>
+                    </header>
+                    <sheet string="Update inventory">
+                        <h2 class="text-center">UPDATE INVENTORY</h2>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('name', '=', 'New')]}" readonly="1"
+                                   style="margin-right: 35%; margin-left: 35%; max-width: 30%; font-style: italic;"
+                                   placeholder="Name"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="session_id" required="1" widget="selection"/>
+                                <field name="type" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Lines" attrs="{'invisible': [('type', '!=', 'product')]}">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <field name="product_ids" attrs="{'readonly' : [('state', '!=', 'draft')]}">
+                                    <tree string="Lines" editable="bottom">
+                                        <field name="partner_id" required="1"
+                                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="lot_id" domain="[('x_status', '=', 'actived')]" required="1"
+                                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="total_qty"/>
+                                        <field name="qty_hand"/>
+                                        <field name="qty_use"/>
+                                        <field name="x_amount"/>
+                                        <field name="x_payment_amount"/>
+                                        <field name="debt"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Lines" attrs="{'invisible': [('type', '!=', 'coin')]}">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <field name="coin_ids" attrs="{'readonly' : [('state', '!=', 'draft')]}">
+                                    <tree string="Lines" editable="bottom">
+                                        <field name="partner_id" required="1"
+                                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="product_id" required="1"/>
+                                        <field name="total_amount_tkc"/>
+                                        <field name="use_amount_tkc"/>
+                                        <field name="total_amount_km"/>
+                                        <field name="use_amount_km"/>
+                                        <field name="x_amount"/>
+                                        <field name="x_payment_amount"/>
+                                        <field name="debt"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Lines" attrs="{'invisible': [('type', '!=', 'money')]}">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <field name="money_ids" attrs="{'readonly' : [('state', '!=', 'draft')]}">
+                                    <tree string="Lines" editable="bottom">
+                                        <field name="partner_id" required="1"
+                                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="x_amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="import_stock_inventory_customer_tree_view" model="ir.ui.view">
+            <field name="name">stock_inventory_customer Tree</field>
+            <field name="model">stock.inventory.customer.update</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'" decoration-muted="state == 'cancel'">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="import_stock_inventory_customer_action" model="ir.actions.act_window">
+            <field name="name">Update inventory</field>
+            <field name="res_model">stock.inventory.customer.update</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Update inventory
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window.view" id="action_import_stock_inventory_customer_tree_view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="import_stock_inventory_customer_tree_view"/>
+            <field name="act_window_id" ref="import_stock_inventory_customer_action"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="action_import_stock_inventory_customer_form_view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="import_stock_inventory_customer_form_view"/>
+            <field name="act_window_id" ref="import_stock_inventory_customer_action"/>
+        </record>
+
+        <menuitem action="import_stock_inventory_customer_action"
+                  id="menu_stock_inventory_customer_action" name="Update inventory"
+                  parent="izi_pos_custom_backend.izi_menu_res_partner_debt" sequence="64"/>
+
+
+        <record id="import_stock_inventory_customer_form_check" model="ir.ui.view">
+            <field name="name">import_stock_inventory_customer_form_check</field>
+            <field name="model">stock.inventory.customer.update</field>
+            <field name="arch" type="xml">
+                <form string="Update">
+                    <p>Có khách hàng đã được đổ tồn trước đó. Vui lòng tra cứu lại tài khoản khách hàng trước khi nhấn
+                        hoàn thành
+                    </p>
+                    <p>Chi tiết
+                        <field name="check" readonly="1" force_save="1"/>
+                    </p>
+                    <footer>
+                        <button name="action_done" string="Continute" type="object" class="btn-primary"/>
+                        <button name="action_cancel" string="Cancel" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

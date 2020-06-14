@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="izi_view_warehouse_form_inherit" model="ir.ui.view">
+            <field name="name">stock.warehouse.form.inherit</field>
+            <field name="model">stock.warehouse</field>
+            <field name="inherit_id" ref="stock.view_warehouse"/>
+            <field name="arch" type="xml">
+                <field name="out_type_id" position="after">
+                    <field name="x_outgoing_split_id"/>
+                    <field name="x_incoming_split_id"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

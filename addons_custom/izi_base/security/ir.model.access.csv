@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ir_config_parameter,ir_config_parameter_name,base.model_ir_config_parameter,base.group_user,1,0,0,0
+access_stock_production_lot,stock_production_lot,stock.model_stock_production_lot,point_of_sale.group_pos_user,1,0,0,0
+access_account_payment,account_payment,account.model_account_payment,point_of_sale.group_pos_user,1,1,1,1
+access_account_move,account_move,account.model_account_move,point_of_sale.group_pos_user,1,1,1,1
+access_account_move_line,account_move_line,account.model_account_move_line,point_of_sale.group_pos_user,1,1,1,1
+access_account_partial_reconcile,account_partial_reconcile,account.model_account_partial_reconcile,point_of_sale.group_pos_user,1,1,1,1
+access_account_account_type,account_account_type,account.model_account_account_type,point_of_sale.group_pos_user,1,1,1,1
+access_account_analytic_line,account_analytic_line,account.model_account_analytic_line,point_of_sale.group_pos_user,1,1,1,1
+access_account_full_reconcile,account_full_reconcile,account.model_account_full_reconcile,point_of_sale.group_pos_user,1,1,1,1

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!-- Add virtual money tab to customer form -->
+		<record id="izi_virtual_money_view_partner_form" model="ir.ui.view">
+			<field name="name">res.partner.form.inherited_by.izi_virtual_money</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='sales_purchases']" position="after">
+					<page name="virtual_money" string="Virtual money">
+						<label string="Virtual money"/>
+						<field name="virtual_money_ids" readonly="1">
+							<tree default_order='id desc'>
+								<field name="id" invisible="1"/>
+								<field name="typex"/>
+								<field name="order_id"/>
+<!--								<field name="expired"/>-->
+								<field name="money" sum="Money" widget="integer"/>
+								<field name="money_used" sum="Used" widget="integer"/>
+								<field name="debt_amount" sum="Debt" widget="integer"/>
+								<field name="available_money" sum="Available" widget="integer"/>
+								<field name="state"/>
+							</tree>
+					</field>
+						<label string="History virtual money"/>
+						<field name="virtual_money_history_ids" readonly="1">
+							<tree default_order='id desc'>
+								<field name="id" invisible="1"/>
+								<field name="order_id"/>
+								<field name="amount" sum="Total" widget="integer"/>
+								<field name="location_id" />
+								<field name="create_date" string="Used date"/>
+							</tree>
+					</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pop_up_signature_customer" model="ir.ui.view">
+            <field name="name">pos.order.form.view.Signature</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <form string="Customer Signature">
+                    <group>
+                        <field name="amount_total"/>
+                        <field name="x_amount_payment" readonly="1" force_save="1"/>
+                        <field name="x_amount_debt" readonly="1" force_save="1"/>
+                        <field name="x_signature_image" widget="signature"/>
+                    </group>
+                    <footer>
+                        <button name="process_customer_signature" string="_Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--<record id="view_pop_up_signature_customer_refund" model="ir.ui.view">-->
+            <!--<field name="name">pos.order.form.view.signature.refund</field>-->
+            <!--<field name="model">pos.order</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Customer Signature Refund">-->
+                    <!--<group>-->
+                        <!--<field name="amount_total"/>-->
+                        <!--<field name="x_amount_payment" readonly="1" force_save="1"/>-->
+                        <!--<field name="x_amount_debt" readonly="1" force_save="1"/>-->
+                        <!--<field name="x_signature_image_refund" widget="signature"/>-->
+                    <!--</group>-->
+                    <!--<footer>-->
+                        <!--<button name="process_customer_signature" string="_Apply" type="object" class="btn-primary"/>-->
+                        <!--<button string="Cancel" class="btn-default" special="cancel"/>-->
+                    <!--</footer>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+    </data>
+</odoo>

@@ -1,0 +1,110 @@
+<odoo>
+    <data>
+        <record id="reception_customer_form_view" model="ir.ui.view">
+            <field name="name">Reception Customer</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="new,done" nolabel="1"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <field name="search_result" invisible="True"/>
+                        <h1>
+                            <field name="name" placeholder="Tên hoặc số điện thoại của khách hàng..." attrs="{'action_element_class': '.action_create_lead', 'readonly': [('state', '=', 'done')]}" widget="enter2action"/>
+                            <button name="action_search_lead" string="Search" type="object" class="oe_highlight action_create_lead" attrs="{'invisible': [('state', '=', 'done')]}"/>
+                            <button name="action_create_lead" string="Create new" type="object" style="margin-left: 20px" attrs="{'invisible': [('state', '=', 'done')]}"/>
+                        </h1>
+                        <group col="4" attrs="{'invisible': [('search_result', 'not in', ('not_search', 'not_found', 'found_one'))]}">
+                                <field name="name_of_lead" attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="partner_name"  attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="birthday" attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="phone_number"  attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="address" attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="email" attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="partner_id" readonly="True" attrs="{'invisible': [('search_result', '!=', 'found_one')]}"/>
+                                <field name="note" attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '=', 'done')]}"/>
+                                <field name="date_meeting" readonly="True" attrs="{'invisible': [('search_result', '!=', 'found_one')]}"/>
+                        </group>
+                        <group attrs="{'invisible': [('search_result', 'not in', ('not_search', 'not_found', 'found_one'))]}">
+                            <field name="user_id" attrs="{'readonly': [('state', '=', 'done')]}" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="team_id" attrs="{'readonly': [('state', '=', 'done')]}" options="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+                        <group attrs="{'invisible': [('search_result', 'not in', ('found_many'))]}">
+                            <field name="lead_ids" nolabel="1">
+                                <tree editable="bottom" create="false" readonly="True">
+                                    <field name="partner_name"/>
+                                    <field name="phone"/>
+                                    <field name="email_from"/>
+                                    <field name="x_birthday"/>
+                                    <field name="partner_id"/>
+                                    <field name="time_booking"/>
+                                    <field name="team_id"/>
+                                    <field name="x_state"/>
+                                    <button name="action_assign_lead" string="Assign lead" type="object" context="{'reception_customer_id': parent.id}" attrs="{'invisible': [('parent.state', '=', 'done')]}"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="team_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                            <field name="user_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                        </group>
+                                        <footer>
+                                            <button name="action_confirm_assign_lead" string="Confirm" type="object" class="oe_highlight"/>
+                                            or
+                                            <button string="Cancel" class="oe_link" special="cancel"/>
+                                        </footer>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </group>
+                        <footer>
+                            <button name="action_assign_lead" string="Assign" type="object" class="oe_highlight" attrs="{'invisible': [('state', '=', 'done')]}"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reception_customer_assign_form_view" model="ir.ui.view">
+            <field name="name">Assign lead</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4">
+                            <field name="partner_name" readonly="True"/>
+                            <field name="phone_number" readonly="True"/>
+                        </group>
+                        <field name="note" readonly="True"/>
+                        <group>
+                            <field name="campaign_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="team_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="user_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_reception_customer" model="ir.actions.act_window">
+            <field name="name">Reception Customer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reception.customer</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('izi_pos_crm.reception_customer_form_view')})]"/>
+        </record>
+
+        <menuitem id="menu_reception_customer"
+                  name="Reception Customer"
+                  action="action_reception_customer"
+                  parent="menu_pos_crm"/>
+    </data>
+</odoo>

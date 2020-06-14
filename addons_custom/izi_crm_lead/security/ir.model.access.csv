@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_crm_lead_izi_crm_lead_1,izi_crm_lead_1,model_crm_lead,sales_team.group_sale_manager,1,1,1,1
+access_izi_crm_lead_izi_crm_lead_2,izi_crm_lead_2,model_crm_lead,sales_team.group_sale_salesman,1,1,0,0
+access_izi_crm_lead_izi_crm_lead_3,izi_crm_lead_3,model_izi_crm_lead_quotes,sales_team.group_sale_salesman,1,1,1,1

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+
+        <template id="partner_file.assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/partner_file/static/src/js/scripts.js"/>
+                <link rel="stylesheet" type="text/css" href="/partner_file/static/src/css/styles.css"/>
+            </xpath>
+        </template>
+
+        <record id="parner_file_res_partner_file_wizard" model="ir.ui.view">
+			<field name="name">res.partner.file.wizard</field>
+			<field name="model">res.partner.file</field>
+			<field name="view_type">form</field>
+			<field name="arch" type="xml">
+				<form>
+                    <div>
+                        <field name="images" widget="customer_files" readonly="1"/>
+                    </div>
+                    <footer>
+                       <button name="cancel" string="Đóng" special="cancel" class="oe_link"/>
+                    </footer>
+                    <![CDATA[
+                        <style>
+                        .modal.in .modal-dialog: padding: 8px 0 !important;
+                        .modal.in .modal-dialog .modal-footer: display:none !important;
+                        </style>
+                    ]]>
+                </form>
+			</field>
+		</record>
+
+        <record id="action_open_customer_files" model="ir.actions.act_window">
+            <field name="name">Hồ sơ đã lưu</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner.file</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="partner_file_view_partner_form" model="ir.ui.view">
+			<field name="name">parner_file.view_partner_form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='type']" position="after">
+					<button type="action" name="%(action_open_customer_files)d" context="{'partner_id': active_id}" string="Hồ sơ đã lưu"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

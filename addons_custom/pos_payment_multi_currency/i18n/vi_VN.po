@@ -1,0 +1,184 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_payment_multi_currency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-19 12:31+0000\n"
+"PO-Revision-Date: 2019-06-19 12:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_payment_multi_currency
+#: model:ir.ui.view,arch_db:pos_payment_multi_currency.view_pos_session_form_inherit_view
+msgid "+ Multi Currency"
+msgstr "+ Multi Currency"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_account_bank_statement_line_x_amount_currency
+msgid "Amount Currency"
+msgstr "Số tiền"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Sổ phụ từ Ngân hàng"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Giao dịch trên sổ phụ ngân hàng"
+
+#. module: pos_payment_multi_currency
+#: model:ir.ui.view,arch_db:pos_payment_multi_currency.view_pop_up_masseage
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_res_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_account_bank_statement_line_x_currency_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_account_bank_statement_x_currency_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_invoice_make_payment_x_currency_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_make_payment_x_currency_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_payment_service_x_currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_res_currency_rate
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_account_bank_statement_line_x_currency_rate_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_invoice_make_payment_x_currency_rate_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_make_payment_x_currency_rate_id
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_payment_service_x_currency_rate_id
+msgid "Currency Rate"
+msgstr "Tỷ giá"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_config_x_journal_currency_ids
+#: model:ir.model.fields,help:pos_payment_multi_currency.field_pos_config_x_journal_currency_ids
+msgid "Các phương thức thanh toán bằng tiền tệ khác"
+msgstr "Các phương thức thanh toán bằng tiền tệ khác"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_invoice_make_payment
+msgid "Invoice Payment"
+msgstr "Hóa đơn thanh toán"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_invoice_make_payment_x_money_multi
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_make_payment_x_money_multi
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_payment_service_x_money_multi
+msgid "Money Multi"
+msgstr "Số tiền(ngoại tệ)"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_session_x_cash_total_multi_currency
+#: model:ir.ui.view,arch_db:pos_payment_multi_currency.view_pos_session_form_inherit_view
+msgid "Multi Currency"
+msgstr "Đa tiền tệ"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Điểm bán hàng"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Điểm bán hàng"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_account_journal_x_pos_multi_currency_id
+msgid "Pos Multi Currency"
+msgstr "Pos Multi Currency"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_invoice_make_payment_x_rate_vn
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_payment_service_x_rate_vn
+msgid "Rate VN"
+msgstr "Tỉ giá Việt Nam"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_res_currency_rate_rate_vn
+msgid "Rate Vn"
+msgstr "Tỉ giá Việt Nam"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_make_payment_x_rate_vn
+msgid "Rate vn"
+msgstr "Tỉ giá Việt Nam"
+
+#. module: pos_payment_multi_currency
+#: code:addons/pos_payment_multi_currency/models/pos_payment_use_service.py:82
+#, python-format
+msgid "Request Material"
+msgstr "Yêu cầu NVL"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_invoice_make_payment_x_show_currency_amount
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_make_payment_x_show_currency_amount
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_pos_payment_service_x_show_currency_amount
+msgid "Show Currency Amount"
+msgstr "Show Currency Amount"
+
+#. module: pos_payment_multi_currency
+#: model:ir.ui.view,arch_db:pos_payment_multi_currency.view_pop_up_masseage
+msgid "Số tiền điều chỉnh (làm tròn) không thể lớn hơn 1.000 VNĐ"
+msgstr "Số tiền điều chỉnh (làm tròn) không thể lớn hơn 1.000 VNĐ"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,help:pos_payment_multi_currency.field_res_currency_rate_rate_vn
+msgid "The rate of the currency to the currency of rate 1"
+msgstr "The rate of the currency to the currency of rate 1"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,field_description:pos_payment_multi_currency.field_account_bank_statement_x_total_multi_currency
+msgid "Total Multi Subtotal"
+msgstr "Tổng tiền"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,help:pos_payment_multi_currency.field_account_bank_statement_x_total_multi_currency
+msgid "Total of multi lines."
+msgstr "Total of multi lines."
+
+#. module: pos_payment_multi_currency
+#: model:ir.model.fields,help:pos_payment_multi_currency.field_pos_session_x_cash_total_multi_currency
+msgid "Total of opening cash currency lines."
+msgstr "Total of opening cash currency lines."
+
+#. module: pos_payment_multi_currency
+#: model:ir.ui.view,arch_db:pos_payment_multi_currency.view_pop_up_masseage
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_pos_config
+msgid "pos.config"
+msgstr "pos.config"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_pos_payment_service
+msgid "pos.payment.service"
+msgstr "pos.payment.service"
+
+#. module: pos_payment_multi_currency
+#: model:ir.model,name:pos_payment_multi_currency.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"
+

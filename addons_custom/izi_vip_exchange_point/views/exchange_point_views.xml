@@ -1,0 +1,120 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="izi_vip_exchange_point_form_view">
+            <field name="name">izi_vip_exchange_point_form_view</field>
+            <field name="model">izi.vip.exchange.point</field>
+            <field name="arch" type="xml">
+                <form delete="0">
+                    <header>
+                        <button name="action_sent" class="oe_highlight" type="object" states="draft" string="Sent"/>
+                        <button name="action_compute" type="object" states="draft"
+                                string="Compute"/>
+                        <button name="action_confirm" class="oe_highlight" type="object" states="to_confirm"
+                                groups="point_of_sale.group_pos_manager"
+                                string="Approval"/>
+                        <button name="action_done" class="oe_highlight" type="object" states="confirm,rate"
+                                string="Done"/>
+                        <button name="action_to_refund" type="object" states="done"
+                                string="Refund" confirm="Bạn có chắc chắn muốn hoàn tác đơn?"/>
+                        <button name="action_refund" class="oe_highlight" type="object" states="to_refund"
+                                string="Approval" groups="point_of_sale.group_pos_manager"/>
+                        <button name="action_cancel" type="object" states="to_confirm,to_refund" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,rate,done"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">ĐỔI ĐIỂM</h3>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('name', '=', 'New')]}" readonly="1"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Name"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"
+                                       context="{'form_view_ref':'izi_pos_custom_backend.customer_form_view_for_pos'}"/>
+                                <field name="rank_id" readonly="1" force_save="1"/>
+                                <field name="date_exchange" readonly="1"/>
+                                <field name="pos_order_id" readonly="1"
+                                       attrs="{'invisible': [('pos_order_id', '=', False)]}"/>
+                            </group>
+                            <group>
+                                <field name="vip_config_id" readonly="1" force_save="1"/>
+                                <field name="point" readonly="1" force_save="1"/>
+                                <field name="point_exchange_id" required="1" widget="selection"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="number" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <field name="note" placeholder="Note"/>
+                        <notebook>
+                            <page string="Details">
+                                <field name="lines" readonly="1">
+                                    <tree editable="1">
+                                        <field name="product_id"/>
+                                        <field name="uom_id"/>
+                                        <field name="qty"/>
+                                        <field name="price_unit"/>
+                                        <field name="total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_vip_exchange_point_tree_view">
+            <field name="name">izi_vip_exchange_point_tree_view</field>
+            <field name="model">izi.vip.exchange.point</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'"
+                      decoration-muted="state in ('refunded','cancel')"
+                      decoration-danger="state not in ('cancel', 'done','refunded','draft')">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="date_exchange"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_izi_vip_exchange_point" model="ir.actions.act_window">
+            <field name="name">Vip exchange point</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">izi.vip.exchange.point</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--<menuitem id="izi_vip_exchange_point_menu" action="action_izi_vip_exchange_point"-->
+                  <!--parent="point_of_sale.menu_point_of_sale" sequence="4"/>-->
+
+
+        <record id="lot_number_exchange_point_view" model="ir.ui.view">
+            <field name="name">lot_number_exchange_point_view</field>
+            <field name="model">izi.vip.exchange.point</field>
+            <field name="arch" type="xml">
+                <form string="Card">
+                    <p>Trong sản phẩm đổi điểm chưa dịch vụ, bạn cần gắn thẻ cho các dịch vụ đó!</p>
+                    <group>
+                        <group>
+                            <field name="x_lot_number" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_exchange_point" string="Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

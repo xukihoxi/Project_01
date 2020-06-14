@@ -1,0 +1,116 @@
+<openerp>
+    <data>
+        <record id="izi_stock_custom_transfer_outgoing_action" model="ir.actions.act_window">
+            <field name="name">Outgoing</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create':False,'delete':False}</field>
+            <field name="domain">
+                [('picking_type_id.code','=','outgoing'),('picking_type_id.default_location_src_id.user_ids','in',(uid)), ('origin','not like','YC/NVL%')]
+            </field>
+        </record>
+
+        <record id="izi_stock_custom_transfer_outgoing_action_tree_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="stock.vpicktree"/>
+            <field name="act_window_id" ref="izi_stock_custom_transfer_outgoing_action"/>
+        </record>
+
+        <record id="izi_stock_custom_transfer_outgoing_action_form_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock.view_picking_form"/>
+            <field name="act_window_id" ref="izi_stock_custom_transfer_outgoing_action"/>
+        </record>
+
+        <menuitem id="menu_izi_stock_custom_transfer_outgoing_action" parent="stock.menu_stock_warehouse_mgmt"
+                  sequence="2"
+                  action="izi_stock_custom_transfer_outgoing_action"/>
+
+
+        <record id="izi_stock_custom_transfer_internal_action" model="ir.actions.act_window">
+            <field name="name">Internal</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="domain">
+                [('picking_type_id.code','=','internal'),'|',('picking_type_id.default_location_src_id.user_ids','in',(uid)),('picking_type_id.default_location_dest_id.user_ids','in',(uid))]
+            </field>
+        </record>
+
+        <record id="izi_stock_custom_transfer_internal_action_tree_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="stock.vpicktree"/>
+            <field name="act_window_id" ref="izi_stock_custom_transfer_internal_action"/>
+        </record>
+
+        <record id="izi_stock_custom_transfer_internal_action_form_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_stock_picking.view_internal_picking_form"/>
+            <field name="act_window_id" ref="izi_stock_custom_transfer_internal_action"/>
+        </record>
+
+        <menuitem id="menu_izi_stock_custom_transfer_internal_action" parent="stock.menu_stock_warehouse_mgmt"
+                  sequence="3"
+                  action="izi_stock_custom_transfer_internal_action"/>
+
+        <record id="izi_stock_custom_transfer_incoming_action" model="ir.actions.act_window">
+            <field name="name">Incoming</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create':False,'delete':False}</field>
+            <field name="domain">
+                [('picking_type_id.code','=','incoming'),('picking_type_id.default_location_dest_id.user_ids','in',(uid)), ('origin','not like','YC/NVL%')]
+            </field>
+        </record>
+
+        <record id="izi_stock_custom_transfer_incoming_action_tree_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="stock.vpicktree"/>
+            <field name="act_window_id" ref="izi_stock_custom_transfer_incoming_action"/>
+        </record>
+
+        <record id="izi_stock_custom_transfer_incoming_action_form_view" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock.view_picking_form"/>
+            <field name="act_window_id" ref="izi_stock_custom_transfer_incoming_action"/>
+        </record>
+
+        <menuitem id="menu_izi_stock_custom_transfer_incoming_action" parent="stock.menu_stock_warehouse_mgmt"
+                  sequence="2"
+                  action="izi_stock_custom_transfer_incoming_action"/>
+
+        <record id="stock.action_picking_tree_all" model="ir.actions.act_window">
+            <field name="name">Stock Operations</field>
+            <field name="res_model">stock.picking</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar</field>
+            <field name="domain"></field>
+            <field name="context">{
+                'contact_display': 'partner_address','create':False,'delete':False
+                }
+            </field>
+            <field name="search_view_id" ref="stock.view_picking_internal_search"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click here to create a new transfer.
+                </p>
+                <p>
+                    You can either do it immediately or mark it as Todo for future processing. Use your scanner to
+                    validate the transferred quantity quicker.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

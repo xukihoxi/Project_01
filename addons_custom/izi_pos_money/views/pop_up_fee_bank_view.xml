@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pop_up_pos_money" model="ir.ui.view">
+            <field name="name">pos.money.form.view</field>
+            <field name="model">pos.money</field>
+            <field name="arch" type="xml">
+                <form string="Pos Money">
+                    <group>
+                        <field name="fee_account_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                        <field name="amount_fee"/>
+                    </group>
+                    <footer>
+                        <button name="close_action_window" string="_Apply" type="object" class="btn-primary"/>
+                        <button name="cancel_close_action_window" string="Cancel" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

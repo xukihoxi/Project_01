@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="product_release_form_view">
+            <field name="name">product.release.form</field>
+            <field name="model">izi.product.release</field>
+            <field name="arch" type="xml">
+                <form string="release form" delete="0">
+                    <header>
+                        <button name="generate_serial" string="Generate coupon" type="object" states="draft"
+                                class="oe_highlight"/>
+                        <button name="action_active" string="Active" type="object" states="created"
+                                class="oe_highlight" groups="stock.group_stock_manager"
+                                confirm="Bạn có chắc chắn muốn kích hoạt tất cả các mã đã tạo trong lần phát hành này?"/>
+                        <button name="action_transfer" string="Transfer" type="object" states="actived"
+                                class="oe_highlight"/>
+                        <!--<button name="action_cancel_release"-->
+                        <!--string="Destroy"-->
+                        <!--type="object"-->
+                        <!--states="actived"-->
+                        <!--confirm="Tất cả mã đã tạo sẽ bị xóa không thể khôi phục lại, phôi sẽ hồi kho, Bạn có chắc chắn muốn xóa lần phát hành này?"-->
+                        <!--/>-->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,created,actived,done"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">PHÁT HÀNH THẺ DỊCH VỤ - PHIẾU MUA HÀNG</h3>
+                        <h3 class="text-center">
+                            <field name="name" readonly="1" required="1" attrs="{'invisible': [('name','=','/')]}"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Number"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="campaign_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="product_id"
+                                       domain="[('product_tmpl_id.x_type_card', 'in', ('tdv','pmh','tbh','tdt'))]"
+                                       attrs="{'readonly': [('state','!=','draft')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="card_blank_id" invisible="1"/>
+                                <field name="quantity" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="release_location_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                       required="1"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"
+                                       domain="[('usage', '=','internal')]"/>
+                                <field name="location_id" attrs="{'readonly': [('state','!=','draft')]}" required="1"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"
+                                       domain="[('usage', '=','internal')]"/>
+                            </group>
+                            <group>
+                                <field name="date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="expired_type" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                                <field name="expired_date"
+                                       attrs="{'readonly': [('state','!=','draft')], 'required': [('expired_type','=','0')], 'invisible': [('expired_type','=','1')]}"/>
+                                <field name="validity"
+                                       attrs="{'readonly': [('state','!=', 'draft')], 'required': [('expired_type','=','1')], 'invisible': [('expired_type','=','0')]}"/>
+                                <field name="use_type" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                                <field name="picking_id" readonly="1"
+                                       attrs="{'invisible': [('picking_id','=',False)]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="production_lot_ids" readonly="1">
+                                    <tree string="Product detail" delete="0" create="0">
+                                        <field name="product_id" width="180" invisible="1"/>
+                                        <field name="name"/>
+                                        <field name="life_date" string="Ngày hết hạn"/>
+                                        <field name="x_customer_id" string="Người sở hữu"/>
+                                        <field name="x_user_id" string="Người sủ dụng"/>
+                                        <field name="x_status"/>
+                                    </tree>
+                                    <form string="Lot" create="false" edit="false">
+                                        <sheet>
+                                            <div class="oe_title">
+                                                <div class="oe_edit_only">
+                                                    <label for="name"/>
+                                                </div>
+                                                <h1>
+                                                    <field name="name" placeholder="Name"/>
+                                                </h1>
+                                            </div>
+                                            <group>
+                                                <group>
+                                                    <field name="product_id"/>
+                                                    <field name="x_customer_id"/>
+                                                    <field name="x_user_id"/>
+                                                    <field name="x_amount"/>
+                                                    <field name="x_order_id"/>
+                                                </group>
+                                                <group>
+                                                    <field name="life_date"/>
+                                                    <field name="x_status"/>
+                                                    <field name="x_discount"/>
+                                                    <field name="x_payment_amount"/>
+                                                </group>
+                                            </group>
+                                            <notebook>
+                                                <page string="Dịch vụ">
+                                                    <field name="x_card_detail_ids" readonly="1">
+                                                        <tree create="false" edit="false">
+                                                            <field name="product_id"/>
+                                                            <field name="total_qty"/>
+                                                            <field name="qty_hand"/>
+                                                            <field name="qty_use"/>
+                                                            <field name="price_unit"/>
+                                                            <field name="amount_total"/>
+                                                            <field name="remain_amount"/>
+                                                            <field name="state"/>
+                                                            <field name="note"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                        <field name="note" placeholder="Note"
+                               attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_release_tree_view">
+            <field name="name">product.release.tree</field>
+            <field name="model">izi.product.release</field>
+            <field name="arch" type="xml">
+                <tree default_order='date desc' decoration-info="state == 'draft'" decoration-muted="state == 'cancel'"
+                      decoration-danger="state not in ('cancel', 'done')">
+                    <field name="name"/>
+                    <field name="campaign_id"/>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="date"/>
+                    <field name="expired_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_product_release_form" model="ir.actions.act_window">
+            <field name="name">Coupon, Card Release</field>
+            <field name="res_model">izi.product.release</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="filter" eval="True"/>
+            <field name="limit">20</field>
+            <field name="domain">[('location_id.user_ids','in',(uid))]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a times release coupon and card
+                </p>
+                <p>
+                    Odoo .....................
+                </p>
+            </field>
+        </record>
+
+        <record id="action_transfer_to_stock" model="ir.actions.act_window">
+            <field name="name">Product serial transfer</field>
+            <field name="res_model">izi.product.release</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem id="menu_product_release"
+                  name="Coupon, card release"
+                  parent="izi_stock_transfer.menu_stock_transfer"
+                  action="action_product_release_form" sequence="999"/>
+    </data>
+</openerp>

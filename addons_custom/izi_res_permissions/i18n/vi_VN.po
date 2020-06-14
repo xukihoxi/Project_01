@@ -1,0 +1,333 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_res_permissions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-02 09:49+0000\n"
+"PO-Revision-Date: 2019-11-02 09:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_business_manager
+msgid "Business manager"
+msgstr "Giám đốc kinh doanh"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_cashier
+#: model:res.groups,name:izi_res_permissions.group_cashier
+msgid "Cashier"
+msgstr "Thu ngân"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_gangnam_clinic_hanoi
+msgid "Cashier gangnam_clinic_hanoi"
+msgstr "Thu ngân gangnam_clinic_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_gangnam_clinic_hochiminh
+msgid "Cashier gangnam_clinic_hochiminh"
+msgstr "Thu ngân gangnam_clinic_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_gangnam_danang
+msgid "Cashier gangnam_danang"
+msgstr "Thu ngân gangnam_danang"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_gangnam_hanoi
+msgid "Cashier gangnam_hanoi"
+msgstr "Thu ngân gangnam_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_gangnam_hochiminh
+msgid "Cashier gangnam_hochiminh"
+msgstr "Thu ngân gangnam_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_tata1
+msgid "Cashier tata1"
+msgstr "Thu ngân tata1"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cashier_tata2
+msgid "Cashier tata2"
+msgstr "Thu ngân tata2"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_chief_accountant
+msgid "Chief accountant"
+msgstr "Kế toán trưởng"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_consultant
+#: model:res.groups,name:izi_res_permissions.group_consultant
+msgid "Consultant"
+msgstr "Tư vấn"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_gangnam_clinic_hanoi
+msgid "Consultant gangnam_clinic_hanoi"
+msgstr "Tư vấn gangnam_clinic_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_gangnam_clinic_hochiminh
+msgid "Consultant gangnam_clinic_hochiminh"
+msgstr "Tư vấn gangnam_clinic_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_gangnam_danang
+msgid "Consultant gangnam_danang"
+msgstr "Tư vấn gangnam_danang"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_gangnam_hanoi
+msgid "Consultant gangnam_hanoi"
+msgstr "Tư vấn gangnam_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_gangnam_hochiminh
+msgid "Consultant gangnam_hochiminh"
+msgstr "Tư vấn gangnam_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_tata1
+msgid "Consultant tata1"
+msgstr "Tư vấn tata1"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_consultant_tata2
+msgid "Consultant tata2"
+msgstr "Tư vấn tata2"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_cost_accountant
+msgid "Cost accountant"
+msgstr "Kế toán chi phí"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_customer_care
+#: model:res.groups,name:izi_res_permissions.group_customer_care
+msgid "Customer care"
+msgstr "CSKH"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_customer_care_gangnam
+msgid "Customer care gangnam"
+msgstr "CSKH gangnam"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_customer_care_tata
+msgid "Customer care tata"
+msgstr "CSKH tata"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_fund_accountant
+msgid "Fund accountant"
+msgstr "Kế toán quỹ"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_general
+msgid "General"
+msgstr "Tổng"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_inventory_accounting
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting
+msgid "Inventory accounting"
+msgstr "Kế toán kho"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_gangnam_clinic_hanoi
+msgid "Inventory accounting gangnam_clinic_hanoi"
+msgstr "Kế toán kho gangnam_clinic_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_gangnam_clinic_hochiminh
+msgid "Inventory accounting gangnam_clinic_hochiminh"
+msgstr "Kế toán kho gangnam_clinic_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_gangnam_danang
+msgid "Inventory accounting gangnam_danang"
+msgstr "Kế toán kho gangnam_danang"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_gangnam_hanoi
+msgid "Inventory accounting gangnam_hanoi"
+msgstr "Kế toán kho gangnam_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_gangnam_hochiminh
+msgid "Inventory accounting gangnam_hochiminh"
+msgstr "Kế toán kho gangnam_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_tata1
+msgid "Inventory accounting tata1"
+msgstr "Kế toán kho tata1"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_inventory_accounting_tata2
+msgid "Inventory accounting tata2"
+msgstr "Kế toán kho tata2"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_uid_telesales
+msgid "Leader UID - Telesales"
+msgstr "Trưởng nhóm UID - Telesales"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_leader_shop
+#: model:res.groups,name:izi_res_permissions.group_leader_shop
+msgid "Leader shop"
+msgstr "Shop trưởng"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_gangnam_clinic_hanoi
+msgid "Leader shop gangnam_clinic_hanoi"
+msgstr "Shop trưởng gangnam_clinic_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_gangnam_clinic_hochiminh
+msgid "Leader shop gangnam_clinic_hochiminh"
+msgstr "Shop trưởng gangnam_clinic_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_gangnam_danang
+msgid "Leader shop gangnam_danang"
+msgstr "Shop trưởng gangnam_danang"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_gangnam_hanoi
+msgid "Leader shop gangnam_hanoi"
+msgstr "Shop trưởng gangnam_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_gangnam_hochiminh
+msgid "Leader shop gangnam_hochiminh"
+msgstr "Shop trưởng gangnam_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_tata1
+msgid "Leader shop tata1"
+msgstr "Shop trưởng tata1"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_leader_shop_tata2
+msgid "Leader shop tata2"
+msgstr "Shop trưởng tata2"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_member_uid_telesales
+msgid "Member UID - Telesales"
+msgstr "Thành viên UID - Telesales"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_receptionist
+#: model:res.groups,name:izi_res_permissions.group_receptionist
+msgid "Receptionist"
+msgstr "Lễ tân"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_gangnam_clinic_hanoi
+msgid "Receptionist gangnam_clinic_hanoi"
+msgstr "Lễ tân gangnam_clinic_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_gangnam_clinic_hochiminh
+msgid "Receptionist gangnam_clinic_hochiminh"
+msgstr "Lễ tân gangnam_clinic_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_gangnam_danang
+msgid "Receptionist gangnam_danang"
+msgstr "Lễ tân gangnam_danang"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_gangnam_hanoi
+msgid "Receptionist gangnam_hanoi"
+msgstr "Lễ tân gangnam_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_gangnam_hochiminh
+msgid "Receptionist gangnam_hochiminh"
+msgstr "Lễ tân gangnam_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_tata1
+msgid "Receptionist tata1"
+msgstr "Lễ tân tata1"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_receptionist_tata2
+msgid "Receptionist tata2"
+msgstr "Lễ tân tata2"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_revenue_accountant
+msgid "Revenue accountant"
+msgstr "Kế toán doanh thu"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_revenue_control
+msgid "Revenue control"
+msgstr "Kiểm soát doanh thu"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_stock_keeper
+msgid "Stock keeper"
+msgstr "Thủ kho"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_therapist
+#: model:res.groups,name:izi_res_permissions.group_therapist
+msgid "Therapist"
+msgstr "Kỹ thuật viên"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_gangnam_clinic_hanoi
+msgid "Therapist gangnam_clinic_hanoi"
+msgstr "Kỹ thuật viên gangnam_clinic_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_gangnam_clinic_hochiminh
+msgid "Therapist gangnam_clinic_hochiminh"
+msgstr "Kỹ thuật viên gangnam_clinic_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_gangnam_danang
+msgid "Therapist gangnam_danang"
+msgstr "Kỹ thuật viên gangnam_danang"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_gangnam_hanoi
+msgid "Therapist gangnam_hanoi"
+msgstr "Kỹ thuật viên gangnam_hanoi"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_gangnam_hochiminh
+msgid "Therapist gangnam_hochiminh"
+msgstr "Kỹ thuật viên gangnam_hochiminh"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_tata1
+msgid "Therapist tata1"
+msgstr "Kỹ thuật viên tata1"
+
+#. module: izi_res_permissions
+#: model:res.groups,name:izi_res_permissions.group_therapist_tata2
+msgid "Therapist tata2"
+msgstr "Kỹ thuật viên tata2"
+
+#. module: izi_res_permissions
+#: model:ir.module.category,name:izi_res_permissions.category_uid_telesales
+msgid "UID - Telesales"
+msgstr "UID - Telesales"

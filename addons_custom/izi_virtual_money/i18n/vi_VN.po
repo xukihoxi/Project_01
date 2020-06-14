@@ -1,0 +1,434 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_virtual_money
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-28 03:34+0000\n"
+"PO-Revision-Date: 2020-05-28 03:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "(update)"
+msgstr "(cập nhật)"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Accounting Information"
+msgstr "Thông tin kế toán"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_amount
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_money
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_order_tree_izi_vm_sell
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Available"
+msgstr "Available"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_available_money
+msgid "Available Amount"
+msgstr "Số tiền khả dụng"
+
+#. module: izi_virtual_money
+#: selection:pos.virtual.money,state:0
+msgid "Cancel"
+msgstr "Đã hủy"
+
+#. module: izi_virtual_money
+#: model:ir.actions.act_window,help:izi_virtual_money.action_pos_pos_form_izi_vm_sell
+msgid "Click to create a new order."
+msgstr "Click để tạo một đơn mới."
+
+#. module: izi_virtual_money
+#: model:ir.model,name:izi_virtual_money.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_create_uid
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_create_date
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Customer Signature"
+msgstr "Khách hàng xác nhận"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Debt"
+msgstr "Debt"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_debt_amount
+msgid "Debt amount"
+msgstr "Số tiền ghi nợ"
+
+#. module: izi_virtual_money
+#: selection:pos.order,x_type:0
+msgid "Default"
+msgstr "Mặc định"
+
+#. module: izi_virtual_money
+#: selection:pos.order,x_type:0
+msgid "Destroy Service"
+msgstr "Hủy dich vụ"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Discount compute"
+msgstr "Tính khuyến mại"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_display_name
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_virtual_money
+#: selection:pos.order,x_type:0
+msgid "Exchange_service"
+msgstr "Exchange_service"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_expired
+msgid "Expired"
+msgstr "Ngày hết hạn"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Extra Info"
+msgstr "Thông tin thêm"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "General Information"
+msgstr "Thông tin chung"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_order_x_has_paid
+msgid "Has payment"
+msgstr "Has payment"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "History virtual money"
+msgstr "Lịch sử sử dụng thẻ tiền"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_view_pos_payment_vm
+msgid "Huỷ"
+msgstr "Huỷ"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_id
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: izi_virtual_money
+#: model:ir.model,name:izi_virtual_money.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_order_x_vm_journal
+msgid "Journal for vm"
+msgstr "Journal for vm"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_make_payment_x_vm_journal_ids
+msgid "Journal vm"
+msgstr "Journal vm"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money___last_update
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_write_uid
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_write_date
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_typex
+msgid "Loại tài khoản"
+msgstr "Loại tài khoản"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Money"
+msgstr "Money"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_order_x_expired
+msgid "Ngày hết hạn"
+msgstr "Ngày hết hạn"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Number"
+msgstr "Số"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Order lines"
+msgstr "Chi tiết đơn hàng"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_order_id
+msgid "Order ref"
+msgstr "Đơn hàng mua"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_order_id
+msgid "Order ref history"
+msgstr "Đơn hàng sử dụng"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_order_tree_izi_vm_sell
+msgid "POS Orders"
+msgstr "Các đơn hàng POS"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_view_pos_payment_vm
+msgid "Pay Order"
+msgstr "Pay Order"
+
+#. module: izi_virtual_money
+#: code:addons/izi_virtual_money/models/pos_payment.py:22
+#: model:ir.actions.act_window,name:izi_virtual_money.izi_action_pos_payment_vm
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+#, python-format
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Payments"
+msgstr "Các thanh toán"
+
+#. module: izi_virtual_money
+#: model:ir.model,name:izi_virtual_money.model_pos_order
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_virtual_money
+#: model:ir.model,name:izi_virtual_money.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Point of Sale Payment"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: izi_virtual_money
+#: selection:pos.virtual.money,state:0
+msgid "Ready"
+msgstr "Khả dụng"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Return Products"
+msgstr "Trả lại sản phẩm"
+
+#. module: izi_virtual_money
+#: code:addons/izi_virtual_money/models/models.py:162
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+#, python-format
+msgid "Search card"
+msgstr "Tìm thẻ"
+
+#. module: izi_virtual_money
+#: model:ir.actions.act_window,name:izi_virtual_money.action_pos_pos_form_izi_vm_sell
+#: model:ir.ui.menu,name:izi_virtual_money.menu_point_of_sale_sell_vm
+msgid "Sell virtual money"
+msgstr "Bán thẻ tiền"
+
+#. module: izi_virtual_money
+#: selection:pos.order,x_type:0
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.view_pos_pos_form_izi_vm_sell
+msgid "Statement lines"
+msgstr "Giao dịch"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_statement_id
+msgid "Statement ref"
+msgstr "Tham chiếu thanh toán"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_sub_amount_id
+msgid "Sub amount"
+msgstr "Tài khoản khuyến mại"
+
+#. module: izi_virtual_money
+#: selection:pos.order,x_type:0
+msgid "Thẻ tiền"
+msgstr "Thẻ tiền"
+
+#. module: izi_virtual_money
+#: model:ir.model,name:izi_virtual_money.model_pos_virtual_money
+msgid "Tiền ảo"
+msgstr "Tiền ảo"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Total"
+msgstr "Tổng"
+
+#. module: izi_virtual_money
+#: selection:pos.virtual.money,typex:0
+msgid "Tài khoản chính"
+msgstr "Tài khoản chính"
+
+#. module: izi_virtual_money
+#: selection:pos.virtual.money,typex:0
+msgid "Tài khoản khuyến mại"
+msgstr "Tài khoản khuyến mại"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_view_pos_payment_vm
+msgid "Tạo thanh toán"
+msgstr "Tạo thanh toán"
+
+#. module: izi_virtual_money
+#: model:ir.actions.act_window,help:izi_virtual_money.action_pos_pos_form_izi_vm_sell
+msgid "Use this menu to browse previous orders. To record new\n"
+"                    orders, you may use the menu <i>Your Session</i> for\n"
+"                    the touchscreen interface."
+msgstr "Use this menu to browse previous orders. To record new\n"
+"                    orders, you may use the menu <i>Your Session</i> for\n"
+"                    the touchscreen interface."
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Used"
+msgstr "Used"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_money_used
+msgid "Used amount"
+msgstr "Số tiền sử dụng"
+
+#. module: izi_virtual_money
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Used date"
+msgstr "Ngày sử dụng"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_res_partner_virtual_money_ids
+#: model:ir.model.fields,field_description:izi_virtual_money.field_res_users_virtual_money_ids
+#: model:ir.ui.view,arch_db:izi_virtual_money.izi_virtual_money_view_partner_form
+msgid "Virtual money"
+msgstr "Thẻ tiền"
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_virtual_money_history_vm_id
+msgid "Virtual money ID"
+msgstr "Thẻ tiền"
+
+#. module: izi_virtual_money
+#: model:ir.model,name:izi_virtual_money.model_pos_virtual_money_history
+#: model:ir.model.fields,field_description:izi_virtual_money.field_res_partner_virtual_money_history_ids
+#: model:ir.model.fields,field_description:izi_virtual_money.field_res_users_virtual_money_history_ids
+msgid "Virtual money history"
+msgstr "Lịch sử sử dụng thẻ tiền"
+
+#. module: izi_virtual_money
+#: code:addons/izi_virtual_money/models/models.py:57
+#, python-format
+msgid "Vui lòng cấu hình các hình thức thanh toán ghi nợ  ở điểm bán hàng  !\n"
+"Truy cập vào Cấu hình/ điểm bán hàng/ thiếp lập để cấu hình phương thức thanh toán ghi nợ ."
+msgstr "Vui lòng cấu hình các hình thức thanh toán ghi nợ  ở điểm bán hàng  !\n"
+"Truy cập vào Cấu hình/ điểm bán hàng/ thiếp lập để cấu hình phương thức thanh toán ghi nợ ."
+
+#. module: izi_virtual_money
+#: code:addons/izi_virtual_money/models/models.py:61
+#, python-format
+msgid "Vui lòng cấu hình các hình thức thanh toán ngoại lệ ở điểm bán hàng  !\n"
+"Truy cập vào Cấu hình/ điểm bán hàng/ thiếp lập để cấu hình phương thức thanh toán ngoại ."
+msgstr "Vui lòng cấu hình các hình thức thanh toán ngoại lệ ở điểm bán hàng  !\n"
+"Truy cập vào Cấu hình/ điểm bán hàng/ thiếp lập để cấu hình phương thức thanh toán ngoại ."
+
+#. module: izi_virtual_money
+#: model:ir.model.fields,field_description:izi_virtual_money.field_pos_order_x_type
+msgid "X Type"
+msgstr "Loại"
+
+#. module: izi_virtual_money
+#: code:addons/izi_virtual_money/models/models.py:35
+#, python-format
+msgid "You have to select a pricelist in the sale form !\n"
+"Please set one before choosing a product."
+msgstr "You have to select a pricelist in the sale form !\n"
+"Please set one before choosing a product."
+

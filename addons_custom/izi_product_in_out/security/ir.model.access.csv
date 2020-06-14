@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_product_in_out_id,izi_product_in_out_name,model_stock_picking_reason,stock.group_stock_manager,1,1,1,1
+access_izi_product_in_out_id1,izi_product_in_out_name1,model_inventory_product_delivery,stock.group_stock_user,1,1,1,1
+access_izi_product_in_out_id2,izi_product_in_out_name2,model_product_delivery_line,stock.group_stock_user,1,1,1,1
+access_izi_product_in_out_id3,izi_product_in_out_name3,model_product_delivery_line,point_of_sale.group_pos_user,1,0,0,0

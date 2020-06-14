@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <!-- Danh sách các loại tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_type_tree_view">
+            <field name="name">Partner interaction type</field>
+            <field name="model">partner.interaction.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="survey_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view loại tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_type_form_view">
+            <field name="name">Partner interaction type</field>
+            <field name="model">partner.interaction.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="survey_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Hành động loại tương tác khách hàng -->
+        <record model="ir.actions.act_window" id="partner_interaction_type_action_window">
+            <field name="name">Partner interaction type</field>
+            <field name="res_model">partner.interaction.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+
+        <menuitem name="Partner interaction type" id="partner_interaction_type_menu" parent="crm.crm_menu_config"
+                  action="partner_interaction_type_action_window"/>
+    </data>
+</odoo>

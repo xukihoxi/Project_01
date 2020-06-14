@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <menuitem id="menu_pos_crm"
+                  name="POS CRM"
+                  parent="point_of_sale.menu_point_root"
+                  />
+    </data>
+</odoo>

@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="pos_config_view_form_inherit" model="ir.ui.view">
+            <field name="name">pos.config.view.form.inherit.pos</field>
+            <field name="model">pos.config</field>
+            <field name="priority" eval="35"/>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <field name="picking_type_id" position="after">
+                    <div groups="stock.group_stock_multi_locations">
+                        <div>
+                            <label for="x_material_picking_type_id"/>
+                            <div class="text-muted">
+                                Stock location used for the material
+                            </div>
+                            <div>
+                                <field name="x_material_picking_type_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </field>
+                <field name="stock_location_id" position="after">
+                    <div groups="stock.group_stock_multi_locations">
+                        <div>
+                            <label for="x_cosmetic_surgery_picking_type"/>
+                            <div class="text-muted">
+                                Stock location used for the surgery
+                            </div>
+                            <div>
+                                <field name="x_cosmetic_surgery_picking_type"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div groups="stock.group_stock_multi_locations">
+                        <div>
+                            <label for="x_auto_export_import_materials"/>
+                            <div class="text-muted">
+                                Automatically import and export raw materials
+                            </div>
+                            <div>
+                                <field name="x_auto_export_import_materials"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div groups="stock.group_stock_multi_locations">
+                        <div>
+                            <label for="x_auto_export_import_goods"/>
+                            <div class="text-muted">
+                                Automatically import and export goods
+                            </div>
+                            <div>
+                                <field name="x_auto_export_import_goods"/>
+                            </div>
+                        </div>
+                    </div>
+                </field>
+                <!--<div id="company" position="after">-->
+                <!--<div class="row mt16 o_settings_container" id="x_owner_id" groups="base.group_no_one">-->
+                <!--<div class="col-xs-12 col-md-6 o_setting_box">-->
+                <!--<div class="o_setting_right_pane">-->
+                <!--<label for="x_owner_id" class="col-md-3"/>-->
+                <!--&lt;!&ndash;<field name="x_owner_id" options="{'no_create':1, 'no_create_edit':1}"/>&ndash;&gt;-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </field>
+        </record>
+
+        <record id="res_users_form_view" model="ir.ui.view">
+            <field name="name">res.users.form.view</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <field name="pos_security_pin" position="after">
+                    <field name="x_pos_config_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                </field>
+            </field>
+        </record>
+
+
+        <!--<record id="pos_config_rule_portal" model="ir.rule">-->
+            <!--<field name="name">Portat Pos Config</field>-->
+            <!--<field name="model_id" ref="point_of_sale.model_pos_config"/>-->
+            <!--<field name="domain_force">[('x_users_ids','in',user.id)]-->
+            <!--</field>-->
+            <!--<field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="pos_session_rule_portal" model="ir.rule">-->
+            <!--<field name="name">Portat Pos Session user</field>-->
+            <!--<field name="model_id" ref="point_of_sale.model_pos_session"/>-->
+            <!--<field name="domain_force">[('config_id.x_users_ids','in',user.id)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="pos_session_manager_rule_portal" model="ir.rule">-->
+            <!--<field name="name">Portat Pos Session manager</field>-->
+            <!--<field name="model_id" ref="point_of_sale.model_pos_session"/>-->
+            <!--<field name="domain_force">[]-->
+            <!--</field>-->
+            <!--<field name="groups" eval="[(4, ref('point_of_sale.group_pos_manager'))]"/>-->
+        <!--</record>-->
+
+        <!--<record id="pos_order_rule_portal" model="ir.rule">-->
+        <!--<field name="name">Portat Pos Order</field>-->
+        <!--<field name="model_id" ref="point_of_sale.model_pos_order"/>-->
+        <!--<field name="domain_force">[('config_id.x_users_ids','in',user.id)]-->
+        <!--</field>-->
+        <!--<field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>-->
+        <!--</record>-->
+
+        <record id="pos_config_view_form_inherit_izi_vip" model="ir.ui.view">
+            <field name="name">pos.config.form.inherit.izi.vip</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <div id="title" position="after">
+                    <group>
+                        <group cols="4">
+                            <field name="x_location_code" required="1"/>
+                        </group>
+                    </group>
+                </div>
+                <div id="inventory_location" position="after">
+                    <h2>Pos Category</h2>
+                    <div class="row mt16 o_settings_container" id="pos_category">
+                        <div class="col-xs-12 col-md-6 o_setting_box"
+                             title="Pos Category.">
+                            <div class="o_setting_right_pane">
+                                <label for="x_category_ids" string="Pos Category"/>
+                                <div class="text-muted">
+                                    POS Category
+                                </div>
+                                <div class="content-group mt16">
+                                    <field name="x_category_ids" widget="many2many_checkboxes"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</odoo>

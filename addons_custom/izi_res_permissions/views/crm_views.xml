@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <!--CRM-->
+        <record model="ir.ui.menu" id="crm.crm_menu_root">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('sales_team.group_sale_salesman'), ref('sales_team.group_sale_manager'), ref('izi_res_permissions.group_receptionist'), ref('izi_res_permissions.group_consultant'), ref('izi_res_permissions.group_member_uid_telesales')])]"/>
+        </record>
+
+        <!--Đường dẫn pipeline/ Báo giá-->
+        <record model="ir.ui.menu" id="sale_crm.sale_order_menu_quotations_crm">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+
+        <!--Khách hàng-->
+        <record model="ir.ui.menu" id="crm.res_partner_menu_crm">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('base.group_system')])]"/>
+        </record>
+    </data>
+</odoo>

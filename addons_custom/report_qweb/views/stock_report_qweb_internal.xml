@@ -1,0 +1,208 @@
+<openerp>
+    <data>
+        <template id="izi_report_template_stock_picking_internal_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report_qweb.izi_internal_layout" t-lang="en_US">
+                        <div class="page">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                            </style>
+                            <div style="width: 100%; height: 70px;">
+                                <!--<div style="width: 30%; height: 70px;float: left;padding-right:20px;">-->
+                                    <!--<img src="/report_qweb/static/image/logo-purple.png"-->
+                                         <!--style="max-width:300px;max-height:300px;"/>-->
+                                <!--</div>-->
+                                <div style="width: 40%; height: 60px; margin-top: 100px; padding: 5px; float: left;">
+                                    <h3 style="margin-top: 0px;text-align: center; font-weight: 500; margin: 0px;">
+                                        PHIẾU XUẤT NHẬP KHO NỘI BỘ
+                                    </h3>
+                                    <div style="width: 100%; text-align: center; margin: 0px; padding: 0px;">
+                                        <h4 style="margin-top: 3px; margin-left: 0px; margin-right: 0px; margin-bottom: 0px;">
+                                            SỐ:
+                                            <span t-field="o.name"/>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div style="width: 30%; height: 70px;float: left;text-align: center;padding-left: 30px;margin-top:20px">
+                                    <p style="font-style:italic; font-size:15px; font-weight: bold; margin: 0px;">
+                                        Mẫu Số 02-VT
+                                    </p>
+                                    <p style="font-size:15px; margin: 0px;">
+                                        (Ban hành theo Thông tư số: 200/2014/TT-BTC
+                                    </p>
+                                    <p style="font-size:15px; margin: 0px;">
+                                        Ngày 22/12/2014 của BTC)
+                                    </p>
+                                </div>
+                                <br clear="both"/>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <div>
+                                <div style="width: 50%; float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    Xưởng/Kho xuất:
+                                    <span t-field="o.location_id"/>
+                                </div>
+                                <div style="width: 50%; float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    Xưởng/Kho nhập:
+                                    <span t-field="o.location_dest_id"/>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="width: 50%; float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    Diễn giải:
+                                    <span t-field="o.origin"/>
+                                </div>
+                                <div style="width: 50%;float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    Ngày tạo:
+                                    <sapn t-esc="datetime.datetime.strptime(o.scheduled_date, '%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y %H:%M:%S')"/>
+                                </div>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <div style="width: 100%;float: left; margin-top: 5px;">
+                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tr style="padding:1px; margin: 1px;">
+                                        <th class="text-center" width="5%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">STT</p>
+                                        </th>
+                                        <th class="text-center" width="15%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">Mã hàng</p>
+                                        </th>
+                                        <th class="text-center" width="30%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">Tên hàng</p>
+                                        </th>
+                                        <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">Đvt</p>
+                                        </th>
+                                        <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">Số lượng</p>
+                                        </th>
+                                        <th class="text-center" width="20%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">Lot/Serial Number</p>
+                                        </th>
+                                        <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                            <p style="padding:1px; margin: 1px;">Ghi chú</p>
+                                        </th>
+                                    </tr>
+                                    <tbody>
+                                        <t t-set="total" t-value="0"/>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr t-foreach="o.move_line_ids" t-as="l"
+                                            style="padding:1px; margin: 1px">
+
+                                            <t t-set="number" t-value="number+1"/>
+                                            <td id="td1" class="text-center" width="5%"
+                                                style="padding:1px; margin: 1px">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px; padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-field="l.product_id.default_code"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px; padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-field="l.product_id"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-field="l.product_uom_id"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-esc="l.qty_done"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span t-field="l.lot_id"/>
+                                                <t t-if="not l.lot_id">
+                                                    <span t-field="l.lot_name"/>
+                                                </t>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px; padding:1px; margin: 1px">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <div style="width: 100%; height: 30px; padding:0px; margin: 0px">
+                                <div style="height: 30px; float: right; font-size:15px; font-style:italic;  padding:0px; margin: 0px">
+                                    Ngày
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/>
+                                    tháng
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m')"/>
+                                    năm
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
+                                </div>
+                            </div>
+                            <br clear="both"/>
+                            <table style="width:100%;  padding:0px; margin: 0px">
+                                <tr width="100%" style="text-align: center">
+                                    <td>
+                                        <b>Người lập</b>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                        <t t-set="nt" t-value="o._name_qweb()"/>
+                                            <t t-esc="nt"/>
+                                    </td>
+                                    <td>
+                                        <b>Người xuất</b>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                    </td>
+                                    <td>
+                                        <b>Người nhập</b>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                    </td>
+                                    <td>
+                                        <b>Kế toán kho</b>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--<div style="width: 50%;float: left;padding:0px;margin-top:150px">-->
+                                <!--<div style="font-size:15px;font-style:italic">Đại chỉ: 19 Điện Biên Phủ, Ba-->
+                                    <!--Đình, Hà Nội-->
+                                <!--</div>-->
+                                <!--<div style="font-size:15px;font-style:italicx">SĐT: 024.22.199.199 /-->
+                                    <!--024.338.99999-->
+                                <!--</div>-->
+                                <!--<div style="font-size:15px;font-style:italic">Địa chỉ: 33-35 Bà Huyện Thanh-->
+                                    <!--Quan, P6, Q3, TP.HCM-->
+                                <!--</div>-->
+                                <!--<div style="font-size:15px;font-style:italic">SĐT: 028.39.333218 /-->
+                                    <!--028.39.333.219-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <report
+                id="qweb_izi_report_template_stock_picking_internal_view"
+                model="stock.picking"
+                string="Transfer internal"
+                report_type="qweb-pdf"
+                name="report_qweb.izi_report_template_stock_picking_internal_view"
+                file="report_qweb.izi_report_template_stock_picking_internal_view"
+                menu="False"
+        />
+
+        <record model="ir.ui.view" id="izi_stock_report_qweb_int_form">
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="izi_stock_picking.view_internal_picking_form"></field>
+            <field name="arch" type="xml">
+                <button name="do_print_picking" position="replace">
+                    <button name="action_print_picking" string="Print" groups="stock.group_stock_user" type="object"
+                            attrs="{'invisible': ['|', ('state', '!=', 'done'), ('is_locked', '=', False)]}"/>
+                </button>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Đổi dịch vụ-->
+        <record id="izi_pos_exchange_service_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">Exchange service view all group_member_uid_telesales</field>
+            <field name="model_id" ref="izi_pos_exchange_service.model_izi_pos_exchange_service"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('session_id.branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+
+        <!--Điểm bán hàng-->
+        <record id="pos_config_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">POS Config view all group_member_uid_telesales</field>
+            <field name="model_id" ref="point_of_sale.model_pos_config"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('pos_branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+
+        <!--Quản lý đặt cọc-->
+        <!--<record id="pos_customer_deposit_view_all_group_member_uid_telesales_rule" model="ir.rule">-->
+            <!--<field name="name">POS Customer deposit line view all group_member_uid_telesales</field>-->
+            <!--<field name="model_id" ref="pos_customer_deposit.model_pos_customer_deposit"/>-->
+            <!--<field name="global" eval="False"/>-->
+            <!--<field name="domain_force">[('partner_id.x_crm_team_id.x_branch_id', 'in', user.branch_ids.ids)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>-->
+        <!--</record>-->
+
+        <!--Đặt cọc & Hoàn tiền-->
+        <!--<record id="pos_customer_deposit_line_view_all_group_member_uid_telesales_rule" model="ir.rule">-->
+            <!--<field name="name">POS Customer deposit line view all group_member_uid_telesales</field>-->
+            <!--<field name="model_id" ref="pos_customer_deposit.model_pos_customer_deposit_line"/>-->
+            <!--<field name="global" eval="False"/>-->
+            <!--<field name="domain_force">[('session_id.branch_id', 'in', user.branch_ids.ids)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>-->
+        <!--</record>-->
+        <!--<record id="pos_customer_deposit_line_view_only_group_member_uid_telesales_rule" model="ir.rule">-->
+            <!--<field name="name">POS Customer deposit line view only group_member_uid_telesales</field>-->
+            <!--<field name="model_id" ref="pos_customer_deposit.model_pos_customer_deposit_line"/>-->
+            <!--<field name="global" eval="False"/>-->
+            <!--<field name="domain_force">[('user_id', '=', user.id)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>-->
+        <!--</record>-->
+
+        <!--Hủy dịch vụ-->
+        <record id="pos_destroy_service_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">Destroy service view all group_member_uid_telesales</field>
+            <field name="model_id" ref="pos_destroy_service.model_pos_destroy_service"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('session_id.branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+
+        <!--Đơn hàng, Thẻ tiền-->
+        <record id="pos_order_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">POS Order view all group_member_uid_telesales</field>
+            <field name="model_id" ref="point_of_sale.model_pos_order"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('session_id.branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+
+        <!--Phòng-->
+        <!--<record id="pos_service_room_view_all_group_member_uid_telesales_rule" model="ir.rule">-->
+            <!--<field name="name">Service room view all group_member_uid_telesales</field>-->
+            <!--<field name="model_id" ref="izi_manage_room.model_pos_service_room"/>-->
+            <!--<field name="global" eval="False"/>-->
+            <!--<field name="domain_force">[('branch_id', 'in', user.branch_ids.ids)]</field>-->
+            <!--<field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>-->
+        <!--</record>-->
+
+        <!--Phiên-->
+        <record id="pos_session_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">POS Session view all group_member_uid_telesales</field>
+            <field name="model_id" ref="point_of_sale.model_pos_session"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+
+        <!--Sử dụng dịch vụ-->
+        <record id="service_card_using_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">Service card using view all group_member_uid_telesales</field>
+            <field name="model_id" ref="izi_use_service_card.model_izi_service_card_using"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('pos_session_id.branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+
+        <!--Hủy thanh toán công nợ-->
+        <record id="refund_invoice_make_payment_view_all_group_member_uid_telesales_rule" model="ir.rule">
+            <field name="name">Refund invoice make payment view all group_member_uid_telesales</field>
+            <field name="model_id" ref="izi_pos_refund_invoice_make_paymnet.model_refund_invoice_make_payment"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('order_id.session_id.branch_id', 'in', user.branch_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_member_uid_telesales'))]"/>
+        </record>
+    </data>
+</odoo>

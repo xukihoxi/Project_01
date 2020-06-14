@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_guarantee_service_form" model="ir.ui.view">
+            <field name="name">view_guarantee_service_form</field>
+            <field name="model">guarantee.line</field>
+            <field name="arch" type="xml">
+                <form string="Card guarantee">
+                    <header>
+                        <button name="action_send" type="object" class="oe_highlight" string="Send"
+                                states="draft"/>
+                        <button name="action_confirm" type="object" class="oe_highlight" string="Confirm"
+                                states="wait_confirm" groups="pos_security.group_pos_supervisor_user"/>
+                        <button name="action_cancel" type="object" string="Cancel"
+                                states="wait_confirm"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,wait_confirm,done"
+                               readonly="1" force_save="1"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">BẢO HÀNH DỊCH VỤ</h3>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('name', '=', 'New')]}" readonly="1"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Name"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="service_id" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       domain="[('x_guarantee', '=', True)]"/>
+                                <field name="lot_id" attrs="{'invisible': [('lot_id', '=', False)]}" readonly="1"
+                                       force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1" force_save="1"/>
+                                <field name="life_date" attrs="{'readonly': [('state', '=', 'done')]}" force_save="1"
+                                       required="1"/>
+                                <field name="qty" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1"
+                                       required="1"/>
+                            </group>
+                        </group>
+                        <group attrs="{'invisible': [('state', '!=', 'draft')]}">
+                            <group>
+                                <field name="number"/>
+                            </group>
+                            <group>
+                                <button name="action_search_lot_number" type="object" string="Search"
+                                        class="oe_highlight"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_guarantee_service_tree" model="ir.ui.view">
+            <field name="name">view_guarantee_service_tree</field>
+            <field name="model">guarantee.line</field>
+            <field name="arch" type="xml">
+                <tree default_order='date desc' decoration-info="state == 'draft'"
+                      decoration-muted="state in ('cancel')"
+                      decoration-danger="state not in ('cancel', 'done','draft')">
+                    <field name="partner_id"/>
+                    <field name="service_id"/>
+                    <field name="date"/>
+                    <field name="life_date"/>
+                    <field name="lot_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_guarantee_service_action" model="ir.actions.act_window">
+            <field name="name">Guarantee</field>
+            <field name="res_model">guarantee.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="view_guarantee_service_tree_action" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_guarantee_service_tree"/>
+            <field name="act_window_id" ref="view_guarantee_service_action"/>
+        </record>
+
+        <record id="view_guarantee_service_form_action" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_guarantee_service_form"/>
+            <field name="act_window_id" ref="view_guarantee_service_action"/>
+        </record>
+
+        <!--<menuitem id="menu_view_guarantee_service_action"-->
+                  <!--name="Guarantee"-->
+                  <!--parent="izi_pos_custom_backend.menu_point_of_sale_service"-->
+                  <!--action="view_guarantee_service_action" sequence="20"/>-->
+    </data>
+</odoo>

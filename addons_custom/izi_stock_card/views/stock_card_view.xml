@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+        <record id="sc_stock_card_form_view" model="ir.ui.view">
+            <field name="name">SC Stock card form view</field>
+            <field name="model">scstock.card</field>
+            <field name="arch" type="xml">
+                <form string="Stock card">
+                    <header>
+                        <button class="oe_highlight" name="action_print" type="object" string="In Excel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <div>
+                                <h1 style="text-align: center;"><b>Stock card</b></h1>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="state" invisible="1"/>
+                                <field name="location_id" attrs="{'readonly':[('state', '=', 'generated')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="product_id" attrs="{'readonly':[('state', '=', 'generated')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="product_uom" readonly="1" attrs="{'readonly':[('state', '=', 'generated')]}"/>
+                            </group>
+                            <group>
+                                <field name="from_date" attrs="{'readonly':[('state', '=', 'generated')]}"/>
+                                <field name="to_date" attrs="{'readonly':[('state', '=', 'generated')]}"/>
+                                <field name="opening_stock"
+                                       attrs="{'invisible':[('state', '!=', 'generated')], 'readonly':1}"/>
+                                <field name="closing_stock"
+                                       attrs="{'invisible':[('state', '!=', 'generated')], 'readonly':1}"/>
+                            </group>
+                        </group>
+                        <group string="Moves" attrs="{'invisible':[('state', '!=', 'generated')]}">
+                            <field name="move_lines" colspan="2" nolabel="1" readonly="1">
+                                <tree>
+                                    <field name="date" invisible="1"/>
+                                    <field name="date_time"/>
+                                    <field name="reference"/>
+                                    <field name="quant_in"/>
+                                    <field name="quant_out"/>
+                                    <field name="inventory"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <footer>
+                            <button class="oe_highlight" name="generate_card" type="object" string="Generate stock card"
+                                    attrs="{'invisible':[('state', '=', 'generated')]}"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_sc_stock_card" model="ir.actions.act_window">
+            <field name="name">SC Stock card</field>
+            <field name="res_model">scstock.card</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+        </record>
+        <menuitem id="menu_sc_stock_card" groups="stock.group_stock_user"
+                  parent="stock.menu_stock_inventory_control"
+                  action="action_sc_stock_card"/>
+    </data>
+</odoo>

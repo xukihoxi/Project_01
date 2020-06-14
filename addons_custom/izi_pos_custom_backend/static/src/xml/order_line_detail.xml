@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <t t-name="izi_pos_custom_backend.OrderLineDetail">
+        <div class="table-responsive">
+            <table class="o_list_view table table-condensed table-striped o_list_view_ungrouped">
+            <thead>
+                <tr class="oe_list_header_columns">
+<!--                    <th class="oe_list_header_many2one oe_sortable">STT</th>-->
+                    <th class="oe_list_header_many2one oe_sortable">Đơn hàng</th>
+                    <th class="oe_list_header_many2one oe_sortable">Ngày tháng</th>
+                    <th class="oe_list_header_many2one oe_sortable">Người dùng</th>
+                    <th class="oe_list_header_many2one oe_sortable">Sản phẩm</th>
+                    <th class="oe_list_header_many2one oe_sortable">Số lượng</th>
+                    <th class="oe_list_header_many2one oe_sortable">Đơn giá</th>
+                    <th class="oe_list_header_many2one oe_sortable">Giảm giá(%)</th>
+                    <th class="oe_list_header_many2one oe_sortable">Giảm giá</th>
+                    <th class="oe_list_header_many2one oe_sortable">Tổng</th>
+                    <th class="oe_list_header_many2one oe_sortable">Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-set="number" t-value="0"/>
+                <t t-foreach="items" t-as="detail">
+<!--                    <t t-set="number" t-value="number+1"/>-->
+                    <tr>
+<!--                        <td>-->
+<!--                            <t t-esc="number"/>-->
+<!--                        </td>-->
+                        <td>
+                            <t t-esc="order_name"/>
+                        </td>
+                        <td>
+                            <t t-esc="date_order"/>
+                        </td>
+                        <td>
+                            <t t-esc="user_name"/>
+                        </td>
+                        <td>
+                            <t t-esc="product_name"/>
+                        </td>
+                        <td>
+                            <t t-esc="qty"/>
+                        </td>
+                        <td>
+                            <t t-esc="price_unit"/>
+                        </td>
+                        <td>
+                            <t t-esc="discount"/>
+                        </td>
+                        <td>
+                            <t t-esc="x_discount"/>
+                        </td>
+                        <td>
+                            <t t-esc="price_subtotal_incl"/>
+                        </td>
+                        <td>
+                            <t t-if="state == 'cancel'">
+                                Đã hủy
+                            </t>
+                            <t t-if="state == 'paid'">
+                                Đã thanh toán
+                            </t>
+                            <t t-if="state == 'done'">
+                                Đã vào sổ
+                            </t>
+                            <t t-if="state == 'invoiced'">
+                                Đã xuất hóa đơn
+                            </t>
+                        </td>
+                    </tr>
+                </t>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="oe_list_footer oe_number">
+                    </td>
+                    <td class="oe_list_footer oe_number">
+                    </td>
+                    <td class="oe_list_footer oe_number">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+
+    </t>
+</templates>

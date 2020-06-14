@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_move_inherit_view_inht">
+            <field name="name">stock.move.inherit</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.stock_move_tree"/>
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+                    <field name="account_id" invisible="1"/>
+                    <field name="promotion_id" invisible="1"/>
+                    <field name="debit_owner_id" invisible="1"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_stock_picking_inherit_in_out" model="ir.ui.view">
+			<field name="name">stock_picking_file.view_stock_picking_form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='backorder_id']" position="after">
+					 <field name="x_reason"/>
+				</xpath>
+			</field>
+		</record>
+    </data>
+</odoo>

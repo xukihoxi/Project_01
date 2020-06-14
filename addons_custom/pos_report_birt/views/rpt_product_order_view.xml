@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_product_order_form" model="ir.ui.view">
+            <field name="name">Rpt Product Order </field>
+            <field name="model">rpt.product.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="config_id" option="{'no_create':1, 'no_create_edit':1}" required="1"/>
+                        </group>
+                        <group>
+                            <field name="session_id" option="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_product_order_action" model="ir.actions.act_window">
+            <field name="name">Rpt Product Order </field>
+            <field name="res_model">rpt.product.order</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="rpt_product_order" action="rpt_product_order_action" name="Rpt Product Order" parent="point_of_sale.menu_point_rep"/>
+    </data>
+</odoo>

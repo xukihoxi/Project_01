@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_crm_booking_sale,access_crm_booking,model_service_booking,,1,1,1,1
+access_crm_booking_product_sale,access_crm_booking_product_sale,model_service_booking_product,,1,1,1,1

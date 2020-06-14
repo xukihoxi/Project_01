@@ -1,0 +1,399 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* adjust_inventory_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 08:16+0000\n"
+"PO-Revision-Date: 2019-05-06 15:21+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Adjust inventory"
+msgstr "Điều chỉnh tồn khách hàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.actions.act_window,name:adjust_inventory_customer.action_adjust_inventory_customer
+#: model:ir.ui.menu,name:adjust_inventory_customer.menu_action_adjust_inventory_customer
+msgid "Adjust inventory customer"
+msgstr "Điều chỉnh tồn khách hàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_money
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_amount_payment
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_x_amount
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: adjust_inventory_customer
+#: selection:adjust.inventory.customer.coin,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_card_detail_ids
+msgid "Card Detail"
+msgstr "Chi tiết thẻ"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_serial
+msgid "Code"
+msgstr "Mã"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_ids
+msgid "Coin"
+msgstr "Thẻ tiền"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_create_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_create_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_create_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_create_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_create_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_create_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_create_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_create_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_x_debit_money
+msgid "Công nợ"
+msgstr "Công nợ"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_debit_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_ids
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Debit goods"
+msgstr "Quản lý nợ hàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_debt_amount
+msgid "Debt amount"
+msgstr "Số tiền ghi nợ"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_ids
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Deposit"
+msgstr "Đặt cọc"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_deposit_line
+msgid "Deposit Line"
+msgstr "Đặt cọc"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_display_name
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_display_name
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_display_name
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_display_name
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_x_loyal_total
+msgid "Doanh thu tích lũy"
+msgstr "Doanh thu tích lũy"
+
+#. module: adjust_inventory_customer
+#: selection:adjust.inventory.customer,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: adjust_inventory_customer
+#: selection:adjust.inventory.customer,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_expired
+msgid "Expired"
+msgstr "Ngày hết hạn"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_qty_hand
+msgid "Hand"
+msgstr "SL tồn"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_x_rank
+msgid "Hạng VIP"
+msgstr "Hạng VIP"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_id
+msgid "ID"
+msgstr "ID"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_partner_id
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer___last_update
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin___last_update
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit___last_update
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit___last_update
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_write_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_write_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_write_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_write_uid
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_write_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_write_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_write_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_write_date
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Lines"
+msgstr "Chi tiết"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_lot_id
+msgid "Lot/Serial"
+msgstr "Lô/Số sê-ri"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_typex
+msgid "Loại tài khoản"
+msgstr "Loại tài khoản"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_order_id
+msgid "Order ref"
+msgstr "Đơn hàng mua"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_debit_form_view
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Qty"
+msgstr "SL mua"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_debit_form_view
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Qty debit"
+msgstr "SL nợ"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_debit_form_view
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Qty depot"
+msgstr "SL đã trả"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_qty_use
+msgid "Qty used"
+msgstr "Số lượng đã sử dụng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_qty_debit
+msgid "Quantity debit"
+msgstr "SL nợ"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_qty_depot
+msgid "Quantity depot"
+msgstr "SL đã trả"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_qty_transfer
+msgid "Quantity transfer"
+msgstr "SL yêu cầu"
+
+#. module: adjust_inventory_customer
+#: selection:adjust.inventory.customer.coin,state:0
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_remain_amount
+msgid "Remain amount"
+msgstr "Số tiền còn lại"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Sau khi cập nhật, dữ liệu sẽ không thể hoàn tác. Bạn có chắc chắn cập nhật không?"
+msgstr "Sau khi cập nhật, dữ liệu sẽ không thể hoàn tác. Bạn có chắc chắn cập nhật không?"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Search infomation (Customer code or phone)"
+msgstr "Tìm kiếm thông tin (Mã KH hoặc SĐT)"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_product_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Services"
+msgstr "Các dịch vụ"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_state
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_total_qty
+msgid "Total"
+msgstr "Tổng"
+
+#. module: adjust_inventory_customer
+#: selection:adjust.inventory.customer.coin,typex:0
+msgid "Tài khoản chính"
+msgstr "Tài khoản chính"
+
+#. module: adjust_inventory_customer
+#: selection:adjust.inventory.customer.coin,typex:0
+msgid "Tài khoản khuyến mại"
+msgstr "Tài khoản khuyến mại"
+
+#. module: adjust_inventory_customer
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_money_used
+msgid "Used amount"
+msgstr "Số tiền sử dụng"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_virtual_money_id
+#: model:ir.ui.view,arch_db:adjust_inventory_customer.adjust_inventory_customer_form_view
+msgid "Virtual Money"
+msgstr "Thẻ tiền"
+
+#. module: adjust_inventory_customer
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_coin_x_search_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_debit_x_search_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_deposit_x_search_id
+#: model:ir.model.fields,field_description:adjust_inventory_customer.field_adjust_inventory_customer_service_x_search_id
+msgid "X Search"
+msgstr "Tìm kiếm"
+
+#. module: adjust_inventory_customer
+#: model:ir.model,name:adjust_inventory_customer.model_adjust_inventory_customer
+msgid "adjust.inventory.customer"
+msgstr "adjust.inventory.customer"
+
+#. module: adjust_inventory_customer
+#: model:ir.model,name:adjust_inventory_customer.model_adjust_inventory_customer_coin
+msgid "adjust.inventory.customer.coin"
+msgstr "adjust.inventory.customer.coin"
+
+#. module: adjust_inventory_customer
+#: model:ir.model,name:adjust_inventory_customer.model_adjust_inventory_customer_debit
+msgid "adjust.inventory.customer.debit"
+msgstr "adjust.inventory.customer.debit"
+
+#. module: adjust_inventory_customer
+#: model:ir.model,name:adjust_inventory_customer.model_adjust_inventory_customer_deposit
+msgid "adjust.inventory.customer.deposit"
+msgstr "adjust.inventory.customer.deposit"
+
+#. module: adjust_inventory_customer
+#: model:ir.model,name:adjust_inventory_customer.model_adjust_inventory_customer_service
+msgid "adjust.inventory.customer.service"
+msgstr "adjust.inventory.customer.service"

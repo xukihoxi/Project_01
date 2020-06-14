@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Bill of Materials -->
+        <record id="tmp_pos_use_material_view" model="ir.ui.view">
+            <field name="name">tmp.service.card.using.form</field>
+            <field name="model">tmp.service.card.using</field>
+            <field name="arch" type="xml">
+                <form string="Service Card Using">
+                    <sheet>
+                    <group>
+                        <fileld name="user_service_card" invisible ="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Components">
+                            <field name="lines" widget="one2many_list">
+                                <tree string="Bom Material" editable="bottom" create="false" delete="false">
+                                    <field name="product_id" domain="[('product_tmpl_id.type', '=', 'service')]" options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>
+                                    <field name="bom_id" domain="['|',
+                                            ('product_id','=',product_id)
+                                            ,'&amp;',
+                                                ('product_tmpl_id.product_variant_ids','=',product_id),
+                                                ('product_id','=',False)]" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                    <field name="qty_using" readonly="1" force_save="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                        <footer>
+                        <button name="comfirm" string="Comfirm" type="object" class="btn-primary"/>
+                        <button special="cancel" string="Cancel" class="btn-default"/>
+                    </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

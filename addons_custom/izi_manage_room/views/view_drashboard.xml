@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_service_room_kanban" model="ir.ui.view">
+            <field name="name">pos.service.room.kanban</field>
+            <field name="model">pos.service.room</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors o_stock_kanban" create="0">
+                    <field name="color"/>
+                    <field name="code"/>
+                    <field name="count_bed"/>
+                    <field name="bed_ids"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div style="display:block">
+                                <div t-attf-class="o_kanban_card_header">
+                                    <div class="o_kanban_card_header_title">
+                                        <div class="o_primary">
+                                            <b>
+                                                <field name="name"/>
+                                            </b>
+                                        </div>
+                                        <div class="o_secondary">
+                                            <b>
+                                                <field class="o_secondary" name="branch_id"/>
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_manage_button_section">
+                                        <a class="o_kanban_manage_toggle_button" href="#">
+                                            <i class="fa fa-ellipsis-v"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="o_table" style="margin-top:15px;">
+                                <t t-foreach="record.bed_ids.raw_value" t-as="o">
+                                        <t t-if="o.state == 'ready'">
+                                            <div class="o_col" style="color:blue;     padding: 6px 0px;   margin-right: 5px;width: 30%;float: left;border: 1px solid;text-align: center; margin-top: 6px;height: 120px;">
+                                                <img src="/izi_manage_room/static/img/blue.png" class="center"  style="color:blue;width: 60%;"/>
+                                                <div>
+                                                    <b><t t-esc="o.name"/></b>
+                                                </div>
+                                                <!--<div>-->
+                                                    <!--Thời gian làm:-->
+                                                    <!--<t t-esc="o.date_start" class="oe_inline"/>-->
+                                                <!--</div>-->
+                                                <!--<div>-->
+                                                    <!--Thời gian làm:-->
+                                                    <!--<span><t t-esc="o.hour"/>:<t t-esc="o.minutes"/>:<t t-esc="o.seconds"/>-->
+                                                    <!--</span>-->
+                                                <!--</div>-->
+                                            </div>
+
+                                        </t>
+                                        <t t-if="o.state == 'busy'">
+                                            <div class="o_col" style="color:red;     padding: 6px 0px;   margin-right: 5px;width: 30%;float: left;border: 1px solid;text-align: center; margin-top: 6px;height: 120px;">
+                                                <img src="/izi_manage_room/static/img/red.png" class="center"  style="color:blue;width: 60%;"/>
+                                                <div>
+                                                     <b><t t-esc="o.name"/></b>
+                                                </div>
+                                                <!--<div>-->
+                                                    <!--Thời gian làm:-->
+                                                    <!--<t t-esc="o.date_start" class="oe_inline"/>-->
+                                                <!--</div>-->
+                                                <div>
+                                                    Thời gian làm:
+                                                    <b><span><t t-esc="o.hour"/>:<t t-esc="o.minutes"/>:<t t-esc="o.seconds"/>
+                                                    </span></b>
+                                                </div>
+                                            </div>
+
+                                        </t>
+                                        <t t-if="o.state == 'maintenance'">
+                                            <div class="o_col" style="color:gray;     padding: 6px 0px;   margin-right: 5px;width: 30%;float: left;border: 1px solid;text-align: center; margin-top: 6px;height: 120px;">
+                                                <img src="/izi_manage_room/static/img/gray.png" class="center"  style="color:blue;width: 60%;"/>
+                                                <div>
+                                                     <b><t t-esc="o.name"/></b>
+                                                </div>
+                                                <!--<div>-->
+                                                    <!--Thời gian làm:-->
+                                                    <!--<t t-esc="o.date_start" class="oe_inline"/>-->
+                                                <!--</div>-->
+                                                <!--<div>-->
+                                                    <!--Thời gian làm:-->
+                                                    <!--<span><t t-esc="o.hour"/>:<t t-esc="o.minutes"/>:<t t-esc="o.seconds"/>-->
+                                                    <!--</span>-->
+                                                <!--</div>-->
+                                            </div>
+
+                                        </t>
+
+                                </t>
+                                    <div style="clear:both"></div>
+                                </div>
+
+                                <!--<div class="container o_kanban_card_content">-->
+                                <!--<t t-foreach="record.bed_ids" t-as="l">-->
+                                <!--<t t-esc="o.name"/>-->
+                                <!--<t t-esc="o.bed_ids[1]"/>-->
+                                <!--&lt;!&ndash;<div class="o_kanban_card_header_title">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="o_primary">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span style="padding:1px; margin-left: 10px;"&ndash;&gt;-->
+                                <!--&lt;!&ndash;t-field="l.name"/>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="o_secondary">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span style="padding:1px; margin-left: 10px;"&ndash;&gt;-->
+                                <!--&lt;!&ndash;t-field="l.state"/>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--</t>-->
+
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--</div>-->
+                            </div>
+                        </t>
+
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="dashboard_room_action" model="ir.actions.act_window">
+            <field name="name">Trạng thái giường</field>
+            <field name="res_model">pos.service.room</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="usage">menu</field>
+            <field name="domain">[]</field>
+        </record>
+        <record model="ir.actions.act_window.view" id="action_dashbroad_room_kanban_view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="pos_service_room_kanban"/>
+            <field name="act_window_id" ref="dashboard_room_action"/>
+        </record>
+
+        <menuitem id="menu_dashboard_room" name="Trạng thái giường"
+                  action="dashboard_room_action"
+                  parent="izi_pos_custom_backend.menu_point_of_sale_service"
+                  sequence="0"/>
+    </data>
+</odoo>

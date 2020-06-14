@@ -1,0 +1,561 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_therapy_record
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-11 03:45+0000\n"
+"PO-Revision-Date: 2020-06-11 03:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_abdomen
+msgid "Abdomen"
+msgstr "Bụng dưới"
+
+#. module: izi_therapy_record
+#: selection:prescription.task.line,type:0
+msgid "Add"
+msgstr "Sản phẩm/ Dịch vụ mua thêm"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_arm
+msgid "Arm"
+msgstr "Bắp tay"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_armpit
+msgid "Armpit"
+msgstr "Nách"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_back
+msgid "Back"
+msgstr "Lưng"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_body_index_ids
+msgid "Body Index"
+msgstr "Chỉ số cơ thể"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Body Indexs"
+msgstr "Chỉ số cơ thể"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_bundle_therapy_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_bundle_therapy_ids
+msgid "Bundle Therapy"
+msgstr "Gói liệu trình"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_bundle_therapy_line_ids
+msgid "Bundle Therapy Line"
+msgstr "Gói liệu trình chi tiết"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_categ_id
+msgid "Category"
+msgstr "Chuyên mục"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_therapy_record
+#: selection:bundle.therapy,state:0
+msgid "Committed"
+msgstr "Đã ký cam kết"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+msgid "Compute product remain"
+msgstr "Tính toàn sản phẩm/ dịch vụ tồn"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+#: selection:prescription.task,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_country_id
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_create_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_create_date
+msgid "Create Date"
+msgstr "Ngày tạo"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_create_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_create_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_create_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_create_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_create_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_create_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_create_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_create_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_create_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_create_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+msgid "Danh mục thuốc"
+msgstr "Danh mục thuốc"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_display_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_display_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_display_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_display_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_display_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_display_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_therapy_record
+#: selection:prescription.task,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_file_attach
+msgid "File Attach"
+msgstr "Hồ sơ lưu trữ"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_flank
+msgid "Flank"
+msgstr "Hông"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_high
+msgid "High"
+msgstr "Chiều cao"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_therapy_record
+#: selection:bundle.therapy,state:0
+msgid "In Therapy"
+msgstr "Trong liệu trình"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index___last_update
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy___last_update
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line___last_update
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task___last_update
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line___last_update
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy___last_update
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_write_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_write_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_write_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_write_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_write_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_write_uid
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_write_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_write_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_write_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_write_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_write_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_write_date
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_lats
+msgid "Lats"
+msgstr "Xoài"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_left_lower_calf
+msgid "Left Lower Calf"
+msgstr "Bắp chân trái dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_left_upper_calf
+msgid "Left Upper Calf"
+msgstr "Bắp chân trái trên"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_left_upper_thighs
+msgid "Left Upper Thigh"
+msgstr "Bắp đùi trái trên"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_left_lower_thighs
+msgid "Left lower Thigh"
+msgstr "Bắp đùi trái dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_level_age_id
+msgid "Level Age"
+msgstr "Khung độ tuổi"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_lower_waist
+msgid "Lower of Waist"
+msgstr "Eo dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_measurement_time
+msgid "Measurement  time"
+msgstr "Thời gian đo"
+
+#. module: izi_therapy_record
+#: selection:prescription.task.line,type:0
+msgid "Medicine"
+msgstr "Danh mục thuốc"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_middle_abdomen
+msgid "Middle Abdomen"
+msgstr "Bụng giữa"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_middle_waist
+msgid "Middle Waist"
+msgstr "Eo giữa"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_therapy_record
+#: code:addons/izi_therapy_record/models/therapy_record.py:87
+#: code:addons/izi_therapy_record/models/therapy_record.py:161
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_note
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_note
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_partner_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Precription Tasks"
+msgstr "Phiếu chỉ định"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_employee_id
+msgid "Prescripter"
+msgstr "Người chỉ định"
+
+#. module: izi_therapy_record
+#: model:ir.actions.act_window,name:izi_therapy_record.action_izi_prescription_task
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_prescription_task_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_prescription_task_ids
+#: model:ir.ui.menu,name:izi_therapy_record.izi_prescription_task
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_tree
+msgid "Prescription Task"
+msgstr "Phiếu chỉ định"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_prescription_task_line_add_ids
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_prescription_task_line_medicine_ids
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_prescription_task_line_remain_ids
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_prescription_task_line_warranty_ids
+msgid "Prescription Task Line"
+msgstr "Chi tiết phiếu chỉ định"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_time_prescription
+msgid "Prescription Time"
+msgstr "Thời gian chỉ định"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_product_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_product_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_name
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_product_therapy_ids
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Product Therapy"
+msgstr "Sản phẩm trị liệu tồn"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_qty
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_qty_actual
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_qty_actual
+msgid "Qty Actual"
+msgstr "Số lượng khả dụng"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_qty_max
+msgid "Qty Max"
+msgstr "Số lượng tối đa"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_qty_used
+msgid "Qty Used"
+msgstr "Số lượng đã sử dụng"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Quốc gia..."
+msgstr "Quốc gia..."
+
+#. module: izi_therapy_record
+#: selection:prescription.task.line,type:0
+msgid "Remain"
+msgstr "Remain"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_right_lower_calf
+msgid "Right Lower Calf"
+msgstr "Bắp chân phải dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_right_upper_calf
+msgid "Right Upper Calf"
+msgstr "Bắp chân phải trên"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_right_upper_thighs
+msgid "Right Upper Thigh"
+msgstr "Bắp chân trái dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_right_lower_thighs
+msgid "Right lower Thigh"
+msgstr "Bắp đùi phải dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_employee_id
+msgid "Staff create"
+msgstr "Người khởi tạo"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_state
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_state
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_state_id
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_street
+msgid "Street"
+msgstr "Địa chỉ"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+msgid "Sản phẩm/ Dịch vụ bảo hành"
+msgstr "Sản phẩm/ Dịch vụ bảo hành"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+msgid "Sản phẩm/ Dịch vụ mua thêm"
+msgstr "Sản phẩm/ Dịch vụ mua thêm"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_prescription_task_form
+msgid "Sản phẩm/ Dịch vụ tồn"
+msgstr "Sản phẩm/ Dịch vụ tồn"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_crm_lead_tag_ids
+msgid "Tag"
+msgstr "Đối tượng khách hàng"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_technician
+msgid "Technicain"
+msgstr "Kỹ thuật viên"
+
+#. module: izi_therapy_record
+#: model:ir.actions.act_window,name:izi_therapy_record.action_izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_therapy_record_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_therapy_record_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_therapy_record_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_therapy_record_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_name
+#: model:ir.ui.menu,name:izi_therapy_record.izi_therapy_record
+#: model:ir.ui.menu,name:izi_therapy_record.izi_therapy_record_menu
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_tree
+msgid "Therapy Record"
+msgstr "Hồ sơ trị liệu"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Tên hồ sơ trị liệu..."
+msgstr "Tên hồ sơ trị liệu..."
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Tỉnh/Tp..."
+msgstr "Tỉnh/Tp..."
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_bundle_therapy_line_uom_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_prescription_task_line_uom_id
+#: model:ir.model.fields,field_description:izi_therapy_record.field_product_therapy_uom_id
+msgid "Unit of  Measure"
+msgstr "Đơn vị"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_upper_abdomen
+msgid "Upper Abdomen"
+msgstr "Bụng dưới"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_upper_waist
+msgid "Upper of Waist"
+msgstr "Eo trên"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_note
+msgid "Warning Information"
+msgstr "Thông tin lưu ý"
+
+#. module: izi_therapy_record
+#: selection:prescription.task.line,type:0
+msgid "Warranty"
+msgstr "Sản phẩm/Dịch vụ Bảo hành"
+
+#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_body_index_weight
+msgid "Weight"
+msgstr "Trọng lượng"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_body_index
+msgid "body.index"
+msgstr "body.index"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_bundle_therapy
+msgid "bundle.therapy"
+msgstr "bundle.therapy"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_bundle_therapy_line
+msgid "bundle.therapy.line"
+msgstr "bundle.therapy.line"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_prescription_task
+msgid "prescription.task"
+msgstr "prescription.task"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_prescription_task_line
+msgid "prescription.task.line"
+msgstr "prescription.task.line"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_product_therapy
+msgid "product.therapy"
+msgstr "product.therapy"
+
+#. module: izi_therapy_record
+#: model:ir.model,name:izi_therapy_record.model_therapy_record
+msgid "therapy.record"
+msgstr "therapy.record"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Địa chỉ"
+msgstr "Địa chỉ"
+
+#. module: izi_therapy_record
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
+msgid "Địa chỉ..."
+msgstr "Địa chỉ..."
+

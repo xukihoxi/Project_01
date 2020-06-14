@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-27 08:44+0000\n"
+"PO-Revision-Date: 2019-05-27 15:45+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_brand
+#: model:ir.actions.act_window,name:izi_brand.izi_brand_action_window
+#: model:ir.model.fields,field_description:izi_brand.field_res_partner_x_brand_id
+#: model:ir.model.fields,field_description:izi_brand.field_res_users_x_brand_id
+#: model:ir.ui.menu,name:izi_brand.izi_brand_menu
+#: model:ir.ui.view,arch_db:izi_brand.izi_brand_view_partner_form
+msgid "Brand"
+msgstr "Thương hiệu"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: izi_brand
+#: model:ir.model,name:izi_brand.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_description
+#: model:ir.ui.view,arch_db:izi_brand.izi_brand_form
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_brand
+#: model:ir.model.fields,field_description:izi_brand.field_res_brand_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_brand
+#: code:addons/izi_brand/models/res_partner.py:17
+#: code:addons/izi_brand/models/res_partner.py:22
+#: code:addons/izi_brand/models/res_partner.py:32
+#: code:addons/izi_brand/models/res_partner.py:38
+#, python-format
+msgid "Tồn tại khách hàng có số điện thoại này"
+msgstr "Tồn tại khách hàng có số điện thoại này"
+
+#. module: izi_brand
+#: model:ir.model,name:izi_brand.model_res_brand
+msgid "res.brand"
+msgstr "res.brand"

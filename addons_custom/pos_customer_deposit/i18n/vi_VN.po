@@ -1,0 +1,463 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_customer_deposit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-16 03:45+0000\n"
+"PO-Revision-Date: 2019-10-16 03:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "+ Không hoàn lại tiền đặt\n"
+"                                                    cọc trong bất kỳ trường hợp nào"
+msgstr "+ Không hoàn lại tiền đặt\n"
+"                                                    cọc trong bất kỳ trường hợp nào"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "+ Số tiền quy đổi:"
+msgstr "+ Số tiền quy đổi:"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "+ Tỉ giá ngoại tệ:"
+msgstr "+ Tỉ giá ngoại tệ:"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<b>Liên số:1</b>"
+msgstr "<b>Liên số:1</b>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<b>Liên số:2</b>"
+msgstr "<b>Liên số:2</b>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<b>PHIẾU HOÀN TIỀN</b>"
+msgstr "<b>PHIẾU HOÀN TIỀN</b>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<b>PHIẾU ĐẶT CỌC</b>"
+msgstr "<b>PHIẾU ĐẶT CỌC</b>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<b>Số:</b>"
+msgstr "<b>Số:</b>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<strong>Chuyên viên tư vấn</strong>"
+msgstr "<strong>Chuyên viên tư vấn</strong>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<strong>Khách hàng</strong>"
+msgstr "<strong>Khách hàng</strong>"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "<strong>Thu ngân</strong>"
+msgstr "<strong>Thu ngân</strong>"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_account_move_ids
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_form_view
+msgid "Account Move"
+msgstr "Chi tiết các bút toán"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_revenue_id
+msgid "Allocation revenue"
+msgstr "Phân bổ doanh thu"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_amount_total
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view_deposit
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+msgid "Approval"
+msgstr "Chấp thuận"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_user_id
+msgid "Beneficiary"
+msgstr "Nhân viên hưởng doanh thu"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view_deposit
+#: selection:pos.customer.deposit.line,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_cash_lines
+#: selection:pos.customer.deposit.line,type:0
+#: selection:pos.customer.deposit.line,x_type:0
+msgid "Cash"
+msgstr "Hoàn tiền"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_charge_refund
+msgid "Charge refund"
+msgstr "Phí hoàn tiền"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+#: selection:pos.customer.deposit.line,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_create_uid
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_create_date
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_currency_rate_id
+msgid "Currency Rate"
+msgstr "Tỷ giá"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_partner_id
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: pos_customer_deposit
+#: code:addons/pos_customer_deposit/models/pos_customer_deposit_line.py:196
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view_deposit
+#, python-format
+msgid "Customer Signature"
+msgstr "Khách hàng xác nhận"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_form_view
+msgid "Cấn trừ đặt cọc"
+msgstr "Cấn trừ đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_deposit_lines
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_deposit_id
+#: selection:pos.customer.deposit.line,type:0
+#: selection:pos.customer.deposit.line,x_type:0
+msgid "Deposit"
+msgstr "Đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.actions.act_window,name:pos_customer_deposit.action_pos_customer_deposit
+#: model:ir.ui.menu,name:pos_customer_deposit.pos_customer_deposit_menu
+msgid "Deposit manager"
+msgstr "Quản lý tiền đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.actions.act_window,name:pos_customer_deposit.action_pos_customer_deposit_line
+#: model:ir.ui.menu,name:pos_customer_deposit.pos_customer_deposit_line_menu
+msgid "Deposit/Withdrawal"
+msgstr "Đặt cọc & Hoàn tiền"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_display_name
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Diễn giải:"
+msgstr "Diễn giải:"
+
+#. module: pos_customer_deposit
+#: selection:pos.customer.deposit.line,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: pos_customer_deposit
+#: selection:pos.customer.deposit.line,state:0
+msgid "Draft"
+msgstr "Tạo mới"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_invoice_make_payment_show_deposit_amount
+msgid "Hiện đặt cọc"
+msgstr "Hiện đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_form_view
+msgid "Hoàn tiền đặt cọc"
+msgstr "Hoàn tiền đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Hình thức nộp tiền:"
+msgstr "Hình thức nộp tiền:"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Họ và tên khách hàng:"
+msgstr "Họ và tên khách hàng:"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_id
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+msgid "Information Genaral"
+msgstr "Thông tin chung"
+
+#. module: pos_customer_deposit
+#: model:ir.model,name:pos_customer_deposit.model_invoice_make_payment
+msgid "Invoice Payment"
+msgstr "Hóa đơn thanh toán"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_journal_id
+msgid "Journal deposit"
+msgstr "Sổ nhật ký"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit___last_update
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_write_uid
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_write_date
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_form_view
+msgid "Lịch sử đặt cọc"
+msgstr "Lịch sử đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_money_multi
+msgid "Money Multi"
+msgstr "Số tiền(ngoại tệ)"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_name
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_name
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_customer_deposit
+#: code:addons/pos_customer_deposit/models/pos_customer_deposit_line.py:128
+#: code:addons/pos_customer_deposit/models/pos_customer_deposit_line.py:129
+#, python-format
+msgid "New"
+msgstr "Tạo mới"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Ngày"
+msgstr "Ngày"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_payment_lines
+#: selection:pos.customer.deposit.line,type:0
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.view_pos_customer_deposit_line_form_view_receipt
+msgid "Print"
+msgstr "In"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_form_view
+msgid "QUẢN LÝ TIỀN ĐẶT CỌC"
+msgstr "QUẢN LÝ TIỀN ĐẶT CỌC"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_rate_vn
+msgid "Rate VN"
+msgstr "Tỉ giá Việt Nam"
+
+#. module: pos_customer_deposit
+#: model:ir.actions.report,name:pos_customer_deposit.pos_customer_deposit_tmpl
+msgid "Receipt"
+msgstr "Receipt"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_residual
+msgid "Residual"
+msgstr "Số tiền còn lại"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+msgid "Send"
+msgstr "Gửi"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_show_currency_amount
+msgid "Show Currency Amount"
+msgstr "Show Currency Amount"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_signature_image
+msgid "Signature Image"
+msgstr "Hình ảnh chữ ký"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_invoice_make_payment_deposit_amount_residual
+msgid "Số tiền đặt cọc"
+msgstr "Số tiền đặt cọc"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Số tiền:"
+msgstr "Số tiền:"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Số điện thoại:"
+msgstr "Số điện thoại:"
+
+#. module: pos_customer_deposit
+#: selection:pos.customer.deposit.line,state:0
+msgid "To Confirm"
+msgstr "Chờ phê duyệt"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_type
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_x_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: pos_customer_deposit
+#: model:ir.model.fields,field_description:pos_customer_deposit.field_pos_customer_deposit_line_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Viết bằng chữ:"
+msgstr "Viết bằng chữ:"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "năm"
+msgstr "năm"
+
+#. module: pos_customer_deposit
+#: model:ir.model,name:pos_customer_deposit.model_pos_customer_deposit
+msgid "pos.customer.deposit"
+msgstr "pos.customer.deposit"
+
+#. module: pos_customer_deposit
+#: model:ir.model,name:pos_customer_deposit.model_pos_customer_deposit_line
+msgid "pos.customer.deposit.line"
+msgstr "pos.customer.deposit.line"
+
+#. module: pos_customer_deposit
+#: model:ir.model,name:pos_customer_deposit.model_pos_session
+msgid "pos.session"
+msgstr "Phiên"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "tháng"
+msgstr "tháng"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Đã nhận đủ số tiền (viết bằng\n"
+"                                                chữ):"
+msgstr "Đã nhận đủ số tiền (viết bằng\n"
+"                                                chữ):"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.pos_customer_deposit_line_form_view
+msgid "ĐẶT CỌC / HOÀN TIỀN"
+msgstr "ĐẶT CỌC / HOÀN TIỀN"
+
+#. module: pos_customer_deposit
+#: model:ir.ui.view,arch_db:pos_customer_deposit.report_template_deposit_view
+msgid "Địa chỉ:"
+msgstr "Địa chỉ:"
+

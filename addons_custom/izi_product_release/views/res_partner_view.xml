@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_production_lot_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.stockproduction.lot</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+<!--                Thẻ dịch vụ hoặc PMH-->
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page name="coupon_ids" string="Thẻ dịch vụ">
+                        <field name="coupon_ids" readonly="1">
+                            <tree default_order='id desc'>
+                                <field name="id" invisible="1"/>
+                                <field name="x_order_id"/>
+                                <field name="name"/>
+                                <field name="product_id"/>
+                                <field name="life_date"/>
+                                <field name="x_customer_id"/>
+                                <field name="x_amount" widget="integer"/>
+                                <field name="x_status"/>
+                            </tree>
+                            <form string="Lot" create="false" edit="false">
+                                <sheet>
+                                    <div class="oe_title">
+                                        <div class="oe_edit_only">
+                                            <label for="name"/>
+                                        </div>
+                                        <h1>
+                                            <field name="name" placeholder="Name"/>
+                                        </h1>
+                                    </div>
+                                    <group>
+                                        <group>
+                                            <field name="product_id"/>
+                                            <field name="x_customer_id"/>
+                                            <field name="x_user_id"/>
+                                            <field name="x_amount"/>
+                                            <field name="x_order_id"/>
+                                        </group>
+                                        <group>
+                                            <field name="life_date"/>
+                                            <field name="x_status"/>
+                                            <field name="x_discount"/>
+                                            <field name="x_payment_amount"/>
+                                        </group>
+                                    </group>
+                                    <notebook>
+                                        <page string="Dịch vụ">
+                                            <field name="x_card_detail_ids" readonly="1">
+                                                <tree create="false" edit="false">
+                                                    <field name="product_id"/>
+                                                    <field name="total_qty"/>
+                                                    <field name="qty_hand"/>
+                                                    <field name="qty_use"/>
+                                                    <field name="price_unit"/>
+                                                    <field name="amount_total"/>
+                                                    <field name="remain_amount"/>
+                                                    <field name="state"/>
+                                                    <field name="note"/>
+                                                </tree>
+                                            </field>
+                                        </page>
+                                    </notebook>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="service" string="Các dịch vụ">
+                        <field name="service_ids" readonly="1">
+                            <tree default_order='id desc'>
+                                <field name="id" invisible="1"/>
+                                <field name="lot_id"/>
+                                <field name="product_id"/>
+                                <field name="total_qty" widget="integer"/>
+                                <field name="qty_hand" widget="integer"/>
+                                <field name="qty_use" widget="integer"/>
+                                <field name="price_unit" widget="integer"/>
+                                <field name="amount_total" widget="integer"/>
+                                <field name="remain_amount" widget="integer"/>
+                                <field name="state"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

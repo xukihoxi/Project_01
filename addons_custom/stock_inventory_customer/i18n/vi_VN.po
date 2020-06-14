@@ -1,0 +1,329 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_inventory_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 10:41+0000\n"
+"PO-Revision-Date: 2019-05-06 17:46+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_debt
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_debt
+msgid "Amount debt"
+msgstr "Số tiền nợ"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_total_amount_km
+msgid "Amount km"
+msgstr "Số tiền KM"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_x_payment_amount
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_x_payment_amount
+msgid "Amount payment"
+msgstr "Số tiền thanh toán"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_total_amount_tkc
+msgid "Amount tkc"
+msgstr "Số tiền TKC"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_x_amount
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_x_amount
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_x_amount
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: stock_inventory_customer
+#: code:addons/stock_inventory_customer/models/import_master.py:38
+#, python-format
+msgid "Bạn chưa cấu hình phiên cập nhật tồn. Xin hãy liên hệ với người quản trị."
+msgstr "Bạn chưa cấu hình phiên cập nhật tồn. Xin hãy liên hệ với người quản trị."
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_check
+#: selection:stock.inventory.customer.update,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_check
+msgid "Char"
+msgstr "Char"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_check
+msgid "Chi tiết"
+msgstr "Chi tiết"
+
+#. module: stock_inventory_customer
+#: selection:stock.inventory.customer.update,type:0
+msgid "Coin"
+msgstr "Thẻ tiền"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_check
+msgid "Continute"
+msgstr "Continute"
+
+#. module: stock_inventory_customer
+#: model:ir.actions.act_window,help:stock_inventory_customer.import_stock_inventory_customer_action
+msgid "Create a Update inventory"
+msgstr "Create a Update inventory"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_create_uid
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_create_uid
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_create_uid
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_create_date
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_create_date
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_create_date
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_partner_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_partner_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_check
+msgid "Có khách hàng đã được đổ tồn trước đó. Vui lòng tra cứu lại tài khoản khách hàng trước khi nhấn hoàn thành"
+msgstr "Có khách hàng đã được đổ tồn trước đó. Vui lòng tra cứu lại tài khoản khách hàng trước khi nhấn hoàn thành"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_display_name
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_display_name
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_display_name
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+#: selection:stock.inventory.customer.update,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: stock_inventory_customer
+#: selection:stock.inventory.customer.update,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_field_binary_import
+msgid "Field Binary Import"
+msgstr "Field Binary Import"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_field_binary_name
+msgid "Field Binary Name"
+msgstr "Field Binary Name"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update___last_update
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin___last_update
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money___last_update
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_write_uid
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_write_uid
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_write_uid
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_write_date
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_write_date
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_write_date
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_ids
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_ids
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_ids
+msgid "Line"
+msgstr "Line"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+msgid "Lines"
+msgstr "Chi tiết"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_lot_id
+msgid "Lot"
+msgstr "Lot"
+
+#. module: stock_inventory_customer
+#: selection:stock.inventory.customer.update,type:0
+msgid "Money"
+msgstr "Tiền"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_name
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: stock_inventory_customer
+#: code:addons/stock_inventory_customer/models/import_master.py:46
+#: code:addons/stock_inventory_customer/models/import_master.py:47
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_order_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: stock_inventory_customer
+#: selection:stock.inventory.customer.update,type:0
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_qty_hand
+msgid "Qty hand"
+msgstr "Số lượng tồn"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_total_qty
+msgid "Qty total"
+msgstr "Tổng số lượng"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_qty_use
+msgid "Qty used"
+msgstr "Số lượng đã sử dụng"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_product_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_product_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: stock_inventory_customer
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+msgid "UPDATE INVENTORY"
+msgstr "UPDATE INVENTORY"
+
+#. module: stock_inventory_customer
+#: code:addons/stock_inventory_customer/models/import_master.py:302
+#: code:addons/stock_inventory_customer/models/import_master.py:332
+#: code:addons/stock_inventory_customer/models/import_master.py:362
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_check
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+#, python-format
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_inventory_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_money_inventory_id
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_product_inventory_id
+msgid "Update Inventory"
+msgstr "Cập nhật tồn khách hàng"
+
+#. module: stock_inventory_customer
+#: model:ir.actions.act_window,name:stock_inventory_customer.import_stock_inventory_customer_action
+#: model:ir.ui.menu,name:stock_inventory_customer.menu_stock_inventory_customer_action
+#: model:ir.ui.view,arch_db:stock_inventory_customer.import_stock_inventory_customer_form_view
+msgid "Update inventory"
+msgstr "Cập nhật tồn khách hàng"
+
+#. module: stock_inventory_customer
+#: selection:stock.inventory.customer.update,state:0
+msgid "Updated"
+msgstr "Cập nhật"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_use_amount_km
+msgid "Use amount km"
+msgstr "Sô tiền KM đã sử dụng"
+
+#. module: stock_inventory_customer
+#: model:ir.model.fields,field_description:stock_inventory_customer.field_stock_inventory_customer_update_coin_use_amount_tkc
+msgid "Use amount tkc"
+msgstr "Số tiền TKC đã sử dụng"
+
+#. module: stock_inventory_customer
+#: model:ir.model,name:stock_inventory_customer.model_stock_inventory_customer_update
+msgid "stock.inventory.customer.update"
+msgstr "stock.inventory.customer.update"
+
+#. module: stock_inventory_customer
+#: model:ir.model,name:stock_inventory_customer.model_stock_inventory_customer_update_coin
+msgid "stock.inventory.customer.update.coin"
+msgstr "stock.inventory.customer.update.coin"
+
+#. module: stock_inventory_customer
+#: model:ir.model,name:stock_inventory_customer.model_stock_inventory_customer_update_money
+msgid "stock.inventory.customer.update.money"
+msgstr "stock.inventory.customer.update.money"
+
+#. module: stock_inventory_customer
+#: model:ir.model,name:stock_inventory_customer.model_stock_inventory_customer_update_product
+msgid "stock.inventory.customer.update.product"
+msgstr "stock.inventory.customer.update.product"

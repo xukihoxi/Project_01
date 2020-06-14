@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="service_booking_form">
+            <field name="name">Service booking</field>
+            <field name="model">service.booking</field>
+            <field name="inherit_id" ref="izi_crm_booking.service_booking_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_confirm']" position="before">
+                    <button name="action_create_interaction" string="Create interaction" type="object" states="new"/>
+                </xpath>
+                <notebook position="inside">
+                    <page string="Confirmation">
+                        <field name="partner_interaction_ids" readonly="1">
+                            <tree default_order='date desc'>
+                                <field name="partner_id"/>
+                                <field name="type_id"/>
+                                <field name="date"/>
+                                <field name="user_id"/>
+                                <field name="note"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="service_booking_tree">
+            <field name="name">Service booking</field>
+            <field name="model">service.booking</field>
+            <field name="inherit_id" ref="izi_crm_booking.services_booking_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='time_to']" position="after">
+                    <field name="survey_label_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="service_booking_search_view">
+            <field name="name">Service booking</field>
+            <field name="model">service.booking</field>
+            <field name="inherit_id" ref="izi_crm_booking.view_service_booking_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='activities_my']" position="before">
+                    <filter string="Interacted" name="interacted" domain="[('partner_interaction_ids', '!=', False)]"/>
+                    <filter string="Not interacted yet" name="not_interacted_yet" domain="[('partner_interaction_ids', '=', False)]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

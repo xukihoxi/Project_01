@@ -1,0 +1,394 @@
+<odoo>
+    <data>
+        <record id="use_service_card_tree" model="ir.ui.view">
+            <field name="name">use.service.card.tree</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <!--<field name="serial_code"/>-->
+                    <field name="type"/>
+                    <field name="redeem_date"/>
+                    <field name="customer_id"/>
+                    <field name="pricelist_id"/>
+                    <field name="option_refund"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="use_service_card_form" model="ir.ui.view">
+            <field name="name">use.service.card.form</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <!--context="{'is_state': True}"-->
+                        <!--<button name="action_approve_tbh" type="object" class="oe_highlight" string="Approve" attrs="{'invisible': ['|',('type', '!=', 'card'), ('state', '!=', 'wait_approve')]}" groups="pos_security.group_pos_supervisor_user"/>-->
+                        <!--<button name="action_validate_service" string="Approve" attrs="{'invisible': ['|',('type', '!=', 'service'), ('state', '!=', 'wait_approve')]}" type="object" class="oe_highlight" groups="pos_security.group_pos_supervisor_user"/>-->
+                        <button name="action_manager_confirm" class="oe_highlight" type="object" states="wait_approve" string="Confirm" confirm="Đơn sử dụng dịch vụ đang bán dưới giá tối thiểu. Bạn có chắc chắn muốn xác nhận đơn sử dụng dịch vụ này?" groups="pos_security.group_pos_supervisor_user"/>
+                        <button name="action_back" type="object" string="Back"  attrs="{'invisible': [('state', 'not in', ('wait_payment','wait_approve'))]}"/>
+                        <button name="action_cancel" type="object" string="Cancel" states="wait_material" confirm="Bạn có chắc chắn muốn hủy đơn sử dụng dịch vụ này?"/>
+                        <button name="action_confirm_card" type="object" class="oe_highlight" string="Confirm" attrs="{'invisible': ['|',('type', '!=', 'card'), ('state', '!=', 'draft')]}"/>
+                        <button name="payment_service" type="object" string="Payment Service" class="oe_highlight"
+                                attrs="{'invisible': ['|',('type', '!=', 'service'), ('state', '!=', 'wait_payment')]}"/>
+                        <button name="action_confirm_service" type="object" class="oe_highlight" string="Confirm"
+                                attrs="{'invisible': ['|',('type', '!=', 'service'), ('state', '!=', 'wait_payment')]}"/>
+                        <button name="action_confirm_guarantee" type="object" class="oe_highlight" string="Confirm"
+                                attrs="{'invisible': ['|',('type', '!=', 'guarantee'), ('state', '!=', 'wait_payment')]}"/>
+                        <button name="action_send_price" type="object" string="Send" attrs="{'invisible': ['|',('type', '=', 'card'), ('state', '!=', 'draft')]}" class="oe_highlight"/>
+                        <button name="action_compute_order_discount" type="object" string="Discount" attrs="{'invisible': ['|',('type', '=', 'card'), ('state', '!=', 'draft')]}"/>
+                        <!--<button name="action_compute_order_discount" type="object" string="Discount" attrs="{'invisible': ['|',('type', '=', 'card'), ('state', '!=', 'draft')]}"/>-->
+                        <!--<button name="action_request_material" type="object" string="Request Material" states="wait_material" class="oe_highlight"/>-->
+                        <button name="action_change_employeee" type="object" class="oe_highlight" string="Change" attrs="{'invisible': ['|', ('state', 'not in', ('done')),'&amp;',('state', '=', 'cancel'),('option_refund', 'in', ('cancel'))]}" groups="izi_res_permissions.group_receptionist" confirm="Bạn có chắc chắn muốn thay đổi nhân viên làm dịch vụ"/>
+                        <button name="action_rate" type="object" class="oe_highlight" string="Rate" states="working"/>
+                        <button name="action_done" type="object" string="Done" class="oe_highlight" states="rate"
+                                groups="izi_res_permissions.group_receptionist"/>
+                        <button name="action_refund" type="object" string="Cancel" states="done"  confirm="Bạn có chắc chắn muốn hủy đơn yêu cầu thu hồi thẻ này?"/>
+                        <button name="action_confirm_refund" type="object" string="Confirm" states="wait_confirm" groups="pos_security.group_pos_supervisor_user"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,wait_material,working,rate,done"
+                               readonly="1"
+                               force_save="1"/>
+                    </header>
+                    <sheet>
+                        <h2 class="text-center">SỬ DỤNG DỊCH VỤ</h2>
+                        <h3 class="text-center">
+                            <field name="name"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%"
+                                   readonly="1" attrs="{'invisible': [('name', '=', '/')]}"/>
+                        </h3>
+                        <group>
+                            <field name="type" widget="radio" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                               options="{'horizontal': true}"/>
+                        </group>
+                        <group attrs="{'invisible': ['|',('type', '!=', 'card'),('state', '!=', 'draft')]}">
+                            <group>
+                                <field name="partner_search_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="serial_code" widget="enter2action"
+                                       attrs="{'action_element_class': '.izi_btn_action_search_serial', 'invisible': ['|',('type', '!=', 'card'), ('state', '!=', 'draft')]}"
+                                       placeholder="Mã thẻ, Mã KH, SĐT KH ..." class="text-left"/>
+                            </group>
+                            <group>
+                                <button name="action_search_serial" type="object" string="Search"
+                                        class="oe_edit_only oe_highlight izi_btn_action_search_serial"
+                                        attrs="{'invisible': ['|',('type', '!=', 'card'),('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <!--<field name="serial_code"-->
+                                           <!--attrs="{'invisible': ['|',('type', '!=', 'card'), ('state', '!=', 'draft')]}"-->
+                                            <!--placeholder="Mã thẻ, Mã KH, SĐT KH ..." class="text-left"-->
+                                           <!--/>-->
+                                <!--<br/>-->
+                                <field name="customer_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <!--<field name="rank_id" readonly="1" force_save="1"/>-->
+                                <field name="pricelist_id"
+                                       context="{'domain_by_session_id': pos_session_id}"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <!--<label for="pending"/>-->
+                                <!--<div class="o_row">-->
+                                     <!--<field name="pending" attrs="{'readonly': [('state', '!=', 'working')]}"/>-->
+                                    <!--<button name="action_pending" type="object" string="Done" attrs="{'invisible': ['|', ('pending', '=', False), ('state', '!=', 'done')]}" class="oe_highliht"/>-->
+                                <!--</div>-->
+                                <!--<field name="pending_note" attrs="{'invisible': [('pending', '=', False)], 'readonly': [('state', '!=', 'working')]}"/>-->
+                                <!--<field name="merge" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+                            </group>
+                            <group>
+                                <!--<button name="action_search_serial" type="object" string="Search"-->
+                                        <!--class="oe_edit_only oe_highlight"-->
+                                        <!--attrs="{'invisible': ['|',('type', '!=', 'card'),('state', '!=', 'draft')]}"/>-->
+                                <!--<br/>-->
+                                <field name="redeem_date" readonly="1" force_save="1"/>
+                                <field name="date_start" readonly="1" force_save="1"/>
+                                <field name="date_end" readonly="1" force_save="1"/>
+                                <field name="user_id" attrs="{'invisible': [('type', '!=', 'service')], 'readonly': [('state', '!=', 'draft')]}" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="pos_order_id" readonly="1" force_save="1" attrs="{'invisible': [('pos_order_id', '=', False)]}"/>
+                                <field name="pos_order_refund_id" readonly="1" force_save="1" attrs="{'invisible': [('pos_order_refund_id', '=', False)]}"/>
+                                <field name="pos_session_id" invisible="1"/>
+                                <field name="option_refund" attrs="{'invisible': [('state', 'not in', ('wait_confirm', 'wait_delivery', 'cancel'))]}"/>
+                                <field name="rate_content" attrs="{'readonly': 1, 'invisible': [('rate_content', '=', False)]}" />
+                            </group>
+                        </group>
+                        <group>
+                            <button class="oe_highlight" name="action_print_work" string="Print work" type="object"/>
+                        </group>
+                        <notebook>
+                            <page string="General" attrs="{'invisible': [('type', '!=', 'card')]}">
+                                <field name="service_card_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" invisible="1"/>
+                                        <field name="serial_id" options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>
+                                        <field name="detail_serial_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               invisible="1"/>
+                                        <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               readonly="1" force_save="1"/>
+                                        <field name="max_use_count" readonly="1" force_save="1" invisible="1"/>
+                                        <field name="paid_count" readonly="1" force_save="1"/>
+                                        <field name="used_count" readonly="1" force_save="1"/>
+                                        <field name="quantity" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="uom_id" readonly="1" force_save="1"/>
+                                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                               attrs="{'readonly': ['|',('parent.state', '!=', 'draft'), ('quantity','=',0)]}" widget="many2many_tags"/>
+                                        <field name="doctor_ids" domain="[('job_id.x_code', '=', 'BS')]" options="{'no_create':1, 'no_create_edit':1}"
+                                               attrs="{'readonly': ['|',('parent.state', '!=', 'draft'), ('quantity','=',0)]}" widget="many2many_tags"/>
+                                        <field name="work_type" required="1" attrs="{'readonly': [('parent.state', 'in', ('rate', 'done'))]}" invisible="1"/>
+                                        <field name="customer_rate" widget="sentiment_icon" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>
+                                        <field name="customer_comment" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>
+                                        <field name="show_button" invisible="1"/>
+                                        <field name="note" attrs="{'readonly': [('parent.state', 'in', ('done', 'cancel'))]}"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="name" invisible="1"/>
+                                                <field name="serial_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                                <field name="detail_serial_id"
+                                                       options="{'no_create':1, 'no_create_edit':1}"
+                                                       invisible="1"/>
+                                                <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                                <field name="max_use_count" invisible="1"/>
+                                                <field name="paid_count"/>
+                                            </group>
+                                            <group>
+                                                <field name="used_count"/>
+                                                <field name="quantity"/>
+                                                <field name="uom_id"/>
+                                                <field name="employee_ids" required="1" widget="many2many_tags"/>
+                                            </group>
+                                            <label for="note"/>
+                                            <field name="note"/>
+                                        </group>
+                                    </form>
+                                </field>
+                                <!--<group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">-->
+                                    <!--<div class="oe_subtotal_footer_separator oe_inline">-->
+                                        <!--<label for="amount_total"/>-->
+                                    <!--</div>-->
+                                    <!--<field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"-->
+                                           <!--widget="monetary"/>-->
+                                <!--</group>-->
+                            </page>
+                            <page string="Service" attrs="{'invisible': [('type', '=', 'card')]}">
+                                <field name="service_card1_ids" attrs="{'readonly': [('customer_id', '=', False), ('state', 'in', ('done', 'cancel'))]}">
+                                    <tree editable="bottom">
+                                        <field name="edit_price" invisible="1"/>
+                                        <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                               domain="[('product_tmpl_id.type', '=', 'service')]" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="quantity" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="price_unit" required="1" attrs="{'readonly': [('edit_price', '=', False)]}" force_save="1"/>
+                                        <field name="discount" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                                        <field name="amount" readonly="1" force_save="1"/>
+                                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                               attrs="{'readonly': [('parent.state', '!=', 'draft')]}" widget="many2many_tags" required="0"/>
+                                        <field name="doctor_ids" domain="[('job_id.x_code', '=', 'BS')]" options="{'no_create':1, 'no_create_edit':1}"
+                                               attrs="{'readonly': [('parent.state', '!=', 'draft')]}" widget="many2many_tags" />
+                                        <field name="work_type" required="1" attrs="{'readonly': [('parent.state', '!=', 'draft')]}" invisible="1"/>
+                                        <field name="customer_rate" widget="sentiment_icon" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>
+                                        <field name="customer_comment" attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}" readonly="1" force_save="1"/>
+                                        <field name="show_button" invisible="1"/>
+                                        <field name="note" attrs="{'readonly': [('parent.state', 'in', ('done', 'cancel'))]}"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                                <field name="quantity"/>
+                                                <field name="price_unit"/>
+                                            </group>
+                                            <group>
+                                                <field name="discount"/>
+                                                <field name="amount"/>
+                                                <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                                       required="1" widget="many2many_tags"/>
+                                            </group>
+                                            <label for="note"/>
+                                            <field name="note"/>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                </group>
+                            </page>
+                            <page string="Material">
+                                <field name="use_material_ids" readonly="1" force_save="1">
+                                    <tree editable="bottom" create="false">
+                                        <field name="name"/>
+                                        <field name="state"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="name"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Images">
+                                <div>Ảnh cũ</div>
+                                <field name="old_image_ids">
+                                    <tree>
+                                        <field name="image_small" widget="image" readonly="1"/>
+                                        <field name="note" readonly="1"/>
+                                    </tree>
+                                    <form>
+                                        <label for="note"/>
+                                        <field name="note"/>
+                                        <field name="image_customer" widget="image"/>
+                                    </form>
+                                </field>
+                                <group><field name="old_image_note"/></group>
+                                <separator/>
+                                <div>Ảnh mới</div>
+                                <field name="new_image_ids">
+                                    <tree>
+                                        <field name="image_small" widget="image" readonly="1"/>
+                                        <field name="note" readonly="1"/>
+                                    </tree>
+                                    <form>
+                                        <label for="note"/>
+                                        <field name="note"/>
+                                        <field name="image_customer" widget="image"/>
+                                    </form>
+                                </field>
+                                <group><field name="new_image_note"/></group>
+                            </page>
+                            <!--<page string="Images" attrs="{'readonly': [('state', '=', 'done')]}">-->
+                                <!--<div>Ảnh cũ</div>-->
+                                <!--<field name="old_image_ids" attrs="{'readonly': [('state', '=', 'done')], 'required': [('state', '=', 'working')]}">-->
+                                    <!--<kanban>-->
+                                        <!--<field name="id"/>-->
+                                        <!--<field name="image"/>-->
+                                        <!--<templates>-->
+                                            <!--<t t-name="kanban-box">-->
+                                                <!--<div class="oe_kanban_global_click">-->
+                                                    <!--<div class="o_kanban_image">-->
+                                                        <!--<img t-att-src="kanban_image('izi.images', 'image', record.id.value)"-->
+                                                             <!--class="oe_kanban_picture"/>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</t>-->
+                                        <!--</templates>-->
+                                    <!--</kanban>-->
+                                <!--</field>-->
+                                <!--<group><field name="old_image_note"/></group>-->
+                                <!--<div>Ảnh mới</div>-->
+                                <!--<field name="new_image_ids" attrs="{'readonly': [('state', '=', 'done')], 'required': [('state', '=', 'working')]}">-->
+                                    <!--<kanban>-->
+                                        <!--<field name="id" attrs="{'required': [('parent.state', '=', 'working')]}"/>-->
+                                        <!--<field name="image" attrs="{'required': [('parent.state', '=', 'working')]}"/>-->
+                                        <!--<templates>-->
+                                            <!--<t t-name="kanban-box">-->
+                                                <!--<div class="oe_kanban_global_click">-->
+                                                    <!--<div class="o_kanban_image">-->
+                                                        <!--<img t-att-src="kanban_image('izi.images', 'image', record.id.value)"-->
+                                                             <!--class="oe_kanban_picture"/>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</t>-->
+                                        <!--</templates>-->
+                                    <!--</kanban>-->
+                                <!--</field>-->
+                                <!--<group><field name="new_image_note"/></group>-->
+                            <!--</page>-->
+                            <page string="Payment" attrs="{'invisible': [('type', '=', 'card')]}" readonly="1" force_save="1">
+                                <field name="pos_payment_service_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom" create="false">
+                                        <field name="journal_id" options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>
+                                        <field name="amount" readonly="1" force_save="1"/>
+                                        <field name="x_vc_code" readonly="1" force_save="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="journal_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                            <field name="amount"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Information Genaral" name="information_genaral">
+                                <form>
+                                    <group>
+                                        <!--<group>-->
+                                            <!--<field name="customer_rate" widget="sentiment_icon" readonly="1" force_save="1"/>-->
+                                            <!--<field name="customer_comment" readonly="1" force_save="1"/>-->
+                                        <!--</group>-->
+                                        <!--<group>-->
+                                        <field name="signature_image" widget="image" readonly="1" force_save="1"/>
+                                        <field name="note" attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}" />
+                                        <!--</group>-->
+                                    </group>
+                                </form>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="use_service_card_action" model="ir.actions.act_window">
+            <field name="name">Use Service Card</field>
+            <field name="res_model">izi.service.card.using</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="domain">[('pos_session_id.config_id.crm_team_id.x_member_ids','in',[uid,])]</field>-->
+        </record>
+
+         <record id="use_service_card_action_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="use_service_card_tree"/>
+            <field name="act_window_id" ref="use_service_card_action"/>
+        </record>
+
+        <record id="use_service_card_action_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="use_service_card_form"/>
+            <field name="act_window_id" ref="use_service_card_action"/>
+        </record>
+
+        <menuitem id="use_service_card_menu" action="use_service_card_action"
+                  parent="izi_pos_custom_backend.menu_point_of_sale_service"/>
+
+        <record id="uizi_images_view_form" model="ir.ui.view">
+            <field name="name">Image</field>
+            <field name="model">izi.images</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="image_customer" nolabel="1" widget="image"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="use_service_search_view" model="ir.ui.view">
+            <field name="name">use_service_search_view</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="customer_id"
+                           filter_domain="['|','|','|','|','|','|',('customer_id.name','ilike',self),('customer_id.phone','ilike',self),('customer_id.mobile','ilike',self),('customer_id.x_code', 'ilike', self),('customer_id.display_name','ilike',self),('customer_id.ref','=',self),('customer_id.email','ilike',self)]"/>
+                    <field name="name" filter_domain="[('name', 'ilike', self)]"/>
+                    <group expand="0" name="group_by" string="Group By">
+                       <filter name="pos_session_id" string="Session" domain="[]" context="{'group_by' : 'pos_session_id'}" />
+                       <filter name="state" string="State" context="{'group_by': 'state'}"/>
+                       <filter name="customer_id" string="Partner" context="{'group_by': 'customer_id'}"/>
+                   </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

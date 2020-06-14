@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <!-- Danh sách loại khiếu nại -->
+        <record model="ir.ui.view" id="crm_claim_type_tree_view">
+            <field name="name">Claim type</field>
+            <field name="model">crm.claim.type</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Danh sách loại khiếu nại -->
+        <record model="ir.ui.view" id="crm_claim_type_form_view">
+            <field name="name">Claim</field>
+            <field name="model">crm.claim</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Hành động loại khiếu nại -->
+        <record model="ir.actions.act_window" id="crm_claim_type_action_window">
+            <field name="name">Claim type</field>
+            <field name="res_model">crm.claim.type</field>
+            <field name="view_mode">tree, form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem name="Claim type" id="crm_claim_type_menu" parent="izi_crm_claim.crm_claim_main_menu"
+                  action="crm_claim_type_action_window"/>
+    </data>
+</odoo>

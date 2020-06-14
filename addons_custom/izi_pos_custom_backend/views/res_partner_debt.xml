@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Chỉnh view -->
+    <data>
+
+        <!-- Hiện option "hiển thị trên pos" cho loại sổ nhật ký là "Khác" -->
+        <record id="izi_view_account_journal_pos_user_form" model="ir.ui.view">
+            <field name="name">izi.account.journal.pos.user.form.inherit</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="point_of_sale.view_account_journal_pos_user_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='journal_user']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', 'not in', ['bank', 'cash', 'general'])]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Chỉnh form bán hàng PoS -->
+        <record id="izi_view_pos_pos_form_inherit" model="ir.ui.view">
+            <field name="name">izi.view.pos.form.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <!--<button name="%(point_of_sale.action_pos_payment)d" position="replace">-->
+                <!--<button name="%(izi_action_pos_payment_pos_order)d"-->
+                <!--attrs="{'invisible': ['|', '|', ('x_promotion_test', '=', True), ('state','!=','draft'), '&amp;', ('x_discount_computed', '=', False), ('x_custom_discount', '=', False)]}"-->
+                <!--string="Payment" class="oe_highlight" type="action" context="{'pos_session_id' : session_id}"/>-->
+                <!--</button>-->
+                <xpath expr="//button[@name='action_pos_order_invoice']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="attributes">
+                    <attribute name="attrs">{'invisible':['|',('state','in',['draft', 'to_confirm', 'to_approve']),
+                        ('x_pos_partner_refund_id','=', False)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name="statusbar_visible">draft,to_confirm,paid,done</attribute>
+                </xpath>
+                <xpath expr="//sheet" position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="before">
+                    <button name="action_order_confirm" string="Confirm" class="oe_highlight" type="object"
+                            attrs="{'invisible':[('state','!=','to_confirm')]}"
+                            groups="pos_security.group_pos_supervisor_user, izi_res_permissions.group_leader_shop, izi_res_permissions.group_cashier"/>
+                    <button name="action_debt_approve"
+                            groups="izi_res_permissions.group_business_manager, izi_res_permissions.group_cashier"
+                            confirm="Đơn hàng này đang bán sản phẩm dưới giá tối thiểu. Bạn có chắc chắn duyệt đơn?"
+                            string="Approve" class="oe_highlight" type="object"
+                            attrs="{'invisible':['|',('state','!=','to_approve'), ('x_pos_partner_refund_id','!=', False)]}"/>
+                    <button name="action_order_cancel"
+                            groups="pos_security.group_pos_supervisor_user,izi_res_permissions.group_consultant,izi_res_permissions.group_leader_shop,izi_res_permissions.group_cashier,point_of_sale.group_pos_user"
+                            confirm="Huỷ các thanh toán và thực hiện thanh toán lại?" string="Cancel" type="object"
+                            attrs="{'invisible':['|', ('state','not in',['to_approve', 'customer_comment', 'to_payment']), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Chỉnh form bán thẻ tiền -->
+        <record id="izi_view_virtual_money_sell_form_inherit" model="ir.ui.view">
+            <field name="name">izi.virtual_money.sell.form.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_pos_order_invoice']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="attributes">
+                    <attribute name="attrs">{'invisible':['|',('state','in',['draft', 'to_confirm', 'to_approve']),
+                        ('x_pos_partner_refund_id','=', False)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name="statusbar_visible">draft,to_confirm,paid,done</attribute>
+                </xpath>
+                <xpath expr="//sheet" position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="before">
+                    <field name="state" invisible="1"/>
+                    <field name="x_pos_partner_refund_id" invisible="1"/>
+                    <button name="action_order_confirm" string="Confirm" class="oe_highlight" type="object"
+                            attrs="{'invisible':[('state','!=','to_confirm')]}"
+                            groups="izi_res_permissions.group_cashier"/>
+                    <button name="action_debt_approve" confirm="Bạn có chắc chắn duyệt đơn?" string="Approve"
+                            class="oe_highlight" type="object"
+                            attrs="{'invisible':['|',('x_pos_partner_refund_id','!=', False),('state','!=','to_approve')]}"
+                            groups="izi_res_permissions.group_business_manager, izi_res_permissions.group_cashier"/>
+                    <button name="action_order_cancel" confirm="Huỷ các thanh toán và thực hiện thanh toán lại?"
+                            string="Cancel" type="object"
+                            attrs="{'invisible':['|',('x_pos_partner_refund_id','!=', False),('state','not in',['to_approve', 'customer_comment', 'to_payment'])]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Thêm tiêu chí lọc các đơn hàng nợ -->
+        <record id="izi_view_pos_pos_filter_inherit" model="ir.ui.view">
+            <field name="name">izi.view.pos.filter.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_order']" position="after">
+                    <filter string="To approve" domain="[('state','=','to_approve')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Hiện chữ ký của KH trên các thanh toán -->
+        <record id="izi_view_account_payment_form" model="ir.ui.view">
+            <field name="name">izi.account.view_account_payment_form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group" position="after">
+                    <group>
+                        <field name="x_customer_sign" widget="signature" readonly="1" string="Chữ ký khách hàng"
+                               class="oe_read_only"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Form thanh toán hoá đơn -->
+        <record id="view_invoice_make_payment_form" model="ir.ui.view">
+            <field name="name">Pay invoice</field>
+            <field name="model">invoice.make.payment</field>
+            <field name="arch" type="xml">
+                <form string="Pay Invoice">
+                    <group>
+                        <field name="journal_id" options="{'no_open':True, 'no_create': True}"
+                               domain="[('journal_user', '=', True)]"
+                               attrs="{'readonly': [('is_ready', '=', True)]}"
+                               context="{'izi_session_id': session_id, 'izi_invoice_id': invoice_id, 'izi_journal_pay_debt': True}"/>
+                        <field name="vm_amount"
+                               attrs="{'invisible': ['|', ('show_vm_amount', '=', False), ('is_ready', '=', True)]}"/>
+                        <field name="amount" attrs="{'readonly': [('is_ready', '=', True)]}"/>
+                        <field name="payment_name" attrs="{'readonly': [('is_ready', '=', True)]}"/>
+                        <field name="customer_sign" widget="signature"
+                               attrs="{'invisible': [('is_ready', '=', False)]}"/>
+                        <field name="session_id" invisible="1"/>
+                        <field name="invoice_id" invisible="1"/>
+                        <field name="show_vm_amount" invisible="1"/>
+                        <field name="is_ready" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="add_payment" string="Make Payment" type="object" class="btn-primary"
+                                attrs="{'invisible': [('is_ready', '=', True)]}"/>
+                        <button name="process_payment" string="Xác nhận" type="object" class="btn-primary"
+                                attrs="{'invisible': [('is_ready', '=', False)]}"/>
+                        <button special="cancel" string="Cancel" class="btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+    <!-- Danh sách KH - công nợ -->
+    <data>
+        <!-- Ẩn nút thanh toán -->
+        <record id="izi_customer_invoice_bbacomm_form" model="ir.ui.view">
+            <field name="name">izi.account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <header position="before">
+                    <field name="x_pos_order_id" invisible="1"/>
+                </header>
+                <button name="%(account.action_account_invoice_payment)d" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible': ['|', ('x_pos_order_id', '!=', False), ('state','not in',('open'))]}</attribute>
+                </button>
+                <button name="%(account.action_account_invoice_refund)d" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|',('type', 'in', ['in_refund','out_refund']), '|', ('state','not in',('open','paid')), ('x_pos_order_id', '!=', False)]}</attribute>
+                </button>
+            </field>
+        </record>
+
+        <record id="izi_invoice_supplier_form" model="ir.ui.view">
+            <field name="name">izi.account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <header position="before">
+                    <field name="x_pos_order_id" invisible="1"/>
+                </header>
+                <button name="%(account.action_account_invoice_payment)d" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible': ['|', ('x_pos_order_id', '!=', False), ('state','not in',('open'))]}</attribute>
+                </button>
+                <button name="%(account.action_account_invoice_refund)d" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|',('type', 'in', ['in_refund','out_refund']), '|', ('state','not in',('open','paid')), ('x_pos_order_id', '!=', False)]}
+                    </attribute>
+                </button>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_res_partner_debt_form">
+            <field name="name">res.partner.debt.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form create="0" edit="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1"/>
+                                <field name="x_code" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="debit_limit" readonly="1"/>
+                                <field name="credit" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Các hoá đơn công nợ">
+                                <field name="x_account_invoices">
+                                    <tree create="0" edit="0">
+                                        <field name="number"/>
+                                        <field name="amount_total"/>
+                                        <field name="residual"/>
+                                        <field name="date_invoice"/>
+                                        <field name="date_due"/>
+                                        <field name="state"/>
+
+                                        <button name="action_invoice_payment"
+                                                context="{'invoice_id': id, 'izi_partner_debt':True}"
+                                                string="Register Payment" type="object" states="open"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Tất cả các hoá đơn">
+                                <field name="x_account_invoices_all">
+                                    <tree create="0" edit="0">
+                                        <field name="number"/>
+                                        <field name="amount_total"/>
+                                        <field name="residual"/>
+                                        <field name="date_invoice"/>
+                                        <field name="date_due"/>
+                                        <field name="state"/>
+                                        <button name="action_in_invoice_payment"
+                                                context="{'invoice_id': id, 'izi_partner_debt':True}" string="Print"
+                                                type="object"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Payment">
+                                <field name="x_payment_ids" auto_refresh="true">
+                                    <tree string="Payment">
+                                        <field name="name"/>
+                                        <field name="payment_type"/>
+                                        <field name="journal_id"/>
+                                        <field name="amount"/>
+                                        <field name="payment_date"/>
+                                        <field name="state"/>
+                                        <button name="action_in_account_payment"
+                                                context="{'invoice_id': id, 'izi_partner_debt':True}" string="Print"
+                                                type="object"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_res_partner_debt_tree">
+            <field name="name">res.partner.debt.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree create="0" default_order="create_date desc">
+                    <field name="display_name"/>
+                    <field name="phone"/>
+                    <field name="credit"/>
+                    <field name="debit_limit"/>
+                    <field name="x_total_overdue"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_invoice_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.invoice</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <!-- Hóa đơn khách hàng dịch vụ-->
+                    <page name="invoice_service" string="Công nợ">
+                        <label string="Account Invoices"/>
+                        <field name="x_account_invoices" readonly="1">
+                            <tree default_order='id desc'>
+                                <field name="id" invisible="1"/>
+    <!--                                <field name="order_id"/>-->
+                                <field name="origin"/>
+                                <field name="name"/>
+                                <field name="amount_total" widget="integer"/>
+                                <field name="residual" widget="integer"/>
+                                <field name="date_invoice"/>
+                                <field name="date_due"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+<!--                    Thanh toán công nợ-->
+                        <label string="History payment account invoices"/>
+                        <field name="x_payment_ids" readonly="1">
+                            <tree default_order='id desc'>
+                                <field name="id" invisible="1"/>
+                                <field name="payment_type" invisible="1"/>
+                                <field name="state" invisible="1"/>
+                                <field name="invoice_ids" widget="many2many_tags"/>
+                                <field name="name"/>
+                                <field name="journal_id"/>
+                                <field name="amount" widget="integer"/>
+                                <field name="payment_date"/>
+                            </tree>
+                    </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="izi_action_res_partner_debt" model="ir.actions.act_window">
+            <field name="name">Công nợ khách hàng</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="izi_res_partner_debt_tree"/>
+            <!--<field name="domain">[('customer', '=', True), ('credit', '>=', 0)]</field>-->
+        </record>
+
+        <record model="ir.actions.act_window.view" id="izi_action_res_partner_debt_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="izi_res_partner_debt_tree"/>
+            <field name="act_window_id" ref="izi_action_res_partner_debt"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="izi_action_res_partner_debt_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_res_partner_debt_form"/>
+            <field name="act_window_id" ref="izi_action_res_partner_debt"/>
+        </record>
+
+        <menuitem id="izi_menu_res_partner_debt" parent="point_of_sale.menu_point_root" name="Khách hàng"
+                  sequence="12"/>
+        <menuitem id="izi_menu_res_partner_debt_debt" action="izi_action_res_partner_debt"
+                  parent="izi_menu_res_partner_debt" sequence="2"/>
+        <menuitem id="res_partner_menu_pos" parent="izi_menu_res_partner_debt"
+                  action="base.action_partner_form"
+                  sequence="1"/>
+        <record id="view_res_partner_filter_phone" model="ir.ui.view">
+            <field name="name">res.partner.phone.inherit.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="phone" filter_domain="['|',('phone','=',self),('mobile','=',self)]"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

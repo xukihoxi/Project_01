@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="izi_stock_production_lot_form" model="ir.ui.view">
+        <field name="name">izi_stock_production_lot_form</field>
+        <field name="model">stock.production.lot</field>
+        <field name="arch" type="xml">
+            <form string="Lot" create="false" edit="false">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name"/>
+                        </div>
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="x_customer_id"/>
+                            <field name="x_user_id"/>
+                        </group>
+                        <group>
+                            <field name="life_date"/>
+                            <field name="x_status"/>
+                            <field name="x_discount"/>
+                            <field name="x_amount"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Dịch vụ">
+                            <field name="x_card_detail_ids" readonly="1">
+                                <tree create="false" edit="false">
+                                    <field name="product_id"/>
+                                    <field name="total_qty"/>
+                                    <field name="qty_hand"/>
+                                    <field name="qty_use"/>
+                                    <field name="price_unit"/>
+                                    <field name="amount_total"/>
+                                    <field name="remain_amount"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="izi_stock_production_lot_position" model="ir.ui.view">
+        <field name="name">izi_stock_production_lot_position</field>
+        <field name="model">izi.pos.exchange.service</field>
+        <field name="inherit_id" ref="izi_pos_exchange_service.izi_pos_exchange_service_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_lot_id']" position="attributes">
+                <attribute name="context">{'form_view_ref':'izi_pos_exchange_service.izi_stock_production_lot_form'}
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,364 @@
+<openerp>
+    <data>
+        <template id="report_template_work_service_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div>
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                                .work_service_card {font-size: 20px}
+                                .work_service_card > span {display: block; }
+                                .work_service_card > div {text-align:center; margin-top: 20px}
+                            </style>
+                            <t t-if="o.service_card_ids != False">
+                                <div t-foreach="o.service_card_ids" t-as="line" class="work_service_card">
+                                    <strong>
+                                        <span>
+                                            <t t-esc="line.service_id.name"/>
+                                        </span>
+                                    </strong>
+                                    <span>Khách hàng:
+                                        [<t t-esc="o.customer_id.x_code"/>] <t t-esc="o.customer_id.name"/>
+                                    </span>
+                                    <span>Giường:
+                                        <t t-foreach="line.bed_ids" t-as="bed">[<t t-esc="bed.room_id.code"/>]<t
+                                                t-esc="bed.name"/>,
+                                        </t>
+                                    </span>
+                                    <span>Nhân viên làm:
+                                        <t t-foreach="line.employee_ids" t-as="employee"><t t-esc="employee.name"/>,
+                                        </t>
+                                    </span>
+                                    <div>
+                                        <img width="300"
+                                             t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.id, 600, 100)"/>
+                                        <span>
+                                            <t t-esc="line.id"/>
+                                        </span>
+                                    </div>
+                                    <!--get_use_service_history:
+                                    <t t-foreach="o.get_use_service_history()" t-as="use_card" style="padding:1px; margin: 1px">
+                                    <span t-esc="use_card"/>
+
+                                    </t>-->
+
+                                </div>
+                            </t>
+                            <br clear="both"/>
+                            <div style="width: 100%;float: left;font-size:16px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <table class="table"
+                                       style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr>
+                                            <th colspan="7" class="text-center">
+                                                <p style="padding:1px; margin: 1px;">Liệu trình của khách</p>
+                                            </th>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="20%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Mã thẻ</p>
+                                            </th>
+                                            <th class="text-center" width="40%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Dịch vụ</p>
+                                            </th>
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Tổng</p>
+                                            </th>
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Tồn</p>
+                                            </th>
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Đã sử dụng</p>
+                                            </th>
+                                            <th class="text-center" width="20%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Trạng thái</p>
+                                            </th>
+                                        </tr>
+                                        <tr t-foreach="o.get_service_card_detail()" t-as="service_card_detail"
+                                            style="padding:1px; margin: 1px">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <!--STT-->
+                                            <td id="td1" class="text-center" width="5%"
+                                                style="padding:1px; margin: 1px; vertical-align: middle">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <!--Mã thẻ-->
+                                            <td width="20%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="service_card_detail['card_name']"/>
+                                            </td>
+                                            <!--dịch vụ-->
+                                            <td width="40%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                [<t t-esc="service_card_detail['service_code']"/>]
+                                                <t t-esc="service_card_detail['service_name']"/>
+                                            </td>
+                                            <!--Tổng-->
+                                            <td width="5%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="service_card_detail['total_qty']"/>
+                                            </td>
+                                            <!--Tồn-->
+                                            <td width="5%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="service_card_detail['qty_hand']"/>
+                                            </td>
+                                            <!--Đã sử dụng-->
+                                            <td width="5%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="service_card_detail['qty_use']"/>
+                                            </td>
+                                            <!--Trạng thái-->
+                                            <td width="20%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="service_card_detail['state']"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <div style="width: 100%;float: left;font-size:16px; margin-top: 5px;margin-left: 20px;padding-right:40px;">
+                                <table class="table"
+                                       style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr>
+                                            <th colspan="10" class="text-center">
+                                                <p style="padding:1px; margin: 1px;">LỊCH SỬ SỬ DỤNG DỊCH VỤ</p>
+                                            </th>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="15%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Mã đơn SDDV</p>
+                                            </th>
+                                            <th class="text-center" width="15%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Ngày sử dụng</p>
+                                            </th>
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Hình thức</p>
+                                            </th>
+                                            <th class="text-center" width="15%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Dịch vụ</p>
+                                            </th>
+                                            <th class="text-center" width="5%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Ghi chú</p>
+                                            </th>
+                                            <th class="text-center" width="10%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Kỹ thuật viên</p>
+                                            </th>
+                                            <th class="text-center" width="10%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Bác sĩ</p>
+                                            </th>
+                                            <th class="text-center" width="10%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Trạng thái</p>
+                                            </th>
+                                            <th class="text-center" width="10%"
+                                                style="padding:1px; ; vertical-align: middle">
+                                                <p style="padding:1px; margin: 1px;">Chữ ký KH</p>
+                                            </th>
+                                        </tr>
+                                        <tr t-foreach="o.get_use_service_history()" t-as="use_service_history"
+                                            style="padding:1px; margin: 1px">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <!--STT-->
+                                            <td id="td1" class="text-center" width="5%"
+                                                style="padding:1px; margin: 1px; vertical-align: middle">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <!--Mã đơn SDDV-->
+                                            <td width="15%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="use_service_history['using_name']"/>
+                                            </td>
+                                            <!--Ngày sử dụng-->
+                                            <td width="15%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="datetime.datetime.strptime(use_service_history['redeem_date'], '%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y %H:%M:%S')"/>
+                                            </td>
+                                            <!--Hình thức-->
+                                            <td width="5%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-if="use_service_history['type'] == 'service'">
+                                                    Dịch vụ
+                                                </t>
+                                                <t t-if="use_service_history['type'] == 'card'">
+                                                    Thẻ dịch vụ
+                                                </t>
+                                                <t t-if="use_service_history['type'] == 'guarantee'">
+                                                    Bảo hành
+                                                </t>
+                                            </td>
+                                            <!--Dịch vụ-->
+                                            <td width="15%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                [<t t-esc="use_service_history['service_code']"/>]
+                                                <t t-esc="use_service_history['service_name']"/>
+                                            </td>
+                                            <!--Ghi chú-->
+                                            <td width="5%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="use_service_history['note']"/>
+                                            </td>
+                                            <!--Kỹ thuật viên-->
+                                            <td width="10%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="use_service_history['employee']"/>
+                                            </td>
+                                            <!--Bác sĩ-->
+                                            <td width="10%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-esc="use_service_history['doctor']"/>
+                                            </td>
+                                            <!--Trạng thái-->
+                                            <td width="10%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <t t-if="use_service_history['state'] == 'draft'">Nháp</t>
+                                                <t t-if="use_service_history['state'] == 'wait_payment'">
+                                                    Chờ thanh toán
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'wait_approve'">
+                                                    Chờ phê duyệt
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'wait_material'">
+                                                    Chờ nguyên vật liệu
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'working'">
+                                                    Đang làm
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'rate'">
+                                                    Khách hàng ký xác nhận
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'done'">
+                                                    Hoàn thành
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'wait_confirm'">
+                                                    Chờ xác nhận
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'wait_delivery'">
+                                                    Đợi nhập hàng
+                                                </t>
+                                                <t t-if="use_service_history['state'] == 'cancel'">
+                                                    Hủy
+                                                </t>
+                                            </td>
+                                            <!--Chữ ký KH-->
+                                            <td width="10%"
+                                                style="padding:1px; margin: 1px;text-align: left; vertical-align: middle">
+                                                <div style="max-width: 300px;margin: auto;margin-top: 10px;">
+                                                    <img width="150"
+                                                         t-att-src="'data:image/png;base64,%s' % to_text(use_service_history['customer_sign'])"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!--<template id="report_template_work_service_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div>
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                                .work_service_card {font-size: 20px}
+                                .work_service_card > span {display: block; }
+                                .work_service_card > div {text-align:center; margin-top: 20px}
+                            </style>
+                            <t t-if="o.service_card_ids != False">
+                                <div t-foreach="o.service_card_ids" t-as="line" class="work_service_card">
+                                    <strong><span><t t-esc="line.service_id.name"/></span></strong>
+                                    <span>Khách hàng: <t t-esc="o.customer_id.name"/></span>
+                                    <span>Giường: <t t-foreach="line.bed_ids" t-as="bed">[<t t-esc="bed.room_id.code"/>]<t t-esc="bed.name"/>, </t></span>
+                                    <span>Nhân viên làm: <t t-foreach="line.employee_ids" t-as="employee"><t t-esc="employee.name"/>, </t></span>
+                                    <div>
+                                        <img width="300" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.id, 600, 100)"/>
+                                        <span><t t-esc="line.id"/></span>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>-->
+
+        <!--<record id="paperformat_report_template_work_service" model="report.paperformat">
+            <field name="name">Máy in nhiệt</field>
+            <field name="format">custom</field>
+            <field name="page_height">300</field>
+            <field name="page_width">70</field>
+            <field name="orientation">Portrait</field>
+        </record>-->
+
+        <record id="paperformat_report_template_work_service" model="report.paperformat">
+            <field name="name">A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">96</field>
+        </record>
+
+        <report
+                id="qweb_work_service"
+                model="izi.service.card.using"
+                string="Work service"
+                report_type="qweb-pdf"
+                name="izi_use_service_card.report_template_work_service_view"
+                file="izi_use_service_card.report_template_work_service_view"
+                paperformat="izi_use_service_card.paperformat_report_template_work_service"
+                menu="False"/>
+    </data>
+</openerp>

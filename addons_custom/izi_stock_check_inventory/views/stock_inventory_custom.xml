@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="izi_view_inventory_form_custom">
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"></field>
+            <field name="arch" type="xml">
+                <button name="action_done" position="before">
+                    <button name="action_import_line" states="confirm" string="Import" type="object"
+                            class="oe_highlight" groups="stock.group_stock_manager"/>
+                </button>
+                <field name="location_id" position="before">
+                    <field name="warehouse_id" required="1" domain="[('user_ids', 'in', (uid))]"/>
+                </field>
+                <field name="line_ids" position="before">
+                    <field name="field_binary_import" filename="field_binary_name"
+                           attrs="{'invisible' : [('state', '!=', 'confirm')]}"/>
+                    <field name="field_binary_name" invisible="1"/>
+                    <button name="download_template" type="object" string="Download Import Template"
+                            class="btn btn-link" style="text-decoration: underline;"
+                            help="Mẫu import có định dạng là xls hoặc xlsx"/>
+                </field>
+                <field name="product_qty" position="after">
+                    <field name="x_note"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="stock.action_inventory_form" model="ir.actions.act_window">
+            <field name="name">Inventory Adjustments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.inventory</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_id" ref="stock.view_inventory_tree"/>
+            <field name="domain">[('warehouse_id.user_ids','in',(uid))]
+            </field>
+            <field name="search_view_id" ref="stock.view_inventory_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to start an inventory.
+                </p>
+                <p>
+                    Periodical Inventories are used to count the number of products
+                    available per location. You can use it once a year when you do
+                    the general inventory or whenever you need it, to adapt the
+                    current inventory level of a product.
+                </p>
+            </field>
+        </record>
+    </data>
+</openerp>

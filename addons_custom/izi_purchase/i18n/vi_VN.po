@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 12:57+0000\n"
+"PO-Revision-Date: 2019-05-06 12:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_invoice:0
+#: selection:purchase.order,x_state_picking:0
+msgid "Đã hủy"
+msgstr ""
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_picking:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_invoice:0
+#: selection:purchase.order,x_state_picking:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_invoice:0
+msgid "In Payment"
+msgstr ""
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_invoice:0
+msgid "No Invoice"
+msgstr "Chưa có hóa đơn"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_picking:0
+msgid "No Picking"
+msgstr "Chưa có đơn nhập kho"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_invoice:0
+msgid "Open"
+msgstr "Mở"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_invoice:0
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: izi_purchase
+#: model:ir.model,name:izi_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_picking:0
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#. module: izi_purchase
+#: model_terms:ir.ui.view,arch_db:izi_purchase.izi_purchase_order_tree_inherit
+msgid "Reference Source"
+msgstr "Tham chiếu nguồn"
+
+#. module: izi_purchase
+#: model:ir.model.fields,field_description:izi_purchase.field_purchase_order__x_state_invoice
+msgid "State Invoice"
+msgstr "Trạng thái hóa đơn"
+
+#. module: izi_purchase
+#: model:ir.model.fields,field_description:izi_purchase.field_purchase_order__x_state_picking
+msgid "State Picking"
+msgstr "Trạng thái đơn nhập kho"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_picking:0
+msgid "Waiting"
+msgstr "Chờ"
+
+#. module: izi_purchase
+#: selection:purchase.order,x_state_picking:0
+msgid "Waiting Another Operation"
+msgstr "Chờ HĐ khác"
+

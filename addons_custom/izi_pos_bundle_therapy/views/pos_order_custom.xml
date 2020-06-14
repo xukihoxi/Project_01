@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+        <record id="view_pos_bundle_therapy_pos_form" model="ir.ui.view">
+            <field name="name">POS Order</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <field name="x_therapy_record_id" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
+                    <field name="x_number_massage" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
+                    <field name="x_barem_id" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
+                    <field name="x_categ_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='create_invoice']" position="after">
+                    <button name="action_compute_barem" type="object" class="oe_highlight" string="Compute Barem" attrs="{'invisible': ['|',('x_therapy_record_id', '=', False),('state', '!=', 'draft')]}"/>
+                </xpath>
+                <xpath expr="//page[2]" position="before">
+                    <page name="product_complement" string="Product Complement" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}">
+                        <field name="x_pos_order_complement_ids">
+                            <tree create="0" editable="bottom">
+                                <field name="product_id" readonly="1"/>
+                                <field name="qty"/>
+                                <field name="qty_max" readonly="1"/>
+                                <field name="uom_id" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page[1]" position="replace">
+                    <page string="Products">
+                        <field name="lines" colspan="4" nolabel="1">
+                            <tree string="Order lines" editable="bottom">
+                                <field name="x_check_service" invisible="1"/>
+                                <field name="x_charge_refund" invisible="1"/>
+                                <field name="x_edit_price" invisible="1"/>
+                                <field name="product_id" context="{'izi_pos_product_search':True,'categ_id': parent.x_categ_id}"
+                                       options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                       domain="[('product_tmpl_id.x_type_card', '=', 'none'), ('available_in_pos','=',True)]"/>
+                                <field name="lot_name" readonly="1" force_save="1"/>
+                                <field name="qty"
+                                       attrs="{'readonly': [('x_check_service', '=', True), ('parent.x_pos_partner_refund_id', '!=', False)]}"
+                                       force_save="1"/>
+                                <field name="x_qty" invisible="True"
+                                       attrs="{'readonly': [('parent.x_pos_partner_refund_id', '!=', False)]}"
+                                       force_save="1"/>
+                                <field name="x_body_area_ids" widget="many2many_tags" required="1" options="{'no_create_edit':True, 'no_create':True}" attrs="{'invisible': [('parent.x_therapy_record_id', '=', False)]}"/>
+                                <field name="price_unit" widget="monetary"
+                                       attrs="{'readonly': [('x_edit_price', '=', False)]}" force_save="1"/>
+                                <field name="discount" widget="monetary"/>
+                                <field name="x_discount" widget="monetary"/>
+                                <field name="tax_ids_after_fiscal_position" widget="many2many_tags"
+                                       invisible="1"/>
+                                <field name="tax_ids" widget="many2many_tags" invisible="1"/>
+                                <field name="price_subtotal" widget="monetary" invisible="1"/>
+                                <field name="x_subtotal_wo_discount" widget="monetary" invisible="1"/>
+                                <field name="price_subtotal_incl" widget="monetary"/>
+                            </tree>
+                        </field>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                            <field name="amount_tax" widget="monetary"/>
+                            <field name="x_amount_total" class="oe_subtotal_footer_separator"
+                                   widget="monetary"/>
+                            <!--<field name="x_vip_discount" class="oe_subtotal_footer_separator"-->
+                            <!--widget="monetary"/>-->
+                            <div class="oe_subtotal_footer_separator oe_inline">
+                                <label for="amount_total"/>
+                                <button name="button_dummy" states="draft" string="(update)" invisible="1"
+                                        class="oe_edit_only oe_link"/>
+                            </div>
+                            <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                   widget="monetary"/>
+                        </group>
+                        <div class="oe_clear"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

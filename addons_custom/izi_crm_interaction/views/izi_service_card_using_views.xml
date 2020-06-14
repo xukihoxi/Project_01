@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="service_card_using_form" model="ir.ui.view">
+            <field name="name">Service card using</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='service_card_ids']/tree/field[@name='note']" position="after">
+                    <button name="action_create_interaction" string="Create interaction" type="object" states="done"/>
+                </xpath>
+                <xpath expr="//field[@name='service_card1_ids']/tree/field[@name='note']" position="after">
+                    <button name="action_create_interaction" string="Create interaction" type="object" states="done"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

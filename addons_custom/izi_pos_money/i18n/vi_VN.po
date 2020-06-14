@@ -1,0 +1,275 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_pos_money
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-27 11:14+0000\n"
+"PO-Revision-Date: 2019-11-27 11:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_amount
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_amount
+msgid "Amount"
+msgstr "Số tiền nộp"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_amount_fee
+msgid "Amount Fee"
+msgstr "Phí nộp tiền"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_amount_currency
+msgid "Amount currency"
+msgstr "Ngoại tệ (nếu có)"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_attachment_ids
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+msgid "Back to draft"
+msgstr "Thiết lập về dự thảo"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_balance_end_real
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_balance_end_real
+msgid "Balance End Real"
+msgstr "Số dư còn lại"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_balance_start
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_balance_start
+msgid "Balance Start"
+msgstr "Tiền chưa nộp"
+
+#. module: izi_pos_money
+#: selection:pos.money,type:0
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#. module: izi_pos_money
+#: model:ir.model,name:izi_pos_money.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Sổ phụ từ Ngân hàng"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_branch_id
+msgid "Branch"
+msgstr "Chi nhánh"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+msgid "Bạn có chắc chắn xác nhận nộp tiền?"
+msgstr "Bạn có chắc chắn xác nhận nộp tiền?"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.view_pop_up_pos_money
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_pos_money
+#: selection:pos.money,type:0
+msgid "Cash"
+msgstr "Tiền mặt"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_account_bank_statement_x_cash_posted
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_session_x_cash_posted
+msgid "Cash posted"
+msgstr "Tiền mặt đã nộp"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+#: selection:pos.money,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_create_uid
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_create_date
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+msgid "Description....."
+msgstr "Mô tả"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_display_name
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_pos_money
+#: selection:pos.money,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_pos_money
+#: selection:pos.money,state:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_fee_account_id
+msgid "Fee Journal"
+msgstr "Hình thức nộp tiền"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_id
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money___last_update
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_move_id
+msgid "Move"
+msgstr "Dịch chuyển"
+
+#. module: izi_pos_money
+#: sql_constraint:pos.money.line:0
+msgid "Một phiên không thể nộp tiền 2 lần với cùng hình thức thanh toán!"
+msgstr "Một phiên không thể nộp tiền 2 lần với cùng hình thức thanh toán!"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_name
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_pos_money
+#: code:addons/izi_pos_money/models/pos_money.py:74
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+msgid "Number"
+msgstr "Số"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.izi_pos_money_form
+msgid "NỘP TIỀN"
+msgstr "NỘP TIỀN"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_payment_method_id
+msgid "Payment method"
+msgstr "Hình thức thanh toán"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_pos_config_id
+msgid "Pos Config"
+msgstr "Điểm bán hàng"
+
+#. module: izi_pos_money
+#: model:ir.actions.act_window,name:izi_pos_money.izi_pos_money_action_window
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_pos_money_id
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_pos_money_line_ids
+#: model:ir.ui.menu,name:izi_pos_money.izi_pos_money_menu
+#: model:ir.ui.view,arch_db:izi_pos_money.view_pop_up_pos_money
+msgid "Pos Money"
+msgstr "Nộp tiền"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_line_pos_session_id
+msgid "Pos Session"
+msgstr "Phiên"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_pos_money
+#: model:ir.model.fields,field_description:izi_pos_money.field_pos_money_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: izi_pos_money
+#: model:ir.ui.view,arch_db:izi_pos_money.view_pop_up_pos_money
+msgid "_Apply"
+msgstr "_Áp dụng"
+
+#. module: izi_pos_money
+#: model:ir.model,name:izi_pos_money.model_pos_money
+msgid "pos.money"
+msgstr "NỘP TIỀN"
+
+#. module: izi_pos_money
+#: model:ir.model,name:izi_pos_money.model_pos_money_line
+msgid "pos.money.line"
+msgstr "Chi tiết nộp tiền"
+
+#. module: izi_pos_money
+#: model:ir.model,name:izi_pos_money.model_pos_session
+msgid "pos.session"
+msgstr "Phiên"
+

@@ -1,0 +1,125 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="adjust_inventory_customer_form_view">
+            <field name="name">adjust_inventory_customer form view</field>
+            <field name="model">adjust.inventory.customer</field>
+            <field name="arch" type="xml">
+                <form string="Adjust inventory">
+                    <header>
+                        <button name="action_update" type="object" class="oe_highlight" states="draft" string="Update"
+                                confirm="Sau khi cập nhật, dữ liệu sẽ không thể hoàn tác. Bạn có chắc chắn cập nhật không?"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    </header>
+                    <sheet>
+                        <h2 attrs="{'invisible': [('state', '=', 'done')]}">
+                            <div style="margin-left:150px">Search infomation (Customer code or phone)</div>
+                        </h2>
+                        <h2 attrs="{'invisible': [('state', '=', 'done')]}">
+                            <group>
+                                <group>
+                                    <field name="serial" string=""/>
+                                </group>
+                                <group>
+                                    <button name="action_check" type="object" string="Search"
+                                            class="oe_highlight"/>
+                                </group>
+                            </group>
+                        </h2>
+                        <field name="name" invisible="1"/>
+                        <group>
+                            <group>
+                                <field name="partner_id" readonly="1" force_save="1"/>
+                                <field name="date" readonly="1" force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="x_rank" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="x_loyal_total" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="x_debit_money" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Services">
+                                <field name="card_detail_ids" attrs="{'readonly': [('state', '=', 'done')]}">
+                                    <tree default_order='lot_id desc' create="0" editable="bottom">
+                                        <field name="lot_id" readonly="1" force_save="1"/>
+                                        <field name="product_id" readonly="1" force_save="1"/>
+                                        <field name="total_qty"/>
+                                        <field name="qty_hand"/>
+                                        <field name="qty_use"/>
+                                        <field name="price_unit"/>
+                                        <field name="amount_total"/>
+                                        <field name="remain_amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Debit goods">
+                                <field name="debit_ids" attrs="{'readonly': [('state', '=', 'done')]}">
+                                    <tree editable="bottom" create="0">
+                                        <field name="product_id" readonly="1" force_save="1"/>
+                                        <field name="qty" sum="Qty"/>
+                                        <field name="qty_depot" sum="Qty depot"/>
+                                        <field name="qty_debit" sum="Qty debit"/>
+                                        <field name="order_id" readonly="1" force_save="1"/>
+                                        <field name="date" readonly="1" force_save="1"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Virtual Money">
+                                <field name="coin_ids" attrs="{'readonly': [('state', '=', 'done')]}">
+                                    <tree default_order='order_id desc' create="0" editable="bottom">
+                                        <field name="order_id" readonly="1" force_save="1"/>
+                                        <field name="typex" readonly="1" force_save="1"/>
+                                        <field name="money"/>
+                                        <field name="money_used"/>
+                                        <field name="debt_amount"/>
+                                        <field name="state" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Deposit">
+                                <field name="deposit_ids" attrs="{'readonly': [('state', '=', 'done')]}">
+                                    <tree string="Lines" editable="bottom" create="0">
+                                        <field name="partner_id" readonly="1" force_save="1"/>
+                                        <field name="x_amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="adjust_inventory_customer_tree_view" model="ir.ui.view">
+            <field name="name">adjust_inventory_customer Tree</field>
+            <field name="model">adjust.inventory.customer</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'">
+                    <field name="partner_id"/>
+                    <field name="name" invisible="1"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_adjust_inventory_customer" model="ir.actions.act_window">
+            <field name="name">Adjust inventory customer</field>
+            <field name="res_model">adjust.inventory.customer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_adjust_inventory_customer"
+                  id="menu_action_adjust_inventory_customer" name="Adjust inventory customer"
+                  parent="izi_pos_custom_backend.izi_menu_res_partner_debt" sequence="65"/>
+
+    </data>
+</odoo>

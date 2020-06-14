@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="use_service_card_inherit">
+            <field name="name">use.service.card.form.inherit</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <field name="x_vc_code" position="after">
+                    <field name="x_money_multi" readonly="1" force_save="1"/>
+                    <field name="x_currency_id" readonly="1" force_save="1"/>
+                    <field name="x_currency_rate_id" readonly="1" force_save="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

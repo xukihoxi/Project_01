@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--<record id="stock.group_stock_cosmetic_surgery" model="res.groups">-->
+            <!--<field name="name">Cosmetic Surgery</field>-->
+            <!--<field name="category_id" ref="base.module_category_warehouse_management"/>-->
+            <!--<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+        <!--</record>-->
+    </data>
+</odoo>
+
+
+

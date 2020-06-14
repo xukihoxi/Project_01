@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_product_form">
+            <field name="name">Product</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <page name="notes" position="after">
+                    <page name="service_remind" string="Service remind" attrs="{'invisible':[('type', '!=', 'service')]}">
+                        <field name="x_service_remind_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="type" required="1"/>
+                                <field name="value" required="1"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="type" required="1"/>
+                                    <field name="value" required="1"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>

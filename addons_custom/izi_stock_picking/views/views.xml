@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="izi_stock_picking.list">
+      <field name="name">izi_stock_picking list</field>
+      <field name="model">izi_stock_picking.izi_stock_picking</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="izi_stock_picking.action_window">
+      <field name="name">izi_stock_picking window</field>
+      <field name="res_model">izi_stock_picking.izi_stock_picking</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="izi_stock_picking.action_server">
+      <field name="name">izi_stock_picking server</field>
+      <field name="model_id" ref="model_izi_stock_picking_izi_stock_picking"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="izi_stock_picking" id="izi_stock_picking.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="izi_stock_picking.menu_1" parent="izi_stock_picking.menu_root"/>
+    <menuitem name="Menu 2" id="izi_stock_picking.menu_2" parent="izi_stock_picking.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="izi_stock_picking.menu_1_list" parent="izi_stock_picking.menu_1"
+              action="izi_stock_picking.action_window"/>
+    <menuitem name="Server to list" id="izi_stock_picking" parent="izi_stock_picking.menu_2"
+              action="izi_stock_picking.action_server"/>
+    -->
+  </data>
+</odoo>
